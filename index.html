@@ -204,7 +204,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-14 16:03:06" itemprop="dateModified" datetime="2021-06-14T16:03:06+08:00">2021-06-14</time>
+        <time title="Modified: 2021-06-14 16:08:06" itemprop="dateModified" datetime="2021-06-14T16:08:06+08:00">2021-06-14</time>
       </span>
 
   
@@ -240,8 +240,6 @@
 <p>记$<em>$为卷积，根据频域下的卷积定理<br>$$<br>f_1(t)f_2(t)=\frac{1}{2\pi}F^{-1}\left[ F_1(j\omega)</em> F_2(j\omega)\right]<br>$$</p>
 <p>采样后输出的信号$X_s(j\omega)$为：<br>$$<br>X_s(j\omega)=\frac{1}{2\pi} X_m(j\omega)*S(j\omega)=\frac{1}{2\pi}· X_m(j\omega) ·\left[ \frac{2\pi}{T} \sum^\infty_{k=-\infty} \delta(\omega -k\omega_s) \right]<br>$$<br>最终，采样后信号的傅里叶变换为：<br>$$<br>X_s(j\omega)=\frac{1}{T}\sum^\infty_{k=-\infty} X_m(j\omega-jk\omega_s)<br>$$</p>
 <p>从上式可以看出，原信号的频谱$X_m(j\omega)$在频域内发生了周期延拓。即，原信号在频谱上的宽度是$2f_m$，每隔$f_s$重复一次（相当于信号的平移），发生了周期延拓，从图中直观的看出来，如果$f_s&lt;2f_m$，延拓后的信号会在频域内会发生混淆。</p>
-<div align=center>![pinlvhunxiao](/image/pinlvhunxiao.jpg)
-
 <img src="/image/pinlvhunxiao.jpg" width = "60%" height = "60%"  align=center />
       
     </div>
