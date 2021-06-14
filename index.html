@@ -173,7 +173,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/06/13/%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86/">
+    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/06/13/2021-6-13-%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -186,7 +186,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/13/%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86/" class="post-title-link" itemprop="url">采样定理</a>
+          <a href="/2021/06/13/2021-6-13-%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86/" class="post-title-link" itemprop="url">采样定理</a>
         </h2>
 
         <div class="post-meta-container">
@@ -204,7 +204,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-14 16:18:10" itemprop="dateModified" datetime="2021-06-14T16:18:10+08:00">2021-06-14</time>
+        <time title="Modified: 2021-06-14 16:42:05" itemprop="dateModified" datetime="2021-06-14T16:42:05+08:00">2021-06-14</time>
       </span>
 
   
@@ -219,7 +219,7 @@
     <div class="post-body" itemprop="articleBody">
           <h2 id="采样"><a href="#采样" class="headerlink" title="采样"></a>采样</h2><p>采样就是将连续模拟信号变为离散数字信号的过程。</p>
 <h2 id="什么是采样定理"><a href="#什么是采样定理" class="headerlink" title="什么是采样定理"></a>什么是采样定理</h2><p>离散后的信号能唯一的确定原连续信号，并要求离散信号通过D/A（数/模）转化后能恢复成原连续信号。由于离散信号是从连续信号上取出的一部分值，与连续信号的关系是整体和局部的关系，一般来说是不可能唯一确定连续信号的。只有在满足一定条件下，离散信号才可按照一定方式恢复出原来的连续信号。这个条件就是采样定理。</p>
-<h2 id="如何满足采样定理"><a href="#如何满足采样定理" class="headerlink" title="如何满足采样定理"></a>如何满足采样定理</h2><p>采样频率必须大于被分析信号成分中最高频率值的两倍以上，否则将产生高、低频<strong>混淆现象</strong>，即高频信号经采样后只出现低频信号，采样信号无法还原为原信号。<br>$$<br>f_s=\frac{1}{\Delta t} &gt;2f_m<br>$$</p>
+<h2 id="如何满足采样定理"><a href="#如何满足采样定理" class="headerlink" title="如何满足采样定理"></a>如何满足采样定理</h2><p><strong>采样定理</strong>：采样频率必须大于被分析信号成分中最高频率值的两倍以上，否则将产生高、低频<strong>混淆现象</strong>，即高频信号经采样后只出现低频信号，采样信号无法还原为原信号。<br>$$<br>f_s=\frac{1}{\Delta t} &gt;2f_m<br>$$</p>
 <p>其中$f_s$是采样频率，$f_m$是被分析信号成分中的最高频率值，$\Delta t$是采样时间间隔。</p>
 <h2 id="频率混淆现象"><a href="#频率混淆现象" class="headerlink" title="频率混淆现象"></a>频率混淆现象</h2><p><strong>如果想彻底了解采样定理的内涵，以及为什么不满足采样定理就会出现混淆现象，请接着看下去</strong><br>读者自己推导采样后得到的信号$x_s(t)$的傅里叶变换表达式$X_s(j\omega)$，再根据$X_s(j\omega)$绘制频谱图，最终就会理解采样定理的内涵。</p>
 <p>为了便于推导，现定义：</p>
