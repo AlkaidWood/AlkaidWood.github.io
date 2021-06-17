@@ -20,15 +20,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;alkaidwood.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script><script src="/js/config.js"></script>
-<meta name="description" content="引言快速傅里叶变换（FFT）是离散傅里叶变换（DFT）的加速算法，而DFT则是将连续的傅里叶变化离散化（在时域和频域离散），连续傅里叶变换可由傅里叶展开式推导得出。 正向逻辑为：傅里叶展开式 $\rightarrow$ 推导得到 $\rightarrow$ 连续傅里叶变换对 $\rightarrow$ 离散后得到 $\rightarrow$ 离散傅里叶变换 $\rightarrow$ 开发加速算法">
+<meta name="description" content="引言快速傅里叶变换（FFT）是离散傅里叶变换（DFT）的加速算法，而DFT则是将连续的傅里叶变换离散化（在时域和频域离散），连续傅里叶变换可由傅里叶展开式推导得出。 正向逻辑为：傅里叶展开式 $\rightarrow$ 推导得到 $\rightarrow$ 连续傅里叶变换对 $\rightarrow$ 离散后得到 $\rightarrow$ 离散傅里叶变换 $\rightarrow$ 开发加速算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="快速傅里叶变换（FFT）基本原理">
 <meta property="og:url" content="https://alkaidwood.github.io/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="Alkaid Zhang - Blog">
-<meta property="og:description" content="引言快速傅里叶变换（FFT）是离散傅里叶变换（DFT）的加速算法，而DFT则是将连续的傅里叶变化离散化（在时域和频域离散），连续傅里叶变换可由傅里叶展开式推导得出。 正向逻辑为：傅里叶展开式 $\rightarrow$ 推导得到 $\rightarrow$ 连续傅里叶变换对 $\rightarrow$ 离散后得到 $\rightarrow$ 离散傅里叶变换 $\rightarrow$ 开发加速算法">
+<meta property="og:description" content="引言快速傅里叶变换（FFT）是离散傅里叶变换（DFT）的加速算法，而DFT则是将连续的傅里叶变换离散化（在时域和频域离散），连续傅里叶变换可由傅里叶展开式推导得出。 正向逻辑为：傅里叶展开式 $\rightarrow$ 推导得到 $\rightarrow$ 连续傅里叶变换对 $\rightarrow$ 离散后得到 $\rightarrow$ 离散傅里叶变换 $\rightarrow$ 开发加速算法">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-14T16:28:51.000Z">
-<meta property="article:modified_time" content="2021-06-15T13:38:24.161Z">
+<meta property="article:modified_time" content="2021-06-16T16:08:35.720Z">
 <meta property="article:author" content="Alkaid Zhang">
 <meta property="article:tag" content="振动测试">
 <meta name="twitter:card" content="summary">
@@ -200,10 +200,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-06-15 00:28:51 / Modified: 21:38:24" itemprop="dateCreated datePublished" datetime="2021-06-15T00:28:51+08:00">2021-06-15</time>
+      <time title="Created: 2021-06-15 00:28:51" itemprop="dateCreated datePublished" datetime="2021-06-15T00:28:51+08:00">2021-06-15</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-06-17 00:08:35" itemprop="dateModified" datetime="2021-06-17T00:08:35+08:00">2021-06-17</time>
+      </span>
 
   
 </div>
@@ -215,7 +221,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>快速傅里叶变换（FFT）是离散傅里叶变换（DFT）的加速算法，而DFT则是将连续的傅里叶变化离散化（在时域和频域离散），连续傅里叶变换可由傅里叶展开式推导得出。</p>
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>快速傅里叶变换（FFT）是离散傅里叶变换（DFT）的加速算法，而DFT则是将连续的傅里叶变换离散化（在时域和频域离散），连续傅里叶变换可由傅里叶展开式推导得出。</p>
 <p>正向逻辑为：<br>傅里叶展开式 $\rightarrow$ 推导得到 $\rightarrow$ 连续傅里叶变换对 $\rightarrow$ 离散后得到 $\rightarrow$ 离散傅里叶变换 $\rightarrow$ 开发加速算法 $\rightarrow$ 快速傅里叶变换</p>
 <h2 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h2><h3 id="三角函数形式"><a href="#三角函数形式" class="headerlink" title="三角函数形式"></a>三角函数形式</h3><p>对于一个周期为 $T$ 的信号 $x(t)$，其基频为 $f_1=1/T$。对 $x(t)$ 进行傅里叶展开：</p>
 <p>$$<br>x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ a_n \cos\left(2\pi n f_1 t \right) + b_n \sin\left(2\pi n f_1 t \right) \right]<br>$$</p>
@@ -239,7 +245,7 @@
 <p>发现指数项前的系数具有奇偶性，利用奇偶性并改变求和符号的下限，将展开式改写为：</p>
 <p>$$<br>x(t) = \sum^{\infty}_ {n=-\infty}  X(2\pi n f_1)   e^{ j 2\pi n f_1 t }<br>$$</p>
 <p>注意，此时求和符号的下限由一变为负无穷，$1 \rightarrow -\infty$。式中的 $X(2\pi n f_1) $ 展开后为：</p>
-<p>$$<br>\begin{gathered}<br>X(2\pi n f_1) =\frac{1}{2} \left[ \frac{2}{T} \int^T_ 0 x(t) \cos \left( 2\pi n f_1 t \right) - \frac{2j}{T} \int^T_ 0 x(t) \sin \left( 2\pi n f_1 t \right) dt \right] \\<br>= \frac{1}{T} \int^T_ 0 x(t) \left[ \cos \left( 2\pi n f_1 t \right) - j \sin \left( 2\pi n f_1 t \right) \right] dt<br>\end{gathered}<br>$$</p>
+<p>$$<br>\begin{gathered}<br>X(2\pi n f_1) =\frac{1}{2} \left[ \frac{2}{T} \int^T_ 0 x(t) \cos \left( 2\pi n f_1 t \right) dt - \frac{2j}{T} \int^T_ 0 x(t) \sin \left( 2\pi n f_1 t \right) dt \right] \\<br>= \frac{1}{T} \int^T_ 0 x(t) \left[ \cos \left( 2\pi n f_1 t \right) - j \sin \left( 2\pi n f_1 t \right) \right] dt<br>\end{gathered}<br>$$</p>
 <p>再利用欧拉公式，可得：</p>
 <p>$$<br>X(2\pi n f_1) = \frac{1}{T} \int^T_ 0 x(t)   e^{ -j 2\pi n f_1 t} dt<br>$$</p>
 <p><strong>总结上述推导过程，得到指数形式的傅里叶变换对：</strong></p>
@@ -290,7 +296,7 @@
 <p>$$<br>\bar{x}_N = \begin{bmatrix} x(0) &amp;  x(1) &amp;  \cdots &amp;  x(N-1) \end{bmatrix}^\mathrm{T}<br>$$</p>
 <p>则DFT的矩阵表达式为：</p>
 <p>$$<br>\bar{X}_N = \mathbf{W}_N \bar{x}_N<br>$$</p>
-<p>观察矩阵形式的DFT表达式，可以发现DFT中包含大量重复运算，矩阵 $\mathbf{W}_N$ 虽然有 $N^2$ 个元素，但是其中 只有 $N$ 个独立值，并且一部分元素的值极为简单。$W$ 因子的取值有如下特点：</p>
+<p>观察矩阵形式的DFT表达式，可以发现DFT中包含大量重复运算，矩阵 $\mathbf{W}_N$ 虽然有 $N^2$ 个元素，但是其中只有 $N$ 个独立值，并且一部分元素的值极为简单。$W$ 因子的取值有如下特点：</p>
 <ul>
 <li>$W^0=1$, $W^{N/2}=-1$</li>
 <li>$W^{N+r}=W^r$, $W^{N/2+r}=-W^r$</li>
@@ -300,7 +306,7 @@
 <p>将矩阵的第二列和第三列交换，可得：</p>
 <p>$$<br>\begin{bmatrix} X(0) \\  X(1) \\  X(2) \\  X(3) \end{bmatrix} = \begin{bmatrix} 1 &amp;  1 &amp;  1 &amp;  1 \\  1 &amp;  -1 &amp;  W^1 &amp;  -W^1 \\  1 &amp;  1 &amp;  -1 &amp;  -1 \\ 1 &amp;  -1 &amp;  -W^1 &amp;  W^1  \end{bmatrix}\begin{bmatrix} x(0) \\  x(2) \\  x(1) \\  x(3) \end{bmatrix}<br>$$</p>
 <p>由此可得：</p>
-<p>$$<br>\begin{gathered}<br>X(0) = [x(0) + x(2)] + [x(1) + x(x)]  \\<br>X(1) = [x(0) - x(2)] + [x(1) - x(x)]  \\<br>X(2) = [x(0) + x(2)] - [x(1) + x(x)]  \\<br>X(3) = [x(0) - x(2)] - [x(1) - x(x)]<br>\end{gathered}<br>$$</p>
+<p>$$<br>\begin{gathered}<br>X(0) = [x(0) + x(2)] + [x(1) + x(3)]  \\<br>X(1) = [x(0) - x(2)] + [x(1) - x(3)] W^1  \\<br>X(2) = [x(0) + x(2)] - [x(1) + x(3)] W^1 \\<br>X(3) = [x(0) - x(2)] - [x(1) - x(3)]<br>\end{gathered}<br>$$</p>
 <p>利用上式计算DFT只需要 $1$ 次复数乘法运算。处理长序列时，只需要将长序列分成类似于上式或比上式更简短的序列后，进行简单的运算，再按一定方式组合起来即可。</p>
 <p>因此，<strong>FFT的基本原理是</strong>：先将原始的序列分解为一系列的短序列，充分利用 $W$ 因子的周期性和对称性，进而求出这些短序列相应的DFT并进行适当组合，达到删除重复计算，减少乘法运算和简化结构的目的。</p>
 <p>对于大部分FFT算法，有一些通用的概念和规律：</p>
