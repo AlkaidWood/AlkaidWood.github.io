@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;alkaidwood.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script><script src="/js/config.js"></script>
+<meta name="description" content="问题背景论文写作时，我们往往需要插入矢量图，以保证图形被阅览时不会因缩放而出现难看的锯齿（失真）。 需要矢量图的常用场景如下：  纯矢量图 简单的折线、柱形、条形图等 抽象的模型图、概念图、流程图、程序框图等 混合类图形，混合了以上两种图形   矢量图与位图的混合 色彩复杂的模型图（位图）旁配上文字、简单的折线图、流程图等 在流程图中嵌入各种结果，如Science、Nature中常见的占用一页的超">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在论文中完美插入矢量图">
+<meta property="og:url" content="https://alkaidwood.github.io/2021/06/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE/index.html">
+<meta property="og:site_name" content="Alkaid Zhang - Blog">
+<meta property="og:description" content="问题背景论文写作时，我们往往需要插入矢量图，以保证图形被阅览时不会因缩放而出现难看的锯齿（失真）。 需要矢量图的常用场景如下：  纯矢量图 简单的折线、柱形、条形图等 抽象的模型图、概念图、流程图、程序框图等 混合类图形，混合了以上两种图形   矢量图与位图的混合 色彩复杂的模型图（位图）旁配上文字、简单的折线图、流程图等 在流程图中嵌入各种结果，如Science、Nature中常见的占用一页的超">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-06-23T03:01:33.000Z">
+<meta property="article:modified_time" content="2021-06-23T03:55:04.717Z">
+<meta property="article:author" content="Alkaid Zhang">
+<meta property="article:tag" content="论文写作">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://alkaidwood.github.io/2021/06/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;alkaidwood.github.io&#x2F;2021&#x2F;06&#x2F;23&#x2F;%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;06&#x2F;23&#x2F;如何在论文中完美插入矢量图&#x2F;&quot;,&quot;title&quot;:&quot;如何在论文中完美插入矢量图&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>如何在论文中完美插入矢量图 | Alkaid Zhang - Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Alkaid Zhang - Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share equ happiness</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%83%8C%E6%99%AF"><span class="nav-number">1.</span> <span class="nav-text">问题背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E7%A7%8D%E7%B1%BB%E5%9E%8B%E5%9B%BE%E7%89%87%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">各种类型图片的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A2%E9%87%8F%E5%9B%BE"><span class="nav-number">2.1.</span> <span class="nav-text">矢量图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%8D%E5%9B%BE"><span class="nav-number">2.2.</span> <span class="nav-text">位图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%9F%A2%E9%87%8F%E5%9B%BE"><span class="nav-number">3.</span> <span class="nav-text">如何在论文中使用矢量图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Office%E5%A5%97%E4%BB%B6%E4%B8%AD%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE"><span class="nav-number">4.</span> <span class="nav-text">Office套件中插入矢量图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Alkaid Zhang</p>
+  <div class="site-description" itemprop="description">Alkaid Zhang</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/06/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Alkaid Zhang">
+      <meta itemprop="description" content="Alkaid Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alkaid Zhang - Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如何在论文中完美插入矢量图
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-06-23 11:01:33 / Modified: 11:55:04" itemprop="dateCreated datePublished" datetime="2021-06-23T11:01:33+08:00">2021-06-23</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>论文写作时，我们往往需要插入矢量图，以保证图形被阅览时不会因缩放而出现难看的锯齿（失真）。</p>
+<p>需要矢量图的常用场景如下：</p>
+<ul>
+<li>纯矢量图<ul>
+<li>简单的折线、柱形、条形图等</li>
+<li>抽象的模型图、概念图、流程图、程序框图等</li>
+<li>混合类图形，混合了以上两种图形</li>
+</ul>
+</li>
+<li>矢量图与位图的混合<ul>
+<li>色彩复杂的模型图（位图）旁配上文字、简单的折线图、流程图等</li>
+<li>在流程图中嵌入各种结果，如Science、Nature中常见的占用一页的超大混合类图形</li>
+</ul>
+</li>
+<li>其他</li>
+</ul>
+<h2 id="各种类型图片的区别"><a href="#各种类型图片的区别" class="headerlink" title="各种类型图片的区别"></a>各种类型图片的区别</h2><h3 id="矢量图"><a href="#矢量图" class="headerlink" title="矢量图"></a>矢量图</h3><p>简单来说矢量图就像用几何图形来描述一幅图，在矢量图放大时，我们所记录的几何图形的各种角度、形状等并没有改变，所以无论是放大还是缩小，都不会影响矢量图的清晰度。</p>
+<p><strong>文件类型：</strong> Adobe Illustrator的<code>.AI</code>、<code>.EPS</code>和<code>.SVG</code>、AutoCAD的<code>.dwg</code>和<code>.dxf</code>、Corel DRAW的<code>.cdr</code>等。<code>.pdf</code>也常被用来保存矢量图。</p>
+<p><strong>制图：</strong> 使用Adobe Illustrator(AI)、CorelDRAW、FlashMX制图</p>
+<h3 id="位图"><a href="#位图" class="headerlink" title="位图"></a>位图</h3><p>位图又被称作点阵图或栅格图像，它的特点就是，整幅图由许多的‘点’组成，这些‘点’我们称为“像素”。在位图模式下，计算机会将图片的每个像素点进行保存。当位图放大到一定程度时，我们会发现图片是由一个一个的小方块组成，这些小方块就是像素点。</p>
+<p><strong>文件类型：</strong> <code>.jpg</code>、<code>.png</code>、<code>.bmp</code>、<code>.pcx</code>、<code>.gif</code>、<code>.tif</code>、<code>.psd</code>等。</p>
+<p><strong>制图：</strong> 使用Photoshop、Painter和Windows系统自带的画图工具制图。</p>
+<h2 id="如何在论文中使用矢量图"><a href="#如何在论文中使用矢量图" class="headerlink" title="如何在论文中使用矢量图"></a>如何在论文中使用矢量图</h2><p><strong>这里主要讨论使用LaTex写作时，如何插入矢量图。</strong></p>
+<p><strong>第一步</strong>：使用任何软件得到矢量图形。如果使用Matlab、Python得到折线、柱形图等，直接输出为<code>.pdf</code>或<code>.eps</code>格式。如果使用Visio、PPT等软件绘制流程图、模型图，导出为<code>.pdf</code>。（貌似微软的办公软件不支持<code>.eps</code>）</p>
+<p>（如果是直接插入已得到的矢量图，请转至第三步）</p>
+<p><strong>第二步</strong>：使用Adobe Illustrator将多个矢量图组合在一起后用快捷键<code>Shift+o</code>裁剪画布，删去边框。将文件保存为<code>.eps</code>或<code>.pdf</code>。如果只是删除<code>.pdf</code>中的白边，使用Adobe Acrobat 的编辑功能就能轻松做到。</p>
+<p><strong>第三步</strong>：在LaTex中插入组合好的矢量图。</p>
+<p><strong>提示</strong>：在第一步制作矢量图时，最好调整好字号，图宽以适合出现在论文中或PPT中，并且使用Matlab时一定要保存一份<code>.fig</code>文件，便于以后查找修改。</p>
+<h2 id="Office套件中插入矢量图"><a href="#Office套件中插入矢量图" class="headerlink" title="Office套件中插入矢量图"></a>Office套件中插入矢量图</h2><p>Office办公软件下插入矢量图，使用<code>.emf</code>即可。Office系列间的互通是较为方便的，如Visio、PPT、Word间相互插入文件。</p>
+<p>使用Word和Latex一段时间以后，还是非常推荐大家使用LaTex的（强迫症福音）。毕竟插入的行内、行间公式怎是一个“服服帖帖”就能概括的。更别说切换模板时，只需要改动导言区就ok啦，简直不要太方便。LaTex缺点也有，表格制作很麻烦QAQ…，整体学习成本略高。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/378251607/answer/1160351444">https://www.zhihu.com/question/378251607/answer/1160351444</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/" rel="tag"># 论文写作</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/" rel="prev" title="快速傅里叶变换（FFT）基本原理">
+                  <i class="fa fa-chevron-left"></i> 快速傅里叶变换（FFT）基本原理
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Alkaid Zhang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:{&quot;url&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;,&quot;integrity&quot;:&quot;sha256-ncNI9OXOS5Ek4tzVYiOMmN&#x2F;KKCPZ6V0Cpv2P&#x2F;zHntiA&#x3D;&quot;}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
