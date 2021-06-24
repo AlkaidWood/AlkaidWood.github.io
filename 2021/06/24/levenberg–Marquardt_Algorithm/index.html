@@ -20,30 +20,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;alkaidwood.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script><script src="/js/config.js"></script>
-<meta name="description" content="压电效应某些电介质在沿一定方向上受到外力的作用而变形时，其内部会产生极化现象，同时在它的两个相对表面上出现正负相反的电荷。当外力去掉后，它又会恢复到不带电的状态，这种现象称为正压电效应。当作用力的方向改变时，电荷的极性也随之改变。依据电介质压电效应研制的一类传感器称为压电传感器。 压电加速度传感器压电式加速度传感器又称压电加速计。工作原理：在加速度计受振时，质量块加在压电元件上的力也随之变化。当被">
+<meta name="description" content="问题背景在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到 Levenberg–Marquardt 算法。 Levenberg–Marquardt 算法Levenberg–Marquardt 算法是一种最小二乘（模型拟合）算法。它可以解决以下问题： $$\min_{x}f(x)&#x3D; \min_{x} | F(x) |^2_2 &#x3D; \">
 <meta property="og:type" content="article">
-<meta property="og:title" content="压电加速度传感器基本原理">
-<meta property="og:url" content="https://alkaidwood.github.io/2021/06/13/2021-6-13-%E5%8E%8B%E7%94%B5%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/index.html">
+<meta property="og:title" content="Levenberg–Marquardt Algorithm">
+<meta property="og:url" content="https://alkaidwood.github.io/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/index.html">
 <meta property="og:site_name" content="Alkaid Zhang - Blog">
-<meta property="og:description" content="压电效应某些电介质在沿一定方向上受到外力的作用而变形时，其内部会产生极化现象，同时在它的两个相对表面上出现正负相反的电荷。当外力去掉后，它又会恢复到不带电的状态，这种现象称为正压电效应。当作用力的方向改变时，电荷的极性也随之改变。依据电介质压电效应研制的一类传感器称为压电传感器。 压电加速度传感器压电式加速度传感器又称压电加速计。工作原理：在加速度计受振时，质量块加在压电元件上的力也随之变化。当被">
+<meta property="og:description" content="问题背景在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到 Levenberg–Marquardt 算法。 Levenberg–Marquardt 算法Levenberg–Marquardt 算法是一种最小二乘（模型拟合）算法。它可以解决以下问题： $$\min_{x}f(x)&#x3D; \min_{x} | F(x) |^2_2 &#x3D; \">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://alkaidwood.github.io/image/zhendongceshi/yadianxiaoying1.jpg">
-<meta property="article:published_time" content="2021-06-13T10:47:08.000Z">
-<meta property="article:modified_time" content="2021-06-14T09:53:17.412Z">
+<meta property="article:published_time" content="2021-06-24T07:14:39.000Z">
+<meta property="article:modified_time" content="2021-06-24T08:10:25.854Z">
 <meta property="article:author" content="Alkaid Zhang">
-<meta property="article:tag" content="振动测试">
+<meta property="article:tag" content="Math">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://alkaidwood.github.io/image/zhendongceshi/yadianxiaoying1.jpg">
 
 
-<link rel="canonical" href="https://alkaidwood.github.io/2021/06/13/2021-6-13-%E5%8E%8B%E7%94%B5%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">
+<link rel="canonical" href="https://alkaidwood.github.io/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;alkaidwood.github.io&#x2F;2021&#x2F;06&#x2F;13&#x2F;2021-6-13-%E5%8E%8B%E7%94%B5%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;06&#x2F;13&#x2F;2021-6-13-压电加速度传感器基本原理&#x2F;&quot;,&quot;title&quot;:&quot;压电加速度传感器基本原理&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;alkaidwood.github.io&#x2F;2021&#x2F;06&#x2F;24&#x2F;levenberg%E2%80%93Marquardt_Algorithm&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;06&#x2F;24&#x2F;levenberg–Marquardt_Algorithm&#x2F;&quot;,&quot;title&quot;:&quot;Levenberg–Marquardt Algorithm&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>压电加速度传感器基本原理 | Alkaid Zhang - Blog</title>
+<title>Levenberg–Marquardt Algorithm | Alkaid Zhang - Blog</title>
   
 
 
@@ -120,7 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%8B%E7%94%B5%E6%95%88%E5%BA%94"><span class="nav-number">1.</span> <span class="nav-text">压电效应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%8B%E7%94%B5%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="nav-number">2.</span> <span class="nav-text">压电加速度传感器</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%83%8C%E6%99%AF"><span class="nav-number">1.</span> <span class="nav-text">问题背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Levenberg%E2%80%93Marquardt-%E7%AE%97%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">Levenberg–Marquardt 算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Levenberg%E2%80%93Marquardt-%E7%AE%97%E6%B3%95%E4%B8%8E%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E6%B1%82%E6%A0%B9"><span class="nav-number">3.</span> <span class="nav-text">Levenberg–Marquardt 算法与非线性方程组求根</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -179,7 +177,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/06/13/2021-6-13-%E5%8E%8B%E7%94%B5%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">
+    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -192,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          压电加速度传感器基本原理
+          Levenberg–Marquardt Algorithm
         </h1>
 
         <div class="post-meta-container">
@@ -202,16 +200,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-06-13 18:47:08" itemprop="dateCreated datePublished" datetime="2021-06-13T18:47:08+08:00">2021-06-13</time>
+      <time title="Created: 2021-06-24 15:14:39 / Modified: 16:10:25" itemprop="dateCreated datePublished" datetime="2021-06-24T15:14:39+08:00">2021-06-24</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-14 17:53:17" itemprop="dateModified" datetime="2021-06-14T17:53:17+08:00">2021-06-14</time>
-      </span>
 
   
 </div>
@@ -223,14 +215,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="压电效应"><a href="#压电效应" class="headerlink" title="压电效应"></a>压电效应</h2><p>某些电介质在沿一定方向上受到外力的作用而变形时，其内部会产生极化现象，同时在它的两个相对表面上出现正负相反的电荷。当外力去掉后，它又会恢复到不带电的状态，这种现象称为正压电效应。当作用力的方向改变时，电荷的极性也随之改变。依据电介质压电效应研制的一类传感器称为压电传感器。</p>
-<h2 id="压电加速度传感器"><a href="#压电加速度传感器" class="headerlink" title="压电加速度传感器"></a>压电加速度传感器</h2><p>压电式加速度传感器又称压电加速计。<br><strong>工作原理</strong>：在加速度计受振时，质量块加在压电元件上的力也随之变化。当被测振动频率远低于加速度计的固有频率时，则力的变化与被测加速度成正比。压电式加速度传感器利用了某些物质的压电效应，可以将加在自身上的力转化为电荷的变化，即将机械信号转化为电信号，进而通过电信号的转化成功输出或储存被测物体的加速度信号。</p>
-<p>设 $q$ 为释放的电荷，$F$ 为作用力，$A$ 为电极化面面积，$d_x$ 是压电系数，单位为 $C/N$（库伦/牛），则下列关系式成立：</p>
-<p>$$<br>\frac{q}{A}=d_x\frac{F}{A}<br>$$</p>
-<p>理论与试验研究表明，在一般情况下，表示机械量和电量之间关系的压电方程是很复杂的，但是在压电材料弹性变形范围内，电荷与作用力之间的关系可以用线性映射关系表现出来:</p>
-<p>$$<br>\bar{q}=\textbf{D}\bar{F}<br>$$</p>
-<p><img src="/image/zhendongceshi/yadianxiaoying1.jpg" alt="yadian"></p>
-<p>如上所示，压电型加速度传感器，基座受到的加速度最终会以电压形式输出。电荷及电压输出都与加速度成一定比例关系，因此通过测量电荷和电压即可得出加速度。一般电荷输出称为电荷灵敏度，电压输出称为电压灵敏度。</p>
+        <h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到 <strong>Levenberg–Marquardt 算法</strong>。</p>
+<h2 id="Levenberg–Marquardt-算法"><a href="#Levenberg–Marquardt-算法" class="headerlink" title="Levenberg–Marquardt 算法"></a>Levenberg–Marquardt 算法</h2><p>Levenberg–Marquardt 算法是一种最小二乘（模型拟合）算法。它可以解决以下问题：</p>
+<p>$$<br>\min_{x}f(x)= \min_{x} | F(x) |^2_2 = \min_{x} \sum_i F_i^2(x)<br>$$</p>
+<p>即求一个 $x$ 使 $f(x)$ 最小。</p>
+<p>1944年<a target="_blank" rel="noopener" href="https://doi.org/10.1090/qam/10666">Kenneth Levenberg</a>首次提出该算法，1963年<a target="_blank" rel="noopener" href="https://doi.org/10.1137/0111030">Donald Marquardt</a>也发现了该算法，后来这种算法被称作Levenberg–Marquardt。</p>
+<p>关于该算法的详细原理和实现可以参考 Flannery 等人的著作 <a target="_blank" rel="noopener" href="http://www.nrbook.com/a/bookcpdf.php">Numerical recipes in C</a>。</p>
+<h2 id="Levenberg–Marquardt-算法与非线性方程组求根"><a href="#Levenberg–Marquardt-算法与非线性方程组求根" class="headerlink" title="Levenberg–Marquardt 算法与非线性方程组求根"></a>Levenberg–Marquardt 算法与非线性方程组求根</h2><p>求解非线性方程组即求解一组 $\bar{x}$ 令其满足 $\bar{F}(x)=0$。显然非线性方程组的根可以令上式成立。</p>
+<p>因此，给定初始值，通过Levenberg–Marquardt 算法求得的 $\bar{x}$  就是非线性方程组 $\bar{x}$ 的一组近似根（初始值附近）。</p>
+<p>非线性方程组的根显然不止一组，而通过该方法只能得到距离初始值较近的根，要想得到全部的根，需要配合其他算法。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>Levenberg, K. (1944). A method for the solution of certain non-linear problems in least squares. <em>Quarterly of applied mathematics</em>, 2(2), 164-168.</li>
+<li>Mardquardt, D. W. (1963). An algorithm for least square estimation of parameters. <em>J. Soc. Ind. Appl. Math</em>, 11, 431-441.</li>
+<li>Flannery, B. P., Press, W. H., Teukolsky, S. A., &amp; Vetterling, W. (1992). Numerical recipes in C. <em>Press Syndicate of the University of Cambridge, New York</em>, 24(78), 36.</li>
+</ul>
 
     </div>
 
@@ -240,21 +238,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%8C%AF%E5%8A%A8%E6%B5%8B%E8%AF%95/" rel="tag"># 振动测试</a>
+              <a href="/tags/Math/" rel="tag"># Math</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/06/12/Markdown%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="prev" title="Markdown 标记语言常用命令">
-                  <i class="fa fa-chevron-left"></i> Markdown 标记语言常用命令
+                <a href="/2021/06/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE/" rel="prev" title="如何在论文中完美插入矢量图">
+                  <i class="fa fa-chevron-left"></i> 如何在论文中完美插入矢量图
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/06/13/2021-6-13-%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86/" rel="next" title="采样定理">
-                  采样定理 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
