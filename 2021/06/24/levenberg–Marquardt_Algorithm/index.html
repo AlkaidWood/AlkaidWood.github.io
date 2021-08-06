@@ -20,15 +20,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;alkaidwood.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script><script src="/js/config.js"></script>
-<meta name="description" content="问题背景在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到 Levenberg–Marquardt 算法。 Levenberg–Marquardt 算法Levenberg–Marquardt 算法是一种最小二乘（模型拟合）算法。它可以解决以下问题： $$\min_{x}f(x)&#x3D; \min_{x} | F(x) |^2_2 &#x3D; \">
+<meta name="description" content="问题背景在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到 Levenberg–Marquardt 算法。 Levenberg–Marquardt 算法Levenberg–Marquardt 算法是一种最小二乘（模型拟合）算法。它可以解决以下问题： $$\min_{x}f(x)&#x3D; \min_{x} \| F(x) \|^2_2 &#x3D;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Levenberg–Marquardt Algorithm">
 <meta property="og:url" content="https://alkaidwood.github.io/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/index.html">
 <meta property="og:site_name" content="Alkaid Zhang - Blog">
-<meta property="og:description" content="问题背景在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到 Levenberg–Marquardt 算法。 Levenberg–Marquardt 算法Levenberg–Marquardt 算法是一种最小二乘（模型拟合）算法。它可以解决以下问题： $$\min_{x}f(x)&#x3D; \min_{x} | F(x) |^2_2 &#x3D; \">
+<meta property="og:description" content="问题背景在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到 Levenberg–Marquardt 算法。 Levenberg–Marquardt 算法Levenberg–Marquardt 算法是一种最小二乘（模型拟合）算法。它可以解决以下问题： $$\min_{x}f(x)&#x3D; \min_{x} \| F(x) \|^2_2 &#x3D;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-24T07:14:39.000Z">
-<meta property="article:modified_time" content="2021-06-24T08:10:25.854Z">
+<meta property="article:modified_time" content="2021-06-24T14:32:49.338Z">
 <meta property="article:author" content="Alkaid Zhang">
 <meta property="article:tag" content="Math">
 <meta name="twitter:card" content="summary">
@@ -131,7 +131,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -202,7 +202,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-06-24 15:14:39 / Modified: 16:10:25" itemprop="dateCreated datePublished" datetime="2021-06-24T15:14:39+08:00">2021-06-24</time>
+      <time title="Created: 2021-06-24 15:14:39 / Modified: 22:32:49" itemprop="dateCreated datePublished" datetime="2021-06-24T15:14:39+08:00">2021-06-24</time>
     </span>
 
   
@@ -217,7 +217,7 @@
     <div class="post-body" itemprop="articleBody">
         <h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到 <strong>Levenberg–Marquardt 算法</strong>。</p>
 <h2 id="Levenberg–Marquardt-算法"><a href="#Levenberg–Marquardt-算法" class="headerlink" title="Levenberg–Marquardt 算法"></a>Levenberg–Marquardt 算法</h2><p>Levenberg–Marquardt 算法是一种最小二乘（模型拟合）算法。它可以解决以下问题：</p>
-<p>$$<br>\min_{x}f(x)= \min_{x} | F(x) |^2_2 = \min_{x} \sum_i F_i^2(x)<br>$$</p>
+<p>$$<br>\min_{x}f(x)= \min_{x} \| F(x) \|^2_2 = \min_{x} \sum_i F_i^2(x)<br>$$</p>
 <p>即求一个 $x$ 使 $f(x)$ 最小。</p>
 <p>1944年<a target="_blank" rel="noopener" href="https://doi.org/10.1090/qam/10666">Kenneth Levenberg</a>首次提出该算法，1963年<a target="_blank" rel="noopener" href="https://doi.org/10.1137/0111030">Donald Marquardt</a>也发现了该算法，后来这种算法被称作Levenberg–Marquardt。</p>
 <p>关于该算法的详细原理和实现可以参考 Flannery 等人的著作 <a target="_blank" rel="noopener" href="http://www.nrbook.com/a/bookcpdf.php">Numerical recipes in C</a>。</p>
@@ -250,6 +250,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2021/08/06/FFT-and-Bode-plot/" rel="next" title="FFT和伯德图 (Bode plot) 的区别与联系">
+                  FFT和伯德图 (Bode plot) 的区别与联系 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
