@@ -28,7 +28,7 @@
 <meta property="og:description" content="概述主要区别：  作用对象。FFT作用于时间序列信号；Bode图作用于系统传递函数 $H(s)$ 目的。FFT的目的是得到一段信号的频谱；Bode图的目的是得到传递函数的幅频特性和相频特性 原理。FFT基于傅里叶变换；Bode图基于拉普拉斯变换 适用性。FFT分析的时间序列可以来自于线性系统或非线性系统；Bode图只能分析线性非时变系统的传递函数  主要联系：  两者都得到频域下的结果 在数学形式">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-06T12:05:57.000Z">
-<meta property="article:modified_time" content="2021-08-06T13:48:13.514Z">
+<meta property="article:modified_time" content="2021-08-06T13:57:46.749Z">
 <meta property="article:author" content="Alkaid Zhang">
 <meta property="article:tag" content="振动测试">
 <meta name="twitter:card" content="summary">
@@ -118,7 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bode%E5%9B%BE"><span class="nav-number">2.</span> <span class="nav-text">Bode图</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">傅里叶变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bode%E5%9B%BE"><span class="nav-number">3.</span> <span class="nav-text">Bode图</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -202,7 +202,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-08-06 20:05:57 / Modified: 21:48:13" itemprop="dateCreated datePublished" datetime="2021-08-06T20:05:57+08:00">2021-08-06</time>
+      <time title="Created: 2021-08-06 20:05:57 / Modified: 21:57:46" itemprop="dateCreated datePublished" datetime="2021-08-06T20:05:57+08:00">2021-08-06</time>
     </span>
 
   
@@ -227,7 +227,7 @@
 <li>两者都得到频域下的结果</li>
 <li>在数学形式上，得到传递函数时使用的拉普拉斯变换退化后得到傅里叶变换</li>
 </ul>
-<p>##傅里叶变换<br><strong>傅里叶变换的目的</strong>：得到被采集信号包含的频率成分和每个频率成分在原信号中的占比，用图形表示则为频谱图。</p>
+<h2 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h2><p><strong>傅里叶变换的目的</strong>：得到被采集信号包含的频率成分和每个频率成分在原信号中的占比，用图形表示则为频谱图。</p>
 <p>傅里叶变换简单通俗理解就是把看似杂乱无章的信号考虑成由一定振幅、相位、频率的基本正弦（余弦）信号组合而成，傅里叶变换的目的就是找出这些基本正弦（余弦）信号中振幅较大（能量较高）信号对应的频率，从而找出杂乱无章的信号中的主要振动频率特点。如减速机故障时，通过傅里叶变换做频谱分析，根据各级齿轮转速、齿数与杂音频谱中振幅大的对比，可以快速判断哪级齿轮损伤。</p>
 <p>傅里叶正变换可以写为：<br>$$<br>X(j\omega) = \int^{+\infty}_ {-\infty} x(t)   e^{ -j \omega t} dt<br>$$</p>
 <p>但是，我们发现傅里叶变换中的基函数是 $e^{j\omega t}$，能用它拟合的函数具有共同特征，那就是，各个频率下的三角函数分量不随时间衰减。这个假设具有明显的局限性，要么是理想没有阻尼的系统，要么是研究有阻尼的系统对特定频率的瞬时响应。</p>
