@@ -28,7 +28,7 @@
 <meta property="og:description" content="概述主要区别：  作用对象。FFT作用于时间序列信号；Bode图作用于系统传递函数 $H(s)$ 目的。FFT的目的是得到一段信号的频谱；Bode图的目的是得到传递函数的幅频特性和相频特性 原理。FFT基于傅里叶变换；Bode图基于拉普拉斯变换 适用性。FFT分析的时间序列可以来自于线性系统或非线性系统；Bode图只能分析线性非时变系统的传递函数  主要联系：  两者都得到频域下的结果 在数学形式">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-06T12:05:57.000Z">
-<meta property="article:modified_time" content="2021-08-06T13:57:46.749Z">
+<meta property="article:modified_time" content="2021-08-07T09:43:57.226Z">
 <meta property="article:author" content="Alkaid Zhang">
 <meta property="article:tag" content="振动测试">
 <meta name="twitter:card" content="summary">
@@ -118,7 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">傅里叶变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bode%E5%9B%BE"><span class="nav-number">3.</span> <span class="nav-text">Bode图</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">傅里叶变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2"><span class="nav-number">3.</span> <span class="nav-text">拉普拉斯变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bode%E5%9B%BE"><span class="nav-number">4.</span> <span class="nav-text">Bode图</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -200,10 +200,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-08-06 20:05:57 / Modified: 21:57:46" itemprop="dateCreated datePublished" datetime="2021-08-06T20:05:57+08:00">2021-08-06</time>
+      <time title="Created: 2021-08-06 20:05:57" itemprop="dateCreated datePublished" datetime="2021-08-06T20:05:57+08:00">2021-08-06</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-08-07 17:43:57" itemprop="dateModified" datetime="2021-08-07T17:43:57+08:00">2021-08-07</time>
+      </span>
 
   
 </div>
@@ -235,7 +241,7 @@
 <p>$$<br>e^{\sigma t}e^{j\omega t}=e^{(\sigma+j\omega) t}=e^{st}<br>$$</p>
 <p>其中，$s=\sigma+j\omega$ 为拉普拉斯变换中的变量，表示复实数（$j$为虚数单位）。</p>
 <p>PS：有关傅里叶变换的详细内容可以参照另一篇博客：<a href="https://alkaidwood.github.io/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">快速傅里叶变换（FFT）基本原理</a>。</p>
-<p>##拉普拉斯变换<br>拉普拉斯变换可以写为：<br>$$<br>X(\sigma+j\omega)=\int^{+\infty}_ {-\infty} x(t)   e^{(\sigma+j\omega) t} dt=\int^{+\infty}_ {-\infty} x(t)   e^{s t} dt=X(s)<br>$$</p>
+<h2 id="拉普拉斯变换"><a href="#拉普拉斯变换" class="headerlink" title="拉普拉斯变换"></a>拉普拉斯变换</h2><p>拉普拉斯变换可以写为：<br>$$<br>X(\sigma+j\omega)=\int^{+\infty}_ {-\infty} x(t)   e^{(\sigma+j\omega) t} dt=\int^{+\infty}_ {-\infty} x(t)   e^{s t} dt=X(s)<br>$$</p>
 <p>$$<br>X(s)=\int^{+\infty}_ {-\infty} x(t)   e^{s t} dt<br>$$</p>
 <p>拓展傅里叶变换得到拉普拉斯变换。它是为简化计算而建立的实变量函数和复变量函数间的一种函数变换。对一个实变量函数作拉普拉斯变换，并在复数域中作各种运算，再将运算结果作拉普拉斯反变换来求得实数域中的相应结果，往往比直接在实数域中求出同样的结果在计算上容易得多。拉普拉斯变换的这种运算步骤对于求解线性微分方程尤为有效，它可把微分方程化为容易求解的代数方程来处理，从而使计算简化。在经典控制理论中，对控制系统的分析和综合，都是建立在拉普拉斯变换的基础上的。</p>
 <p><strong>引入拉普拉斯变换的一个主要优点，是可采用传递函数 $H(s)$ 代替微分方程来描述系统的特性</strong>。这就为采用直观和简便的图解方法来确定控制系统的整个特性（见信号流程图、动态结构图）、分析控制系统的运动过程（见奈奎斯特稳定判据、根轨迹法），以及综合控制系统的校正装置（见控制系统校正方法）提供了可能性。</p>
