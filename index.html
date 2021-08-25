@@ -204,7 +204,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-08-25 18:32:02" itemprop="dateModified" datetime="2021-08-25T18:32:02+08:00">2021-08-25</time>
+        <time title="Modified: 2021-08-25 18:40:00" itemprop="dateModified" datetime="2021-08-25T18:40:00+08:00">2021-08-25</time>
       </span>
 
   
@@ -287,7 +287,11 @@
 <h2 id="最小势能原理"><a href="#最小势能原理" class="headerlink" title="最小势能原理"></a>最小势能原理</h2><h3 id="原理简述"><a href="#原理简述" class="headerlink" title="原理简述"></a>原理简述</h3><p><strong>最小势能原理：</strong> 在满足弹性体的几何方程和位移边界条件的所有容许的位移中，真实的位移必使弹性体的总势能有驻值。当弹性体为稳定平衡时，其总势能为极小值。</p>
 <p><strong>简述为：在一切运动许可状态中，真实状态的总势能最小。</strong></p>
 <h3 id="原理推导"><a href="#原理推导" class="headerlink" title="原理推导"></a>原理推导</h3><p>图中是一个一般意义下的弹性体。受到的外力分为面力 $\bar{p} _i$ 和体力 $f _i$；弹性体的外表面 $S _u$ 所在区域受到位形约束 $\bar{u} _i$。</p>
-<p>$$<br>\begin{array}{l}<br>\varepsilon_{i j}=\frac{1}{2}\left(u_{i, j}+u_{j, i}\right) \<br>\sigma_{i j, j}+f_{i}=0 \<br>\sigma_{i j} v_{i}=\bar{p}<em>{j} \quad \text { on } S</em>{\sigma} \<br>u_{i}=\bar{u}<em>{i} \quad \text { on } S</em>{u} \<br>\sigma_{i j}=\frac{\partial A\left(\varepsilon_{i j}\right)}{\partial \varepsilon_{i j}}<br>\end{array}<br>$$</p>
+<p>$$<br>\varepsilon_{i j}=\frac{1}{2}\left(u_{i, j}+u_{j, i}\right)<br>$$</p>
+<p>$$<br>\sigma_{i j, j}+f_{i}=0<br>$$</p>
+<p>$$<br>\sigma_{i j} v_{i}=\bar{p}<em>{j} \quad \text { on } S</em>{\sigma}<br>$$</p>
+<p>$$<br>u_{i}=\bar{u}<em>{i} \quad \text { on } S</em>{u}<br>$$</p>
+<p>$$<br>\sigma_{i j}=\frac{\partial A\left(\varepsilon_{i j}\right)}{\partial \varepsilon_{i j}}<br>$$</p>
 <img src="/image/FiniteElement/shinengyuanli.png" width = "90%" height = "90%"  align=center />
 
 <p><strong>真实状态</strong>的总势能 $\Pi$ 分为应变能 $U$ 和 外力势 $W$ 两部分：</p>
@@ -301,7 +305,7 @@
 <p>$$<br>\begin{aligned}<br>\Pi^{(k)}-\Pi &amp;=\int_{V}\left[A^{(k)}\left(\varepsilon_{i j}^{(k)}\right)-A\left(\varepsilon_{i j}\right)\right] \mathrm{d} V \<br>&amp;-\int_{V} f_{i}\left[u_{i}^{(k)}-u_{i}\right] \mathrm{d} V-\int_{S} p_{i}\left[u_{i}^{(k)}-u_{i}\right] \mathrm{d} S<br>\end{aligned}<br>$$</p>
 <p>注意到与面力相关项的积分区域 $S_\sigma \rightarrow S$，这是因为两种状态都满足位形约束，所以两种状态在 $S _u$ 的位移差恒为0。</p>
 <p>利用可能功原理，外力项可以被改写为：</p>
-<p>$$<br>\begin{array}{l}<br>-\int_{V} f_{i}\left[u_{i}^{(k)}-u_{i}\right] \mathrm{d} V-\int_{S} p_{i}\left[u_{i}^{(k)}-u_{i}\right] \mathrm{d} S \<br>=-\int_{V} \sigma_{i j}\left(\varepsilon_{i j}^{(k)}-\varepsilon_{i j}\right) \mathrm{d} V=-\int_{V} \frac{\partial A}{\partial \varepsilon_{i j}}\left(\varepsilon_{i j}^{(k)}-\varepsilon_{i j}\right) \mathrm{d} V<br>\end{array}<br>$$</p>
+<p>$$<br>-\int_{V} f_{i}\left[u_{i}^{(k)}-u_{i}\right] \mathrm{d} V-\int_{S} p_{i}\left[u_{i}^{(k)}-u_{i}\right] \mathrm{d} S =-\int_{V} \sigma_{i j}\left(\varepsilon_{i j}^{(k)}-\varepsilon_{i j}\right) \mathrm{d} V=-\int_{V} \frac{\partial A}{\partial \varepsilon_{i j}}\left(\varepsilon_{i j}^{(k)}-\varepsilon_{i j}\right) \mathrm{d} V<br>$$</p>
 <p>则两种状态的势能差为：</p>
 <p>$$<br>\Pi^{(k)}-\Pi=\int_{V}\left[A^{(k)}\left(\varepsilon_{i j}^{(k)}\right)-A\left(\varepsilon_{i j}\right) - \frac{\partial A}{\partial \varepsilon_{i j}}\left(\varepsilon_{i j}^{(k)}-\varepsilon_{i j}\right)\right] \mathrm{d} V<br>$$</p>
 <p>只要应变能密度函数 $A$ 是凸函数，则必有：</p>
@@ -317,17 +321,19 @@
 <p><strong>真实状态</strong>的系统总余能 $\Pi^*$ 由 余应变能 $U^*$ 和外力余势 $W^*$ 构成：</p>
 <p>$$<br>\Pi ^*= U^* +W^* \int_{V} B \left(\sigma_{i j}\right) \mathrm{d} V-  \int_{S_{u}} p_{i} \bar{u}_{i} \mathrm{~d} S<br>$$</p>
 <p><strong>静力许可状态</strong>仅满足静力关系：</p>
-<p>$$<br>\begin{array}{l}<br>\sigma_{i j, j}^{(s)}+f_{i}=0 \quad &amp;\text{ on } V \<br>p_{i}^{(s)}=\sigma_{i j}^{(s)} v_{j} \quad &amp;\text{ on } S <em>u \<br>p</em>{i}^{(s)}=\bar{p}_{i}\quad &amp;\text{ on } S _\sigma<br>\end{array}<br>$$</p>
+<p>$$<br>\sigma <em>{i j, j}^{(s)}+f</em>{i}=0 \quad \text{ on } V<br>$$</p>
+<p>$$<br>p_{i}^{(s)}=\sigma_{i j}^{(s)} v_{j} \quad \text{ on } S _u<br>$$</p>
+<p>$$<br>p_{i}^{(s)}=\bar{p}_{i}\quad \text{ on } S _\sigma<br>$$</p>
 <p>静力许可状态的总余能为：</p>
 <p>$$<br>\Pi ^{*(s)}= \int_{V} B^{(s)}\left(\sigma_{i j}^{(s)}\right) \mathrm{d} V- \int_{S_{u}} p_{i}^{(s)} \bar{u}_{i} \mathrm{~d} S<br>$$</p>
 <p>两种状态的势能差为：</p>
-<p>$$<br>\begin{aligned}<br>\Pi^{<em>(s)}-\Pi^</em>=&amp; \int_{V}\left[B^{(s)}\left(\sigma_{ij}^{(s)}\right)-B\left(\sigma_{i j}\right)\right] \mathrm{d} V \<br>&amp;-\int_{V}\left(f_{i}^{(s)}-f_{i}\right) u_{i} \mathrm{<del>d} V-\int_{S}\left(p_{i}^{(s)}-p_{i}\right) u_{i} \mathrm{</del>d} S<br>\end{aligned}<br>$$</p>
+<p>$$<br>\Pi^{<em>(s)}-\Pi^</em>= \int_{V}\left[B^{(s)}\left(\sigma_{ij}^{(s)}\right)-B\left(\sigma_{i j}\right)\right] \mathrm{d} V -\int_{V}\left(f_{i}^{(s)}-f_{i}\right) u_{i} \mathrm{<del>d} V-\int_{S}\left(p_{i}^{(s)}-p_{i}\right) u_{i} \mathrm{</del>d} S<br>$$</p>
 <p>利用可能功原理，外力项可以被改写为：</p>
-<p>$$<br>\begin{array}{l}<br>-\int_{V}\left(f_{i}^{(s)}-f_{i}\right) u_{i} \mathrm{<del>d} V-\int_{S}\left(p_{i}^{(s)}-p_{i}\right) u_{i} \mathrm{</del>d} S\<br>=-\int_{V} \varepsilon_{i j}\left(\sigma_{i j}^{(s)}-\sigma_{i j}\right) \mathrm{d} V =-\int_{V} \frac{\partial B}{\partial \sigma_{i j}}\left(\sigma_{i j}^{(s)}-\sigma_{i j}\right) \mathrm{d} V<br>\end{array}<br>$$</p>
+<p>$$<br>-\int_{V}\left(f_{i}^{(s)}-f_{i}\right) u_{i} \mathrm{<del>d} V-\int_{S}\left(p_{i}^{(s)}-p_{i}\right) u_{i} \mathrm{</del>d} S=-\int_{V} \varepsilon_{i j}\left(\sigma_{i j}^{(s)}-\sigma_{i j}\right) \mathrm{d} V =-\int_{V} \frac{\partial B}{\partial \sigma_{i j}}\left(\sigma_{i j}^{(s)}-\sigma_{i j}\right) \mathrm{d} V<br>$$</p>
 <p>只要应变余能密度函数 $B$ 是凸函数，则必有：</p>
 <p>$$<br>\Pi^{<em>(s)}-\Pi^</em> \geq 0<br>$$</p>
 <h2 id="最小势能原理和最小余能原理的区别与联系"><a href="#最小势能原理和最小余能原理的区别与联系" class="headerlink" title="最小势能原理和最小余能原理的区别与联系"></a>最小势能原理和最小余能原理的区别与联系</h2><p><em><em>联系：$\Pi +\Pi^</em>=0$</em>*</p>
-<p>$$<br>\begin{aligned}<br>\Pi+\Pi^* &amp;=\int_{V}\left[A+B\right] \mathrm{d} V-\int_{V} f_{i} u_{i} \mathrm{<del>d} V-\int_{S_{\sigma}} \bar{p}<em>{i} u</em>{i} \mathrm{</del>d} S-\int_{S_{u}} p_{i} \bar{u}<em>{i} \mathrm{~d} S \<br>&amp;=\int</em>{V} \sigma_{i j} \varepsilon_{i j} \mathrm{<del>d} V-\int_{V} f_{i} u_{i} \mathrm{</del>d} V-\int_{S} p_{i} u_{i} \mathrm{~d} S<br>\end{aligned}<br>$$</p>
+<p>$$<br>\Pi+\Pi^* =\int_{V}\left[A+B\right] \mathrm{d} V-\int_{V} f_{i} u_{i} \mathrm{<del>d} V-\int_{S_{\sigma}} \bar{p}<em>{i} u</em>{i} \mathrm{</del>d} S-\int_{S_{u}} p_{i} \bar{u}<em>{i} \mathrm{~d} S =\int</em>{V} \sigma_{i j} \varepsilon_{i j} \mathrm{<del>d} V-\int_{V} f_{i} u_{i} \mathrm{</del>d} V-\int_{S} p_{i} u_{i} \mathrm{~d} S<br>$$</p>
 <p>由可能功原理可得 $\Pi +\Pi^*=0$。</p>
 <p><strong>区别：</strong><br>用这两种原理建立数值方程求解时有以下区别：最小势能原理以位移为基本变量，要求位移场事先满足几何方程和给定位移边界条件。最小余能原理以应力为基本变量，要求应力场事先满足平衡方程和给定面力边界条件。</p>
 <p>用该原理求解的优点是通常只有一个场函数，且泛函具有极值性。但是对于许多物理或力学问题，要求场函数事先满足全部附加条件是很困难的。</p>
