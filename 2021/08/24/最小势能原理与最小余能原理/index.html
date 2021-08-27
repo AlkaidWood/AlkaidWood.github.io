@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://alkaidwood.github.io/image/FiniteElement/yingbianneng.png">
 <meta property="og:image" content="https://alkaidwood.github.io/image/FiniteElement/shinengyuanli.png">
 <meta property="article:published_time" content="2021-08-24T08:17:29.000Z">
-<meta property="article:modified_time" content="2021-08-25T10:59:07.711Z">
+<meta property="article:modified_time" content="2021-08-26T07:47:23.283Z">
 <meta property="article:author" content="Alkaid Zhang">
 <meta property="article:tag" content="有限元">
 <meta name="twitter:card" content="summary">
@@ -134,7 +134,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-08-25 18:59:07" itemprop="dateModified" datetime="2021-08-25T18:59:07+08:00">2021-08-25</time>
+        <time title="Modified: 2021-08-26 15:47:23" itemprop="dateModified" datetime="2021-08-26T15:47:23+08:00">2021-08-26</time>
       </span>
 
   
@@ -342,8 +342,16 @@
 <h2 id="最小势能原理和最小余能原理的区别与联系"><a href="#最小势能原理和最小余能原理的区别与联系" class="headerlink" title="最小势能原理和最小余能原理的区别与联系"></a>最小势能原理和最小余能原理的区别与联系</h2><p><strong>联系：</strong></p>
 <p>$$<br>\Pi+\Pi^* =\int _{V} \left[ A+B \right] \mathrm{d} V-\int _{V} f _{i} u _{i} \mathrm{d} V-\int _{S _{\sigma}} \bar{p} _{i} u _{i} \mathrm{d} S-\int _{S _{u}} p _{i} \bar{u} _{i} \mathrm{d} S =\int _{V} \sigma _{i j} \varepsilon _{i j} \mathrm{d} V-\int _{V} f _{i} u _{i} \mathrm{d} V-\int _{S} p _{i} u _{i} \mathrm{d} S<br>$$</p>
 <p>由可能功原理可得 $\Pi +\Pi^*=0$。</p>
-<p><strong>区别：</strong><br>用这两种原理建立数值方程求解时有以下区别：最小势能原理以位移为基本变量，要求位移场事先满足几何方程和给定位移边界条件。最小余能原理以应力为基本变量，要求应力场事先满足平衡方程和给定面力边界条件。</p>
-<p>用该原理求解的优点是通常只有一个场函数，且泛函具有极值性。但是对于许多物理或力学问题，要求场函数事先满足全部附加条件是很困难的。</p>
+<p>于是有:</p>
+<p>$$<br>\Pi^{* (s)} \geq \Pi^* =-\Pi \geq - \Pi^{(k)}<br>$$</p>
+<p>因此用这两种原理建立数值方程求解有如下<strong>特点：</strong></p>
+<ul>
+<li>利用最小势能原理求得位移近似解的弹性变形能是精确解变形能的下届，即近似的位移场在总体上偏小，也就是说结构的计算模型显得偏于刚硬。</li>
+<li>利用最小余能原理得到的近似解的弹性余能是精确余能的上界，即近似的应力解在总体上偏大，结构计算模型模型偏于柔软。</li>
+<li>分别利用这两个极值原理求解同一个问题时，可以获得这个问题的上界和下界，可以较准确的估算所得近似解的误差。</li>
+</ul>
+<p><strong>区别：</strong><br>最小势能原理以位移为基本变量，要求位移场事先满足几何方程和给定位移边界条件。最小余能原理以应力为基本变量，要求应力场事先满足平衡方程和给定面力边界条件。</p>
+<p>用这两个原理求解的优点是通常只有一个场函数，且泛函具有极值性。但是对于许多物理或力学问题，要求场函数事先满足全部附加条件是很困难的。</p>
 <hr>
 <p>参考：</p>
 <ul>
@@ -371,6 +379,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2021/08/26/%E5%8A%A0%E6%9D%83%E6%AE%8B%E5%80%BCGalerkin%E6%96%B9%E6%B3%95/" rel="next" title="加权残值伽辽金法">
+                  加权残值伽辽金法 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
