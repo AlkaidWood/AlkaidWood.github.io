@@ -28,7 +28,7 @@
 <meta property="og:description" content="三者存在的条件 形心：目标具有几何外形； 质心：目标具有几何外形、具有质量； 重心：目标具有几何外形、具有质量、身处重力场。  质心定义：质心是多质点系统的质量中心。特点：若对该点施力，系统会沿着力的方向运动、不会旋转。质心位置：质点的位置对质量取加权平均值，求得质心位置。 对于离散系统，三维物体的质心位置由下式求得： $$\bar{x} &#x3D; \frac{\sum{x_k m_k}}{\sum{m">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-08T11:29:11.000Z">
-<meta property="article:modified_time" content="2022-03-08T12:29:24.603Z">
+<meta property="article:modified_time" content="2022-03-08T12:39:06.518Z">
 <meta property="article:author" content="Alkaid Zhang">
 <meta property="article:tag" content="数学物理基础知识">
 <meta name="twitter:card" content="summary">
@@ -202,7 +202,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-03-08 19:29:11 / Modified: 20:29:24" itemprop="dateCreated datePublished" datetime="2022-03-08T19:29:11+08:00">2022-03-08</time>
+      <time title="Created: 2022-03-08 19:29:11 / Modified: 20:39:06" itemprop="dateCreated datePublished" datetime="2022-03-08T19:29:11+08:00">2022-03-08</time>
     </span>
 
   
@@ -222,15 +222,15 @@
 </ul>
 <h2 id="质心"><a href="#质心" class="headerlink" title="质心"></a>质心</h2><p><strong>定义</strong>：质心是多质点系统的质量中心。<br><strong>特点</strong>：若对该点施力，系统会沿着力的方向运动、不会旋转。<br><strong>质心位置</strong>：质点的位置对质量取加权平均值，求得质心位置。</p>
 <p>对于离散系统，三维物体的质心位置由下式求得：</p>
-<p>$$<br>\bar{x} = \frac{\sum{x_k m_k}}{\sum{m_k}},; \bar{y} = \frac{\sum{y_k m_k}}{\sum{m_k}}, ; \bar{z} = \frac{\sum{z_k m_k}}{\sum{m_k}}<br>$$</p>
-<p>对于连续系统，上式推广为：<br>$$<br>\bar{x} = \frac{\int_{\Omega}{x \rho}; \rm{d}V}{\int_{\Omega}{ \rho}; \rm{d}V},; \bar{y} = \frac{\int_{\Omega}{y \rho}; \rm{d}V}{\int_{\Omega}{ \rho}; \rm{d}V},; \bar{z} = \frac{\int_{\Omega}{z \rho}; \rm{d}V}{\int_{\Omega}{ \rho}; \rm{d}V}<br>$$</p>
+<p>$$<br>\bar{x} = \frac{\sum{x_k m_k}}{\sum{m_k}}, \bar{y} = \frac{\sum{y_k m_k}}{\sum{m_k}},  \bar{z} = \frac{\sum{z_k m_k}}{\sum{m_k}}<br>$$</p>
+<p>对于连续系统，上式推广为：<br>$$<br>\bar{x} = \frac{\int_{\Omega}{x \rho} \rm{d}V}{\int_{\Omega}{ \rho} \rm{d}V},  \bar{y} = \frac{\int_{\Omega}{y \rho} \rm{d}V}{\int_{\Omega}{ \rho} \rm{d}V}, \bar{z} = \frac{\int_{\Omega}{z \rho}  \rm{d}V}{\int_{\Omega}{ \rho} \rm{d}V}<br>$$</p>
 <p>其中，$\rho$ 是物体的密度，为 $x,y,z$ 的函数。上式为在物体所在空间 $\Omega$ 进行体积分。</p>
 <h2 id="形心"><a href="#形心" class="headerlink" title="形心"></a>形心</h2><p><strong>定义</strong>：形心又被称为几何中心。形心是将该物体分成“矩”相等的两部分的所有超平面的交点。<br><strong>形心位置</strong>：等价于取加权平均。</p>
-<p>对于二维图形，形心位置由下式给出：<br>$$<br>\bar{x} = \frac{\int{x f(x)};\rm{d}x}{\int{f(x)};\rm{d}x}, ;\bar{y} = \frac{\int{y f(y)};\rm{d}y}{\int{f(y)};\rm{d}y}<br>$$</p>
+<p>对于二维图形，形心位置由下式给出：<br>$$<br>\bar{x} = \frac{\int{x f(x)}\rm{d}x}{\int{f(x)}\rm{d}x}, \bar{y} = \frac{\int{y f(y)}\rm{d}y}{\int{f(y)}\rm{d}y}<br>$$</p>
 <p>上式分子部分为 $x$ 和 $y$ 的一阶矩。其中，$f(x)$ 为几何图形的横坐标位于 $x$ 点时在 $y$ 方向上的长度；$f(y)$ 为几何图形的纵坐标位于 $y$ 点时在 $x$ 方向上的长度。</p>
-<p>上式的等价形式为：<br>$$<br>\bar{x} = \frac{\int_D{x};\rm{d}S}{\int_D{ };\rm{d}S} = \frac{\int_D{x};\rm{d}S}{A}<br>$$</p>
+<p>上式的等价形式为：<br>$$<br>\bar{x} = \frac{\int_D{x}\rm{d}S}{\int_D{ }\rm{d}S} = \frac{\int_D{x}\rm{d}S}{A}<br>$$</p>
 <p>上式积分表示在几何图形所在二维空间 $D$ 进行面积分；$A$ 表示二维几何图形的面积。（$y$ 方向写法与之类似）</p>
-<p>将该式推广至三维空间可得：<br>$$<br>\bar{x} = \frac{\int_\Omega{x};\rm{d}V}{\int_\Omega{ };\rm{d}V} = \frac{\int_\Omega{x};\rm{d}V}{V}<br>$$</p>
+<p>将该式推广至三维空间可得：<br>$$<br>\bar{x} = \frac{\int_\Omega{x}\rm{d}V}{\int_\Omega{ }\rm{d}V} = \frac{\int_\Omega{x}\rm{d}V}{V}<br>$$</p>
 <p>对比发现，上式积分中如果加入密度项，则得到的质心的坐标。即，<strong>对于密度均匀的物体，其质心和形心重合</strong>。</p>
 <h2 id="重心"><a href="#重心" class="headerlink" title="重心"></a>重心</h2><p><strong>定义</strong>：重心是重力作用的平均位置。<br><strong>特点</strong>：各质点相对于重心的位置矢量乘上各质点的重力之和(合力矩)为零。</p>
 <p>在均匀的重力场中，重心等同于质心。在非均匀的重力场中，质心和重心往往不在同一点。</p>
