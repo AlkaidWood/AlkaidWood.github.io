@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;alkaidwood.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script><script src="/js/config.js"></script>
+<meta name="description" content="数据类型字符 str 引号：在字符中显示单引号，则编程时用双引号将字符括起来；在字符中显示双引号，则编程时用单引号将字符括起来；字符中的单引号：course &#x3D; &quot;He&#39;s finger&quot;字符串中的双引号：words &#x3D; &#39;Python is for &quot;beginners&quot;&#39; 大小写：course.upper() 、 course.l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础知识">
+<meta property="og:url" content="https://alkaidwood.github.io/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:site_name" content="Alkaid Zhang - Blog">
+<meta property="og:description" content="数据类型字符 str 引号：在字符中显示单引号，则编程时用双引号将字符括起来；在字符中显示双引号，则编程时用单引号将字符括起来；字符中的单引号：course &#x3D; &quot;He&#39;s finger&quot;字符串中的双引号：words &#x3D; &#39;Python is for &quot;beginners&quot;&#39; 大小写：course.upper() 、 course.l">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-09T13:43:59.000Z">
+<meta property="article:modified_time" content="2021-11-10T10:22:59.507Z">
+<meta property="article:author" content="Alkaid Zhang">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://alkaidwood.github.io/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;alkaidwood.github.io&#x2F;2021&#x2F;11&#x2F;09&#x2F;Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;11&#x2F;09&#x2F;Python基础知识&#x2F;&quot;,&quot;title&quot;:&quot;Python基础知识&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>Python基础知识 | Alkaid Zhang - Blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Alkaid Zhang - Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share equ happiness</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6-str"><span class="nav-number">1.1.</span> <span class="nav-text">字符 str</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B4%A2%E5%BC%95"><span class="nav-number">1.2.</span> <span class="nav-text">数据索引</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if"><span class="nav-number">2.</span> <span class="nav-text">if</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF"><span class="nav-number">3.</span> <span class="nav-text">循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">4.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="nav-number">4.1.</span> <span class="nav-text">常用函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7"><span class="nav-number">5.1.</span> <span class="nav-text">运算符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#import"><span class="nav-number">5.2.</span> <span class="nav-text">import</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Questions"><span class="nav-number">6.</span> <span class="nav-text">Questions</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Alkaid Zhang</p>
+  <div class="site-description" itemprop="description">Alkaid Zhang</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Alkaid Zhang">
+      <meta itemprop="description" content="Alkaid Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alkaid Zhang - Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Python基础知识
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-11-09 21:43:59" itemprop="dateCreated datePublished" datetime="2021-11-09T21:43:59+08:00">2021-11-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-11-10 18:22:59" itemprop="dateModified" datetime="2021-11-10T18:22:59+08:00">2021-11-10</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="字符-str"><a href="#字符-str" class="headerlink" title="字符 str"></a>字符 str</h3><ul>
+<li><strong>引号</strong>：在字符中显示单引号，则编程时用双引号将字符括起来；在字符中显示双引号，则编程时用单引号将字符括起来；<br>字符中的单引号：<code>course = &quot;He&#39;s finger&quot;</code><br>字符串中的双引号：<code>words = &#39;Python is for &quot;beginners&quot;&#39;</code></li>
+<li><strong>大小写</strong>：<code>course.upper()</code> 、 <code>course.lower()</code>、<code>course.title()</code></li>
+<li><strong>查找替换</strong>：<code>course.find(&#39;xxx&#39;),</code>和<code>course.replace(&#39;xxx&#39;,&#39;aaa&#39;)</code></li>
+<li><strong>字符长度</strong>：使用<code>len()</code></li>
+<li><strong>f与花括号</strong>：可以被用来格式化输出字符（在字符中嵌入变量）。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">first_name=&#x27;John&#x27;</span><br><span class="line">last_name=&#x27;Smith&#x27;</span><br><span class="line">msg = f&quot;&#123;first_name&#125; [&#123;last_name&#125;] is a coder&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>整数 int<br>浮点数 float<br>复数 complex</p>
+<h3 id="数据索引"><a href="#数据索引" class="headerlink" title="数据索引"></a>数据索引</h3><ol>
+<li>Python中的索引从0开始</li>
+<li>数据索引中的负号表示从结束端开始：<code>[1:-1]</code>是正确的，-1表示倒数第二个数据</li>
+</ol>
+<p><strong>数据切片索引</strong><br>与Matlab不同的是，<code>A[1:5]</code>返回的不是数列A中位于1、2、3、4、5号位置的数据；取而代之的是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="line">print(A[1:5])</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">[2, 3, 4, 5]</span><br><span class="line"></span><br><span class="line">      -------------------------------------------</span><br><span class="line">[A]:   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |</span><br><span class="line">cut:  -0---1---2---3---4---5---6---7---8---9----10- </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><p>常用调用模式如下，用缩进控制开始和结束（与matlab不同）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if is_hot:</span><br><span class="line">    print(&#x27;xxxxx&#x27;)</span><br><span class="line">elif is_coldL:</span><br><span class="line">    print(&#x27;xxxxxx&#x27;)</span><br><span class="line">else:</span><br><span class="line">    print(&#x27;xxxx&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>常用逻辑运算符</p>
+<ol>
+<li>和：<code>and</code>，例如：<code>is_hot and is_cold</code></li>
+<li>或：<code>or</code></li>
+<li>非：<code>not</code>，例如：<code>is_cold and not is_wind</code>，<code>not</code>会将其后的False转化为True；上例中如果<code>is_cold = True</code>、<code>is_wind = False</code>，则返回<code>True</code></li>
+</ol>
+<p>比大小：</p>
+<ol>
+<li>大于：<code>&gt;</code>、小于:<code>&lt;</code>、等于:<code>==</code></li>
+<li>大于等于：<code>&gt;=</code>、小于等于：<code>&lt;=</code></li>
+<li>不等于：<code>!=</code></li>
+</ol>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><p><code>while</code>常用调用模式如下，<code>break</code>可以用来跳出程序：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i=1</span><br><span class="line">while i&lt;=5：</span><br><span class="line">    print(&#x27;i&#x27;)</span><br><span class="line">    i = i + 1</span><br><span class="line">print(&#x27;Done&#x27;) #用缩进控制while的结束</span><br></pre></td></tr></table></figure>
+
+<p><code>for</code>常用调用模式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for item in [1,2,3,4]</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure>
+
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h3><p>绝对值：<code>abs()</code><br>四舍五入到整数：<code>round()</code><br>生成等间距数列：<code>range(5,10,2)</code>；step=2，from 5 to 10，输出 5 7 9</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="运算符号"><a href="#运算符号" class="headerlink" title="运算符号"></a>运算符号</h3><ol>
+<li>加<code>+</code>；减<code>-</code>；乘<code>*</code>；除<code>/</code>；幂<code>**</code></li>
+<li>特殊除号：得到结果的整数部分<code>//</code>；得到结果的余数<code>%</code></li>
+<li>增广运算符<code>X += 3</code>与<code>x = x + 3</code>等价、<code>x -= 3</code>同理</li>
+</ol>
+<h3 id="import"><a href="#import" class="headerlink" title="import"></a><em><strong>import</strong></em></h3><p>调用包：<code>import XXX</code>，例如<code>import math</code>;使用时<code>math.acos()</code></p>
+<h2 id="Questions"><a href="#Questions" class="headerlink" title="Questions"></a>Questions</h2><ol>
+<li>methods 和 function 在Python有何区别的？</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"># Python</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/08/26/%E5%8A%A0%E6%9D%83%E6%AE%8B%E5%80%BCGalerkin%E6%96%B9%E6%B3%95/" rel="prev" title="加权残值伽辽金法">
+                  <i class="fa fa-chevron-left"></i> 加权残值伽辽金法
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/03/08/%E8%B4%A8%E5%BF%83-%E5%BD%A2%E5%BF%83-%E9%87%8D%E5%BF%83/" rel="next" title="质心_形心_重心">
+                  质心_形心_重心 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Alkaid Zhang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:{&quot;url&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;,&quot;integrity&quot;:&quot;sha256-ncNI9OXOS5Ek4tzVYiOMmN&#x2F;KKCPZ6V0Cpv2P&#x2F;zHntiA&#x3D;&quot;}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

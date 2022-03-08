@@ -128,14 +128,14 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -164,6 +164,206 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2022/03/08/%E8%B4%A8%E5%BF%83-%E5%BD%A2%E5%BF%83-%E9%87%8D%E5%BF%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Alkaid Zhang">
+      <meta itemprop="description" content="Alkaid Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alkaid Zhang - Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/08/%E8%B4%A8%E5%BF%83-%E5%BD%A2%E5%BF%83-%E9%87%8D%E5%BF%83/" class="post-title-link" itemprop="url">质心_形心_重心</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-08 19:29:11 / Modified: 20:29:24" itemprop="dateCreated datePublished" datetime="2022-03-08T19:29:11+08:00">2022-03-08</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="三者存在的条件"><a href="#三者存在的条件" class="headerlink" title="三者存在的条件"></a>三者存在的条件</h2><ul>
+<li><strong>形心</strong>：目标具有几何外形；</li>
+<li><strong>质心</strong>：目标具有几何外形、具有质量；</li>
+<li><strong>重心</strong>：目标具有几何外形、具有质量、身处重力场。</li>
+</ul>
+<h2 id="质心"><a href="#质心" class="headerlink" title="质心"></a>质心</h2><p><strong>定义</strong>：质心是多质点系统的质量中心。<br><strong>特点</strong>：若对该点施力，系统会沿着力的方向运动、不会旋转。<br><strong>质心位置</strong>：质点的位置对质量取加权平均值，求得质心位置。</p>
+<p>对于离散系统，三维物体的质心位置由下式求得：</p>
+<p>$$<br>\bar{x} = \frac{\sum{x_k m_k}}{\sum{m_k}},; \bar{y} = \frac{\sum{y_k m_k}}{\sum{m_k}}, ; \bar{z} = \frac{\sum{z_k m_k}}{\sum{m_k}}<br>$$</p>
+<p>对于连续系统，上式推广为：<br>$$<br>\bar{x} = \frac{\int_{\Omega}{x \rho}; \rm{d}V}{\int_{\Omega}{ \rho}; \rm{d}V},; \bar{y} = \frac{\int_{\Omega}{y \rho}; \rm{d}V}{\int_{\Omega}{ \rho}; \rm{d}V},; \bar{z} = \frac{\int_{\Omega}{z \rho}; \rm{d}V}{\int_{\Omega}{ \rho}; \rm{d}V}<br>$$</p>
+<p>其中，$\rho$ 是物体的密度，为 $x,y,z$ 的函数。上式为在物体所在空间 $\Omega$ 进行体积分。</p>
+<h2 id="形心"><a href="#形心" class="headerlink" title="形心"></a>形心</h2><p><strong>定义</strong>：形心又被称为几何中心。形心是将该物体分成“矩”相等的两部分的所有超平面的交点。<br><strong>形心位置</strong>：等价于取加权平均。</p>
+<p>对于二维图形，形心位置由下式给出：<br>$$<br>\bar{x} = \frac{\int{x f(x)};\rm{d}x}{\int{f(x)};\rm{d}x}, ;\bar{y} = \frac{\int{y f(y)};\rm{d}y}{\int{f(y)};\rm{d}y}<br>$$</p>
+<p>上式分子部分为 $x$ 和 $y$ 的一阶矩。其中，$f(x)$ 为几何图形的横坐标位于 $x$ 点时在 $y$ 方向上的长度；$f(y)$ 为几何图形的纵坐标位于 $y$ 点时在 $x$ 方向上的长度。</p>
+<p>上式的等价形式为：<br>$$<br>\bar{x} = \frac{\int_D{x};\rm{d}S}{\int_D{ };\rm{d}S} = \frac{\int_D{x};\rm{d}S}{A}<br>$$</p>
+<p>上式积分表示在几何图形所在二维空间 $D$ 进行面积分；$A$ 表示二维几何图形的面积。（$y$ 方向写法与之类似）</p>
+<p>将该式推广至三维空间可得：<br>$$<br>\bar{x} = \frac{\int_\Omega{x};\rm{d}V}{\int_\Omega{ };\rm{d}V} = \frac{\int_\Omega{x};\rm{d}V}{V}<br>$$</p>
+<p>对比发现，上式积分中如果加入密度项，则得到的质心的坐标。即，<strong>对于密度均匀的物体，其质心和形心重合</strong>。</p>
+<h2 id="重心"><a href="#重心" class="headerlink" title="重心"></a>重心</h2><p><strong>定义</strong>：重心是重力作用的平均位置。<br><strong>特点</strong>：各质点相对于重心的位置矢量乘上各质点的重力之和(合力矩)为零。</p>
+<p>在均匀的重力场中，重心等同于质心。在非均匀的重力场中，质心和重心往往不在同一点。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Alkaid Zhang">
+      <meta itemprop="description" content="Alkaid Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alkaid Zhang - Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">Python基础知识</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-11-09 21:43:59" itemprop="dateCreated datePublished" datetime="2021-11-09T21:43:59+08:00">2021-11-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-11-10 18:22:59" itemprop="dateModified" datetime="2021-11-10T18:22:59+08:00">2021-11-10</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="字符-str"><a href="#字符-str" class="headerlink" title="字符 str"></a>字符 str</h3><ul>
+<li><strong>引号</strong>：在字符中显示单引号，则编程时用双引号将字符括起来；在字符中显示双引号，则编程时用单引号将字符括起来；<br>字符中的单引号：<code>course = &quot;He&#39;s finger&quot;</code><br>字符串中的双引号：<code>words = &#39;Python is for &quot;beginners&quot;&#39;</code></li>
+<li><strong>大小写</strong>：<code>course.upper()</code> 、 <code>course.lower()</code>、<code>course.title()</code></li>
+<li><strong>查找替换</strong>：<code>course.find(&#39;xxx&#39;),</code>和<code>course.replace(&#39;xxx&#39;,&#39;aaa&#39;)</code></li>
+<li><strong>字符长度</strong>：使用<code>len()</code></li>
+<li><strong>f与花括号</strong>：可以被用来格式化输出字符（在字符中嵌入变量）。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">first_name=&#x27;John&#x27;</span><br><span class="line">last_name=&#x27;Smith&#x27;</span><br><span class="line">msg = f&quot;&#123;first_name&#125; [&#123;last_name&#125;] is a coder&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>整数 int<br>浮点数 float<br>复数 complex</p>
+<h3 id="数据索引"><a href="#数据索引" class="headerlink" title="数据索引"></a>数据索引</h3><ol>
+<li>Python中的索引从0开始</li>
+<li>数据索引中的负号表示从结束端开始：<code>[1:-1]</code>是正确的，-1表示倒数第二个数据</li>
+</ol>
+<p><strong>数据切片索引</strong><br>与Matlab不同的是，<code>A[1:5]</code>返回的不是数列A中位于1、2、3、4、5号位置的数据；取而代之的是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="line">print(A[1:5])</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">[2, 3, 4, 5]</span><br><span class="line"></span><br><span class="line">      -------------------------------------------</span><br><span class="line">[A]:   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |</span><br><span class="line">cut:  -0---1---2---3---4---5---6---7---8---9----10- </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><p>常用调用模式如下，用缩进控制开始和结束（与matlab不同）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if is_hot:</span><br><span class="line">    print(&#x27;xxxxx&#x27;)</span><br><span class="line">elif is_coldL:</span><br><span class="line">    print(&#x27;xxxxxx&#x27;)</span><br><span class="line">else:</span><br><span class="line">    print(&#x27;xxxx&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>常用逻辑运算符</p>
+<ol>
+<li>和：<code>and</code>，例如：<code>is_hot and is_cold</code></li>
+<li>或：<code>or</code></li>
+<li>非：<code>not</code>，例如：<code>is_cold and not is_wind</code>，<code>not</code>会将其后的False转化为True；上例中如果<code>is_cold = True</code>、<code>is_wind = False</code>，则返回<code>True</code></li>
+</ol>
+<p>比大小：</p>
+<ol>
+<li>大于：<code>&gt;</code>、小于:<code>&lt;</code>、等于:<code>==</code></li>
+<li>大于等于：<code>&gt;=</code>、小于等于：<code>&lt;=</code></li>
+<li>不等于：<code>!=</code></li>
+</ol>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><p><code>while</code>常用调用模式如下，<code>break</code>可以用来跳出程序：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i=1</span><br><span class="line">while i&lt;=5：</span><br><span class="line">    print(&#x27;i&#x27;)</span><br><span class="line">    i = i + 1</span><br><span class="line">print(&#x27;Done&#x27;) #用缩进控制while的结束</span><br></pre></td></tr></table></figure>
+
+<p><code>for</code>常用调用模式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for item in [1,2,3,4]</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure>
+
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h3><p>绝对值：<code>abs()</code><br>四舍五入到整数：<code>round()</code><br>生成等间距数列：<code>range(5,10,2)</code>；step=2，from 5 to 10，输出 5 7 9</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="运算符号"><a href="#运算符号" class="headerlink" title="运算符号"></a>运算符号</h3><ol>
+<li>加<code>+</code>；减<code>-</code>；乘<code>*</code>；除<code>/</code>；幂<code>**</code></li>
+<li>特殊除号：得到结果的整数部分<code>//</code>；得到结果的余数<code>%</code></li>
+<li>增广运算符<code>X += 3</code>与<code>x = x + 3</code>等价、<code>x -= 3</code>同理</li>
+</ol>
+<h3 id="import"><a href="#import" class="headerlink" title="import"></a><em><strong>import</strong></em></h3><p>调用包：<code>import XXX</code>，例如<code>import math</code>;使用时<code>math.acos()</code></p>
+<h2 id="Questions"><a href="#Questions" class="headerlink" title="Questions"></a>Questions</h2><ol>
+<li>methods 和 function 在Python有何区别的？</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1126,262 +1326,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/06/14/%E5%AE%9E%E9%AA%8C%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8E%E4%B8%BB%E8%A6%81%E8%BF%87%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Alkaid Zhang">
-      <meta itemprop="description" content="Alkaid Zhang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Alkaid Zhang - Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/14/%E5%AE%9E%E9%AA%8C%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8E%E4%B8%BB%E8%A6%81%E8%BF%87%E7%A8%8B/" class="post-title-link" itemprop="url">实验模态分析的基本原理与主要过程</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-06-14 18:47:21" itemprop="dateCreated datePublished" datetime="2021-06-14T18:47:21+08:00">2021-06-14</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-16 21:36:28" itemprop="dateModified" datetime="2021-06-16T21:36:28+08:00">2021-06-16</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="模态分析"><a href="#模态分析" class="headerlink" title="模态分析"></a>模态分析</h3><p><strong>模态分析</strong>是研究结构动力特性一种方法，一般应用在工程振动领域。</p>
-<p>其中，<strong>模态</strong>是指机械结构的固有振动特性，每一个模态都有特定的固有频率、阻尼比和模态振型。分析这些模态参数的过程称为模态分析。</p>
-<p>按计算方法，模态分析可分为：</p>
-<ul>
-<li>计算模态分析：由有限元计算的方法取得待识别参数</li>
-<li>试验模态分析：通过试验将采集的系统输入与输出信号经过参数识别获得待识别参数</li>
-</ul>
-<p><strong>通常，模态分析都是指试验模态分析。</strong></p>
-<h3 id="实验模态分析"><a href="#实验模态分析" class="headerlink" title="实验模态分析"></a>实验模态分析</h3><p><strong>实验模态分析</strong>主要是通过模态试验，测量系统的振动响应信号或同时测量系统的激励信号和响应信号，从测量信号中，识别描述系统动力特征的有关参数。</p>
-<p>试验模态分析结果可以验证和修改结构数学模型、综合试验分析模型、校核动态计算分析结果的有效性、分析结构产品性能、检查结构中的薄弱部位、鉴定结构总体设计的合理性。</p>
-<h3 id="待识别参数"><a href="#待识别参数" class="headerlink" title="待识别参数"></a>待识别参数</h3><ul>
-<li>物理参数：质量矩阵、刚度矩阵、阻尼矩阵等</li>
-<li>模态参数：固有频率、衰减系数、模态矢量、模态刚度、模态阻尼</li>
-</ul>
-<h3 id="模态分析系统的组成"><a href="#模态分析系统的组成" class="headerlink" title="模态分析系统的组成"></a>模态分析系统的组成</h3><ul>
-<li>激振系统：使得系统产生稳态、瞬态或随机振动<ul>
-<li>稳态正弦激振法</li>
-<li>瞬态激振法<ul>
-<li>快速正弦扫描激振法</li>
-<li>脉冲锤击激振法</li>
-</ul>
-</li>
-<li>随机激振法<ul>
-<li>纯随机激振法</li>
-<li>伪随机激振法</li>
-<li>周期随机激振法</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>测量系统：用传感器测量实验对象的各个主要部位上的位移、速度或加速度信号，然后将这些信号与激振信号一起记录并保存</li>
-<li>分析系统：将保存的激励信号和响应信号经过数模转换，采样并输入数字式分析仪或计算机中，用硬件或软件系统识别振动系统的模态参数</li>
-</ul>
-<h2 id="实验模态分析的基本原理"><a href="#实验模态分析的基本原理" class="headerlink" title="实验模态分析的基本原理"></a>实验模态分析的基本原理</h2><h3 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h3><p>本部分以多自由度动力学系统为例，阐明了实验模态分析的<strong>基本原理</strong>：<br>对于多自由度动力学常微分方程 $\rightarrow$ 对其拉氏变换 $\rightarrow$ 得到传递函数 $\rightarrow$ 通过振型的正交性 $\rightarrow$ 发现传递函数中含有模态参数的信息 $\rightarrow$ 因此可以通过实验可以得到传递函数  $\rightarrow$ 再从传递函数中识别得到振动系统有关参数 $\rightarrow$ 最后进一步计算得到待求模态参数</p>
-<h3 id="传递函数与模态参数的关系"><a href="#传递函数与模态参数的关系" class="headerlink" title="传递函数与模态参数的关系"></a>传递函数与模态参数的关系</h3><p>对于多自由度动力学系统，其动力学方程为：</p>
-<p>$$<br>\textbf{M}\bar{\ddot{x} }+\textbf{C}\bar{ \dot{x} }+\textbf{K}\bar{x}=\bar{f}<br>$$</p>
-<p>对其进行拉氏变换：</p>
-<p>$$<br>\textbf{M}\left[ s^2 \bar{X}(s) - s\bar{x}(0) - \bar{\dot{x} }(0) \right] + \textbf{C} \left[  s\bar{X}(s) - \bar{x}(0) \right] + \textbf{K} \bar{X}(s) = \bar{F}(s)<br>$$</p>
-<p>初始条件全为0时：</p>
-<p>$$<br>\left[ s^2 \textbf{M} + s \textbf{C} + \textbf{K} \right] \bar{X}(s) = \bar{F}(s)<br>$$</p>
-<p>根据传递函数的定义，系统的传递函数为：</p>
-<p>$$<br>\textbf{H}(s)=\frac{\bar{X}(s)}{\bar{F}(s)} = \frac{ 1}{ s^2 \textbf{M} + s \textbf{C} + \textbf{K} }<br>$$</p>
-<blockquote>
-<p>机械系统中<strong>传递函数的定义</strong>：零初始条件下线性系统响应（即输出）量的拉普拉斯变换与激励（即输入）量的拉普拉斯变换之比。</p>
-</blockquote>
-<p>利用振型的正交性，当模态振型矩阵为$ [\varphi] $时，模态质量矩阵、模态阻尼矩阵、模态刚度矩阵为：</p>
-<p>$$<br>\textbf{M}_r = [\varphi]^\mathrm{T}\textbf{M}[\varphi] = \mathrm{diag}(m_1 , \cdots , m_r , \cdots , m_N)<br>$$</p>
-<p>$$<br>\textbf{C}_r = [\varphi]^\mathrm{T}\textbf{C}[\varphi] =  \mathrm{diag}(c_1 , \cdots , c_r , \cdots , c_N)<br>$$</p>
-<p>$$<br>\textbf{K}_r = [\varphi]^\mathrm{T}\textbf{K}[\varphi] = \mathrm{diag}(k_1 , \cdots , k_r , \cdots , k_N)<br>$$</p>
-<p>将上式代入传递函数，可得到：</p>
-<p>$$<br>\textbf{H}(s)= [\varphi] \left[ s^2 \textbf{M}_r + s \textbf{C}_r + \textbf{K}_r \right]^\mathrm{-1}[\varphi]^\mathrm{T}<br>$$</p>
-<p>将传递函数矩阵展开可以发现，它的每一行或每一列都包含有所有的模态信息：模态质量矩阵、模态阻尼矩阵、模态刚度矩阵中所有元素以及所有模态矢量。</p>
-<h3 id="实验、传递矩阵和模态参数的关系"><a href="#实验、传递矩阵和模态参数的关系" class="headerlink" title="实验、传递矩阵和模态参数的关系"></a>实验、传递矩阵和模态参数的关系</h3><p>若固定在一点测量振动响应信号，而不断改变激励信号的作用点，这样就测量出了传递函数的一行；若固定在一点进行激励，而在不同点进行振动响应信号测量，这样就测量出了传递函数的一列。</p>
-<p>从上一节的分析中可知，传递函数矩阵的每一行或每一列都包含有所有的模态信息。<strong>因此，只要通过实验测得传递函数矩阵的一行或一列再加以分析计算，就可以得到全部的模态信息。</strong></p>
-<p>从传递函数中求出模态参数的方法，被称为<strong>参数识别方法</strong>。一般通用的参数识别方法有两种：图解法和曲线拟合法。</p>
-<ul>
-<li><p>图解法是利用频响函数曲线直接进行模态识别的方法。其优点是简便、直观，缺点是精度差、不能排除外界干扰。</p>
-</li>
-<li><p>曲线拟合法是用一条连续曲线去拟合一组离散的实验数据，然后利用拟合曲线识别有关参数的方法。该方法常利用图解法所识别的参数作为初始值进行迭代优化计算，直到满足精度为止，从而可以从传递函数中识别得到振动系统有关参数，最后进一步计算得到待求模态参数。</p>
-</li>
-</ul>
-<h2 id="实验模态分析的主要过程"><a href="#实验模态分析的主要过程" class="headerlink" title="实验模态分析的主要过程"></a>实验模态分析的主要过程</h2><p>根据实验模态分析的基本原理，现将实验模态分析的主要过程总结如下：</p>
-<ol>
-<li>确定实验模型，将实验结构支撑起来（边界条件的确定）</li>
-<li>进行模态试验，利用上述激振方法进行激励实验结构（一般用锤击法），记录原点和各测点的激励、响应时间历程曲线</li>
-<li>对各测点的时间历程数据进行数字处理，利用传递函数与模态参数的关系和时/频域转换技术求出各测点的传递函数，并组成传递函数矩阵</li>
-<li>利用参数识别方法进行参数识别，求得模态参数</li>
-<li>进行模态动画展示</li>
-</ol>
-<img src="/image/zhendongceshi/motaifenxiguocheng.png" width = "45%" height = "45%"  align=center />
-
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Alkaid Zhang">
-      <meta itemprop="description" content="Alkaid Zhang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Alkaid Zhang - Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/" class="post-title-link" itemprop="url">振动传感器主要性能指标</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-06-14 16:51:27" itemprop="dateCreated datePublished" datetime="2021-06-14T16:51:27+08:00">2021-06-14</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-16 16:17:29" itemprop="dateModified" datetime="2021-06-16T16:17:29+08:00">2021-06-16</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="灵敏度"><a href="#灵敏度" class="headerlink" title="灵敏度"></a>灵敏度</h2><p>灵敏度是指沿传感器的测量方向，对应于每一单位简谐机械量的输入，其开路时电信号的输出，即输出比输入。</p>
-<ul>
-<li>输入的机械量：$x=X\sin(\omega t +\alpha)$</li>
-<li>输出的电信号：$e=E\sin (\omega t+ \alpha - \theta)$，$\theta$ 为相移，即输出的电信号$e$对被测机械量$x$的相位滞后</li>
-<li>灵敏度：$s=E/X$ （电信号单位 / 机械量单位）</li>
-</ul>
-<p>通常，$X$ 是位移、速度、加速度、力、应变等，$E$ 是电压、电荷等。</p>
-<h2 id="分辨率"><a href="#分辨率" class="headerlink" title="分辨率"></a>分辨率</h2><p>分辨率是指传感器可感受到的被测量的最小变化的能力。</p>
-<p>也就是说，如果输入量从某一非零值缓慢地变化，但变化值未超过某一数值 $\Delta X$ 时，传感器的输出变化量 $\Delta E =0$ ，即传感器对此输入量的变化是分辨不出来的。只有当输入量的变化超过分辨率时，其输出才会发生变化。</p>
-<p>$\Delta X$ 越小，灵敏度越高，分辨率也越高。灵敏度越高，传感器的信噪比将相应下降，这将降低测量结果的精度，故应综合考虑。</p>
-<h2 id="线性度和线性范围"><a href="#线性度和线性范围" class="headerlink" title="线性度和线性范围"></a>线性度和线性范围</h2><p>通常情况下，传感器的实际静态特性输出是条曲线而非直线。在实际工作中，为使仪表具有均匀刻度的读数，常用一条拟合直线近似地代表实际的特性曲线。</p>
-<p><strong>线性度</strong>（非线性误差）$\gamma$ 就是这个近似程度的一个性能指标，定义为在全量程范围内实际特性曲线与拟合直线之间的最大偏差值与满量程输出值之比。</p>
-<p>$$<br>\gamma=\frac{ \Delta E }{  E_{max} -  E_{min} } \times 100 \%<br>$$</p>
-<p><strong>线性范围</strong>是指传感器测量量与实际被测量之间保持近似线性关系的范围。</p>
-<img src="/image/zhendongceshi/xianxingdu.png" width = "60%" height = "60%"  align=center />
-
-<h2 id="频率范围"><a href="#频率范围" class="headerlink" title="频率范围"></a>频率范围</h2><p><strong>频率范围</strong>是指传感器的灵敏度随频率的变化量不超出某一给定的误差限的频率范围（频率上限和下限）。传感器的频率范围取决于：</p>
-<ol>
-<li>机械接收部分的频率特性。</li>
-<li>机电变换部分和所用二次仪表的频率特性。 </li>
-<li>传感器的安装条件也影响频率上限。 </li>
-</ol>
-<p>备注：</p>
-<ul>
-<li>在制定测量方案时，首先要看传感器的频率范围是否满足测量的要求</li>
-<li>压电式加速度传感器具有较宽的频率范围，而且频率上限也比较高</li>
-<li>电阻式、压阻式和伺服式等三种加速度传感器都具有零频率响应，其中压阻式也具有较高的上限频率</li>
-</ul>
-<h2 id="固有频率与安装谐振频率"><a href="#固有频率与安装谐振频率" class="headerlink" title="固有频率与安装谐振频率"></a>固有频率与安装谐振频率</h2><p>对于惯性式接收传感器，其机械接收部分是由质量块、阻尼器、弹簧构成的单自由度振动系统，其质量、阻尼、刚度分别为 $m, c, k$。该振系统无阻尼自由振动的频率 $ \omega_n = \sqrt{k/m}$ 被称为传感器的<strong>固有频率</strong>。</p>
-<p>传感器产生共振时的最低频率称为<strong>安装谐振频率</strong>，若安装刚度是有限的（实际上也很难达到无穷大），则其对传感器的接收特性将有较大影响。 </p>
-<h2 id="工作范围"><a href="#工作范围" class="headerlink" title="工作范围"></a>工作范围</h2><p>频率范围和线性范围一起决定了传感器的<strong>工作范围</strong>。工作范围可以从诺谟图（Nomogram）中得到</p>
-<img src="/image/zhendongceshi/nuomotu.jpg" width = "50%" height = "50%"  align=center />
-
-<h2 id="横向灵敏度与方向特性"><a href="#横向灵敏度与方向特性" class="headerlink" title="横向灵敏度与方向特性"></a>横向灵敏度与方向特性</h2><p>横向灵敏度主要是由于最大灵敏度轴与传感器的几何轴线不重合而引起的。这是由于传感器加工、安装上的间歇误差等条件造成的。最大灵敏度的轴线与几何轴线间的夹角为 $\theta$，<strong>最大的横向灵敏度</strong>表示为：</p>
-<p>$$<br>s_t=\tan \theta<br>$$</p>
-<p>备注：</p>
-<ul>
-<li>加速度传感器的外壳上的红点被用来表示横向灵敏度的方向。</li>
-<li>一般令红点和传感器中心的连线，与振幅最大的非被测振动方向垂直，以减少测量误差。</li>
-</ul>
-<h2 id="动态范围"><a href="#动态范围" class="headerlink" title="动态范围"></a>动态范围</h2><p><strong>动态范围</strong>是指某一输入机械量的幅值范围（用分贝表示），该范围内传感器的灵敏度随输入机械量幅值的变化量不超出某一给定的误差限。</p>
-<p>$$<br>D=20 \lg \frac{X_{max}}{X_{min}}<br>$$</p>
-<p>动态范围越大，说明传感器对幅值变化的适应能力越强。比如 $D=80dB$，则幅值上限与下限之比达10000倍。传感器的量程即是指其幅值上限与下限值的代数差。</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>传感器的其它性能参数还包括其质量、重复性、稳定性、输入输出阻抗、阻尼、迟滞、零飘、过载能力、以及它的工作环境条件等。 </p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
@@ -1395,7 +1339,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
