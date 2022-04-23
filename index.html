@@ -186,7 +186,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/23/maple%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">maple常用命令</a>
+          <a href="/2022/04/23/maple%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Maple常用命令</a>
         </h2>
 
         <div class="post-meta-container">
@@ -198,7 +198,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-04-23 14:21:16 / Modified: 21:02:06" itemprop="dateCreated datePublished" datetime="2022-04-23T14:21:16+08:00">2022-04-23</time>
+      <time title="Created: 2022-04-23 14:21:16 / Modified: 21:06:05" itemprop="dateCreated datePublished" datetime="2022-04-23T14:21:16+08:00">2022-04-23</time>
     </span>
 
   
@@ -275,7 +275,7 @@
 
 <p><strong>函数映射</strong>： <code>map()</code></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 将某个函数（自定义的或系统自带的）映射到某个对象（例如矩阵）的全部元素中去</span><br><span class="line">test1 := &lt;&lt;1 | 2 | 3&gt;, &lt;4 | 5 | 6&gt;, &lt;7 | 8 | 9&gt;&gt;</span><br><span class="line">f := x -&gt; x^2：</span><br><span class="line">test2:=map(f, test1)</span><br></pre></td></tr></table></figure>
-<p>结果为：<br>$$<br>test1=\begin{bmatrix}1 &amp; 2 &amp; 3 \\4 &amp; 5 &amp; 6 \\7 &amp; 8 &amp; 9 \end{bmatrix},; test2=\begin{bmatrix}1 &amp; 4 &amp; 9 \\16 &amp; 25 &amp; 36 \\49 &amp; 64 &amp; 81 \end{bmatrix}<br>$$</p>
+<p>结果为：<br>$$<br>test1=\begin{bmatrix}1 &amp; 2 &amp; 3 \\4 &amp; 5 &amp; 6 \\7 &amp; 8 &amp; 9 \end{bmatrix},test2=\begin{bmatrix}1 &amp; 4 &amp; 9 \\16 &amp; 25 &amp; 36 \\49 &amp; 64 &amp; 81 \end{bmatrix}<br>$$</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">test := &lt;&lt;1 | 2 | 3&gt;, &lt;4 | 5 | 6&gt;, &lt;7 | 8 | 9&gt;&gt;     #创建矩阵</span><br><span class="line">int(test, x = 0 .. 2)                               #报错，不可以直接对矩阵进行积分</span><br><span class="line">map(int, test, x = 0 .. 2)                          #将 int() 映射到矩阵中的每个元素，进行积分</span><br></pre></td></tr></table></figure>
 <p>结果为：<br>$$<br>test=\begin{bmatrix}2 &amp; 4 &amp; 6 \\8 &amp; 10 &amp; 12 \\14 &amp; 16 &amp; 18 \end{bmatrix}<br>$$</p>
 <h2 id="参考书目"><a href="#参考书目" class="headerlink" title="参考书目"></a>参考书目</h2><ul>
