@@ -128,14 +128,14 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -164,6 +164,90 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Alkaid Zhang">
+      <meta itemprop="description" content="Alkaid Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alkaid Zhang - Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/" class="post-title-link" itemprop="url">Levenberg–Marquardt Algorithm</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-06-24 15:14:39" itemprop="dateCreated datePublished" datetime="2021-06-24T15:14:39+08:00">2021-06-24</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-04-23 10:14:46" itemprop="dateModified" datetime="2022-04-23T10:14:46+08:00">2022-04-23</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到 <strong>Levenberg–Marquardt 算法</strong>。</p>
+<h2 id="Levenberg–Marquardt-算法"><a href="#Levenberg–Marquardt-算法" class="headerlink" title="Levenberg–Marquardt 算法"></a>Levenberg–Marquardt 算法</h2><p>Levenberg–Marquardt 算法是一种最小二乘（模型拟合）算法。它可以解决以下问题：</p>
+<p>$$<br>\min_{x}f(x)= \min_{x} \| F(x) \|^2_2 = \min_{x} \sum_i F_i^2(x)<br>$$</p>
+<p>即求一个 $x$ 使 $f(x)$ 最小。</p>
+<p>1944年<a target="_blank" rel="noopener" href="https://doi.org/10.1090/qam/10666">Kenneth Levenberg</a>首次提出该算法，1963年<a target="_blank" rel="noopener" href="https://doi.org/10.1137/0111030">Donald Marquardt</a>也发现了该算法，后来这种算法被称作Levenberg–Marquardt。</p>
+<p>关于该算法的详细原理和实现可以参考 Flannery 等人的著作 <a target="_blank" rel="noopener" href="http://www.nrbook.com/a/bookcpdf.php">Numerical recipes in C</a>。</p>
+<h2 id="Levenberg–Marquardt-算法与非线性方程组求根"><a href="#Levenberg–Marquardt-算法与非线性方程组求根" class="headerlink" title="Levenberg–Marquardt 算法与非线性方程组求根"></a>Levenberg–Marquardt 算法与非线性方程组求根</h2><p>求解非线性方程组即求解一组 $\bar{x}$ 令其满足 $\bar{F}(x)=0$。显然非线性方程组的根可以令上式成立。</p>
+<p>因此，给定初始值，通过Levenberg–Marquardt 算法求得的 $\bar{x}$  就是非线性方程组 $\bar{x}$ 的一组近似根（初始值附近）。</p>
+<p>非线性方程组的根显然不止一组，而通过该方法只能得到距离初始值较近的根，要想得到全部的根，需要配合其他算法。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>Levenberg, K. (1944). A method for the solution of certain non-linear problems in least squares. <em>Quarterly of applied mathematics</em>, 2(2), 164-168.</li>
+<li>Mardquardt, D. W. (1963). An algorithm for least square estimation of parameters. <em>J. Soc. Ind. Appl. Math</em>, 11, 431-441.</li>
+<li>Flannery, B. P., Press, W. H., Teukolsky, S. A., &amp; Vetterling, W. (1992). Numerical recipes in C. <em>Press Syndicate of the University of Cambridge, New York</em>, 24(78), 36.</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 

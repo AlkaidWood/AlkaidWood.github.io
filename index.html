@@ -128,14 +128,14 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -173,6 +173,142 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2022/04/23/maple%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Alkaid Zhang">
+      <meta itemprop="description" content="Alkaid Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alkaid Zhang - Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/23/maple%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">maple常用命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-23 14:21:16 / Modified: 21:02:06" itemprop="dateCreated datePublished" datetime="2022-04-23T14:21:16+08:00">2022-04-23</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><p><strong>赋值</strong>： <code>：=</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a :=b   #表示将 a 的值赋予 b</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>相等</strong>： <code>=</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = b           # 创建了一个表达式</span><br><span class="line">equn:= a=b      #将表达式 a=b 赋值给 equn</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>执行但不输出结果</strong>： <code>:</code></p>
+<p><strong>上标</strong>： <code>^</code>    </p>
+<p><strong>下标</strong>： <code>__</code> （双下划线）</p>
+<p><strong>乘</strong>： <code> </code> （空格）</p>
+<p><strong>构造矩阵</strong>： <code>&lt; &gt;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;a, b, c&gt; | &lt;x, y,z&gt;&gt;</span><br></pre></td></tr></table></figure>
+<p>输出结果为：<br>$$<br>\begin{bmatrix} a &amp; x \\ b &amp; y \\ c &amp; z \end{bmatrix}<br>$$</p>
+<p><strong>构造函数</strong> <code>F:=x-&gt;2*x</code> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">F := (x, y) -&gt; 2*x + y</span><br><span class="line">F(2,1)</span><br></pre></td></tr></table></figure>
+<p>输出结果为 <code>4</code></p>
+<h2 id="最常用的数据类型"><a href="#最常用的数据类型" class="headerlink" title="最常用的数据类型"></a>最常用的数据类型</h2><p><strong>序列</strong>： <code>a := 1, 2, 3</code><br>特点：有顺序、可组合 <code>b:=a,4,5</code> （输出结果为 <code>1,2,3,4,5</code>），典型应用是函数的输入参数<br>生成序列的函数 <code>seq()</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">seq(x^i,i=1..11,2)</span><br></pre></td></tr></table></figure>
+<p>输出结果为： $x,x^3,x^5,x^9,x^{11}$</p>
+<p><strong>列表</strong>： 是用 <code>[  ]</code> 封装的序列<br>与序列的不同：列表中嵌入列表展开方式不同<br>与集合的不同：列表中元素项顺序是固定的，且会保留重复项</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a:=[1,2,3]:</span><br><span class="line">b:=[a,4,5]</span><br><span class="line">b[1]</span><br><span class="line">b[2]</span><br></pre></td></tr></table></figure>
+<p>输出结果为：<code>b:=[[1,2,3],4,5]</code> 和 <code>[1,2,3]</code> 和 <code>4</code></p>
+<h2 id="表达式的处理"><a href="#表达式的处理" class="headerlink" title="表达式的处理"></a>表达式的处理</h2><p><strong>简化</strong>： <code>simplify()</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">equn :=a (a+b+2 a)</span><br><span class="line">simplify(equn)                          #处理单个表达式或矩阵</span><br><span class="line">equns := a (a+b+2 a), x+3x+y, m+n+n+n   #生成表达式序列</span><br><span class="line">simplify(equns)                         #会报错</span><br><span class="line">seq( simplify(equns[i]), i=1..3 )       #正常化简，生成一个化简后的序列</span><br><span class="line">simplify([equns])                       #正常化简，生成一个化简后的列表</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>展开</strong>： <code>expand()</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a:= x ( x+2 + x (x+3) )</span><br><span class="line">expand(a)                               #结果为 x^3 + 4*x^2 + 2*x</span><br><span class="line">b:= x ( x+2 + x (x+3) ), 2 y ( y+21 - 5 y (y+1) )</span><br><span class="line">expand(b)                               #只展开前一项，后一项被当作输入参数</span><br><span class="line">seq(expand(b[i]),i=1..2)                #正常展开，结果为序列 x^3 + 4*x^2 + 2*x, -10*y^3 - 8*y^2 + 42*y</span><br><span class="line">expand([b])                             #正常展开，结果为列表 [x^3 + 4*x^2 + 2*x, -10*y^3 - 8*y^2 + 42*y]</span><br></pre></td></tr></table></figure>
+
+<p><strong>整理</strong>：<code>collect()</code> 和 <code>sort()</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">equn := x*y*(x + y*(x + y + y*(x^2 + 1)))</span><br><span class="line">equn := expand(equn)            #先展开 结果为 x^3*y^3 + x^2*y^2 + 2*x*y^3 + x^2*y</span><br><span class="line">collect(equn, y)                #再按照 y 整理各项，结果为 (x^3 + 2*x)*y^3 + x^2*y^2 + x^2*y</span><br><span class="line">sort(equn, y, ascending)        #按 y 降次排列，结果为 x^2*y + x^2*y^2 + x^3*y^3 + 2*x*y^3</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>变量替换</strong>：<code>subs()</code> 和 <code>algsubs()</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a := x + 3*y</span><br><span class="line">subs(x = z, a)          #用 z 替换表达式 a 中的 x，结果为 z + 3*y</span><br><span class="line">subs(z = x, a)          #因等式中无 z，故结果为 x + 3*y；等式左端为表示中已有变量，右端为替换后的变量</span><br><span class="line">subs（x = 2 z,a）       #结果为 2*z + 3*y</span><br><span class="line">subs（2 y = z,a）       #结果为 x + 3*y；因为subs只用来替换单变量不进行表达式的计算，该情况使用 algsubs()</span><br><span class="line">algsubs(2*y = z, a)     #结果为 x + (3*z)/2</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>微分</strong>： <code>diff()</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 一般求导--------------------------------------------------------</span><br><span class="line">equn:=x^3 + 2*x*y^2 + x*y + y^2 + x</span><br><span class="line">diff(equn,x)                    #对 equn 关于 x 求导数，结果为 3*x^2 + 2*y^2 + y + 1</span><br><span class="line"># 对 x(t) 求导----------------------------------------------------</span><br><span class="line">equn2：= x(t) +x(t)^2</span><br><span class="line">diff(equn3, t)                  #可以对 t 直接求导，结果为diff(x(t), t) + 2*x(t)*diff(x(t), t)</span><br><span class="line">diff(equn2,x)                   #结果为0，因为maple不会将 x(t) 认定为 x</span><br><span class="line">diff(equn2, x(t))               #报错，不能对 x(t) 直接求导</span><br><span class="line">equn3 := subs(x(t) = x, equn3)  #先用 x 代换 x(t)，再求导</span><br><span class="line">equn3 := diff(equn3, x)</span><br><span class="line">equn3 := subs(x = x(t), equn3)  #再反代换回去，结果为 2*x(t) + 1</span><br></pre></td></tr></table></figure>
+
+<p><strong>积分</strong>：<code>int()</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">integrand:= x+x^2</span><br><span class="line">int(integrand, x = 0 .. 1)      #被积函数是 integrand，积分下限是0，上限是1</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>选择特定项并移除</strong>： <code>select()</code> 和 <code>remove()</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">integers := [seq(10 .. 20)]     #结果为 [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]</span><br><span class="line">select(isprime, integers)       #选择列表 integers 里的质数，结果为[11, 13, 17, 19]</span><br><span class="line">remove(isprime, integers)       #移除列表 integers 里的质数，结果为[10, 12, 14, 15, 16, 18, 20]</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>解方程</strong>： <code>solve()</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># solve() 的输入参数可以是序列或列表-------------------------------</span><br><span class="line">equns1 := x + y + z = 3:</span><br><span class="line">equns2 := 2*x + 4*y + z = 7:</span><br><span class="line">equns3 := x + y + 3*z = 5:</span><br><span class="line">equns := [equns1, equns2, equns3]:</span><br><span class="line">vars := [x, y, z]:</span><br><span class="line">solve(equns, vars)     #结果为 [[x = 1, y = 1, z = 1]]</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>转换</strong>： <code>convert()</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">integers:=[seq(1..5),1 ]                #此时 integers 为列表，结果为 [1, 2, 3, 4, 5, 1]</span><br><span class="line">integers:=convert(integers,list)        #此时 integers 为集合，结果为 &#123;1, 2, 3, 4, 5&#125; 因为集合无顺序且删去重复的元素</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>获取等式的左边/右边</strong>：<code>lhs()</code> 和 <code>rhs()</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">equn := x + y = a - b</span><br><span class="line">lhs(equn)                   #获取等式左边，结果为 x + y</span><br><span class="line">rhs(equn)                   #获取等式左边，结果为 a - b</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>函数映射</strong>： <code>map()</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 将某个函数（自定义的或系统自带的）映射到某个对象（例如矩阵）的全部元素中去</span><br><span class="line">test1 := &lt;&lt;1 | 2 | 3&gt;, &lt;4 | 5 | 6&gt;, &lt;7 | 8 | 9&gt;&gt;</span><br><span class="line">f := x -&gt; x^2：</span><br><span class="line">test2:=map(f, test1)</span><br></pre></td></tr></table></figure>
+<p>结果为：<br>$$<br>test1=\begin{bmatrix}1 &amp; 2 &amp; 3 \\4 &amp; 5 &amp; 6 \\7 &amp; 8 &amp; 9 \end{bmatrix},; test2=\begin{bmatrix}1 &amp; 4 &amp; 9 \\16 &amp; 25 &amp; 36 \\49 &amp; 64 &amp; 81 \end{bmatrix}<br>$$</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">test := &lt;&lt;1 | 2 | 3&gt;, &lt;4 | 5 | 6&gt;, &lt;7 | 8 | 9&gt;&gt;     #创建矩阵</span><br><span class="line">int(test, x = 0 .. 2)                               #报错，不可以直接对矩阵进行积分</span><br><span class="line">map(int, test, x = 0 .. 2)                          #将 int() 映射到矩阵中的每个元素，进行积分</span><br></pre></td></tr></table></figure>
+<p>结果为：<br>$$<br>test=\begin{bmatrix}2 &amp; 4 &amp; 6 \\8 &amp; 10 &amp; 12 \\14 &amp; 16 &amp; 18 \end{bmatrix}<br>$$</p>
+<h2 id="参考书目"><a href="#参考书目" class="headerlink" title="参考书目"></a>参考书目</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.maplesoft.com.cn/support/documentation/PDF/maple2020/Maple2020%E4%B8%AD%E6%96%87%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.pdf">《Maple2020中文用户手册》</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.maplesoft.com.cn/support/documentation/">Maple文档中心</a></li>
+<li><a target="_blank" rel="noopener" href="https://pdc.capub.cn/search.html#/detail?id=yrcnjprstu53gy5l2gvknezqtg5lyoocv7kzwrpwvcxul7qhho7q&from=1&type=marc">《Maple理论力学》 李银山</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2022/04/23/%E6%A2%81%E7%90%86%E8%AE%BA%E4%B8%8E%E6%9C%89%E9%99%90%E5%85%83-%E5%8F%82%E8%80%83%E4%B9%A6%E5%8D%95%E5%8F%8A%E6%96%87%E7%8C%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -198,7 +334,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-04-23 10:08:23 / Modified: 11:06:49" itemprop="dateCreated datePublished" datetime="2022-04-23T10:08:23+08:00">2022-04-23</time>
+      <time title="Created: 2022-04-23 10:08:23 / Modified: 11:20:04" itemprop="dateCreated datePublished" datetime="2022-04-23T10:08:23+08:00">2022-04-23</time>
     </span>
 
   
@@ -1120,90 +1256,6 @@
 <li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Bode_plot">Bode plot - Wikipeida</a></li>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/148778408">傅里叶变换和拉普拉斯变换的物理解释及区别</a></li>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/228219488">Bode Plots（伯德图）</a></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Alkaid Zhang">
-      <meta itemprop="description" content="Alkaid Zhang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Alkaid Zhang - Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/" class="post-title-link" itemprop="url">Levenberg–Marquardt Algorithm</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-06-24 15:14:39" itemprop="dateCreated datePublished" datetime="2021-06-24T15:14:39+08:00">2021-06-24</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-04-23 10:14:46" itemprop="dateModified" datetime="2022-04-23T10:14:46+08:00">2022-04-23</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到 <strong>Levenberg–Marquardt 算法</strong>。</p>
-<h2 id="Levenberg–Marquardt-算法"><a href="#Levenberg–Marquardt-算法" class="headerlink" title="Levenberg–Marquardt 算法"></a>Levenberg–Marquardt 算法</h2><p>Levenberg–Marquardt 算法是一种最小二乘（模型拟合）算法。它可以解决以下问题：</p>
-<p>$$<br>\min_{x}f(x)= \min_{x} \| F(x) \|^2_2 = \min_{x} \sum_i F_i^2(x)<br>$$</p>
-<p>即求一个 $x$ 使 $f(x)$ 最小。</p>
-<p>1944年<a target="_blank" rel="noopener" href="https://doi.org/10.1090/qam/10666">Kenneth Levenberg</a>首次提出该算法，1963年<a target="_blank" rel="noopener" href="https://doi.org/10.1137/0111030">Donald Marquardt</a>也发现了该算法，后来这种算法被称作Levenberg–Marquardt。</p>
-<p>关于该算法的详细原理和实现可以参考 Flannery 等人的著作 <a target="_blank" rel="noopener" href="http://www.nrbook.com/a/bookcpdf.php">Numerical recipes in C</a>。</p>
-<h2 id="Levenberg–Marquardt-算法与非线性方程组求根"><a href="#Levenberg–Marquardt-算法与非线性方程组求根" class="headerlink" title="Levenberg–Marquardt 算法与非线性方程组求根"></a>Levenberg–Marquardt 算法与非线性方程组求根</h2><p>求解非线性方程组即求解一组 $\bar{x}$ 令其满足 $\bar{F}(x)=0$。显然非线性方程组的根可以令上式成立。</p>
-<p>因此，给定初始值，通过Levenberg–Marquardt 算法求得的 $\bar{x}$  就是非线性方程组 $\bar{x}$ 的一组近似根（初始值附近）。</p>
-<p>非线性方程组的根显然不止一组，而通过该方法只能得到距离初始值较近的根，要想得到全部的根，需要配合其他算法。</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
-<li>Levenberg, K. (1944). A method for the solution of certain non-linear problems in least squares. <em>Quarterly of applied mathematics</em>, 2(2), 164-168.</li>
-<li>Mardquardt, D. W. (1963). An algorithm for least square estimation of parameters. <em>J. Soc. Ind. Appl. Math</em>, 11, 431-441.</li>
-<li>Flannery, B. P., Press, W. H., Teukolsky, S. A., &amp; Vetterling, W. (1992). Numerical recipes in C. <em>Press Syndicate of the University of Cambridge, New York</em>, 24(78), 36.</li>
 </ul>
 
       
