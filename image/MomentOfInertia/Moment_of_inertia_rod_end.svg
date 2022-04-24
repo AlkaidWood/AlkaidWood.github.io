@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="100px" height="100px" viewBox="-5 0 100 100" >
+<title>MI of a thin rod</title>
+<desc> Moment of Inertia of a thin rod about an axis perpendicular 
+to the length of the rod and passing through its one end.</desc>
+<defs>
+	<marker id="RedArrow" viewBox="0 0 10 10" refX="8" refY="5"
+		markerUnits="strokeWidth" orient="auto"
+		markerWidth="10" markerHeight="10">
+		<polyline points="10,5 0,10 4,5 0,0 10,5" style="stroke:none;fill:red" />
+	</marker>
+	<marker id="BlueArrow" viewBox="0 0 10 10" refX="8" refY="5"
+		markerUnits="strokeWidth" orient="auto"
+		markerWidth="10" markerHeight="10">
+		<polyline points="10,5 0,10 4,5 0,0 10,5" style="stroke:none;fill:blue" />
+	</marker>
+	<g id="rod" style="stroke:black;stroke-width:.5;fill:grey" >
+		<circle cx="20" cy="80" r="5" />
+		<path d="M20,75 H100 A5,5 0 0,1 100,85 H20 A5,5 0,0 0 20,75 A5,5 0,0 0 20,85" />
+	</g>
+</defs>
+<use xlink:href="#rod" transform="rotate(-30,20,80)" />
+<line x1="20" x2="20" y1="95" y2="25" style="stroke:blue;stroke-width:1" />
+<path d="M30,20 A15,3 0 0,0 20,30 A15,3 0 0,0 31,22" style="stroke:red;stoke-width:1;fill:none" 
+	marker-end="url(#RedArrow)" />
+<line x1="20" x2="20" y1="25" y2="5" style="stroke:blue;stroke-width:1" 
+	marker-end="url(#BlueArrow)" />
+</svg>
