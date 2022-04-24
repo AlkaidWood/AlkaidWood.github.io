@@ -128,7 +128,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -164,6 +164,115 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/08/06/FFT-and-Bode-plot/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Alkaid Zhang">
+      <meta itemprop="description" content="Alkaid Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alkaid Zhang - Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/08/06/FFT-and-Bode-plot/" class="post-title-link" itemprop="url">FFT和伯德图 (Bode plot) 的区别与联系</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-08-06 20:05:57" itemprop="dateCreated datePublished" datetime="2021-08-06T20:05:57+08:00">2021-08-06</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-08-07 17:43:57" itemprop="dateModified" datetime="2021-08-07T17:43:57+08:00">2021-08-07</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><strong>主要区别</strong>：</p>
+<ul>
+<li>作用对象。FFT作用于<strong>时间序列信号</strong>；Bode图作用于系统<strong>传递函数</strong> $H(s)$</li>
+<li>目的。FFT的目的是得到一段信号的频谱；Bode图的目的是得到传递函数的幅频特性和相频特性</li>
+<li>原理。FFT基于<strong>傅里叶变换</strong>；Bode图基于<strong>拉普拉斯变换</strong></li>
+<li>适用性。FFT分析的时间序列可以来自于线性系统或非线性系统；Bode图只能分析<strong>线性非时变系统</strong>的传递函数</li>
+</ul>
+<p><strong>主要联系</strong>：</p>
+<ul>
+<li>两者都得到频域下的结果</li>
+<li>在数学形式上，得到传递函数时使用的拉普拉斯变换退化后得到傅里叶变换</li>
+</ul>
+<h2 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h2><p><strong>傅里叶变换的目的</strong>：得到被采集信号包含的频率成分和每个频率成分在原信号中的占比，用图形表示则为频谱图。</p>
+<p>傅里叶变换简单通俗理解就是把看似杂乱无章的信号考虑成由一定振幅、相位、频率的基本正弦（余弦）信号组合而成，傅里叶变换的目的就是找出这些基本正弦（余弦）信号中振幅较大（能量较高）信号对应的频率，从而找出杂乱无章的信号中的主要振动频率特点。如减速机故障时，通过傅里叶变换做频谱分析，根据各级齿轮转速、齿数与杂音频谱中振幅大的对比，可以快速判断哪级齿轮损伤。</p>
+<p>傅里叶正变换可以写为：<br>$$<br>X(j\omega) = \int^{+\infty}_ {-\infty} x(t)   e^{ -j \omega t} dt<br>$$</p>
+<p>但是，我们发现傅里叶变换中的基函数是 $e^{j\omega t}$，能用它拟合的函数具有共同特征，那就是，各个频率下的三角函数分量不随时间衰减。这个假设具有明显的局限性，要么是理想没有阻尼的系统，要么是研究有阻尼的系统对特定频率的瞬时响应。</p>
+<p>因此需要对傅里叶变换的基函数进行拓展，由此引出拉普拉斯变换：</p>
+<p>$$<br>e^{\sigma t}e^{j\omega t}=e^{(\sigma+j\omega) t}=e^{st}<br>$$</p>
+<p>其中，$s=\sigma+j\omega$ 为拉普拉斯变换中的变量，表示复实数（$j$为虚数单位）。</p>
+<p>PS：有关傅里叶变换的详细内容可以参照另一篇博客：<a href="https://alkaidwood.github.io/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">快速傅里叶变换（FFT）基本原理</a>。</p>
+<h2 id="拉普拉斯变换"><a href="#拉普拉斯变换" class="headerlink" title="拉普拉斯变换"></a>拉普拉斯变换</h2><p>拉普拉斯变换可以写为：<br>$$<br>X(\sigma+j\omega)=\int^{+\infty}_ {-\infty} x(t)   e^{(\sigma+j\omega) t} dt=\int^{+\infty}_ {-\infty} x(t)   e^{s t} dt=X(s)<br>$$</p>
+<p>$$<br>X(s)=\int^{+\infty}_ {-\infty} x(t)   e^{s t} dt<br>$$</p>
+<p>拓展傅里叶变换得到拉普拉斯变换。它是为简化计算而建立的实变量函数和复变量函数间的一种函数变换。对一个实变量函数作拉普拉斯变换，并在复数域中作各种运算，再将运算结果作拉普拉斯反变换来求得实数域中的相应结果，往往比直接在实数域中求出同样的结果在计算上容易得多。拉普拉斯变换的这种运算步骤对于求解线性微分方程尤为有效，它可把微分方程化为容易求解的代数方程来处理，从而使计算简化。在经典控制理论中，对控制系统的分析和综合，都是建立在拉普拉斯变换的基础上的。</p>
+<p><strong>引入拉普拉斯变换的一个主要优点，是可采用传递函数 $H(s)$ 代替微分方程来描述系统的特性</strong>。这就为采用直观和简便的图解方法来确定控制系统的整个特性（见信号流程图、动态结构图）、分析控制系统的运动过程（见奈奎斯特稳定判据、根轨迹法），以及综合控制系统的校正装置（见控制系统校正方法）提供了可能性。</p>
+<h2 id="Bode图"><a href="#Bode图" class="headerlink" title="Bode图"></a>Bode图</h2><p>刚才提到，通过拉普拉斯变换可以得到系统的传递函数；而传递函数可以直观的反应线性系统输入与输出之间的关系。当我们对传递函数可视化时往往就会用到<strong>Bode图</strong>。</p>
+<p>伯德图(bode)利用对数表示系统传递函数的幅频、相频特性,它分为两个图，一个是对数幅频图、一个是相频图，横坐标均为 $\omega$ ，纵坐标一个为$L(\omega)=20\lg A(\omega )$表示对数幅值，一个为$\varphi (\omega)$ 表示相位角。</p>
+<blockquote>
+<p><strong>例</strong>：Bode图<br>假设系统的传递函数为：<br>$$<br>H(s)=\frac{A}{s+a}<br>$$<br>$s=\sigma+j\omega$，则传递函数可以写为：<br>$$<br>H(\sigma+j\omega)=\frac{A}{(\sigma+j\omega)+a}<br>$$<br>此时传递函数的图像是三维的，有两个自变量$\sigma 和 \omega$，但是Bode图只关系其中的$\omega$，将另一个变量视为0，$\sigma=0$：<br>$$<br>H(\omega)=\frac{A}{(j\omega)+a}<br>$$<br>上式的对数幅值和相角分别为：<br>$$<br>L(\omega)=20\lg \big\vert H(\omega) \big \vert = 20\lg \bigg( \frac{A}{\sqrt{\omega^2+a^2}} \bigg )<br>$$<br>$$<br>\varphi (\omega) = - \arctan \frac{\omega}{a}<br>$$<br>利用以上两式即可画出Bode图，横坐标均为$\omega$</p>
+</blockquote>
+<hr>
+<p>本文参考了以下博主分享的文章：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Davidietop/article/details/105369349">信号处理趣学D8——关于拉氏变换和频谱图的那些事儿</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/22085329">傅里叶变换、拉普拉斯变换、Z 变换的联系是什么？为什么要进行这些变换？</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Davidietop/article/details/102768194">MATLAB频域分析,奈氏图、伯德图、对数幅相图绘制</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Bode_plot">Bode plot - Wikipeida</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/148778408">傅里叶变换和拉普拉斯变换的物理解释及区别</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/228219488">Bode Plots（伯德图）</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
