@@ -173,7 +173,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2022/04/23/%E6%88%AA%E9%9D%A2%E6%83%AF%E6%80%A7%E7%9F%A9%E4%B8%8E%E8%BD%AC%E5%8A%A8%E6%83%AF%E9%87%8F/">
+    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2022/04/23/%E8%BD%AC%E5%8A%A8%E6%83%AF%E9%87%8F-%E6%88%AA%E9%9D%A2%E6%83%AF%E6%80%A7%E7%9F%A9-%E6%9E%81%E6%83%AF%E6%80%A7%E7%9F%A9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -186,7 +186,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/23/%E6%88%AA%E9%9D%A2%E6%83%AF%E6%80%A7%E7%9F%A9%E4%B8%8E%E8%BD%AC%E5%8A%A8%E6%83%AF%E9%87%8F/" class="post-title-link" itemprop="url">截面惯性矩与转动惯量</a>
+          <a href="/2022/04/23/%E8%BD%AC%E5%8A%A8%E6%83%AF%E9%87%8F-%E6%88%AA%E9%9D%A2%E6%83%AF%E6%80%A7%E7%9F%A9-%E6%9E%81%E6%83%AF%E6%80%A7%E7%9F%A9/" class="post-title-link" itemprop="url">转动惯量/截面惯性矩/极惯性矩</a>
         </h2>
 
         <div class="post-meta-container">
@@ -204,7 +204,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-04-24 16:59:49" itemprop="dateModified" datetime="2022-04-24T16:59:49+08:00">2022-04-24</time>
+        <time title="Modified: 2022-04-24 20:23:52" itemprop="dateModified" datetime="2022-04-24T20:23:52+08:00">2022-04-24</time>
       </span>
 
   
@@ -217,7 +217,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="转动惯量"><a href="#转动惯量" class="headerlink" title="转动惯量"></a>转动惯量</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>在经典力学中，<strong>转动惯量</strong>又称<strong>惯性矩</strong>（英语：Moment of inertia），通常以 $I$ 表示，国际单位制为 $kg \cdot m^2$。</p>
+          <h2 id="转动惯量"><a href="#转动惯量" class="headerlink" title="转动惯量"></a>转动惯量</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>在经典力学中，<strong>转动惯量</strong>又称<strong>惯性矩</strong>（英语：moment of inertia, mass moment of inertia, second moment of mass, 最准确的表达应该是 rotational inertia），通常以 $I$ 表示，国际单位制为 $kg \cdot m^2$。</p>
 <p>转动惯量是一个物体对于其旋转运动的惯性大小的量度。一个刚体对于某转轴的转动惯量决定对于这物体绕着这转轴进行某种角加速度运动所需要施加的力矩。</p>
 <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>对于刚体，其转动惯量由积分表示：<br>$$<br>I=\int \rho r^2 dV<br>$$</p>
 <p>其中 $\rho$ 是密度， $dV$ 是微元的体积。</p>
@@ -327,9 +327,117 @@
 <td align="center">$I_d=\frac{1}{12}m(w^2+h^2)$</td>
 </tr>
 </tbody></table>
-<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><ul>
+<h2 id="截面惯性矩"><a href="#截面惯性矩" class="headerlink" title="截面惯性矩"></a>截面惯性矩</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3><p><strong>截面惯性矩</strong>又称<strong>面积二次轴矩</strong>=横截面的惯性矩=面积惯性矩 (英语：second moment of aera, second aera mement, quadratic moment of aera, aera moment of inertia) 通常是对受弯曲作用物体的横截面而言，是反映截面的形状与尺寸对弯曲变形影响的物理量。弯曲作用下的变形或挠度不仅取决于荷载的大小，还与横截面的几何特性有关。如工字梁的抗弯性能就比相同截面尺寸的矩形梁好。它和反映截面抗扭转作用性能的<strong>面积极惯性矩</strong>是相似的。</p>
+<h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>截面的面积为 $A$，则：<br>$$<br>I_x = \int_A y^2 dA=\int \int y^2 dx dy<br>$$</p>
+<p>$$<br>I_y = \int_A x^2 dA=\int \int x^2 dx dy<br>$$<br>分别表示截面对坐标轴$x$与$y$的惯性矩，第一式中的 $y$ 和第二式中的 $x$ 分别表示面积微元 $dA$ 到 $x$ 和到 $y$ 轴的垂直距离。</p>
+<h3 id="截面惯性矩列表（含极惯性矩）"><a href="#截面惯性矩列表（含极惯性矩）" class="headerlink" title="截面惯性矩列表（含极惯性矩）"></a>截面惯性矩列表（含极惯性矩）</h3><table>
+<thead>
+<tr>
+<th align="center">描述</th>
+<th align="center">示意图</th>
+<th align="center">截面惯性矩</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">圆</td>
+<td align="center"><img src="/image/MomentOfInertia/Moment_of_area_of_a_circle.svg" width = "30%"  /></td>
+<td align="center">$I_x=I_y=\frac{\pi}{4}r^4$</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">$I_z=\frac{\pi}{4}r^4$</td>
+</tr>
+<tr>
+<td align="center">圆环</td>
+<td align="center"><img src="/image/MomentOfInertia/Moment_of_area_of_an_annulus.svg" width = "30%"  /></td>
+<td align="center">$I_x=I_y=\frac{\pi}{4}(r_2^4-r_1^4)$</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">$I_z=\frac{\pi}{2}(r_2^4-r_1^4)$</td>
+</tr>
+<tr>
+<td align="center">长方形-中心</td>
+<td align="center"><img src="/image/MomentOfInertia/Moment_of_area_of_a_rectangle_through_the_centroid.svg" width = "30%"  /></td>
+<td align="center">$I_x=\frac{bh^3}{12}$</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">$I_y=\frac{b^3h}{12}$</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">$I_z=\frac{b^3h+bh^3}{12}$</td>
+</tr>
+<tr>
+<td align="center">长方形-端点</td>
+<td align="center"><img src="/image/MomentOfInertia/Moment_of_area_of_a_rectangle_through_the_base.svg" width = "30%"  /></td>
+<td align="center">$I_x=\frac{bh^3}{3}$</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">$I_y=\frac{b^3h}{3}$</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">$I_z=\frac{b^3h+bh^3}{3}$</td>
+</tr>
+<tr>
+<td align="center">长方形-空心</td>
+<td align="center"><img src="/image/MomentOfInertia/Moment_of_area_of_a_hollow_rectangle.svg" width = "30%"  /></td>
+<td align="center">$I_x=\frac{bh^3-b_1h_1^3}{12}$</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">$I_y=\frac{b^3h-b_1^3h_1}{12}$</td>
+</tr>
+<tr>
+<td align="center">三角形-形心</td>
+<td align="center"><img src="/image/MomentOfInertia/Moment_of_aera_of_a_triangle_through_centroide.svg" width = "30%"  /></td>
+<td align="center">$I_x=\frac{bh^3}{36}$</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">$I_y=\frac{b^3h-b^2ha+bha^2}{36}$</td>
+</tr>
+<tr>
+<td align="center">三角形-端点</td>
+<td align="center"><img src="/image/MomentOfInertia/Moment_of_aera_of_a_traingle_through_the_base.svg" width = "30%"  /></td>
+<td align="center">$I_x=\frac{bh^3}{12}$</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">$I_y=\frac{b^3h+b^2ha+bha^2}{12}$</td>
+</tr>
+</tbody></table>
+<h2 id="极惯性矩"><a href="#极惯性矩" class="headerlink" title="极惯性矩"></a>极惯性矩</h2><h3 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a>概念</h3><p><strong>极惯性矩</strong>又称<strong>截面二次极矩</strong> (英语：second polar moment of aera, polar moment of inertia) 通常是对受扭转作用物体的横截面而言，是反应截面形状与尺寸对扭转变形影响的物理量。通常用 $I_z$ 或 $I_p$ 表示。</p>
+<h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3><p>截面的面积为 $A$，且面积微元 $dA$ 到 $z$ 轴的距离为 $\rho$ 则：<br>$$<br>I_z = \int_A \rho^2 dA=\int \int x^2+y^2 dx dy<br>$$</p>
+<p>截面惯性矩与极惯性矩的关系为：</p>
+<p>$$<br>I_z = \int_A \rho^2 dA=\int \int y^2+x^2 dx dy = I_x + I_y<br>$$</p>
+<h2 id="三者的区别"><a href="#三者的区别" class="headerlink" title="三者的区别"></a>三者的区别</h2><ul>
 <li><strong>转动惯量</strong>：转动惯量越大，惯性越大，物体旋转越难改变（需要的力矩越大）与质量分布有关；</li>
 <li><strong>截面惯性矩</strong>：截面惯性矩越大，物体越难弯曲，抗弯截面模量也越大。与质量分布无关。</li>
+<li><strong>极惯性矩</strong>：极惯性矩越大，物体越难扭转。与质量分布无关。与截面惯性矩的关系为： $I_z=I_x+I_y$。</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%88%AA%E9%9D%A2%E4%BA%8C%E6%AC%A1%E8%BD%B4%E7%9F%A9">维基百科-截面二次轴距</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%BD%89%E5%8B%95%E6%85%A3%E9%87%8F">维基百科-转动惯量</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%9E%81%E6%83%AF%E6%80%A7%E7%9F%A9">维基百科-极惯性矩</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Moment_of_inertia">Wikipedia-Moment of inertia</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Second_moment_of_area">Wikipedia-Second moment of area</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Second_Polar_Moment_of_Area">Wikipedia-Second Polar Moment of Area</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_moments_of_inertia">Wikipedia-List of moments of inertia</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_second_moments_of_area">Wikipedia-List of second moments of area</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/296107343/answer/1625307850">材料力学里求惯性矩有什么用？怎么理解惯性矩</a></li>
 </ul>
 
       
