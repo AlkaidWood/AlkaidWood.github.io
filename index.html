@@ -198,7 +198,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-08-01 16:01:53 / Modified: 18:06:12" itemprop="dateCreated datePublished" datetime="2022-08-01T16:01:53+08:00">2022-08-01</time>
+      <time title="Created: 2022-08-01 16:01:53 / Modified: 21:15:56" itemprop="dateCreated datePublished" datetime="2022-08-01T16:01:53+08:00">2022-08-01</time>
     </span>
 
   
@@ -211,12 +211,39 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="延拓法的基本思想"><a href="#延拓法的基本思想" class="headerlink" title="延拓法的基本思想"></a>延拓法的基本思想</h2><ul>
-<li><strong>目的</strong>：扩大非线性方程组的收敛域</li>
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
 <li><strong>前置概念</strong>：<a href="/2022/07/29/%E6%95%B0%E5%AD%A6%E6%A6%82%E5%BF%B5-%E5%90%8C%E4%BC%A6/">同伦</a></li>
-<li></li>
+<li><strong>作用对象</strong>：非线性方程组</li>
+<li><strong>目的</strong>：扩大非线性方程组的收敛域</li>
 </ul>
-<h2 id="延拓法的数学表述"><a href="#延拓法的数学表述" class="headerlink" title="延拓法的数学表述"></a>延拓法的数学表述</h2><h2 id="数值延拓法—with-Newton-Method"><a href="#数值延拓法—with-Newton-Method" class="headerlink" title="数值延拓法—with Newton Method"></a>数值延拓法—with Newton Method</h2>
+<h2 id="延拓法的基本思想"><a href="#延拓法的基本思想" class="headerlink" title="延拓法的基本思想"></a>延拓法的基本思想</h2><ol>
+<li>已知一个待求解的非线性方程组 $F(x)=0$</li>
+<li>在方程组中引入一个参数 $\lambda$，构造 $F(x)$ 的<strong>同伦映射</strong> $H(x,\lambda), \lambda \in [0,1]$, 使得  $H(x,0)=0,  H(x,1)=F(x)$  </li>
+<li>已知 $H(x,0)=0$ 的解是 $x=x_0$ (可以是零向量 $\bar{0}$ )</li>
+<li>数值迭代，求解满足 $H(x,1)=0$ 的解 $x^*$<ul>
+<li>构造序列 $\{ \lambda_i \} = \{0,…,\lambda_i,…1\}, i = 0,1,2,…,N$ </li>
+<li>以 $x_0$ 为初值，求解 $H(x,\lambda_1)=0$ （例如，Netwon迭代），解为 $x_1$</li>
+<li>以 $x_1$ 为初值，求解 $H(x,\lambda_2)=0$，解为 $x_2$</li>
+<li>以 $x_i$ 为初值，求解 $H(x,\lambda_{i+1})=0$，解为 $x_{i+1}$</li>
+<li>最终求得 $H(x,1)=0$ 的解 $x_N$, 即 $F(x)=0$的解 $x^*$</li>
+</ul>
+</li>
+<li>该方法的结果相当于扩大了传统非线性方程组迭代求解方法的收敛域</li>
+</ol>
+<p><strong>Mark 1</strong>： Newton迭代时，可只迭代一步，因为最终目标是求 $\boldsymbol{x}^*$<br><strong>Mark 2</strong>：$N$ 足够大</p>
+<h2 id="延拓法的数学表述"><a href="#延拓法的数学表述" class="headerlink" title="延拓法的数学表述"></a>延拓法的数学表述</h2><p>传统的求解非线性方程组求解方法是局部收敛的，只有初值 $x_0$ 足够接近真值，迭代方法收敛。然而，延拓法作为可以扩大收敛域的有效方法，可以从任意的 $x_0$ 出发，通过延拓求解得到方程的解 $x^*$。</p>
+<p>引入参数 $\lambda$，构造一簇同伦映射 $\boldsymbol{H}:D\times[0,1] \subset \mathbf{R}^{n+1}\rightarrow \mathbf{R}^n$ 代替单映射 $\boldsymbol{F}(\boldsymbol{x})$，令 $\boldsymbol{H}$ 满足条件：</p>
+<p>$$<br>\boldsymbol{H}(\boldsymbol{x}_0,0)=\boldsymbol{0}<br>$$</p>
+<p>$$<br>\boldsymbol{H}(\boldsymbol{x},1)=\boldsymbol{F}(\boldsymbol{x})<br>$$</p>
+<p>它表明当 $\lambda=0$ 时，$\boldsymbol{H}(\boldsymbol{x},0)=\boldsymbol{0}$ 的解 $\boldsymbol{x}_0$ 已知；当 $\lambda=1$ 时，$\boldsymbol{H}(\boldsymbol{x},1)=\boldsymbol{F}(\boldsymbol{x})=0$ 的解 $\boldsymbol{x}^*$ 为非线性方程组的解。</p>
+<p>现考虑同伦方程：</p>
+<p>$$<br>\boldsymbol{H}(\boldsymbol{x},\lambda)=\boldsymbol{0} \quad<br>\lambda \in [0,1],\boldsymbol{x}\in D \subset\mathbf{R}^n<br>$$</p>
+<p>如果对每个 $\lambda \in[0,1]$，上述方程有解 $\boldsymbol{x}=\boldsymbol{x}(\lambda), \boldsymbol{x}:[0,1]\rightarrow D$ 且连续，则 $\boldsymbol{x}=\boldsymbol{x}(\lambda)$ 是关于参数 $\lambda\in[0,1]$ 在 $\mathbf{R}^{n+1}$ 中的一条曲线。该曲线的一端为已知点 $(\boldsymbol{x}_0,0)$，另一端是点 $(\boldsymbol{x}^*,1)$，$\boldsymbol{x}^*$ 即为非线性方程组的解，这就是<strong>延拓法</strong>，也被称作<strong>同伦法</strong>。</p>
+<p>满足条件的同伦可以有各种不同的取法，常用的有两种。</p>
+<p>牛顿同伦：<br>$$<br>\boldsymbol{H}(\boldsymbol{x},\lambda)<br>=\boldsymbol{F}(\boldsymbol{x})<br>+(\lambda-1)\boldsymbol{F}(\boldsymbol{x}_0)<br>$$</p>
+<p>凸同伦：<br>$$<br>\boldsymbol{H}(\boldsymbol{x},\lambda)<br>= t \boldsymbol{F}(\boldsymbol{x})<br>+(1-\lambda)\boldsymbol{A}(\boldsymbol{x} - \boldsymbol{x}_0)<br>$$</p>
+<p>其中 $\boldsymbol{A}\in\mathbf{R}^{n\times n}$ 是非奇的</p>
+
       
     </div>
 
