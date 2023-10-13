@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -16,16 +14,17 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;alkaidwood.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script><script src="/js/config.js"></script>
-<meta name="description" content="灵敏度灵敏度是指沿传感器的测量方向，对应于每一单位简谐机械量的输入，其开路时电信号的输出，即输出比输入。  输入的机械量：$x&#x3D;X\sin(\omega t +\alpha)$ 输出的电信号：$e&#x3D;E\sin (\omega t+ \alpha - \theta)$，$\theta$ 为相移，即输出的电信号$e$对被测机械量$x$的相位滞后 灵敏度：$s&#x3D;E&#x2F;X$ （电信号单位 &#x2F; 机械量单位）">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"alkaidwood.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="灵敏度 灵敏度是指沿传感器的测量方向，对应于每一单位简谐机械量的输入，其开路时电信号的输出，即输出比输入。  输入的机械量：\(x&#x3D;X\sin(\omega t +\alpha)\) 输出的电信号：\(e&#x3D;E\sin (\omega t+ \alpha - \theta)\)，\(\theta\) 为相移，即输出的电信号\(e\)对被测机械量\(x\)的相位滞后 灵敏度：\(s&#x3D;E">
 <meta property="og:type" content="article">
 <meta property="og:title" content="振动传感器主要性能指标">
 <meta property="og:url" content="https://alkaidwood.github.io/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/index.html">
 <meta property="og:site_name" content="Haopeng&#39;s Blog">
-<meta property="og:description" content="灵敏度灵敏度是指沿传感器的测量方向，对应于每一单位简谐机械量的输入，其开路时电信号的输出，即输出比输入。  输入的机械量：$x&#x3D;X\sin(\omega t +\alpha)$ 输出的电信号：$e&#x3D;E\sin (\omega t+ \alpha - \theta)$，$\theta$ 为相移，即输出的电信号$e$对被测机械量$x$的相位滞后 灵敏度：$s&#x3D;E&#x2F;X$ （电信号单位 &#x2F; 机械量单位）">
+<meta property="og:description" content="灵敏度 灵敏度是指沿传感器的测量方向，对应于每一单位简谐机械量的输入，其开路时电信号的输出，即输出比输入。  输入的机械量：\(x&#x3D;X\sin(\omega t +\alpha)\) 输出的电信号：\(e&#x3D;E\sin (\omega t+ \alpha - \theta)\)，\(\theta\) 为相移，即输出的电信号\(e\)对被测机械量\(x\)的相位滞后 灵敏度：\(s&#x3D;E">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://alkaidwood.github.io/image/zhendongceshi/xianxingdu.png">
 <meta property="og:image" content="https://alkaidwood.github.io/image/zhendongceshi/nuomotu.jpg">
@@ -41,14 +40,15 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;alkaidwood.github.io&#x2F;2021&#x2F;06&#x2F;14&#x2F;%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;06&#x2F;14&#x2F;振动传感器主要性能指标&#x2F;&quot;,&quot;title&quot;:&quot;振动传感器主要性能指标&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://alkaidwood.github.io/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/","path":"2021/06/14/振动传感器主要性能指标/","title":"振动传感器主要性能指标"}</script>
 
-<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>振动传感器主要性能指标 | Haopeng's Blog</title>
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-289336754-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{&quot;tracking_id&quot;:&quot;UA-289336754-1&quot;,&quot;only_pageview&quot;:false}</script>
-  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
 
 
 
@@ -62,8 +62,8 @@
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
@@ -76,14 +76,14 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Haopeng's Blog</h1>
+      <p class="site-title">Haopeng's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Share equ happiness</p>
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
     </div>
   </div>
 </div>
@@ -91,25 +91,16 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
   </ul>
 </nav>
 
 
 
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -130,50 +121,35 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Haopeng Zhang"
-      src="/image/aboutme/MSc_photo.jpg">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Haopeng Zhang</p>
   <div class="site-description" itemprop="description">PhD in Northwestern Polytecnical University</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+        <a href="/archives/">
           <span class="site-state-item-count">23</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
+          <a href="/tags/">
         <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
 
-
-
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
 
@@ -189,13 +165,18 @@
     <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/image/aboutme/MSc_photo.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Haopeng Zhang">
-      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Haopeng's Blog">
+      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="振动传感器主要性能指标 | Haopeng's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -212,22 +193,15 @@
 
       <time title="Created: 2021-06-14 16:51:27" itemprop="dateCreated datePublished" datetime="2021-06-14T16:51:27+08:00">2021-06-14</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-16 16:17:29" itemprop="dateModified" datetime="2021-06-16T16:17:29+08:00">2021-06-16</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2021-06-16 16:17:29" itemprop="dateModified" datetime="2021-06-16T16:17:29+08:00">2021-06-16</time>
+    </span>
 
   
-    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">Views: </span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
 </div>
 
         </div>
@@ -236,51 +210,74 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <h2 id="灵敏度"><a href="#灵敏度" class="headerlink" title="灵敏度"></a>灵敏度</h2><p>灵敏度是指沿传感器的测量方向，对应于每一单位简谐机械量的输入，其开路时电信号的输出，即输出比输入。</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="灵敏度">灵敏度</h2>
+<p>灵敏度是指沿传感器的测量方向，对应于每一单位简谐机械量的输入，其开路时电信号的输出，即输出比输入。</p>
 <ul>
-<li>输入的机械量：$x=X\sin(\omega t +\alpha)$</li>
-<li>输出的电信号：$e=E\sin (\omega t+ \alpha - \theta)$，$\theta$ 为相移，即输出的电信号$e$对被测机械量$x$的相位滞后</li>
-<li>灵敏度：$s=E/X$ （电信号单位 / 机械量单位）</li>
+<li>输入的机械量：<span class="math inline">\(x=X\sin(\omega t
++\alpha)\)</span></li>
+<li>输出的电信号：<span class="math inline">\(e=E\sin (\omega t+ \alpha
+- \theta)\)</span>，<span class="math inline">\(\theta\)</span>
+为相移，即输出的电信号<span
+class="math inline">\(e\)</span>对被测机械量<span
+class="math inline">\(x\)</span>的相位滞后</li>
+<li>灵敏度：<span class="math inline">\(s=E/X\)</span> （电信号单位 /
+机械量单位）</li>
 </ul>
-<p>通常，$X$ 是位移、速度、加速度、力、应变等，$E$ 是电压、电荷等。</p>
-<h2 id="分辨率"><a href="#分辨率" class="headerlink" title="分辨率"></a>分辨率</h2><p>分辨率是指传感器可感受到的被测量的最小变化的能力。</p>
-<p>也就是说，如果输入量从某一非零值缓慢地变化，但变化值未超过某一数值 $\Delta X$ 时，传感器的输出变化量 $\Delta E =0$ ，即传感器对此输入量的变化是分辨不出来的。只有当输入量的变化超过分辨率时，其输出才会发生变化。</p>
-<p>$\Delta X$ 越小，灵敏度越高，分辨率也越高。灵敏度越高，传感器的信噪比将相应下降，这将降低测量结果的精度，故应综合考虑。</p>
-<h2 id="线性度和线性范围"><a href="#线性度和线性范围" class="headerlink" title="线性度和线性范围"></a>线性度和线性范围</h2><p>通常情况下，传感器的实际静态特性输出是条曲线而非直线。在实际工作中，为使仪表具有均匀刻度的读数，常用一条拟合直线近似地代表实际的特性曲线。</p>
-<p><strong>线性度</strong>（非线性误差）$\gamma$ 就是这个近似程度的一个性能指标，定义为在全量程范围内实际特性曲线与拟合直线之间的最大偏差值与满量程输出值之比。</p>
-<p>$$<br>\gamma=\frac{ \Delta E }{  E_{max} -  E_{min} } \times 100 \%<br>$$</p>
+<p>通常，<span class="math inline">\(X\)</span>
+是位移、速度、加速度、力、应变等，<span class="math inline">\(E\)</span>
+是电压、电荷等。</p>
+<h2 id="分辨率">分辨率</h2>
+<p>分辨率是指传感器可感受到的被测量的最小变化的能力。</p>
+<p>也就是说，如果输入量从某一非零值缓慢地变化，但变化值未超过某一数值
+<span class="math inline">\(\Delta X\)</span> 时，传感器的输出变化量
+<span class="math inline">\(\Delta E =0\)</span>
+，即传感器对此输入量的变化是分辨不出来的。只有当输入量的变化超过分辨率时，其输出才会发生变化。</p>
+<p><span class="math inline">\(\Delta X\)</span>
+越小，灵敏度越高，分辨率也越高。灵敏度越高，传感器的信噪比将相应下降，这将降低测量结果的精度，故应综合考虑。</p>
+<h2 id="线性度和线性范围">线性度和线性范围</h2>
+<p>通常情况下，传感器的实际静态特性输出是条曲线而非直线。在实际工作中，为使仪表具有均匀刻度的读数，常用一条拟合直线近似地代表实际的特性曲线。</p>
+<p><strong>线性度</strong>（非线性误差）<span
+class="math inline">\(\gamma\)</span>
+就是这个近似程度的一个性能指标，定义为在全量程范围内实际特性曲线与拟合直线之间的最大偏差值与满量程输出值之比。</p>
+<p><span class="math display">\[
+\gamma=\frac{ \Delta E }{  E_{max} -  E_{min} } \times 100 \\%
+\]</span></p>
 <p><strong>线性范围</strong>是指传感器测量量与实际被测量之间保持近似线性关系的范围。</p>
-<img src="/image/zhendongceshi/xianxingdu.png" width = "60%" height = "60%"  align=center />
-
-<h2 id="频率范围"><a href="#频率范围" class="headerlink" title="频率范围"></a>频率范围</h2><p><strong>频率范围</strong>是指传感器的灵敏度随频率的变化量不超出某一给定的误差限的频率范围（频率上限和下限）。传感器的频率范围取决于：</p>
-<ol>
-<li>机械接收部分的频率特性。</li>
-<li>机电变换部分和所用二次仪表的频率特性。 </li>
-<li>传感器的安装条件也影响频率上限。 </li>
-</ol>
-<p>备注：</p>
-<ul>
-<li>在制定测量方案时，首先要看传感器的频率范围是否满足测量的要求</li>
-<li>压电式加速度传感器具有较宽的频率范围，而且频率上限也比较高</li>
-<li>电阻式、压阻式和伺服式等三种加速度传感器都具有零频率响应，其中压阻式也具有较高的上限频率</li>
-</ul>
-<h2 id="固有频率与安装谐振频率"><a href="#固有频率与安装谐振频率" class="headerlink" title="固有频率与安装谐振频率"></a>固有频率与安装谐振频率</h2><p>对于惯性式接收传感器，其机械接收部分是由质量块、阻尼器、弹簧构成的单自由度振动系统，其质量、阻尼、刚度分别为 $m, c, k$。该振系统无阻尼自由振动的频率 $ \omega_n = \sqrt{k/m}$ 被称为传感器的<strong>固有频率</strong>。</p>
-<p>传感器产生共振时的最低频率称为<strong>安装谐振频率</strong>，若安装刚度是有限的（实际上也很难达到无穷大），则其对传感器的接收特性将有较大影响。 </p>
-<h2 id="工作范围"><a href="#工作范围" class="headerlink" title="工作范围"></a>工作范围</h2><p>频率范围和线性范围一起决定了传感器的<strong>工作范围</strong>。工作范围可以从诺谟图（Nomogram）中得到</p>
-<img src="/image/zhendongceshi/nuomotu.jpg" width = "50%" height = "50%"  align=center />
-
-<h2 id="横向灵敏度与方向特性"><a href="#横向灵敏度与方向特性" class="headerlink" title="横向灵敏度与方向特性"></a>横向灵敏度与方向特性</h2><p>横向灵敏度主要是由于最大灵敏度轴与传感器的几何轴线不重合而引起的。这是由于传感器加工、安装上的间歇误差等条件造成的。最大灵敏度的轴线与几何轴线间的夹角为 $\theta$，<strong>最大的横向灵敏度</strong>表示为：</p>
-<p>$$<br>s_t=\tan \theta<br>$$</p>
-<p>备注：</p>
-<ul>
-<li>加速度传感器的外壳上的红点被用来表示横向灵敏度的方向。</li>
-<li>一般令红点和传感器中心的连线，与振幅最大的非被测振动方向垂直，以减少测量误差。</li>
-</ul>
-<h2 id="动态范围"><a href="#动态范围" class="headerlink" title="动态范围"></a>动态范围</h2><p><strong>动态范围</strong>是指某一输入机械量的幅值范围（用分贝表示），该范围内传感器的灵敏度随输入机械量幅值的变化量不超出某一给定的误差限。</p>
-<p>$$<br>D=20 \lg \frac{X_{max}}{X_{min}}<br>$$</p>
-<p>动态范围越大，说明传感器对幅值变化的适应能力越强。比如 $D=80dB$，则幅值上限与下限之比达10000倍。传感器的量程即是指其幅值上限与下限值的代数差。</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>传感器的其它性能参数还包括其质量、重复性、稳定性、输入输出阻抗、阻尼、迟滞、零飘、过载能力、以及它的工作环境条件等。 </p>
+<p><img src="/image/zhendongceshi/xianxingdu.png" width = "60%" height = "60%"  align=center /></p>
+<h2 id="频率范围">频率范围</h2>
+<p><strong>频率范围</strong>是指传感器的灵敏度随频率的变化量不超出某一给定的误差限的频率范围（频率上限和下限）。传感器的频率范围取决于：
+1. 机械接收部分的频率特性。 1. 机电变换部分和所用二次仪表的频率特性。 1.
+传感器的安装条件也影响频率上限。</p>
+<p>备注： * 在制定测量方案时，首先要看传感器的频率范围是否满足测量的要求
+* 压电式加速度传感器具有较宽的频率范围，而且频率上限也比较高 *
+电阻式、压阻式和伺服式等三种加速度传感器都具有零频率响应，其中压阻式也具有较高的上限频率</p>
+<h2 id="固有频率与安装谐振频率">固有频率与安装谐振频率</h2>
+<p>对于惯性式接收传感器，其机械接收部分是由质量块、阻尼器、弹簧构成的单自由度振动系统，其质量、阻尼、刚度分别为
+<span class="math inline">\(m, c,
+k\)</span>。该振系统无阻尼自由振动的频率 $ _n = $
+被称为传感器的<strong>固有频率</strong>。</p>
+<p>传感器产生共振时的最低频率称为<strong>安装谐振频率</strong>，若安装刚度是有限的（实际上也很难达到无穷大），则其对传感器的接收特性将有较大影响。</p>
+<h2 id="工作范围">工作范围</h2>
+<p>频率范围和线性范围一起决定了传感器的<strong>工作范围</strong>。工作范围可以从诺谟图（Nomogram）中得到</p>
+<p><img src="/image/zhendongceshi/nuomotu.jpg" width = "50%" height = "50%"  align=center /></p>
+<h2 id="横向灵敏度与方向特性">横向灵敏度与方向特性</h2>
+<p>横向灵敏度主要是由于最大灵敏度轴与传感器的几何轴线不重合而引起的。这是由于传感器加工、安装上的间歇误差等条件造成的。最大灵敏度的轴线与几何轴线间的夹角为
+<span
+class="math inline">\(\theta\)</span>，<strong>最大的横向灵敏度</strong>表示为：</p>
+<p><span class="math display">\[
+s_t=\tan \theta
+\]</span></p>
+<p>备注： * 加速度传感器的外壳上的红点被用来表示横向灵敏度的方向。 *
+一般令红点和传感器中心的连线，与振幅最大的非被测振动方向垂直，以减少测量误差。</p>
+<h2 id="动态范围">动态范围</h2>
+<p><strong>动态范围</strong>是指某一输入机械量的幅值范围（用分贝表示），该范围内传感器的灵敏度随输入机械量幅值的变化量不超出某一给定的误差限。</p>
+<p><span class="math display">\[
+D=20 \lg \frac{X_{max}}{X_{min}}
+\]</span></p>
+<p>动态范围越大，说明传感器对幅值变化的适应能力越强。比如 <span
+class="math inline">\(D=80dB\)</span>，则幅值上限与下限之比达10000倍。传感器的量程即是指其幅值上限与下限值的代数差。</p>
+<h2 id="其他">其他</h2>
+<p>传感器的其它性能参数还包括其质量、重复性、稳定性、输入输出阻抗、阻尼、迟滞、零飘、过载能力、以及它的工作环境条件等。</p>
 
     </div>
 
@@ -298,12 +295,12 @@
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/2021/06/13/2021-6-13-%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86/" rel="prev" title="采样定理">
-                  <i class="fa fa-chevron-left"></i> 采样定理
+                  <i class="fa fa-angle-left"></i> 采样定理
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/2021/06/14/%E5%AE%9E%E9%AA%8C%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8E%E4%B8%BB%E8%A6%81%E8%BF%87%E7%A8%8B/" rel="next" title="实验模态分析的基本原理与主要过程">
-                  实验模态分析的基本原理与主要过程 <i class="fa fa-chevron-right"></i>
+                  实验模态分析的基本原理与主要过程 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -322,44 +319,33 @@
   <footer class="footer">
     <div class="footer-inner">
 
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Haopeng Zhang</span>
-</div>
-<div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="Total Visitors">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
     </span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="Total Views">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
+    <span class="author" itemprop="copyrightHolder">Haopeng Zhang</span>
+  </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
-
-
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     </div>
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
@@ -370,15 +356,8 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-
-
-  
-
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:{&quot;url&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;,&quot;integrity&quot;:&quot;sha256-ncNI9OXOS5Ek4tzVYiOMmN&#x2F;KKCPZ6V0Cpv2P&#x2F;zHntiA&#x3D;&quot;}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
 
 
 

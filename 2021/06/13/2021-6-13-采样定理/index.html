@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -16,16 +14,17 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;alkaidwood.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script><script src="/js/config.js"></script>
-<meta name="description" content="采样采样就是将连续模拟信号变为离散数字信号的过程。 什么是采样定理离散后的信号能唯一的确定原连续信号，并要求离散信号通过D&#x2F;A（数&#x2F;模）转化后能恢复成原连续信号。由于离散信号是从连续信号上取出的一部分值，与连续信号的关系是整体和局部的关系，一般来说是不可能唯一确定连续信号的。只有在满足一定条件下，离散信号才可按照一定方式恢复出原来的连续信号。这个条件就是采样定理。 如何满足采样定理采样定理：采样频">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"alkaidwood.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="采样 采样就是将连续模拟信号变为离散数字信号的过程。 什么是采样定理 离散后的信号能唯一的确定原连续信号，并要求离散信号通过D&#x2F;A（数&#x2F;模）转化后能恢复成原连续信号。由于离散信号是从连续信号上取出的一部分值，与连续信号的关系是整体和局部的关系，一般来说是不可能唯一确定连续信号的。只有在满足一定条件下，离散信号才可按照一定方式恢复出原来的连续信号。这个条件就是采样定理。 如何满足采样定理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="采样定理">
 <meta property="og:url" content="https://alkaidwood.github.io/2021/06/13/2021-6-13-%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86/index.html">
 <meta property="og:site_name" content="Haopeng&#39;s Blog">
-<meta property="og:description" content="采样采样就是将连续模拟信号变为离散数字信号的过程。 什么是采样定理离散后的信号能唯一的确定原连续信号，并要求离散信号通过D&#x2F;A（数&#x2F;模）转化后能恢复成原连续信号。由于离散信号是从连续信号上取出的一部分值，与连续信号的关系是整体和局部的关系，一般来说是不可能唯一确定连续信号的。只有在满足一定条件下，离散信号才可按照一定方式恢复出原来的连续信号。这个条件就是采样定理。 如何满足采样定理采样定理：采样频">
+<meta property="og:description" content="采样 采样就是将连续模拟信号变为离散数字信号的过程。 什么是采样定理 离散后的信号能唯一的确定原连续信号，并要求离散信号通过D&#x2F;A（数&#x2F;模）转化后能恢复成原连续信号。由于离散信号是从连续信号上取出的一部分值，与连续信号的关系是整体和局部的关系，一般来说是不可能唯一确定连续信号的。只有在满足一定条件下，离散信号才可按照一定方式恢复出原来的连续信号。这个条件就是采样定理。 如何满足采样定理">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://alkaidwood.github.io/image/zhendongceshi/pinlvhunxiao.jpg">
 <meta property="article:published_time" content="2021-06-13T11:09:36.000Z">
@@ -40,14 +39,15 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;alkaidwood.github.io&#x2F;2021&#x2F;06&#x2F;13&#x2F;2021-6-13-%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;06&#x2F;13&#x2F;2021-6-13-采样定理&#x2F;&quot;,&quot;title&quot;:&quot;采样定理&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://alkaidwood.github.io/2021/06/13/2021-6-13-%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86/","path":"2021/06/13/2021-6-13-采样定理/","title":"采样定理"}</script>
 
-<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>采样定理 | Haopeng's Blog</title>
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-289336754-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{&quot;tracking_id&quot;:&quot;UA-289336754-1&quot;,&quot;only_pageview&quot;:false}</script>
-  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
 
 
 
@@ -61,8 +61,8 @@
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
@@ -75,14 +75,14 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Haopeng's Blog</h1>
+      <p class="site-title">Haopeng's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Share equ happiness</p>
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
     </div>
   </div>
 </div>
@@ -90,25 +90,16 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
   </ul>
 </nav>
 
 
 
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -124,55 +115,40 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%87%E6%A0%B7"><span class="nav-number">1.</span> <span class="nav-text">采样</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">什么是采样定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%BB%A1%E8%B6%B3%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">如何满足采样定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%91%E7%8E%87%E6%B7%B7%E6%B7%86%E7%8E%B0%E8%B1%A1"><span class="nav-number">4.</span> <span class="nav-text">频率混淆现象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%87%E6%A0%B7%E5%87%BD%E6%95%B0-s-t"><span class="nav-number">4.1.</span> <span class="nav-text">采样函数$s(t)$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%87%E6%A0%B7%E5%90%8E%E8%BE%93%E5%87%BA%E7%9A%84%E4%BF%A1%E5%8F%B7-x-s-t"><span class="nav-number">4.2.</span> <span class="nav-text">采样后输出的信号$x_s(t)$</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%87%E6%A0%B7"><span class="nav-number">1.</span> <span class="nav-text">采样</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">什么是采样定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%BB%A1%E8%B6%B3%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">如何满足采样定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%91%E7%8E%87%E6%B7%B7%E6%B7%86%E7%8E%B0%E8%B1%A1"><span class="nav-number">4.</span> <span class="nav-text">频率混淆现象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%87%E6%A0%B7%E5%87%BD%E6%95%B0st"><span class="nav-number">4.1.</span> <span class="nav-text">采样函数\(s(t)\)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%87%E6%A0%B7%E5%90%8E%E8%BE%93%E5%87%BA%E7%9A%84%E4%BF%A1%E5%8F%B7x_st"><span class="nav-number">4.2.</span> <span class="nav-text">采样后输出的信号\(x_s(t)\)</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Haopeng Zhang"
-      src="/image/aboutme/MSc_photo.jpg">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Haopeng Zhang</p>
   <div class="site-description" itemprop="description">PhD in Northwestern Polytecnical University</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+        <a href="/archives/">
           <span class="site-state-item-count">23</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
+          <a href="/tags/">
         <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
 
-
-
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
 
@@ -188,13 +164,18 @@
     <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/06/13/2021-6-13-%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/image/aboutme/MSc_photo.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Haopeng Zhang">
-      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Haopeng's Blog">
+      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="采样定理 | Haopeng's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -211,22 +192,15 @@
 
       <time title="Created: 2021-06-13 19:09:36" itemprop="dateCreated datePublished" datetime="2021-06-13T19:09:36+08:00">2021-06-13</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-16 11:50:56" itemprop="dateModified" datetime="2021-06-16T11:50:56+08:00">2021-06-16</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2021-06-16 11:50:56" itemprop="dateModified" datetime="2021-06-16T11:50:56+08:00">2021-06-16</time>
+    </span>
 
   
-    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">Views: </span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
 </div>
 
         </div>
@@ -235,47 +209,119 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <h2 id="采样"><a href="#采样" class="headerlink" title="采样"></a>采样</h2><p>采样就是将连续模拟信号变为离散数字信号的过程。</p>
-<h2 id="什么是采样定理"><a href="#什么是采样定理" class="headerlink" title="什么是采样定理"></a>什么是采样定理</h2><p>离散后的信号能唯一的确定原连续信号，并要求离散信号通过D/A（数/模）转化后能恢复成原连续信号。由于离散信号是从连续信号上取出的一部分值，与连续信号的关系是整体和局部的关系，一般来说是不可能唯一确定连续信号的。只有在满足一定条件下，离散信号才可按照一定方式恢复出原来的连续信号。这个条件就是采样定理。</p>
-<h2 id="如何满足采样定理"><a href="#如何满足采样定理" class="headerlink" title="如何满足采样定理"></a>如何满足采样定理</h2><p><strong>采样定理</strong>：采样频率必须大于被分析信号成分中最高频率值的两倍以上，否则将产生高、低频<strong>混淆现象</strong>，即高频信号经采样后只出现低频信号，采样信号无法还原为原信号。<br>$$<br>f_s=\frac{1}{\Delta t} &gt;2f_m<br>$$</p>
-<p>其中$f_s$是采样频率，$f_m$是被分析信号成分中的最高频率值，$\Delta t$是采样时间间隔。</p>
-<h2 id="频率混淆现象"><a href="#频率混淆现象" class="headerlink" title="频率混淆现象"></a>频率混淆现象</h2><p><strong>如果想彻底了解采样定理的内涵，以及为什么不满足采样定理就会出现混淆现象，请接着看下去</strong><br>读者自己推导采样后得到的信号$x_s(t)$的傅里叶变换表达式$X_s(j\omega)$，再根据$X_s(j\omega)$绘制频谱图，最终就会理解采样定理的内涵。</p>
-<p>为了便于推导，现定义：</p>
-<ul>
-<li>原信号：$x_m(t)$，傅里叶变换后为$X_m(j\omega)$</li>
-<li>采样函数：$s(t)$，傅里叶变换后为$S(j\omega)$</li>
-<li>采样后输出信号：$x_s(t)$，傅里叶变换后为$X_s(j\omega)$</li>
-</ul>
-<h3 id="采样函数-s-t"><a href="#采样函数-s-t" class="headerlink" title="采样函数$s(t)$"></a>采样函数$s(t)$</h3><p>当我们把采样的过程看作一个周期为 $T$ 、宽度为 $\tau$ 的矩形脉冲信号$s(t)$。当$\tau\ll  T$ 时，采样脉冲信号$s(t)$具有了狄拉克$\delta$函数的性质：</p>
-<p>$$<br>\delta(t)= \begin{cases} \infty &amp; t=0 \\ 0 &amp;      t\neq 0 \end{cases}<br>$$</p>
-<p>$$<br>s(t)= \sum^\infty_{n=-\infty} \delta(t-nT)<br>$$</p>
-<p>为了便于傅里叶变换，把$s(t)$表示为傅里叶级数的形式：</p>
-<p>$$<br>s(t)=\sum^\infty_{k=-\infty} a_k e^{jk\omega_s t} ,\quad \omega_s=\frac{2\pi}{T}<br>$$</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="采样">采样</h2>
+<p>采样就是将连续模拟信号变为离散数字信号的过程。</p>
+<h2 id="什么是采样定理">什么是采样定理</h2>
+<p>离散后的信号能唯一的确定原连续信号，并要求离散信号通过D/A（数/模）转化后能恢复成原连续信号。由于离散信号是从连续信号上取出的一部分值，与连续信号的关系是整体和局部的关系，一般来说是不可能唯一确定连续信号的。只有在满足一定条件下，离散信号才可按照一定方式恢复出原来的连续信号。这个条件就是采样定理。</p>
+<h2 id="如何满足采样定理">如何满足采样定理</h2>
+<p><strong>采样定理</strong>：采样频率必须大于被分析信号成分中最高频率值的两倍以上，否则将产生高、低频<strong>混淆现象</strong>，即高频信号经采样后只出现低频信号，采样信号无法还原为原信号。
+<span class="math display">\[
+f_s=\frac{1}{\Delta t} &gt;2f_m
+\]</span></p>
+<p>其中<span class="math inline">\(f_s\)</span>是采样频率，<span
+class="math inline">\(f_m\)</span>是被分析信号成分中的最高频率值，<span
+class="math inline">\(\Delta t\)</span>是采样时间间隔。</p>
+<h2 id="频率混淆现象">频率混淆现象</h2>
+<p><strong>如果想彻底了解采样定理的内涵，以及为什么不满足采样定理就会出现混淆现象，请接着看下去</strong>
+读者自己推导采样后得到的信号<span
+class="math inline">\(x_s(t)\)</span>的傅里叶变换表达式<span
+class="math inline">\(X_s(j\omega)\)</span>，再根据<span
+class="math inline">\(X_s(j\omega)\)</span>绘制频谱图，最终就会理解采样定理的内涵。</p>
+<p>为了便于推导，现定义： * 原信号：<span
+class="math inline">\(x_m(t)\)</span>，傅里叶变换后为<span
+class="math inline">\(X_m(j\omega)\)</span> * 采样函数：<span
+class="math inline">\(s(t)\)</span>，傅里叶变换后为<span
+class="math inline">\(S(j\omega)\)</span> * 采样后输出信号：<span
+class="math inline">\(x_s(t)\)</span>，傅里叶变换后为<span
+class="math inline">\(X_s(j\omega)\)</span></p>
+<h3 id="采样函数st">采样函数<span
+class="math inline">\(s(t)\)</span></h3>
+<p>当我们把采样的过程看作一个周期为 <span
+class="math inline">\(T\)</span> 、宽度为 <span
+class="math inline">\(\tau\)</span> 的矩形脉冲信号<span
+class="math inline">\(s(t)\)</span>。当<span
+class="math inline">\(\tau\ll T\)</span> 时，采样脉冲信号<span
+class="math inline">\(s(t)\)</span>具有了狄拉克<span
+class="math inline">\(\delta\)</span>函数的性质：</p>
+<p><span class="math display">\[
+\delta(t)= \begin{cases} \infty &amp; t=0 \\\\ 0 &amp;      t\neq 0
+\end{cases}
+\]</span></p>
+<p><span class="math display">\[
+s(t)= \sum^\infty_{n=-\infty} \delta(t-nT)
+\]</span></p>
+<p>为了便于傅里叶变换，把<span
+class="math inline">\(s(t)\)</span>表示为傅里叶级数的形式：</p>
+<p><span class="math display">\[
+s(t)=\sum^\infty_{k=-\infty} a_k e^{jk\omega_s t} ,\quad
+\omega_s=\frac{2\pi}{T}
+\]</span></p>
 <p>其中：</p>
-<p>$$<br>a_k=\frac{1}{T} \int^{T/2}_ {-T/2} \sum\nolimits^\infty_{n=-\infty} \delta(t-nT) e^{-j\omega_s t} dt=\frac{1}{T}<br>$$</p>
+<p><span class="math display">\[
+a_k=\frac{1}{T} \int^{T/2}_ {-T/2} \sum\nolimits^\infty_{n=-\infty}
+\delta(t-nT) e^{-j\omega_s t} dt=\frac{1}{T}
+\]</span></p>
 <p>因此，有：</p>
-<p>$$<br>s(t)=\frac{1}{T} \sum^\infty_{k=-\infty} e^{jk\omega_s t}<br>$$</p>
-<p>对$s(t)$进行傅里叶变换得到$S(j\omega)$：</p>
-<p>$$<br>S(j\omega)=F \left[  s(t) \right] =F \left[  \frac{1}{T} \sum^\infty_{k=-\infty} e^{jk\omega_s t}  \right]  = \frac{1}{T} \sum^\infty_{k=-\infty} F \left[  e^{jk\omega_s t}  \right]<br>$$</p>
+<p><span class="math display">\[
+s(t)=\frac{1}{T} \sum^\infty_{k=-\infty} e^{jk\omega_s t}
+\]</span></p>
+<p>对<span class="math inline">\(s(t)\)</span>进行傅里叶变换得到<span
+class="math inline">\(S(j\omega)\)</span>：</p>
+<p><span class="math display">\[
+S(j\omega)=F \left[  s(t) \right] =F \left[  \frac{1}{T}
+\sum^\infty_{k=-\infty} e^{jk\omega_s t}  \right]  = \frac{1}{T}
+\sum^\infty_{k=-\infty} F \left[  e^{jk\omega_s t}  \right]
+\]</span></p>
 <p>查常用Fourier变换表可知：</p>
-<p>$$<br>F \left[  e^{jk\omega_s t}  \right] =2\pi \delta(\omega -k\omega_s)<br>$$</p>
-<p>则$S(j\omega)$为：</p>
-<p>$$<br>S(j\omega) = \frac{2\pi}{T} \sum^\infty_{k=-\infty} \delta(\omega -k\omega_s)<br>$$</p>
-<h3 id="采样后输出的信号-x-s-t"><a href="#采样后输出的信号-x-s-t" class="headerlink" title="采样后输出的信号$x_s(t)$"></a>采样后输出的信号$x_s(t)$</h3><p>采样后输出的信号$x_s(t)$等于原信号$x_m(t)$乘采样函数$s(t)$：</p>
-<p>$$<br>x_s(t)=x_m(t)s(t)<br>$$</p>
-<p>记$*$为卷积，根据频域下的卷积定理</p>
-<p>$$<br>f_1(t)f_2(t)=\frac{1}{2\pi}F^{-1}\left[ F_1(j\omega)* F_2(j\omega)\right]<br>$$</p>
-<p>采样后输出的信号$X_s(j\omega)$为：</p>
-<p>$$<br>X_s(j\omega)=\frac{1}{2\pi} X_m(j\omega)*S(j\omega)=\frac{1}{2\pi}· X_m(j\omega) *\left[ \frac{2\pi}{T} \sum^\infty_{k=-\infty} \delta(\omega -k\omega_s) \right]<br>$$</p>
-<p>根据冲击函数的性质有：<br>$$<br>X_s(j\omega)=\frac{1}{T} \int^\infty _ {-\infty} X_m(j\theta) \sum^\infty_{k=-\infty} \delta(\omega -k\omega_s - \theta) d\theta<br>$$</p>
+<p><span class="math display">\[
+F \left[  e^{jk\omega_s t}  \right] =2\pi \delta(\omega -k\omega_s)
+\]</span></p>
+<p>则<span class="math inline">\(S(j\omega)\)</span>为：</p>
+<p><span class="math display">\[
+S(j\omega) = \frac{2\pi}{T} \sum^\infty_{k=-\infty} \delta(\omega
+-k\omega_s)
+\]</span></p>
+<h3 id="采样后输出的信号x_st">采样后输出的信号<span
+class="math inline">\(x_s(t)\)</span></h3>
+<p>采样后输出的信号<span
+class="math inline">\(x_s(t)\)</span>等于原信号<span
+class="math inline">\(x_m(t)\)</span>乘采样函数<span
+class="math inline">\(s(t)\)</span>：</p>
+<p><span class="math display">\[
+x_s(t)=x_m(t)s(t)
+\]</span></p>
+<p>记<span
+class="math inline">\(*\)</span>为卷积，根据频域下的卷积定理</p>
+<p><span class="math display">\[
+f_1(t)f_2(t)=\frac{1}{2\pi}F^{-1}\left[ F_1(j\omega)*
+F_2(j\omega)\right]
+\]</span></p>
+<p>采样后输出的信号<span
+class="math inline">\(X_s(j\omega)\)</span>为：</p>
+<p><span class="math display">\[
+X_s(j\omega)=\frac{1}{2\pi} X_m(j\omega)*S(j\omega)=\frac{1}{2\pi}·
+X_m(j\omega) *\left[ \frac{2\pi}{T} \sum^\infty_{k=-\infty}
+\delta(\omega -k\omega_s) \right]
+\]</span></p>
+<p>根据冲击函数的性质有： <span class="math display">\[
+X_s(j\omega)=\frac{1}{T} \int^\infty _ {-\infty} X_m(j\theta)
+\sum^\infty_{k=-\infty} \delta(\omega -k\omega_s - \theta) d\theta
+\]</span></p>
 <blockquote>
-<p>冲激函数的性质：$f(t)*\delta(t-t_0)=f(t-t_0)$</p>
+<p>冲激函数的性质：<span
+class="math inline">\(f(t)*\delta(t-t_0)=f(t-t_0)\)</span></p>
 </blockquote>
 <p>最终，采样后信号的傅里叶变换为：</p>
-<p>$$<br>X_s(j\omega)=\frac{1}{T}\sum^\infty_{k=-\infty} X_m(j\omega-jk\omega_s)<br>$$</p>
-<p>从上式可以看出，原信号的频谱$X_m(j\omega)$在频域内发生了周期延拓。即，原信号在频谱上的宽度是$2f_m$，每隔$f_s$重复一次（相当于信号的平移），发生了周期延拓，从图中直观的看出来，如果$f_s&lt;2f_m$，延拓后的信号会在频域内会发生混淆。</p>
-<img src="/image/zhendongceshi/pinlvhunxiao.jpg" width = "60%" height = "60%"  align=center />
+<p><span class="math display">\[
+X_s(j\omega)=\frac{1}{T}\sum^\infty_{k=-\infty} X_m(j\omega-jk\omega_s)
+\]</span></p>
+<p>从上式可以看出，原信号的频谱<span
+class="math inline">\(X_m(j\omega)\)</span>在频域内发生了周期延拓。即，原信号在频谱上的宽度是<span
+class="math inline">\(2f_m\)</span>，每隔<span
+class="math inline">\(f_s\)</span>重复一次（相当于信号的平移），发生了周期延拓，从图中直观的看出来，如果<span
+class="math inline">\(f_s&lt;2f_m\)</span>，延拓后的信号会在频域内会发生混淆。</p>
+<p><img src="/image/zhendongceshi/pinlvhunxiao.jpg" width = "60%" height = "60%"  align=center /></p>
+
     </div>
 
     
@@ -292,12 +338,12 @@
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/2021/06/13/2021-6-13-%E5%8E%8B%E7%94%B5%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/" rel="prev" title="压电加速度传感器基本原理">
-                  <i class="fa fa-chevron-left"></i> 压电加速度传感器基本原理
+                  <i class="fa fa-angle-left"></i> 压电加速度传感器基本原理
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/" rel="next" title="振动传感器主要性能指标">
-                  振动传感器主要性能指标 <i class="fa fa-chevron-right"></i>
+                  振动传感器主要性能指标 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -316,44 +362,33 @@
   <footer class="footer">
     <div class="footer-inner">
 
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Haopeng Zhang</span>
-</div>
-<div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="Total Visitors">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
     </span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="Total Views">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
+    <span class="author" itemprop="copyrightHolder">Haopeng Zhang</span>
+  </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
-
-
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     </div>
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
@@ -364,15 +399,8 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-
-
-  
-
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:{&quot;url&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;,&quot;integrity&quot;:&quot;sha256-ncNI9OXOS5Ek4tzVYiOMmN&#x2F;KKCPZ6V0Cpv2P&#x2F;zHntiA&#x3D;&quot;}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
 
 
 

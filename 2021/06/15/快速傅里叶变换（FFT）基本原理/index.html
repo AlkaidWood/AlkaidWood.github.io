@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -16,16 +14,17 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;alkaidwood.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script><script src="/js/config.js"></script>
-<meta name="description" content="引言快速傅里叶变换（FFT）是离散傅里叶变换（DFT）的加速算法，而DFT则是将连续的傅里叶变换离散化（在时域和频域离散），连续傅里叶变换可由傅里叶展开式推导得出。 正向逻辑为：傅里叶展开式 $\rightarrow$ 推导得到 $\rightarrow$ 连续傅里叶变换对 $\rightarrow$ 离散后得到 $\rightarrow$ 离散傅里叶变换 $\rightarrow$ 开发加速算法">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"alkaidwood.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="引言 快速傅里叶变换（FFT）是离散傅里叶变换（DFT）的加速算法，而DFT则是将连续的傅里叶变换离散化（在时域和频域离散），连续傅里叶变换可由傅里叶展开式推导得出。 正向逻辑为： 傅里叶展开式 \(\rightarrow\) 推导得到 \(\rightarrow\) 连续傅里叶变换对 \(\rightarrow\) 离散后得到 \(\rightarrow\) 离散傅里叶变换 \(\right">
 <meta property="og:type" content="article">
 <meta property="og:title" content="快速傅里叶变换（FFT）基本原理">
 <meta property="og:url" content="https://alkaidwood.github.io/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="Haopeng&#39;s Blog">
-<meta property="og:description" content="引言快速傅里叶变换（FFT）是离散傅里叶变换（DFT）的加速算法，而DFT则是将连续的傅里叶变换离散化（在时域和频域离散），连续傅里叶变换可由傅里叶展开式推导得出。 正向逻辑为：傅里叶展开式 $\rightarrow$ 推导得到 $\rightarrow$ 连续傅里叶变换对 $\rightarrow$ 离散后得到 $\rightarrow$ 离散傅里叶变换 $\rightarrow$ 开发加速算法">
+<meta property="og:description" content="引言 快速傅里叶变换（FFT）是离散傅里叶变换（DFT）的加速算法，而DFT则是将连续的傅里叶变换离散化（在时域和频域离散），连续傅里叶变换可由傅里叶展开式推导得出。 正向逻辑为： 傅里叶展开式 \(\rightarrow\) 推导得到 \(\rightarrow\) 连续傅里叶变换对 \(\rightarrow\) 离散后得到 \(\rightarrow\) 离散傅里叶变换 \(\right">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-14T16:28:51.000Z">
 <meta property="article:modified_time" content="2021-06-16T16:08:35.720Z">
@@ -38,14 +37,15 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;alkaidwood.github.io&#x2F;2021&#x2F;06&#x2F;15&#x2F;%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;06&#x2F;15&#x2F;快速傅里叶变换（FFT）基本原理&#x2F;&quot;,&quot;title&quot;:&quot;快速傅里叶变换（FFT）基本原理&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://alkaidwood.github.io/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/","path":"2021/06/15/快速傅里叶变换（FFT）基本原理/","title":"快速傅里叶变换（FFT）基本原理"}</script>
 
-<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>快速傅里叶变换（FFT）基本原理 | Haopeng's Blog</title>
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-289336754-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{&quot;tracking_id&quot;:&quot;UA-289336754-1&quot;,&quot;only_pageview&quot;:false}</script>
-  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
 
 
 
@@ -59,8 +59,8 @@
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
@@ -73,14 +73,14 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Haopeng's Blog</h1>
+      <p class="site-title">Haopeng's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Share equ happiness</p>
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
     </div>
   </div>
 </div>
@@ -88,25 +88,16 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
   </ul>
 </nav>
 
 
 
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -122,55 +113,40 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">傅里叶变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%BD%A2%E5%BC%8F"><span class="nav-number">2.1.</span> <span class="nav-text">三角函数形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E6%95%B0%E5%BD%A2%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">指数形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E5%AE%9E%E9%99%85%E6%84%8F%E4%B9%89"><span class="nav-number">2.3.</span> <span class="nav-text">傅里叶变换的实际意义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-number">3.</span> <span class="nav-text">离散傅里叶变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-number">4.</span> <span class="nav-text">快速傅里叶变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#FFT%E6%8F%90%E5%87%BA%E7%9A%84%E8%83%8C%E6%99%AF"><span class="nav-number">4.1.</span> <span class="nav-text">FFT提出的背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FFT%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-number">4.2.</span> <span class="nav-text">FFT基本原理</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E6%95%B0%E5%BD%A2%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">指数形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E5%AE%9E%E9%99%85%E6%84%8F%E4%B9%89"><span class="nav-number">1.2.</span> <span class="nav-text">傅里叶变换的实际意义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">离散傅里叶变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-number">3.</span> <span class="nav-text">快速傅里叶变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fft%E6%8F%90%E5%87%BA%E7%9A%84%E8%83%8C%E6%99%AF"><span class="nav-number">3.1.</span> <span class="nav-text">FFT提出的背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fft%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-number">3.2.</span> <span class="nav-text">FFT基本原理</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Haopeng Zhang"
-      src="/image/aboutme/MSc_photo.jpg">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Haopeng Zhang</p>
   <div class="site-description" itemprop="description">PhD in Northwestern Polytecnical University</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+        <a href="/archives/">
           <span class="site-state-item-count">23</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
+          <a href="/tags/">
         <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
 
-
-
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
 
@@ -186,13 +162,18 @@
     <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/image/aboutme/MSc_photo.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Haopeng Zhang">
-      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Haopeng's Blog">
+      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="快速傅里叶变换（FFT）基本原理 | Haopeng's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -209,22 +190,15 @@
 
       <time title="Created: 2021-06-15 00:28:51" itemprop="dateCreated datePublished" datetime="2021-06-15T00:28:51+08:00">2021-06-15</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-17 00:08:35" itemprop="dateModified" datetime="2021-06-17T00:08:35+08:00">2021-06-17</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2021-06-17 00:08:35" itemprop="dateModified" datetime="2021-06-17T00:08:35+08:00">2021-06-17</time>
+    </span>
 
   
-    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">Views: </span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
 </div>
 
         </div>
@@ -233,103 +207,288 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>快速傅里叶变换（FFT）是离散傅里叶变换（DFT）的加速算法，而DFT则是将连续的傅里叶变换离散化（在时域和频域离散），连续傅里叶变换可由傅里叶展开式推导得出。</p>
-<p>正向逻辑为：<br>傅里叶展开式 $\rightarrow$ 推导得到 $\rightarrow$ 连续傅里叶变换对 $\rightarrow$ 离散后得到 $\rightarrow$ 离散傅里叶变换 $\rightarrow$ 开发加速算法 $\rightarrow$ 快速傅里叶变换</p>
-<h2 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h2><h3 id="三角函数形式"><a href="#三角函数形式" class="headerlink" title="三角函数形式"></a>三角函数形式</h3><p>对于一个周期为 $T$ 的信号 $x(t)$，其基频为 $f_1=1/T$。对 $x(t)$ 进行傅里叶展开：</p>
-<p>$$<br>x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ a_n \cos\left(2\pi n f_1 t \right) + b_n \sin\left(2\pi n f_1 t \right) \right]<br>$$</p>
-<p>上式中的 $a_n$ 和 $b_n$ 是傅里叶系数：</p>
-<p>$$<br>a_n = \frac{2}{T} \int^T_ 0 x(t) \cos \left( 2\pi n f_1 t \right) dt<br>$$</p>
-<p>$$<br>b_n = \frac{2}{T} \int^T_ 0 x(t) \sin \left( 2\pi n f_1 t \right) dt<br>$$</p>
-<h3 id="指数形式"><a href="#指数形式" class="headerlink" title="指数形式"></a>指数形式</h3><p>根据欧拉公式，可以将傅里叶变换式写为指数形式，指数形式看起来更为简洁，利于推导。<br>根据欧拉公式，有以下变换：</p>
-<p>$$<br>\cos \left( 2\pi n f_1 t \right) = \frac{1}{2} \left[ e^{j2\pi n f_1 t} +  e^{-j2\pi n f_1 t} \right]<br>$$</p>
-<p>$$<br>\sin \left( 2\pi n f_1 t \right) = \frac{1}{2j} \left[ e^{j2\pi n f_1 t} -  e^{-j2\pi n f_1 t} \right]<br>$$</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="引言">引言</h2>
+<p>快速傅里叶变换（FFT）是离散傅里叶变换（DFT）的加速算法，而DFT则是将连续的傅里叶变换离散化（在时域和频域离散），连续傅里叶变换可由傅里叶展开式推导得出。</p>
+<p>正向逻辑为： 傅里叶展开式 <span
+class="math inline">\(\rightarrow\)</span> 推导得到 <span
+class="math inline">\(\rightarrow\)</span> 连续傅里叶变换对 <span
+class="math inline">\(\rightarrow\)</span> 离散后得到 <span
+class="math inline">\(\rightarrow\)</span> 离散傅里叶变换 <span
+class="math inline">\(\rightarrow\)</span> 开发加速算法 <span
+class="math inline">\(\rightarrow\)</span> 快速傅里叶变换 ## 傅里叶变换
+### 三角函数形式 对于一个周期为 <span class="math inline">\(T\)</span>
+的信号 <span class="math inline">\(x(t)\)</span>，其基频为 <span
+class="math inline">\(f_1=1/T\)</span>。对 <span
+class="math inline">\(x(t)\)</span> 进行傅里叶展开：</p>
+<p><span class="math display">\[
+x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ a_n \cos\left(2\pi n
+f_1 t \right) + b_n \sin\left(2\pi n f_1 t \right) \right]
+\]</span></p>
+<p>上式中的 <span class="math inline">\(a_n\)</span> 和 <span
+class="math inline">\(b_n\)</span> 是傅里叶系数：</p>
+<p><span class="math display">\[
+a_n = \frac{2}{T} \int^T_ 0 x(t) \cos \left( 2\pi n f_1 t \right) dt
+\]</span></p>
+<p><span class="math display">\[
+b_n = \frac{2}{T} \int^T_ 0 x(t) \sin \left( 2\pi n f_1 t \right) dt
+\]</span></p>
+<h3 id="指数形式">指数形式</h3>
+<p>根据欧拉公式，可以将傅里叶变换式写为指数形式，指数形式看起来更为简洁，利于推导。
+根据欧拉公式，有以下变换：</p>
+<p><span class="math display">\[
+\cos \left( 2\pi n f_1 t \right) = \frac{1}{2} \left[ e^{j2\pi n f_1 t}
++  e^{-j2\pi n f_1 t} \right]
+\]</span></p>
+<p><span class="math display">\[
+\sin \left( 2\pi n f_1 t \right) = \frac{1}{2j} \left[ e^{j2\pi n f_1 t}
+-  e^{-j2\pi n f_1 t} \right]
+\]</span></p>
 <blockquote>
-<p>欧拉公式：$e^{ix} = \cos x + i \sin x$</p>
+<p>欧拉公式：<span class="math inline">\(e^{ix} = \cos x + i \sin
+x\)</span></p>
 </blockquote>
 <p>带入傅里叶展开式，可得：</p>
-<p>$$<br>x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ \frac{a_n}{2} \left[ e^{ j 2\pi n f_1 t } + e^{ -j 2\pi n f_1 t } \right] + \frac{b_n}{2j} \left[ e^{ j 2\pi n f_1 t } - e^{ -j 2\pi n f_1 t } \right]  \right]<br>$$</p>
+<p><span class="math display">\[
+x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ \frac{a_n}{2} \left[
+e^{ j 2\pi n f_1 t } + e^{ -j 2\pi n f_1 t } \right] + \frac{b_n}{2j}
+\left[ e^{ j 2\pi n f_1 t } - e^{ -j 2\pi n f_1 t } \right]  \right]
+\]</span></p>
 <p>合并同类项可得：</p>
-<p>$$<br>x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ \frac{a_n - j b_n}{2}  e^{ j 2\pi n f_1 t }  + \frac{a_n + b_n}{2}  e^{ -j 2\pi n f_1 t } \right]<br>$$</p>
+<p><span class="math display">\[
+x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ \frac{a_n - j
+b_n}{2}  e^{ j 2\pi n f_1 t }  + \frac{a_n + b_n}{2}  e^{ -j 2\pi n f_1
+t } \right]
+\]</span></p>
 <p>观察指数项前的系数，令</p>
-<p>$$<br>X(2\pi n f_1) = \frac{a_n - j b_n}{2}<br>$$</p>
+<p><span class="math display">\[
+X(2\pi n f_1) = \frac{a_n - j b_n}{2}
+\]</span></p>
 <p>则有：</p>
-<p>$$<br>X(-2\pi n f_1) = \frac{a_n + j b_n}{2}<br>$$</p>
+<p><span class="math display">\[
+X(-2\pi n f_1) = \frac{a_n + j b_n}{2}
+\]</span></p>
 <p>发现指数项前的系数具有奇偶性，利用奇偶性并改变求和符号的下限，将展开式改写为：</p>
-<p>$$<br>x(t) = \sum^{\infty}_ {n=-\infty}  X(2\pi n f_1)   e^{ j 2\pi n f_1 t }<br>$$</p>
-<p>注意，此时求和符号的下限由一变为负无穷，$1 \rightarrow -\infty$。式中的 $X(2\pi n f_1) $ 展开后为：</p>
-<p>$$<br>\begin{gathered}<br>X(2\pi n f_1) =\frac{1}{2} \left[ \frac{2}{T} \int^T_ 0 x(t) \cos \left( 2\pi n f_1 t \right) dt - \frac{2j}{T} \int^T_ 0 x(t) \sin \left( 2\pi n f_1 t \right) dt \right] \\<br>= \frac{1}{T} \int^T_ 0 x(t) \left[ \cos \left( 2\pi n f_1 t \right) - j \sin \left( 2\pi n f_1 t \right) \right] dt<br>\end{gathered}<br>$$</p>
+<p><span class="math display">\[
+x(t) = \sum^{\infty}_ {n=-\infty}  X(2\pi n f_1)   e^{ j 2\pi n f_1 t
+}   
+\]</span></p>
+<p>注意，此时求和符号的下限由一变为负无穷，<span class="math inline">\(1
+\rightarrow -\infty\)</span>。式中的 $X(2n f_1) $ 展开后为：</p>
+<p><span class="math display">\[
+\begin{gathered}
+X(2\pi n f_1) =\frac{1}{2} \left[ \frac{2}{T} \int^T_ 0 x(t) \cos \left(
+2\pi n f_1 t \right) dt - \frac{2j}{T} \int^T_ 0 x(t) \sin \left( 2\pi n
+f_1 t \right) dt \right] \\\\
+= \frac{1}{T} \int^T_ 0 x(t) \left[ \cos \left( 2\pi n f_1 t \right) - j
+\sin \left( 2\pi n f_1 t \right) \right] dt
+\end{gathered}
+\]</span></p>
 <p>再利用欧拉公式，可得：</p>
-<p>$$<br>X(2\pi n f_1) = \frac{1}{T} \int^T_ 0 x(t)   e^{ -j 2\pi n f_1 t} dt<br>$$</p>
+<p><span class="math display">\[
+X(2\pi n f_1) = \frac{1}{T} \int^T_ 0 x(t)   e^{ -j 2\pi n f_1 t} dt
+\]</span></p>
 <p><strong>总结上述推导过程，得到指数形式的傅里叶变换对：</strong></p>
-<p>$$<br>x(t) = \sum^{\infty}_ {n=-\infty}  X(2\pi n f_1)   e^{ j 2\pi n f_1 t }<br>$$</p>
-<p>$$<br>X(2\pi n f_1) = \frac{1}{T} \int^T_ 0 x(t)   e^{ -j 2\pi n f_1 t} dt<br>$$</p>
+<p><span class="math display">\[
+x(t) = \sum^{\infty}_ {n=-\infty}  X(2\pi n f_1)   e^{ j 2\pi n f_1 t
+}   
+\]</span></p>
+<p><span class="math display">\[
+X(2\pi n f_1) = \frac{1}{T} \int^T_ 0 x(t)   e^{ -j 2\pi n f_1 t} dt
+\]</span></p>
 <p>以上两个公式中，第二式才是<strong>傅里叶变换</strong>，第一式是傅里叶变换反演公式。</p>
-<p>当信号没有周期，即周期无穷大时 $T\rightarrow \infty$，有$f_1\rightarrow 0$，此时第一式的求和符号可以改写为积分号，$f_1$ 可以被当作是一个连续变化的量，傅里叶变换对就被改写为了连续形式。</p>
-<h3 id="傅里叶变换的实际意义"><a href="#傅里叶变换的实际意义" class="headerlink" title="傅里叶变换的实际意义"></a>傅里叶变换的实际意义</h3><p>傅里叶变换对第一式：表示被采集信号 $x(t)$ 可以由具有不同频率（$2\pi n f_1$）和幅值（$X(2\pi n f_1)$）的周期信号叠加得到。</p>
+<p>当信号没有周期，即周期无穷大时 <span
+class="math inline">\(T\rightarrow \infty\)</span>，有<span
+class="math inline">\(f_1\rightarrow
+0\)</span>，此时第一式的求和符号可以改写为积分号，<span
+class="math inline">\(f_1\)</span>
+可以被当作是一个连续变化的量，傅里叶变换对就被改写为了连续形式。</p>
+<h3 id="傅里叶变换的实际意义">傅里叶变换的实际意义</h3>
+<p>傅里叶变换对第一式：表示被采集信号 <span
+class="math inline">\(x(t)\)</span> 可以由具有不同频率（<span
+class="math inline">\(2\pi n f_1\)</span>）和幅值（<span
+class="math inline">\(X(2\pi n f_1)\)</span>）的周期信号叠加得到。</p>
 <p>傅里叶变换对第二式：为傅里叶变换，表示不同频率分量前的系数，可以理解为，该频率分量在被采集信号中的占比。</p>
 <p><strong>傅里叶变换的目的</strong>：得到被采集信号包含的频率成分和每个频率成分在原信号中的占比，用图形表示则为频谱图。</p>
-<h2 id="离散傅里叶变换"><a href="#离散傅里叶变换" class="headerlink" title="离散傅里叶变换"></a>离散傅里叶变换</h2><p>离散傅里叶变换对应的是在时域、频域都有限长，且都是离散的一类变换。</p>
-<p>现有一个时域模拟信号 $x(t)$，对其进行采样，采样长度为 $T$, 采样点有 $N$ 个，采样时间间隔为 $\Delta t$。</p>
+<h2 id="离散傅里叶变换">离散傅里叶变换</h2>
+<p>离散傅里叶变换对应的是在时域、频域都有限长，且都是离散的一类变换。</p>
+<p>现有一个时域模拟信号 <span
+class="math inline">\(x(t)\)</span>，对其进行采样，采样长度为 <span
+class="math inline">\(T\)</span>, 采样点有 <span
+class="math inline">\(N\)</span> 个，采样时间间隔为 <span
+class="math inline">\(\Delta t\)</span>。</p>
 <p>则采样长度与采样点的关系为：</p>
-<p>$$<br>T=N\Delta t<br>$$</p>
+<p><span class="math display">\[
+T=N\Delta t
+\]</span></p>
 <p>采样频率为：</p>
-<p>$$<br>f_s = \frac{1}{\Delta t}<br>$$</p>
-<p>频谱的基频是$f_1$，即：</p>
-<p>$$<br>f_1=\frac{1}{T}<br>$$</p>
+<p><span class="math display">\[
+f_s = \frac{1}{\Delta t}
+\]</span></p>
+<p>频谱的基频是<span class="math inline">\(f_1\)</span>，即：</p>
+<p><span class="math display">\[
+f_1=\frac{1}{T}
+\]</span></p>
 <p>根据傅里叶变换公式，由傅里叶变换求得的频谱谱线都是基频的整数倍，即频谱谱线的间隔：</p>
-<p>$$<br>\Delta f=f_1=\frac{1}{T} = \frac{1}{N\Delta t}<br>$$</p>
-<p>记采样得到的离散的时域数字信号为$x(k\Delta t)$，把傅里叶变换式中的连续变量替换为离散变量</p>
-<p>$$<br>t=k\Delta t,\quad 2\pi nf_1=2\pi n \Delta f<br>$$</p>
-<p>再将$T=N\Delta t$带入傅里叶变换对，对时间积分变为有限时间段内求和，即，$\int \rightarrow \sum$，$dt\rightarrow\Delta t$，得到：</p>
-<p>$$<br>x(k\Delta t) = x(k)= \sum^{N-1}_ {n=0}  X(2\pi n \Delta f)   e^{ j 2\pi n k / N }<br>$$</p>
-<p>$$<br>X(2\pi n \Delta f) =X(n)= \frac{1}{N} \sum^{N-1}_ {k=0}  x(k\Delta t) e^{ -j 2\pi n k /N}<br>$$</p>
-<p>习惯上将标定因子 $N$ 移至反变换式中去，并且用 $n$ 表示第 $n$ 个采样点，用 $k$ 表示第 $k$ 条谱线（频率分量），即将上式中 $n$ 和 $k$ 的位置互换。总结上述结论有：</p>
-<p>$$<br>x(n) = \frac{1}{N} \sum^{N-1}_ {n=0}  X(k)   e^{ j 2\pi n k / N }<br>$$</p>
-<p>$$<br>X(k) = \sum^{N-1}_ {k=0}  x(n) e^{ -j 2\pi n k /N}<br>$$</p>
+<p><span class="math display">\[
+\Delta f=f_1=\frac{1}{T} = \frac{1}{N\Delta t}
+\]</span></p>
+<p>记采样得到的离散的时域数字信号为<span class="math inline">\(x(k\Delta
+t)\)</span>，把傅里叶变换式中的连续变量替换为离散变量</p>
+<p><span class="math display">\[
+t=k\Delta t,\quad 2\pi nf_1=2\pi n \Delta f
+\]</span></p>
+<p>再将<span class="math inline">\(T=N\Delta
+t\)</span>带入傅里叶变换对，对时间积分变为有限时间段内求和，即，<span
+class="math inline">\(\int \rightarrow \sum\)</span>，<span
+class="math inline">\(dt\rightarrow\Delta t\)</span>，得到：</p>
+<p><span class="math display">\[
+x(k\Delta t) = x(k)= \sum^{N-1}_ {n=0}  X(2\pi n \Delta f)   e^{ j 2\pi
+n k / N }   
+\]</span></p>
+<p><span class="math display">\[
+X(2\pi n \Delta f) =X(n)= \frac{1}{N} \sum^{N-1}_ {k=0}  x(k\Delta t)
+e^{ -j 2\pi n k /N}
+\]</span></p>
+<p>习惯上将标定因子 <span class="math inline">\(N\)</span>
+移至反变换式中去，并且用 <span class="math inline">\(n\)</span> 表示第
+<span class="math inline">\(n\)</span> 个采样点，用 <span
+class="math inline">\(k\)</span> 表示第 <span
+class="math inline">\(k\)</span> 条谱线（频率分量），即将上式中 <span
+class="math inline">\(n\)</span> 和 <span
+class="math inline">\(k\)</span> 的位置互换。总结上述结论有：</p>
+<p><span class="math display">\[
+x(n) = \frac{1}{N} \sum^{N-1}_ {n=0}  X(k)   e^{ j 2\pi n k / N }   
+\]</span></p>
+<p><span class="math display">\[
+X(k) = \sum^{N-1}_ {k=0}  x(n) e^{ -j 2\pi n k /N}
+\]</span></p>
 <p>上式就是<strong>离散傅里叶变换式</strong>。式中：</p>
-<p>$$<br>k= 0,1,2\dots,N-1; \quad n= 0,1,2\dots,N-1<br>$$</p>
-<p>根据离散傅里叶变换式可以求出第 $n$ 条谱线对应的傅里叶系数的值，即该频率分量在整个信号中的占比。</p>
+<p><span class="math display">\[
+k= 0,1,2\dots,N-1; \quad n= 0,1,2\dots,N-1
+\]</span></p>
+<p>根据离散傅里叶变换式可以求出第 <span class="math inline">\(n\)</span>
+条谱线对应的傅里叶系数的值，即该频率分量在整个信号中的占比。</p>
 <p>我们注意到离散傅里叶变换式中求和符号的上下限改变了，不再是正负无穷。再改为正负无穷可以吗？改了之后两个公式含义还一样吗？答案是一样的，要用采样定理回答该问题。虽然标注是无穷，但是采样频率一定要大于2倍的被采样信号最高频率：</p>
-<p>$$<br>f_s=\frac{1}{\Delta t}&gt;2f_m<br>$$</p>
-<p>当采样频率已经确定为 $1/ \Delta t$ 时，满足采样定理的 $x(t)$ 的最高频率分量是： </p>
-<p>$$<br>f_m&lt;\frac{1}{2}f_s=\frac{1}{2\Delta t} = \frac{1}{2} N \Delta f<br>$$</p>
-<p>即满足采样定理的最后一根谱线所在的频率为$1/(2N\Delta f)$，换而言之 $k$ 最大为 $N/2$。</p>
-<h2 id="快速傅里叶变换"><a href="#快速傅里叶变换" class="headerlink" title="快速傅里叶变换"></a>快速傅里叶变换</h2><h3 id="FFT提出的背景"><a href="#FFT提出的背景" class="headerlink" title="FFT提出的背景"></a>FFT提出的背景</h3><p>使用离散傅里叶变换时，计算一点的 $X(n)$ 需要 $N$ 次复数乘法和 $N-1$ 次复数加法运算；计算全部的频谱需要 $N^2$ 次复数乘法和 $N(N-1)$ 次复数加法。而实现1次复数乘法需要4次实数乘法和2次实数加法，实现1次复数加法，需要2次实数加法。$N=1024$时，需要 $1048576$ 次复数乘法运算。</p>
+<p><span class="math display">\[
+f_s=\frac{1}{\Delta t}&gt;2f_m
+\]</span></p>
+<p>当采样频率已经确定为 <span class="math inline">\(1/ \Delta t\)</span>
+时，满足采样定理的 <span class="math inline">\(x(t)\)</span>
+的最高频率分量是：</p>
+<p><span class="math display">\[
+f_m&lt;\frac{1}{2}f_s=\frac{1}{2\Delta t} = \frac{1}{2} N \Delta f
+\]</span></p>
+<p>即满足采样定理的最后一根谱线所在的频率为<span
+class="math inline">\(1/(2N\Delta f)\)</span>，换而言之 <span
+class="math inline">\(k\)</span> 最大为 <span
+class="math inline">\(N/2\)</span>。</p>
+<h2 id="快速傅里叶变换">快速傅里叶变换</h2>
+<h3 id="fft提出的背景">FFT提出的背景</h3>
+<p>使用离散傅里叶变换时，计算一点的 <span
+class="math inline">\(X(n)\)</span> 需要 <span
+class="math inline">\(N\)</span> 次复数乘法和 <span
+class="math inline">\(N-1\)</span> 次复数加法运算；计算全部的频谱需要
+<span class="math inline">\(N^2\)</span> 次复数乘法和 <span
+class="math inline">\(N(N-1)\)</span>
+次复数加法。而实现1次复数乘法需要4次实数乘法和2次实数加法，实现1次复数加法，需要2次实数加法。<span
+class="math inline">\(N=1024\)</span>时，需要 <span
+class="math inline">\(1048576\)</span> 次复数乘法运算。</p>
 <p>有没有什么方法可以缩短计算时间呢？</p>
-<p>1965年J. W. Cooley 和 J. W. Tukey 提出了一种快速求解DFT的算法，将乘法运算量由 $N^2$ 降低至 $\frac{N}{2} \log_ 2 N$ 次。以 $N=1024$ 为例，他们提出的算法，只需要 $5120$ 次复数乘法运算。</p>
+<p>1965年J. W. Cooley 和 J. W. Tukey
+提出了一种快速求解DFT的算法，将乘法运算量由 <span
+class="math inline">\(N^2\)</span> 降低至 <span
+class="math inline">\(\frac{N}{2} \log_ 2 N\)</span> 次。以 <span
+class="math inline">\(N=1024\)</span> 为例，他们提出的算法，只需要 <span
+class="math inline">\(5120\)</span> 次复数乘法运算。</p>
 <p><strong>值得注意的是FFT不是特指某一种算法，而是指一类算法</strong>，自1965年后也有许多优秀学者提出了新的FFT算法。</p>
-<h3 id="FFT基本原理"><a href="#FFT基本原理" class="headerlink" title="FFT基本原理"></a>FFT基本原理</h3><p>对于 $N$ 点序列 $x(n)$，其 DFT变换对为：</p>
-<p>$$<br>x(n) = \frac{1}{N} \sum^{N-1}_ {n=0}  X(k) W^{-nk}_ N<br>$$</p>
-<p>$$<br>X(k) = \sum^{N-1}_ {k=0}  x(n) W^{nk}_ N<br>$$</p>
-<p>其中，$W_ N = e^{-j2\pi /N}$ 。</p>
-<p>DFT还可以写成矩阵形式，定义 $\mathbf{W}_N$ 为：</p>
-<p>$$<br>\mathbf{W}_N = \left[ W^{nk} \right]= \begin{bmatrix} W^0 &amp; W^0 &amp; W^0 &amp; \cdots &amp; W^0 \\  W^0 &amp; W^1 &amp; W^2 &amp; \cdots &amp; W^{N-1} \\ W^0 &amp; W^2 &amp; W^4 &amp; \cdots &amp; W^{2(N-1)} \\  \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp;  \vdots  \\  W^0 &amp; W^{(N-1)} &amp; W^{2(N-1)} &amp; \cdots &amp; W^{(N-1)(N-1)} \end{bmatrix}<br>$$</p>
-<p>$$<br>\bar{X}_N = \begin{bmatrix} X(0) &amp;  X(1) &amp;  \cdots &amp;  X(N-1) \end{bmatrix}^\mathrm{T}<br>$$</p>
-<p>$$<br>\bar{x}_N = \begin{bmatrix} x(0) &amp;  x(1) &amp;  \cdots &amp;  x(N-1) \end{bmatrix}^\mathrm{T}<br>$$</p>
+<h3 id="fft基本原理">FFT基本原理</h3>
+<p>对于 <span class="math inline">\(N\)</span> 点序列 <span
+class="math inline">\(x(n)\)</span>，其 DFT变换对为：</p>
+<p><span class="math display">\[
+x(n) = \frac{1}{N} \sum^{N-1}_ {n=0}  X(k) W^{-nk}_ N
+\]</span></p>
+<p><span class="math display">\[
+X(k) = \sum^{N-1}_ {k=0}  x(n) W^{nk}_ N
+\]</span></p>
+<p>其中，<span class="math inline">\(W_ N = e^{-j2\pi /N}\)</span>
+。</p>
+<p>DFT还可以写成矩阵形式，定义 <span
+class="math inline">\(\mathbf{W}_N\)</span> 为：</p>
+<p><span class="math display">\[
+\mathbf{W}_N = \left[ W^{nk} \right]= \begin{bmatrix} W^0 &amp; W^0
+&amp; W^0 &amp; \cdots &amp; W^0 \\\\  W^0 &amp; W^1 &amp; W^2 &amp;
+\cdots &amp; W^{N-1} \\\\ W^0 &amp; W^2 &amp; W^4 &amp; \cdots &amp;
+W^{2(N-1)} \\\\  \vdots &amp; \vdots &amp; \vdots &amp; \vdots
+&amp;  \vdots  \\\\  W^0 &amp; W^{(N-1)} &amp; W^{2(N-1)} &amp; \cdots
+&amp; W^{(N-1)(N-1)} \end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\bar{X}_N = \begin{bmatrix} X(0) &amp;  X(1) &amp;  \cdots &amp;  X(N-1)
+\end{bmatrix}^\mathrm{T}
+\]</span></p>
+<p><span class="math display">\[
+\bar{x}_N = \begin{bmatrix} x(0) &amp;  x(1) &amp;  \cdots &amp;  x(N-1)
+\end{bmatrix}^\mathrm{T}
+\]</span></p>
 <p>则DFT的矩阵表达式为：</p>
-<p>$$<br>\bar{X}_N = \mathbf{W}_N \bar{x}_N<br>$$</p>
-<p>观察矩阵形式的DFT表达式，可以发现DFT中包含大量重复运算，矩阵 $\mathbf{W}_N$ 虽然有 $N^2$ 个元素，但是其中只有 $N$ 个独立值，并且一部分元素的值极为简单。$W$ 因子的取值有如下特点：</p>
+<p><span class="math display">\[
+\bar{X}_N = \mathbf{W}_N \bar{x}_N
+\]</span></p>
+<p>观察矩阵形式的DFT表达式，可以发现DFT中包含大量重复运算，矩阵 <span
+class="math inline">\(\mathbf{W}_N\)</span> 虽然有 <span
+class="math inline">\(N^2\)</span> 个元素，但是其中只有 <span
+class="math inline">\(N\)</span>
+个独立值，并且一部分元素的值极为简单。<span
+class="math inline">\(W\)</span> 因子的取值有如下特点：</p>
 <ul>
-<li>$W^0=1$, $W^{N/2}=-1$</li>
-<li>$W^{N+r}=W^r$, $W^{N/2+r}=-W^r$</li>
+<li><span class="math inline">\(W^0=1\)</span>, <span
+class="math inline">\(W^{N/2}=-1\)</span></li>
+<li><span class="math inline">\(W^{N+r}=W^r\)</span>, <span
+class="math inline">\(W^{N/2+r}=-W^r\)</span></li>
 </ul>
-<p>对于4点的DFT，需要 $4^2=16$ 次复数乘法，但是利用 $W$ 因子的周期性和对称性可以大大简化计算，相关的DFT矩阵格式为：</p>
-<p>$$<br>\begin{bmatrix} X(0) \\  X(1) \\  X(2) \\  X(3) \end{bmatrix} = \begin{bmatrix} 1 &amp;  1 &amp;  1 &amp;  1 \\  1 &amp;  W^1 &amp;  -1 &amp;  -W^1 \\  1 &amp;  -1 &amp;  1 &amp;  -1 \\ 1 &amp;  -W^1 &amp;  -1 &amp;  W^1  \end{bmatrix}\begin{bmatrix} x(0) \\  x(1) \\  x(2) \\  x(3) \end{bmatrix}<br>$$</p>
+<p>对于4点的DFT，需要 <span class="math inline">\(4^2=16\)</span>
+次复数乘法，但是利用 <span class="math inline">\(W\)</span>
+因子的周期性和对称性可以大大简化计算，相关的DFT矩阵格式为：</p>
+<p><span class="math display">\[
+\begin{bmatrix} X(0) \\\\  X(1) \\\\  X(2) \\\\  X(3) \end{bmatrix} =
+\begin{bmatrix} 1 &amp;  1 &amp;  1 &amp;  1 \\\\  1 &amp;  W^1
+&amp;  -1 &amp;  -W^1 \\\\  1 &amp;  -1 &amp;  1 &amp;  -1 \\\\ 1
+&amp;  -W^1 &amp;  -1 &amp;  W^1  \end{bmatrix}\begin{bmatrix} x(0)
+\\\\  x(1) \\\\  x(2) \\\\  x(3) \end{bmatrix}
+\]</span></p>
 <p>将矩阵的第二列和第三列交换，可得：</p>
-<p>$$<br>\begin{bmatrix} X(0) \\  X(1) \\  X(2) \\  X(3) \end{bmatrix} = \begin{bmatrix} 1 &amp;  1 &amp;  1 &amp;  1 \\  1 &amp;  -1 &amp;  W^1 &amp;  -W^1 \\  1 &amp;  1 &amp;  -1 &amp;  -1 \\ 1 &amp;  -1 &amp;  -W^1 &amp;  W^1  \end{bmatrix}\begin{bmatrix} x(0) \\  x(2) \\  x(1) \\  x(3) \end{bmatrix}<br>$$</p>
+<p><span class="math display">\[
+\begin{bmatrix} X(0) \\\\  X(1) \\\\  X(2) \\\\  X(3) \end{bmatrix} =
+\begin{bmatrix} 1 &amp;  1 &amp;  1 &amp;  1 \\\\  1 &amp;  -1
+&amp;  W^1 &amp;  -W^1 \\\\  1 &amp;  1 &amp;  -1 &amp;  -1 \\\\ 1
+&amp;  -1 &amp;  -W^1 &amp;  W^1  \end{bmatrix}\begin{bmatrix} x(0)
+\\\\  x(2) \\\\  x(1) \\\\  x(3) \end{bmatrix}
+\]</span></p>
 <p>由此可得：</p>
-<p>$$<br>\begin{gathered}<br>X(0) = [x(0) + x(2)] + [x(1) + x(3)]  \\<br>X(1) = [x(0) - x(2)] + [x(1) - x(3)] W^1  \\<br>X(2) = [x(0) + x(2)] - [x(1) + x(3)] W^1 \\<br>X(3) = [x(0) - x(2)] - [x(1) - x(3)]<br>\end{gathered}<br>$$</p>
-<p>利用上式计算DFT只需要 $1$ 次复数乘法运算。处理长序列时，只需要将长序列分成类似于上式或比上式更简短的序列后，进行简单的运算，再按一定方式组合起来即可。</p>
-<p>因此，<strong>FFT的基本原理是</strong>：先将原始的序列分解为一系列的短序列，充分利用 $W$ 因子的周期性和对称性，进而求出这些短序列相应的DFT并进行适当组合，达到删除重复计算，减少乘法运算和简化结构的目的。</p>
-<p>对于大部分FFT算法，有一些通用的概念和规律：</p>
-<ul>
-<li><strong>级</strong>：将原信号每次折半，分为更小的单元，每折半一次，多出一级</li>
-<li><strong>蝶形单元</strong>：在FFT计算过程中，计算并不是顺序的，画出信号流图会发现，信号流图中包含着大量8字型（类似于蝴蝶）的计算单元</li>
-<li><strong>组</strong>：每一级的蝶形单元，按照其特性可以分为若干组</li>
-<li><strong>$W$因子的分布</strong>：每一级的 $W$ 因子具有一定的分布规律</li>
-<li><strong>码位倒置</strong>：使用FFT时，输出序列 $\bar{X}_N$ 依照正序排列，但是输入序列的次序不再是自然序列，其排布次序和二进制码翻转、二进制与十进制转换有关</li>
-</ul>
+<p><span class="math display">\[
+\begin{gathered}
+X(0) = [x(0) + x(2)] + [x(1) + x(3)]  \\\\
+X(1) = [x(0) - x(2)] + [x(1) - x(3)] W^1  \\\\
+X(2) = [x(0) + x(2)] - [x(1) + x(3)] W^1 \\\\
+X(3) = [x(0) - x(2)] - [x(1) - x(3)]  
+\end{gathered}
+\]</span></p>
+<p>利用上式计算DFT只需要 <span class="math inline">\(1\)</span>
+次复数乘法运算。处理长序列时，只需要将长序列分成类似于上式或比上式更简短的序列后，进行简单的运算，再按一定方式组合起来即可。</p>
+<p>因此，<strong>FFT的基本原理是</strong>：先将原始的序列分解为一系列的短序列，充分利用
+<span class="math inline">\(W\)</span>
+因子的周期性和对称性，进而求出这些短序列相应的DFT并进行适当组合，达到删除重复计算，减少乘法运算和简化结构的目的。</p>
+<p>对于大部分FFT算法，有一些通用的概念和规律： *
+<strong>级</strong>：将原信号每次折半，分为更小的单元，每折半一次，多出一级
+*
+<strong>蝶形单元</strong>：在FFT计算过程中，计算并不是顺序的，画出信号流图会发现，信号流图中包含着大量8字型（类似于蝴蝶）的计算单元
+* <strong>组</strong>：每一级的蝶形单元，按照其特性可以分为若干组 *
+<strong><span
+class="math inline">\(W\)</span>因子的分布</strong>：每一级的 <span
+class="math inline">\(W\)</span> 因子具有一定的分布规律 *
+<strong>码位倒置</strong>：使用FFT时，输出序列 <span
+class="math inline">\(\bar{X}_N\)</span>
+依照正序排列，但是输入序列的次序不再是自然序列，其排布次序和二进制码翻转、二进制与十进制转换有关</p>
 <p>本文不再详细叙述具体的FFT算法。</p>
 
     </div>
@@ -348,12 +507,12 @@
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/2021/06/14/%E5%AE%9E%E9%AA%8C%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8E%E4%B8%BB%E8%A6%81%E8%BF%87%E7%A8%8B/" rel="prev" title="实验模态分析的基本原理与主要过程">
-                  <i class="fa fa-chevron-left"></i> 实验模态分析的基本原理与主要过程
+                  <i class="fa fa-angle-left"></i> 实验模态分析的基本原理与主要过程
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/2021/06/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE/" rel="next" title="如何在论文中完美插入矢量图">
-                  如何在论文中完美插入矢量图 <i class="fa fa-chevron-right"></i>
+                  如何在论文中完美插入矢量图 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -372,44 +531,33 @@
   <footer class="footer">
     <div class="footer-inner">
 
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Haopeng Zhang</span>
-</div>
-<div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="Total Visitors">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
     </span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="Total Views">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
+    <span class="author" itemprop="copyrightHolder">Haopeng Zhang</span>
+  </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
-
-
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     </div>
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
@@ -420,15 +568,8 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-
-
-  
-
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:{&quot;url&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;,&quot;integrity&quot;:&quot;sha256-ncNI9OXOS5Ek4tzVYiOMmN&#x2F;KKCPZ6V0Cpv2P&#x2F;zHntiA&#x3D;&quot;}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
 
 
 

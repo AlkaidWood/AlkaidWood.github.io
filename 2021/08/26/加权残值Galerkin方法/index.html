@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -16,16 +14,17 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;alkaidwood.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script><script src="/js/config.js"></script>
-<meta name="description" content="概述加权残值伽辽金法 (Galerkin method of weighted residuals) 也被称作加权余量伽辽金法、伽辽金法 (Galerkin method)，常被看作是加权残值（余量）法的一种。该方法是俄罗斯数学家鲍里斯·格里戈里耶维奇·伽辽金 (Boris Galerkin) 发明的一种数值分析方法。应用这种方法可以将求解微分方程问题简化成为线性方程组的求解问题。 伽辽金法原理概">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"alkaidwood.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="概述 加权残值伽辽金法 (Galerkin method of weighted residuals) 也被称作加权余量伽辽金法、伽辽金法 (Galerkin method)，常被看作是加权残值（余量）法的一种。该方法是俄罗斯数学家鲍里斯·格里戈里耶维奇·伽辽金 (Boris Galerkin) 发明的一种数值分析方法。应用这种方法可以将求解微分方程问题简化成为线性方程组的求解问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="加权残值伽辽金法">
 <meta property="og:url" content="https://alkaidwood.github.io/2021/08/26/%E5%8A%A0%E6%9D%83%E6%AE%8B%E5%80%BCGalerkin%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Haopeng&#39;s Blog">
-<meta property="og:description" content="概述加权残值伽辽金法 (Galerkin method of weighted residuals) 也被称作加权余量伽辽金法、伽辽金法 (Galerkin method)，常被看作是加权残值（余量）法的一种。该方法是俄罗斯数学家鲍里斯·格里戈里耶维奇·伽辽金 (Boris Galerkin) 发明的一种数值分析方法。应用这种方法可以将求解微分方程问题简化成为线性方程组的求解问题。 伽辽金法原理概">
+<meta property="og:description" content="概述 加权残值伽辽金法 (Galerkin method of weighted residuals) 也被称作加权余量伽辽金法、伽辽金法 (Galerkin method)，常被看作是加权残值（余量）法的一种。该方法是俄罗斯数学家鲍里斯·格里戈里耶维奇·伽辽金 (Boris Galerkin) 发明的一种数值分析方法。应用这种方法可以将求解微分方程问题简化成为线性方程组的求解问题。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-26T06:08:26.000Z">
 <meta property="article:modified_time" content="2021-08-27T06:24:24.592Z">
@@ -38,14 +37,15 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;alkaidwood.github.io&#x2F;2021&#x2F;08&#x2F;26&#x2F;%E5%8A%A0%E6%9D%83%E6%AE%8B%E5%80%BCGalerkin%E6%96%B9%E6%B3%95&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;08&#x2F;26&#x2F;加权残值Galerkin方法&#x2F;&quot;,&quot;title&quot;:&quot;加权残值伽辽金法&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://alkaidwood.github.io/2021/08/26/%E5%8A%A0%E6%9D%83%E6%AE%8B%E5%80%BCGalerkin%E6%96%B9%E6%B3%95/","path":"2021/08/26/加权残值Galerkin方法/","title":"加权残值伽辽金法"}</script>
 
-<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>加权残值伽辽金法 | Haopeng's Blog</title>
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-289336754-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{&quot;tracking_id&quot;:&quot;UA-289336754-1&quot;,&quot;only_pageview&quot;:false}</script>
-  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
 
 
 
@@ -59,8 +59,8 @@
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
@@ -73,14 +73,14 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Haopeng's Blog</h1>
+      <p class="site-title">Haopeng's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Share equ happiness</p>
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
     </div>
   </div>
 </div>
@@ -88,25 +88,16 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
   </ul>
 </nav>
 
 
 
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -127,50 +118,35 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Haopeng Zhang"
-      src="/image/aboutme/MSc_photo.jpg">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Haopeng Zhang</p>
   <div class="site-description" itemprop="description">PhD in Northwestern Polytecnical University</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+        <a href="/archives/">
           <span class="site-state-item-count">23</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
+          <a href="/tags/">
         <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
 
-
-
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
 
@@ -186,13 +162,18 @@
     <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/08/26/%E5%8A%A0%E6%9D%83%E6%AE%8B%E5%80%BCGalerkin%E6%96%B9%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/image/aboutme/MSc_photo.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Haopeng Zhang">
-      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Haopeng's Blog">
+      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="加权残值伽辽金法 | Haopeng's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -209,22 +190,15 @@
 
       <time title="Created: 2021-08-26 14:08:26" itemprop="dateCreated datePublished" datetime="2021-08-26T14:08:26+08:00">2021-08-26</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-08-27 14:24:24" itemprop="dateModified" datetime="2021-08-27T14:24:24+08:00">2021-08-27</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2021-08-27 14:24:24" itemprop="dateModified" datetime="2021-08-27T14:24:24+08:00">2021-08-27</time>
+    </span>
 
   
-    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">Views: </span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
 </div>
 
         </div>
@@ -233,75 +207,238 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><strong>加权残值伽辽金法</strong> (Galerkin method of weighted residuals) 也被称作加权余量伽辽金法、伽辽金法 (Galerkin method)，常被看作是<strong>加权残值（余量）法</strong>的一种。该方法是俄罗斯数学家鲍里斯·格里戈里耶维奇·伽辽金 (Boris Galerkin) 发明的一种数值分析方法。应用这种方法可以将求解微分方程问题简化成为线性方程组的求解问题。</p>
-<p><strong>伽辽金法原理概述：</strong> 采用微分方程对应的<strong>弱形式</strong>，通过选取有限多项试函数（又称基函数或形函数），将它们叠加；再要求结果在求解域内及边界上的加权积分（权函数为试函数本身）满足原方程，便可以将求解微分方程近似解的问题转化为求解一组线性代数方程，且自然边界条件能够自动满足。</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="概述">概述</h2>
+<p><strong>加权残值伽辽金法</strong> (Galerkin method of weighted
+residuals) 也被称作加权余量伽辽金法、伽辽金法 (Galerkin
+method)，常被看作是<strong>加权残值（余量）法</strong>的一种。该方法是俄罗斯数学家鲍里斯·格里戈里耶维奇·伽辽金
+(Boris Galerkin)
+发明的一种数值分析方法。应用这种方法可以将求解微分方程问题简化成为线性方程组的求解问题。</p>
+<p><strong>伽辽金法原理概述：</strong>
+采用微分方程对应的<strong>弱形式</strong>，通过选取有限多项试函数（又称基函数或形函数），将它们叠加；再要求结果在求解域内及边界上的加权积分（权函数为试函数本身）满足原方程，便可以将求解微分方程近似解的问题转化为求解一组线性代数方程，且自然边界条件能够自动满足。</p>
 <p>必须强调指出的是，伽辽金法所得到的只是在原求解域内的一个近似解（仅仅是加权平均满足原方程，并非在每个点上都满足）。</p>
 <p>为了阐明伽辽金法的原理及特点，本文先介绍相关概念——微分方程的<strong>等效积分形式</strong>和<strong>弱形式</strong>，再介绍加权残值伽辽金法的基本步骤和特点。</p>
-<h2 id="等效积分弱形式"><a href="#等效积分弱形式" class="headerlink" title="等效积分弱形式"></a>等效积分弱形式</h2><p>数学中, <strong>微分方程的弱解</strong>或广义解是指对该方程中的微分可能不存在, 但是在某种精确定义的意义下满足该方程的解。 对于不同种类的微分方程, 弱解的定义性质也可能不同。</p>
-<p>设函数 $\mathbf{u}$ 在域 $\Omega$ 中满足如下微分方程组：</p>
-<p>$$<br>\mathbf{A}(\mathbf{u}) = 0<br>$$</p>
-<p>域 $\Omega$ 可能是体积域或面积域。同时未知函数 $\mathbf{u}$ 还要在边界 $\Gamma$ 满足边界条件：</p>
-<p>$$<br>\mathbf{B}(\mathbf{u}) = 0<br>$$</p>
-<p>由于微分方程组在域 $\Omega$ 中的每一点都必须为0，因此有：</p>
-<p>$$<br>\int _\Omega \mathbf{v} ^\mathrm{T} \mathbf{A}(\mathbf{u}) \mathrm{d} \Omega \equiv \int _\Omega \left( v _1 A _1 (\mathbf{u})+v _2 A _2 (\mathbf{u})+\cdots \right)\mathrm{d} \Omega \equiv 0<br>$$</p>
-<p>上式的数字下标代表对应向量的分量，$\mathbf{v}$ 是一组与微分方程个数相等的任意函数。</p>
-<p>假如边界条件在边界上每一点也同时得到满足，则对任意一组函数 $\bar{\mathbf{v}}$，下式成立：</p>
-<p>$$<br>\int _\Gamma \bar{\mathbf{v}} ^\mathrm{T} \mathbf{B}(\mathbf{u}) \mathrm{d} \Gamma \equiv \int _\Gamma \left( \bar{v} _1 B _1 (\mathbf{u})+ \bar{v} _2 B _2 (\mathbf{u})+\cdots \right)\mathrm{d} \Gamma \equiv 0<br>$$</p>
+<h2 id="等效积分弱形式">等效积分弱形式</h2>
+<p>数学中,
+<strong>微分方程的弱解</strong>或广义解是指对该方程中的微分可能不存在,
+但是在某种精确定义的意义下满足该方程的解。 对于不同种类的微分方程,
+弱解的定义性质也可能不同。</p>
+<p>设函数 <span class="math inline">\(\mathbf{u}\)</span> 在域 <span
+class="math inline">\(\Omega\)</span> 中满足如下微分方程组：</p>
+<p><span class="math display">\[
+\mathbf{A}(\mathbf{u}) = 0
+\]</span></p>
+<p>域 <span class="math inline">\(\Omega\)</span>
+可能是体积域或面积域。同时未知函数 <span
+class="math inline">\(\mathbf{u}\)</span> 还要在边界 <span
+class="math inline">\(\Gamma\)</span> 满足边界条件：</p>
+<p><span class="math display">\[
+\mathbf{B}(\mathbf{u}) = 0
+\]</span></p>
+<p>由于微分方程组在域 <span class="math inline">\(\Omega\)</span>
+中的每一点都必须为0，因此有：</p>
+<p><span class="math display">\[
+\int _\Omega \mathbf{v} ^\mathrm{T} \mathbf{A}(\mathbf{u}) \mathrm{d}
+\Omega \equiv \int _\Omega \left( v _1 A _1 (\mathbf{u})+v _2 A _2
+(\mathbf{u})+\cdots \right)\mathrm{d} \Omega \equiv 0
+\]</span></p>
+<p>上式的数字下标代表对应向量的分量，<span
+class="math inline">\(\mathbf{v}\)</span>
+是一组与微分方程个数相等的任意函数。</p>
+<p>假如边界条件在边界上每一点也同时得到满足，则对任意一组函数 <span
+class="math inline">\(\bar{\mathbf{v}}\)</span>，下式成立：</p>
+<p><span class="math display">\[
+\int _\Gamma \bar{\mathbf{v}} ^\mathrm{T} \mathbf{B}(\mathbf{u})
+\mathrm{d} \Gamma \equiv \int _\Gamma \left( \bar{v} _1 B _1
+(\mathbf{u})+ \bar{v} _2 B _2 (\mathbf{u})+\cdots \right)\mathrm{d}
+\Gamma \equiv 0
+\]</span></p>
 <p>因此有：</p>
-<p>$$<br>\int _\Omega \mathbf{v} ^\mathrm{T} \mathbf{A}(\mathbf{u}) \mathrm{d} \Omega + \int _\Gamma \bar{\mathbf{v}} ^\mathrm{T} \mathbf{B}(\mathbf{u}) \mathrm{d} \Gamma  \equiv 0<br>$$</p>
-<p>上式是与微分方程组 $\mathbf{A}(\mathbf{u})=0$ 完全等效的<strong>等效积分形式</strong>。</p>
+<p><span class="math display">\[
+\int _\Omega \mathbf{v} ^\mathrm{T} \mathbf{A}(\mathbf{u}) \mathrm{d}
+\Omega + \int _\Gamma \bar{\mathbf{v}} ^\mathrm{T}
+\mathbf{B}(\mathbf{u}) \mathrm{d} \Gamma  \equiv 0
+\]</span></p>
+<p>上式是与微分方程组 <span
+class="math inline">\(\mathbf{A}(\mathbf{u})=0\)</span>
+完全等效的<strong>等效积分形式</strong>。</p>
 <p>在很多情况下可以对上式进行分部积分得到另一种形式：</p>
-<p>$$<br>\int _\Omega \mathbf{C} ^\mathrm{T} (\mathbf{v}) \mathbf{D}(\mathbf{u}) \mathrm{d} \Omega + \int _\Gamma \mathbf{E} ^\mathrm{T} (\bar{\mathbf{v}}) \mathbf{F}(\mathbf{u}) \mathrm{d} \Gamma  \equiv 0<br>$$</p>
-<p>其中 $\mathbf{C}, \mathbf{D}, \mathbf{E}, \mathbf{F}$ 是微分算子，与分部积分之前的 $\mathbf{A}$ 相比，他们所包含的导数的阶数较低，这样对函数 $\mathbf{u}$ 只需求较低阶的连续性就可以了。上式中降低 $\mathbf{u}$ 的连续性是以提高 $\mathbf{v}$ 及 $\mathbf{v^{‘}}$ 的连续性为代价的。然而，适当提高 $\mathbf{v}$ 的连续性并不困难，因为它们是可以选择的已知函数。</p>
-<p>这种通过适当提高对任意函数 $\mathbf{v}$ 及 $\mathbf{v^{‘}}$ 的连续性要求，以降低对微分方程场函数 $\mathbf{u}$ 的连续性要求所建立的等效积分形式称为微分方程 $\mathbf{A}$ 的<strong>等效积分弱形式</strong>。等效积分弱形式的解称为<strong>微分方程的弱解</strong>。</p>
-<h2 id="加权残值伽辽金法"><a href="#加权残值伽辽金法" class="headerlink" title="加权残值伽辽金法"></a>加权残值伽辽金法</h2><h3 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h3><p>采用使余量的加权积分为零来求得微分方程近似解的方法称为<strong>加权残值法</strong>，也称加权余量法。加权残值法是一种<strong>基于等效积分形式的近似方法</strong>。根据所选取权函数的不同，加权残值法可分为：配点法、子域法、最小二乘法、力矩法和<strong>加权残值伽辽金法</strong>。</p>
-<p>在应用数学中，加权残值法被用来求解微分方程的近似解，<strong>具体步骤</strong>如下：</p>
-<ol>
-<li>假设近似解的形式是有限个<strong>试探函数</strong>（或基函数、形函数） $\mathbf{N} _i$ 的叠加，叠加时的系数为 $\mathbf{a} _i$。</li>
-<li>由于近似解不能精确满足原微分方程和边界条件，近似解带入原微分方程和边界条件后将产生<strong>残差/余量</strong>（等式左端不为零的项）。</li>
-<li>将得到的关于残差的方程写作<strong>等效积分形式</strong>，并用规定的<strong>权函数</strong> $\mathbf{W} _j$ 代替任意函数 $\bar{v}$。</li>
-<li>令得到的由残差和权函数表示的微分方程等于零，可求得待定系数 $\mathbf{a} _i$，最终得到了原微分方程的近似解。</li>
-</ol>
-<p><strong>Notation：用近似解的试探函数 $\mathbf{N} _j$ 作为权函数 $\mathbf{W} _j$ 时 ($\mathbf{W} _j = \mathbf{N} _j$)，上述步骤被称为加权残值伽辽金法。</strong></p>
-<h3 id="具体推导"><a href="#具体推导" class="headerlink" title="具体推导"></a>具体推导</h3><p>在求解域 $\Omega$ 中，若场函数 $\mathbf{u}$ 是精确解，则在域 $\Omega$ 中的任何一点都满足微分方程 $\mathbf{A}(\mathbf{u})=0$，同时在边界 $\Gamma$ 上满足边界条件 $\mathbf{B}(\mathbf{u})=0$，此时等效积分式或其弱形式必然也得到严格满足。但是对于复杂的实际问题，这样的精确解往往很难找到，因此需要设法找到具有一定精度的近似解。</p>
-<p>假设未知场函数 $\mathbf{u}$ 可以用近似函数表示。近似函数是带有待定参数的已知函数一般形式是：</p>
-<p>$$<br>\mathbf{u}  \approx \mathbf{u}^* = \sum ^n _{i=1} \mathbf{N} _i \mathbf{a} _i = \mathbf{N} \mathbf{a}<br>$$</p>
-<p>其中 $\mathbf{a} _i$ 是待定参数，$\mathbf{N} _i$ 是被称为试探函数（或基函数、形函数）的已知函数，它取自<strong>完全的函数序列</strong>，是线性独立的。近似解通常选择使之满足强制边界条件和连续性的要求。</p>
+<p><span class="math display">\[
+\int _\Omega \mathbf{C} ^\mathrm{T} (\mathbf{v}) \mathbf{D}(\mathbf{u})
+\mathrm{d} \Omega + \int _\Gamma \mathbf{E} ^\mathrm{T}
+(\bar{\mathbf{v}}) \mathbf{F}(\mathbf{u}) \mathrm{d} \Gamma  \equiv 0
+\]</span></p>
+<p>其中 <span class="math inline">\(\mathbf{C}, \mathbf{D}, \mathbf{E},
+\mathbf{F}\)</span> 是微分算子，与分部积分之前的 <span
+class="math inline">\(\mathbf{A}\)</span>
+相比，他们所包含的导数的阶数较低，这样对函数 <span
+class="math inline">\(\mathbf{u}\)</span>
+只需求较低阶的连续性就可以了。上式中降低 <span
+class="math inline">\(\mathbf{u}\)</span> 的连续性是以提高 <span
+class="math inline">\(\mathbf{v}\)</span> 及 <span
+class="math inline">\(\mathbf{v^{&#39;}}\)</span>
+的连续性为代价的。然而，适当提高 <span
+class="math inline">\(\mathbf{v}\)</span>
+的连续性并不困难，因为它们是可以选择的已知函数。</p>
+<p>这种通过适当提高对任意函数 <span
+class="math inline">\(\mathbf{v}\)</span> 及 <span
+class="math inline">\(\mathbf{v^{&#39;}}\)</span>
+的连续性要求，以降低对微分方程场函数 <span
+class="math inline">\(\mathbf{u}\)</span>
+的连续性要求所建立的等效积分形式称为微分方程 <span
+class="math inline">\(\mathbf{A}\)</span>
+的<strong>等效积分弱形式</strong>。等效积分弱形式的解称为<strong>微分方程的弱解</strong>。</p>
+<h2 id="加权残值伽辽金法">加权残值伽辽金法</h2>
+<h3 id="概述-1">概述</h3>
+<p>采用使余量的加权积分为零来求得微分方程近似解的方法称为<strong>加权残值法</strong>，也称加权余量法。加权残值法是一种<strong>基于等效积分形式的近似方法</strong>。根据所选取权函数的不同，加权残值法可分为：配点法、子域法、最小二乘法、力矩法和<strong>加权残值伽辽金法</strong>。</p>
+<p>在应用数学中，加权残值法被用来求解微分方程的近似解，<strong>具体步骤</strong>如下：
+1. 假设近似解的形式是有限个<strong>试探函数</strong>（或基函数、形函数）
+<span class="math inline">\(\mathbf{N} _i\)</span>
+的叠加，叠加时的系数为 <span class="math inline">\(\mathbf{a}
+_i\)</span>。 1.
+由于近似解不能精确满足原微分方程和边界条件，近似解带入原微分方程和边界条件后将产生<strong>残差/余量</strong>（等式左端不为零的项）。
+1.
+将得到的关于残差的方程写作<strong>等效积分形式</strong>，并用规定的<strong>权函数</strong>
+<span class="math inline">\(\mathbf{W} _j\)</span> 代替任意函数 <span
+class="math inline">\(\bar{v}\)</span>。 1.
+令得到的由残差和权函数表示的微分方程等于零，可求得待定系数 <span
+class="math inline">\(\mathbf{a}
+_i\)</span>，最终得到了原微分方程的近似解。</p>
+<p><strong>Notation：用近似解的试探函数 <span
+class="math inline">\(\mathbf{N} _j\)</span> 作为权函数 <span
+class="math inline">\(\mathbf{W} _j\)</span> 时 (<span
+class="math inline">\(\mathbf{W} _j = \mathbf{N}
+_j\)</span>)，上述步骤被称为加权残值伽辽金法。</strong></p>
+<h3 id="具体推导">具体推导</h3>
+<p>在求解域 <span class="math inline">\(\Omega\)</span> 中，若场函数
+<span class="math inline">\(\mathbf{u}\)</span> 是精确解，则在域 <span
+class="math inline">\(\Omega\)</span> 中的任何一点都满足微分方程 <span
+class="math inline">\(\mathbf{A}(\mathbf{u})=0\)</span>，同时在边界
+<span class="math inline">\(\Gamma\)</span> 上满足边界条件 <span
+class="math inline">\(\mathbf{B}(\mathbf{u})=0\)</span>，此时等效积分式或其弱形式必然也得到严格满足。但是对于复杂的实际问题，这样的精确解往往很难找到，因此需要设法找到具有一定精度的近似解。</p>
+<p>假设未知场函数 <span class="math inline">\(\mathbf{u}\)</span>
+可以用近似函数表示。近似函数是带有待定参数的已知函数一般形式是：</p>
+<p><span class="math display">\[
+\mathbf{u}  \approx \mathbf{u}^* = \sum ^n _{i=1} \mathbf{N} _i
+\mathbf{a} _i = \mathbf{N} \mathbf{a}
+\]</span></p>
+<p>其中 <span class="math inline">\(\mathbf{a} _i\)</span>
+是待定参数，<span class="math inline">\(\mathbf{N} _i\)</span>
+是被称为试探函数（或基函数、形函数）的已知函数，它取自<strong>完全的函数序列</strong>，是线性独立的。近似解通常选择使之满足强制边界条件和连续性的要求。</p>
 <blockquote>
 <p>完全函数序列：任一函数都可以用此序列表示。</p>
 </blockquote>
-<p>显然，试探函数为有限项时，近似解是不能精确满足微分方程和边界条件的，它们将产生<strong>残差</strong> $\mathbf{R}$ 和 $\bar{\mathbf{R}}$。</p>
-<p>$$<br>\mathbf{A}(\mathbf{Na}) = \mathbf{R}<br>$$</p>
-<p>$$<br>\mathbf{B}(\mathbf{Na}) = \bar{\mathbf{R}}<br>$$</p>
-<p>残差 $\mathbf{R}$ 和 $\bar{\mathbf{R}}$ 也被称为余量。将原方程写作等效积分形式，并用 $n$ 个规定的函数代替任意函数 $\mathbf{v}$ 和 $\bar{\mathbf{v}}$：</p>
-<p>$$<br>\mathbf{v}=\mathbf{W} _j, \quad \bar{\mathbf{v}}=\bar{\mathbf{W}} _j \quad (j=1,2,\dots,n)<br>$$</p>
+<p>显然，试探函数为有限项时，近似解是不能精确满足微分方程和边界条件的，它们将产生<strong>残差</strong>
+<span class="math inline">\(\mathbf{R}\)</span> 和 <span
+class="math inline">\(\bar{\mathbf{R}}\)</span>。</p>
+<p><span class="math display">\[
+\mathbf{A}(\mathbf{Na}) = \mathbf{R}
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{B}(\mathbf{Na}) = \bar{\mathbf{R}}
+\]</span></p>
+<p>残差 <span class="math inline">\(\mathbf{R}\)</span> 和 <span
+class="math inline">\(\bar{\mathbf{R}}\)</span>
+也被称为余量。将原方程写作等效积分形式，并用 <span
+class="math inline">\(n\)</span> 个规定的函数代替任意函数 <span
+class="math inline">\(\mathbf{v}\)</span> 和 <span
+class="math inline">\(\bar{\mathbf{v}}\)</span>：</p>
+<p><span class="math display">\[
+\mathbf{v}=\mathbf{W} _j, \quad \bar{\mathbf{v}}=\bar{\mathbf{W}} _j
+\quad (j=1,2,\dots,n)
+\]</span></p>
 <p>则原微分方程的等效形式变为：</p>
-<p>$$<br>\int _\Omega \mathbf{W} _j ^\mathrm{T} \mathbf{A}(\mathbf{Na}) \mathrm{d} \Omega + \int _\Gamma \bar{\mathbf{W}} _j ^\mathrm{T} \mathbf{B}(\mathbf{Na}) \mathrm{d} \Gamma  = 0<br>$$</p>
+<p><span class="math display">\[
+\int _\Omega \mathbf{W} _j ^\mathrm{T} \mathbf{A}(\mathbf{Na})
+\mathrm{d} \Omega + \int _\Gamma \bar{\mathbf{W}} _j ^\mathrm{T}
+\mathbf{B}(\mathbf{Na}) \mathrm{d} \Gamma  = 0
+\]</span></p>
 <p>亦可写为余量形式：</p>
-<p>$$<br>\int _\Omega \mathbf{W} _j ^\mathrm{T} \mathbf{R} \mathrm{d} \Omega + \int _\Gamma \bar{\mathbf{W}} _j ^\mathrm{T} \bar{\mathbf{R}} \mathrm{d} \Gamma  = 0<br>$$</p>
+<p><span class="math display">\[
+\int _\Omega \mathbf{W} _j ^\mathrm{T} \mathbf{R} \mathrm{d} \Omega +
+\int _\Gamma \bar{\mathbf{W}} _j ^\mathrm{T} \bar{\mathbf{R}} \mathrm{d}
+\Gamma  = 0
+\]</span></p>
 <p>也可写出等效积分弱形式：</p>
-<p>$$<br>\int _\Omega \mathbf{C} ^\mathrm{T} (\mathbf{W} _j) \mathbf{D}(\mathbf{Na}) \mathrm{d} \Omega + \int _\Gamma \mathbf{E} ^\mathrm{T} (\bar{\mathbf{W}} _j) \mathbf{F}(\mathbf{Na}) \mathrm{d} \Gamma  \equiv 0<br>$$</p>
-<p>以上三式的意义是：通过选择待定系数 $\mathbf{a} _i$ ，强迫余量在某种平均意义上等于零。$\mathbf{W} _j$ 和 $\bar{\mathbf{W}} _j$ 称为权函数。 余量的加权积分为零就得到了一组求解方程，用以求解近似解的待定系数 $\mathbf{a}$，从而得到原问题的近似解答。</p>
+<p><span class="math display">\[
+\int _\Omega \mathbf{C} ^\mathrm{T} (\mathbf{W} _j)
+\mathbf{D}(\mathbf{Na}) \mathrm{d} \Omega + \int _\Gamma \mathbf{E}
+^\mathrm{T} (\bar{\mathbf{W}} _j) \mathbf{F}(\mathbf{Na}) \mathrm{d}
+\Gamma  \equiv 0
+\]</span></p>
+<p>以上三式的意义是：通过选择待定系数 <span
+class="math inline">\(\mathbf{a} _i\)</span>
+，强迫余量在某种平均意义上等于零。<span class="math inline">\(\mathbf{W}
+_j\)</span> 和 <span class="math inline">\(\bar{\mathbf{W}} _j\)</span>
+称为权函数。
+余量的加权积分为零就得到了一组求解方程，用以求解近似解的待定系数 <span
+class="math inline">\(\mathbf{a}\)</span>，从而得到原问题的近似解答。</p>
 <p>近似函数所取的试探函数的项数越多，近似解的精度越高。当项数趋于无穷时，近似解将收敛于精确解。</p>
-<p>取 $\mathbf{W} _j= \mathbf{N} _j$，在边界上 $\bar{\mathbf{W}} _j= -\mathbf{W} _j = -\mathbf{N} _j$。即简单的利用近似解的试探函数序列作为权函数时，以上步骤称为<strong>加权残值伽辽金法</strong>。此时有：</p>
-<p>$$<br>\int _\Omega \mathbf{N} _j ^\mathrm{T} \mathbf{A}\left( \sum ^n _{i=1}\mathbf{N} _i \mathbf{a} _i  \right) \mathrm{d} \Omega + \int _\Gamma \bar{\mathbf{N}} _j ^\mathrm{T} \mathbf{B}\left( \sum ^n _{i=1}\mathbf{N} _i \mathbf{a} _i \right) \mathrm{d} \Gamma  = 0<br>$$</p>
-<h3 id="加权残值伽辽金法的特点"><a href="#加权残值伽辽金法的特点" class="headerlink" title="加权残值伽辽金法的特点"></a>加权残值伽辽金法的特点</h3><p><strong>特点：如果算子 $\mathbf{A}$ 是线性自伴随的，则采用伽辽金法得到的求解方程的系数矩阵是对称的。</strong> 在高维问题中，这种对称性会大大减少计算量。因此使用加权残值法建立有限元格式时，几乎毫无例外地采用伽辽金法。现以一维热传导问题为例说明该特点。</p>
+<p>取 <span class="math inline">\(\mathbf{W} _j= \mathbf{N}
+_j\)</span>，在边界上 <span class="math inline">\(\bar{\mathbf{W}} _j=
+-\mathbf{W} _j = -\mathbf{N}
+_j\)</span>。即简单的利用近似解的试探函数序列作为权函数时，以上步骤称为<strong>加权残值伽辽金法</strong>。此时有：</p>
+<p><span class="math display">\[
+\int _\Omega \mathbf{N} _j ^\mathrm{T} \mathbf{A}\left( \sum ^n
+_{i=1}\mathbf{N} _i \mathbf{a} _i  \right) \mathrm{d} \Omega + \int
+_\Gamma \bar{\mathbf{N}} _j ^\mathrm{T} \mathbf{B}\left( \sum ^n
+_{i=1}\mathbf{N} _i \mathbf{a} _i \right) \mathrm{d} \Gamma  = 0
+\]</span></p>
+<h3 id="加权残值伽辽金法的特点">加权残值伽辽金法的特点</h3>
+<p><strong>特点：如果算子 <span
+class="math inline">\(\mathbf{A}\)</span>
+是线性自伴随的，则采用伽辽金法得到的求解方程的系数矩阵是对称的。</strong>
+在高维问题中，这种对称性会大大减少计算量。因此使用加权残值法建立有限元格式时，几乎毫无例外地采用伽辽金法。现以一维热传导问题为例说明该特点。</p>
 <p>在一维热传导问题中，如果热传导系数取1，则微分方程为：</p>
-<p>$$<br>A(\phi) = \frac{\mathrm{d}^2 \phi}{\mathrm{d} x^2}+Q(x) = 0 \quad (0 \leq x \leq L)<br>$$</p>
-<p>其中，当 $0\leq x\leq \frac{L}{2}$ 时 $Q(x)=1$ ；当 $\frac{L}{2}\leq x\leq L$ 时 $Q(x)=0$。 边界条件为 $x=0$ 和 $x=L$ 时，$\phi =0$。</p>
+<p><span class="math display">\[
+A(\phi) = \frac{\mathrm{d}^2 \phi}{\mathrm{d} x^2}+Q(x) = 0 \quad (0
+\leq x \leq L)
+\]</span></p>
+<p>其中，当 <span class="math inline">\(0\leq x\leq \frac{L}{2}\)</span>
+时 <span class="math inline">\(Q(x)=1\)</span> ；当 <span
+class="math inline">\(\frac{L}{2}\leq x\leq L\)</span> 时 <span
+class="math inline">\(Q(x)=0\)</span>。 边界条件为 <span
+class="math inline">\(x=0\)</span> 和 <span
+class="math inline">\(x=L\)</span> 时，<span class="math inline">\(\phi
+=0\)</span>。</p>
 <p>取傅里叶级数作为近似解：</p>
-<p>$$<br>\phi \approx \tilde{\phi} = \sum ^n _{i=1} a _i \sin \frac{i\pi x}{L}<br>$$</p>
-<p>其中 $a_i$ 为待定参数，试探函数 $N_i= \sin \frac{i\pi x}{L}$。近似解满足边界条件，因此在边界上不产生余量。将近似解带入原方程的等效积分形式中：</p>
-<p>$$<br>\int ^L _0 W _j \left[ \frac{\mathrm{d}^2}{\mathrm{d} x^2} \left( \sum ^n _{i=1} N _i a _i \right) +Q \right] \mathrm{d} x=0 \quad (j=1,2,\dots,n)<br>$$</p>
-<p>采用伽辽金法时，因为权函数 $W _j = N _j$ 是连续的，并且在两端等于 $N _j =0$。对上式分部积分可以得到等效积分形式的弱形式：</p>
-<p>$$<br>\int ^L _0 \left[ \frac{\mathrm{d}W _j}{\mathrm{d}x} \frac{\mathrm{d}}{\mathrm{d} x} \left( \sum ^n _{i=1} N _i a _i \right) + W _j Q \right] \mathrm{d} x=0 \quad (j=1,2,\dots,n)<br>$$</p>
+<p><span class="math display">\[
+\phi \approx \tilde{\phi} = \sum ^n _{i=1} a _i \sin \frac{i\pi x}{L}
+\]</span></p>
+<p>其中 <span class="math inline">\(a_i\)</span> 为待定参数，试探函数
+<span class="math inline">\(N_i= \sin \frac{i\pi
+x}{L}\)</span>。近似解满足边界条件，因此在边界上不产生余量。将近似解带入原方程的等效积分形式中：</p>
+<p><span class="math display">\[
+\int ^L _0 W _j \left[ \frac{\mathrm{d}^2}{\mathrm{d} x^2} \left( \sum
+^n _{i=1} N _i a _i \right) +Q \right] \mathrm{d} x=0 \quad
+(j=1,2,\dots,n)
+\]</span></p>
+<p>采用伽辽金法时，因为权函数 <span class="math inline">\(W _j = N
+_j\)</span> 是连续的，并且在两端等于 <span class="math inline">\(N _j
+=0\)</span>。对上式分部积分可以得到等效积分形式的弱形式：</p>
+<p><span class="math display">\[
+\int ^L _0 \left[ \frac{\mathrm{d}W _j}{\mathrm{d}x}
+\frac{\mathrm{d}}{\mathrm{d} x} \left( \sum ^n _{i=1} N _i a _i \right)
++ W _j Q \right] \mathrm{d} x=0 \quad (j=1,2,\dots,n)
+\]</span></p>
 <p>上式可以改写为：</p>
-<p>$$<br>\mathbf{Ka-P=0}<br>$$</p>
-<p>其中，$\mathbf{P}$ 和 $\mathbf{a}$ 是 $n$ 维向量</p>
-<p>$$<br>P _j =\int ^L _0 W _j Q \mathrm{d}x<br>$$</p>
-<p>$$<br>K _{ij} = \frac{\mathrm{d}W _i}{\mathrm{d}x} \frac{\mathrm{d} N _j}{\mathrm{d} x}<br>$$</p>
-<p>可以看到，当 $W _i= N _i$ 时，将有 $K _{ij} = K _{ji}$，换而言之，采用伽辽金法得到的求解待定参数 $a _i$ 的代数方程组的系数矩阵 $\mathbf{K}$ 是对称的。 </p>
+<p><span class="math display">\[
+\mathbf{Ka-P=0}
+\]</span></p>
+<p>其中，<span class="math inline">\(\mathbf{P}\)</span> 和 <span
+class="math inline">\(\mathbf{a}\)</span> 是 <span
+class="math inline">\(n\)</span> 维向量</p>
+<p><span class="math display">\[
+P _j =\int ^L _0 W _j Q \mathrm{d}x
+\]</span></p>
+<p><span class="math display">\[
+K _{ij} = \frac{\mathrm{d}W _i}{\mathrm{d}x} \frac{\mathrm{d} N
+_j}{\mathrm{d} x}
+\]</span></p>
+<p>可以看到，当 <span class="math inline">\(W _i= N _i\)</span> 时，将有
+<span class="math inline">\(K _{ij} = K
+_{ji}\)</span>，换而言之，采用伽辽金法得到的求解待定参数 <span
+class="math inline">\(a _i\)</span> 的代数方程组的系数矩阵 <span
+class="math inline">\(\mathbf{K}\)</span> 是对称的。</p>
 
     </div>
 
@@ -319,12 +456,12 @@
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/2021/08/24/%E6%9C%80%E5%B0%8F%E5%8A%BF%E8%83%BD%E5%8E%9F%E7%90%86%E4%B8%8E%E6%9C%80%E5%B0%8F%E4%BD%99%E8%83%BD%E5%8E%9F%E7%90%86/" rel="prev" title="最小势能原理与最小余能原理">
-                  <i class="fa fa-chevron-left"></i> 最小势能原理与最小余能原理
+                  <i class="fa fa-angle-left"></i> 最小势能原理与最小余能原理
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="next" title="Python基础知识">
-                  Python基础知识 <i class="fa fa-chevron-right"></i>
+                  Python基础知识 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -343,44 +480,33 @@
   <footer class="footer">
     <div class="footer-inner">
 
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Haopeng Zhang</span>
-</div>
-<div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="Total Visitors">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
     </span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="Total Views">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
+    <span class="author" itemprop="copyrightHolder">Haopeng Zhang</span>
+  </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
-
-
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     </div>
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
@@ -391,15 +517,8 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-
-
-  
-
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{&quot;enable&quot;:true,&quot;tags&quot;:&quot;none&quot;,&quot;js&quot;:{&quot;url&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mathjax@3.1.4&#x2F;es5&#x2F;tex-mml-chtml.js&quot;,&quot;integrity&quot;:&quot;sha256-ncNI9OXOS5Ek4tzVYiOMmN&#x2F;KKCPZ6V0Cpv2P&#x2F;zHntiA&#x3D;&quot;}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
 
 
 
