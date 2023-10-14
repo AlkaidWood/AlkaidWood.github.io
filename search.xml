@@ -1,82 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>振动传感器主要性能指标</title>
-    <url>/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</url>
-    <content><![CDATA[<h2 id="灵敏度">灵敏度</h2>
-<p>灵敏度是指沿传感器的测量方向，对应于每一单位简谐机械量的输入，其开路时电信号的输出，即输出比输入。</p>
-<ul>
-<li>输入的机械量：<span class="math inline">\(x=X\sin(\omega t
-+\alpha)\)</span></li>
-<li>输出的电信号：<span class="math inline">\(e=E\sin (\omega t+ \alpha
-- \theta)\)</span>，<span class="math inline">\(\theta\)</span>
-为相移，即输出的电信号<span
-class="math inline">\(e\)</span>对被测机械量<span
-class="math inline">\(x\)</span>的相位滞后</li>
-<li>灵敏度：<span class="math inline">\(s=E/X\)</span> （电信号单位 /
-机械量单位）</li>
-</ul>
-<p>通常，<span class="math inline">\(X\)</span>
-是位移、速度、加速度、力、应变等，<span class="math inline">\(E\)</span>
-是电压、电荷等。</p>
-<h2 id="分辨率">分辨率</h2>
-<p>分辨率是指传感器可感受到的被测量的最小变化的能力。</p>
-<p>也就是说，如果输入量从某一非零值缓慢地变化，但变化值未超过某一数值
-<span class="math inline">\(\Delta X\)</span> 时，传感器的输出变化量
-<span class="math inline">\(\Delta E =0\)</span>
-，即传感器对此输入量的变化是分辨不出来的。只有当输入量的变化超过分辨率时，其输出才会发生变化。</p>
-<p><span class="math inline">\(\Delta X\)</span>
-越小，灵敏度越高，分辨率也越高。灵敏度越高，传感器的信噪比将相应下降，这将降低测量结果的精度，故应综合考虑。</p>
-<h2 id="线性度和线性范围">线性度和线性范围</h2>
-<p>通常情况下，传感器的实际静态特性输出是条曲线而非直线。在实际工作中，为使仪表具有均匀刻度的读数，常用一条拟合直线近似地代表实际的特性曲线。</p>
-<p><strong>线性度</strong>（非线性误差）<span
-class="math inline">\(\gamma\)</span>
-就是这个近似程度的一个性能指标，定义为在全量程范围内实际特性曲线与拟合直线之间的最大偏差值与满量程输出值之比。</p>
-<p><span class="math display">\[
-\gamma=\frac{ \Delta E }{  E_{max} -  E_{min} } \times 100 \\%
-\]</span></p>
-<p><strong>线性范围</strong>是指传感器测量量与实际被测量之间保持近似线性关系的范围。</p>
-<p><img src="/image/zhendongceshi/xianxingdu.png" width = "60%" height = "60%"  align=center /></p>
-<h2 id="频率范围">频率范围</h2>
-<p><strong>频率范围</strong>是指传感器的灵敏度随频率的变化量不超出某一给定的误差限的频率范围（频率上限和下限）。传感器的频率范围取决于：
-1. 机械接收部分的频率特性。 1. 机电变换部分和所用二次仪表的频率特性。 1.
-传感器的安装条件也影响频率上限。</p>
-<p>备注： * 在制定测量方案时，首先要看传感器的频率范围是否满足测量的要求
-* 压电式加速度传感器具有较宽的频率范围，而且频率上限也比较高 *
-电阻式、压阻式和伺服式等三种加速度传感器都具有零频率响应，其中压阻式也具有较高的上限频率</p>
-<h2 id="固有频率与安装谐振频率">固有频率与安装谐振频率</h2>
-<p>对于惯性式接收传感器，其机械接收部分是由质量块、阻尼器、弹簧构成的单自由度振动系统，其质量、阻尼、刚度分别为
-<span class="math inline">\(m, c,
-k\)</span>。该振系统无阻尼自由振动的频率 $ _n = $
-被称为传感器的<strong>固有频率</strong>。</p>
-<p>传感器产生共振时的最低频率称为<strong>安装谐振频率</strong>，若安装刚度是有限的（实际上也很难达到无穷大），则其对传感器的接收特性将有较大影响。</p>
-<h2 id="工作范围">工作范围</h2>
-<p>频率范围和线性范围一起决定了传感器的<strong>工作范围</strong>。工作范围可以从诺谟图（Nomogram）中得到</p>
-<p><img src="/image/zhendongceshi/nuomotu.jpg" width = "50%" height = "50%"  align=center /></p>
-<h2 id="横向灵敏度与方向特性">横向灵敏度与方向特性</h2>
-<p>横向灵敏度主要是由于最大灵敏度轴与传感器的几何轴线不重合而引起的。这是由于传感器加工、安装上的间歇误差等条件造成的。最大灵敏度的轴线与几何轴线间的夹角为
-<span
-class="math inline">\(\theta\)</span>，<strong>最大的横向灵敏度</strong>表示为：</p>
-<p><span class="math display">\[
-s_t=\tan \theta
-\]</span></p>
-<p>备注： * 加速度传感器的外壳上的红点被用来表示横向灵敏度的方向。 *
-一般令红点和传感器中心的连线，与振幅最大的非被测振动方向垂直，以减少测量误差。</p>
-<h2 id="动态范围">动态范围</h2>
-<p><strong>动态范围</strong>是指某一输入机械量的幅值范围（用分贝表示），该范围内传感器的灵敏度随输入机械量幅值的变化量不超出某一给定的误差限。</p>
-<p><span class="math display">\[
-D=20 \lg \frac{X_{max}}{X_{min}}
-\]</span></p>
-<p>动态范围越大，说明传感器对幅值变化的适应能力越强。比如 <span
-class="math inline">\(D=80dB\)</span>，则幅值上限与下限之比达10000倍。传感器的量程即是指其幅值上限与下限值的代数差。</p>
-<h2 id="其他">其他</h2>
-<p>传感器的其它性能参数还包括其质量、重复性、稳定性、输入输出阻抗、阻尼、迟滞、零飘、过载能力、以及它的工作环境条件等。</p>
-]]></content>
-      <tags>
-        <tag>振动测试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>实验模态分析的基本原理与主要过程</title>
     <url>/2021/06/14/%E5%AE%9E%E9%AA%8C%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8E%E4%B8%BB%E8%A6%81%E8%BF%87%E7%A8%8B/</url>
     <content><![CDATA[<h2 id="基本概念">基本概念</h2>
@@ -489,52 +413,6 @@ class="math inline">\(\bar{X}_N\)</span>
       </tags>
   </entry>
   <entry>
-    <title>如何在论文中完美插入矢量图</title>
-    <url>/2021/06/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE/</url>
-    <content><![CDATA[<h2 id="问题背景">问题背景</h2>
-<p>论文写作时，我们往往需要插入矢量图，以保证图形被阅览时不会因缩放而出现难看的锯齿（失真）。</p>
-<p>需要矢量图的常用场景如下： * 纯矢量图 * 简单的折线、柱形、条形图等 *
-抽象的模型图、概念图、流程图、程序框图等 *
-混合类图形，混合了以上两种图形 * 矢量图与位图的混合 *
-色彩复杂的模型图（位图）旁配上文字、简单的折线图、流程图等 *
-在流程图中嵌入各种结果，如Science、Nature中常见的占用一页的超大混合类图形
-* 其他</p>
-<h2 id="各种类型图片的区别">各种类型图片的区别</h2>
-<h3 id="矢量图">矢量图</h3>
-<p>简单来说矢量图就像用几何图形来描述一幅图，在矢量图放大时，我们所记录的几何图形的各种角度、形状等并没有改变，所以无论是放大还是缩小，都不会影响矢量图的清晰度。</p>
-<p><strong>文件类型：</strong> Adobe
-Illustrator的<code>.AI</code>、<code>.EPS</code>和<code>.SVG</code>、AutoCAD的<code>.dwg</code>和<code>.dxf</code>、Corel
-DRAW的<code>.cdr</code>等。<code>.pdf</code>也常被用来保存矢量图。</p>
-<p><strong>制图：</strong> 使用Adobe
-Illustrator(AI)、CorelDRAW、FlashMX制图</p>
-<h3 id="位图">位图</h3>
-<p>位图又被称作点阵图或栅格图像，它的特点就是，整幅图由许多的‘点’组成，这些‘点’我们称为“像素”。在位图模式下，计算机会将图片的每个像素点进行保存。当位图放大到一定程度时，我们会发现图片是由一个一个的小方块组成，这些小方块就是像素点。</p>
-<p><strong>文件类型：</strong>
-<code>.jpg</code>、<code>.png</code>、<code>.bmp</code>、<code>.pcx</code>、<code>.gif</code>、<code>.tif</code>、<code>.psd</code>等。</p>
-<p><strong>制图：</strong>
-使用Photoshop、Painter和Windows系统自带的画图工具制图。</p>
-<h2 id="如何在论文中使用矢量图">如何在论文中使用矢量图</h2>
-<p><strong>这里主要讨论使用LaTex写作时，如何插入矢量图。</strong></p>
-<p><strong>第一步</strong>：使用任何软件得到矢量图形。如果使用Matlab、Python得到折线、柱形图等，直接输出为<code>.pdf</code>或<code>.eps</code>格式。如果使用Visio、PPT等软件绘制流程图、模型图，导出为<code>.pdf</code>。（貌似微软的办公软件不支持<code>.eps</code>）</p>
-<p>（如果是直接插入已得到的矢量图，请转至第三步）</p>
-<p><strong>第二步</strong>：使用Adobe
-Illustrator将多个矢量图组合在一起后用快捷键<code>Shift+o</code>裁剪画布，删去边框。将文件保存为<code>.eps</code>或<code>.pdf</code>。如果只是删除<code>.pdf</code>中的白边，使用Adobe
-Acrobat 的编辑功能就能轻松做到。</p>
-<p><strong>第三步</strong>：在LaTex中插入组合好的矢量图。</p>
-<p><strong>提示</strong>：在第一步制作矢量图时，最好调整好字号，图宽以适合出现在论文中或PPT中，并且使用Matlab时一定要保存一份<code>.fig</code>文件，便于以后查找修改。</p>
-<h2 id="office套件中插入矢量图">Office套件中插入矢量图</h2>
-<p>Office办公软件下插入矢量图，使用<code>.emf</code>即可。Office系列间的互通是较为方便的，如Visio、PPT、Word间相互插入文件。</p>
-<p>使用Word和Latex一段时间以后，还是非常推荐大家使用LaTex的（强迫症福音）。毕竟插入的行内、行间公式怎是一个“服服帖帖”就能概括的。更别说切换模板时，只需要改动导言区就ok啦，简直不要太方便。LaTex缺点也有，表格制作很麻烦QAQ…，整体学习成本略高。</p>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li>https://www.zhihu.com/question/378251607/answer/1160351444</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>论文写作</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Levenberg–Marquardt Algorithm</title>
     <url>/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/</url>
     <content><![CDATA[<h2 id="问题背景">问题背景</h2>
@@ -581,23 +459,79 @@ of Cambridge, New York</em>, 24(78), 36.</li>
       </tags>
   </entry>
   <entry>
-    <title>论文中的高频英语词汇</title>
-    <url>/2021/08/15/%E8%AE%BA%E6%96%87%E4%B8%AD%E7%9A%84%E9%AB%98%E9%A2%91%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/</url>
-    <content><![CDATA[<h2 id="动词">动词</h2>
-<p>引起学术界的广泛关注 generate a good deal of academic attention</p>
-<h2 id="名词">名词</h2>
-<p>发生 occur 处理 process &gt;&gt; deal with &gt; handle 大量关注 a lot
-of attention</p>
-<h2 id="形容词">形容词</h2>
-<p>各种各样的 various</p>
-<h2 id="副词">副词</h2>
-<p>特别地 in particular &gt; especially</p>
-<h2 id="连接词或短语">连接词或短语</h2>
-<p>同时 at the same time &gt;&gt; meanwhile 此外 furthermore = moreover
-在...的基础上 on the basis of 随后 in the fllowing</p>
+    <title>振动传感器主要性能指标</title>
+    <url>/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</url>
+    <content><![CDATA[<h2 id="灵敏度">灵敏度</h2>
+<p>灵敏度是指沿传感器的测量方向，对应于每一单位简谐机械量的输入，其开路时电信号的输出，即输出比输入。</p>
+<ul>
+<li>输入的机械量：<span class="math inline">\(x=X\sin(\omega t
++\alpha)\)</span></li>
+<li>输出的电信号：<span class="math inline">\(e=E\sin (\omega t+ \alpha
+- \theta)\)</span>，<span class="math inline">\(\theta\)</span>
+为相移，即输出的电信号<span
+class="math inline">\(e\)</span>对被测机械量<span
+class="math inline">\(x\)</span>的相位滞后</li>
+<li>灵敏度：<span class="math inline">\(s=E/X\)</span> （电信号单位 /
+机械量单位）</li>
+</ul>
+<p>通常，<span class="math inline">\(X\)</span>
+是位移、速度、加速度、力、应变等，<span class="math inline">\(E\)</span>
+是电压、电荷等。</p>
+<h2 id="分辨率">分辨率</h2>
+<p>分辨率是指传感器可感受到的被测量的最小变化的能力。</p>
+<p>也就是说，如果输入量从某一非零值缓慢地变化，但变化值未超过某一数值
+<span class="math inline">\(\Delta X\)</span> 时，传感器的输出变化量
+<span class="math inline">\(\Delta E =0\)</span>
+，即传感器对此输入量的变化是分辨不出来的。只有当输入量的变化超过分辨率时，其输出才会发生变化。</p>
+<p><span class="math inline">\(\Delta X\)</span>
+越小，灵敏度越高，分辨率也越高。灵敏度越高，传感器的信噪比将相应下降，这将降低测量结果的精度，故应综合考虑。</p>
+<h2 id="线性度和线性范围">线性度和线性范围</h2>
+<p>通常情况下，传感器的实际静态特性输出是条曲线而非直线。在实际工作中，为使仪表具有均匀刻度的读数，常用一条拟合直线近似地代表实际的特性曲线。</p>
+<p><strong>线性度</strong>（非线性误差）<span
+class="math inline">\(\gamma\)</span>
+就是这个近似程度的一个性能指标，定义为在全量程范围内实际特性曲线与拟合直线之间的最大偏差值与满量程输出值之比。</p>
+<p><span class="math display">\[
+\gamma=\frac{ \Delta E }{  E_{max} -  E_{min} } \times 100 \\%
+\]</span></p>
+<p><strong>线性范围</strong>是指传感器测量量与实际被测量之间保持近似线性关系的范围。</p>
+<p><img src="/image/zhendongceshi/xianxingdu.png" width = "60%" height = "60%"  align=center /></p>
+<h2 id="频率范围">频率范围</h2>
+<p><strong>频率范围</strong>是指传感器的灵敏度随频率的变化量不超出某一给定的误差限的频率范围（频率上限和下限）。传感器的频率范围取决于：
+1. 机械接收部分的频率特性。 1. 机电变换部分和所用二次仪表的频率特性。 1.
+传感器的安装条件也影响频率上限。</p>
+<p>备注： * 在制定测量方案时，首先要看传感器的频率范围是否满足测量的要求
+* 压电式加速度传感器具有较宽的频率范围，而且频率上限也比较高 *
+电阻式、压阻式和伺服式等三种加速度传感器都具有零频率响应，其中压阻式也具有较高的上限频率</p>
+<h2 id="固有频率与安装谐振频率">固有频率与安装谐振频率</h2>
+<p>对于惯性式接收传感器，其机械接收部分是由质量块、阻尼器、弹簧构成的单自由度振动系统，其质量、阻尼、刚度分别为
+<span class="math inline">\(m, c,
+k\)</span>。该振系统无阻尼自由振动的频率 $ _n = $
+被称为传感器的<strong>固有频率</strong>。</p>
+<p>传感器产生共振时的最低频率称为<strong>安装谐振频率</strong>，若安装刚度是有限的（实际上也很难达到无穷大），则其对传感器的接收特性将有较大影响。</p>
+<h2 id="工作范围">工作范围</h2>
+<p>频率范围和线性范围一起决定了传感器的<strong>工作范围</strong>。工作范围可以从诺谟图（Nomogram）中得到</p>
+<p><img src="/image/zhendongceshi/nuomotu.jpg" width = "50%" height = "50%"  align=center /></p>
+<h2 id="横向灵敏度与方向特性">横向灵敏度与方向特性</h2>
+<p>横向灵敏度主要是由于最大灵敏度轴与传感器的几何轴线不重合而引起的。这是由于传感器加工、安装上的间歇误差等条件造成的。最大灵敏度的轴线与几何轴线间的夹角为
+<span
+class="math inline">\(\theta\)</span>，<strong>最大的横向灵敏度</strong>表示为：</p>
+<p><span class="math display">\[
+s_t=\tan \theta
+\]</span></p>
+<p>备注： * 加速度传感器的外壳上的红点被用来表示横向灵敏度的方向。 *
+一般令红点和传感器中心的连线，与振幅最大的非被测振动方向垂直，以减少测量误差。</p>
+<h2 id="动态范围">动态范围</h2>
+<p><strong>动态范围</strong>是指某一输入机械量的幅值范围（用分贝表示），该范围内传感器的灵敏度随输入机械量幅值的变化量不超出某一给定的误差限。</p>
+<p><span class="math display">\[
+D=20 \lg \frac{X_{max}}{X_{min}}
+\]</span></p>
+<p>动态范围越大，说明传感器对幅值变化的适应能力越强。比如 <span
+class="math inline">\(D=80dB\)</span>，则幅值上限与下限之比达10000倍。传感器的量程即是指其幅值上限与下限值的代数差。</p>
+<h2 id="其他">其他</h2>
+<p>传感器的其它性能参数还包括其质量、重复性、稳定性、输入输出阻抗、阻尼、迟滞、零飘、过载能力、以及它的工作环境条件等。</p>
 ]]></content>
       <tags>
-        <tag>论文写作</tag>
+        <tag>振动测试</tag>
       </tags>
   </entry>
   <entry>
@@ -942,6 +876,179 @@ href="https://zhuanlan.zhihu.com/p/26261872">弹性力学变分提法随记 -
       </tags>
   </entry>
   <entry>
+    <title>论文中的高频英语词汇</title>
+    <url>/2021/08/15/%E8%AE%BA%E6%96%87%E4%B8%AD%E7%9A%84%E9%AB%98%E9%A2%91%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/</url>
+    <content><![CDATA[<h2 id="动词">动词</h2>
+<p>引起学术界的广泛关注 generate a good deal of academic attention</p>
+<h2 id="名词">名词</h2>
+<p>发生 occur 处理 process &gt;&gt; deal with &gt; handle 大量关注 a lot
+of attention</p>
+<h2 id="形容词">形容词</h2>
+<p>各种各样的 various</p>
+<h2 id="副词">副词</h2>
+<p>特别地 in particular &gt; especially</p>
+<h2 id="连接词或短语">连接词或短语</h2>
+<p>同时 at the same time &gt;&gt; meanwhile 此外 furthermore = moreover
+在...的基础上 on the basis of 随后 in the fllowing</p>
+]]></content>
+      <tags>
+        <tag>论文写作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FFT和伯德图 (Bode plot) 的区别与联系</title>
+    <url>/2021/08/06/FFT-and-Bode-plot/</url>
+    <content><![CDATA[<h2 id="概述">概述</h2>
+<p><strong>主要区别</strong>： *
+作用对象。FFT作用于<strong>时间序列信号</strong>；Bode图作用于系统<strong>传递函数</strong>
+<span class="math inline">\(H(s)\)</span> *
+目的。FFT的目的是得到一段信号的频谱；Bode图的目的是得到传递函数的幅频特性和相频特性
+*
+原理。FFT基于<strong>傅里叶变换</strong>；Bode图基于<strong>拉普拉斯变换</strong>
+*
+适用性。FFT分析的时间序列可以来自于线性系统或非线性系统；Bode图只能分析<strong>线性非时变系统</strong>的传递函数</p>
+<p><strong>主要联系</strong>： * 两者都得到频域下的结果 *
+在数学形式上，得到传递函数时使用的拉普拉斯变换退化后得到傅里叶变换</p>
+<h2 id="傅里叶变换">傅里叶变换</h2>
+<p><strong>傅里叶变换的目的</strong>：得到被采集信号包含的频率成分和每个频率成分在原信号中的占比，用图形表示则为频谱图。</p>
+<p>傅里叶变换简单通俗理解就是把看似杂乱无章的信号考虑成由一定振幅、相位、频率的基本正弦（余弦）信号组合而成，傅里叶变换的目的就是找出这些基本正弦（余弦）信号中振幅较大（能量较高）信号对应的频率，从而找出杂乱无章的信号中的主要振动频率特点。如减速机故障时，通过傅里叶变换做频谱分析，根据各级齿轮转速、齿数与杂音频谱中振幅大的对比，可以快速判断哪级齿轮损伤。</p>
+<p>傅里叶正变换可以写为： <span class="math display">\[
+X(j\omega) = \int^{+\infty}_ {-\infty} x(t)   e^{ -j \omega t} dt
+\]</span></p>
+<p>但是，我们发现傅里叶变换中的基函数是 <span
+class="math inline">\(e^{j\omega
+t}\)</span>，能用它拟合的函数具有共同特征，那就是，各个频率下的三角函数分量不随时间衰减。这个假设具有明显的局限性，要么是理想没有阻尼的系统，要么是研究有阻尼的系统对特定频率的瞬时响应。</p>
+<p>因此需要对傅里叶变换的基函数进行拓展，由此引出拉普拉斯变换：</p>
+<p><span class="math display">\[
+e^{\sigma t}e^{j\omega t}=e^{(\sigma+j\omega) t}=e^{st}
+\]</span></p>
+<p>其中，<span class="math inline">\(s=\sigma+j\omega\)</span>
+为拉普拉斯变换中的变量，表示复实数（<span
+class="math inline">\(j\)</span>为虚数单位）。</p>
+<p>PS：有关傅里叶变换的详细内容可以参照另一篇博客：<a
+href="https://alkaidwood.github.io/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">快速傅里叶变换（FFT）基本原理</a>。</p>
+<h2 id="拉普拉斯变换">拉普拉斯变换</h2>
+<p>拉普拉斯变换可以写为： <span class="math display">\[
+X(\sigma+j\omega)=\int^{+\infty}_ {-\infty} x(t)   e^{(\sigma+j\omega)
+t} dt=\int^{+\infty}_ {-\infty} x(t)   e^{s t} dt=X(s)
+\]</span></p>
+<p><span class="math display">\[
+X(s)=\int^{+\infty}_ {-\infty} x(t)   e^{s t} dt
+\]</span></p>
+<p>拓展傅里叶变换得到拉普拉斯变换。它是为简化计算而建立的实变量函数和复变量函数间的一种函数变换。对一个实变量函数作拉普拉斯变换，并在复数域中作各种运算，再将运算结果作拉普拉斯反变换来求得实数域中的相应结果，往往比直接在实数域中求出同样的结果在计算上容易得多。拉普拉斯变换的这种运算步骤对于求解线性微分方程尤为有效，它可把微分方程化为容易求解的代数方程来处理，从而使计算简化。在经典控制理论中，对控制系统的分析和综合，都是建立在拉普拉斯变换的基础上的。</p>
+<p><strong>引入拉普拉斯变换的一个主要优点，是可采用传递函数 <span
+class="math inline">\(H(s)\)</span>
+代替微分方程来描述系统的特性</strong>。这就为采用直观和简便的图解方法来确定控制系统的整个特性（见信号流程图、动态结构图）、分析控制系统的运动过程（见奈奎斯特稳定判据、根轨迹法），以及综合控制系统的校正装置（见控制系统校正方法）提供了可能性。</p>
+<h2 id="bode图">Bode图</h2>
+<p>刚才提到，通过拉普拉斯变换可以得到系统的传递函数；而传递函数可以直观的反应线性系统输入与输出之间的关系。当我们对传递函数可视化时往往就会用到<strong>Bode图</strong>。</p>
+<p>伯德图(bode)利用对数表示系统传递函数的幅频、相频特性,它分为两个图，一个是对数幅频图、一个是相频图，横坐标均为
+<span class="math inline">\(\omega\)</span> ，纵坐标一个为<span
+class="math inline">\(L(\omega)=20\lg A(\omega
+)\)</span>表示对数幅值，一个为<span class="math inline">\(\varphi
+(\omega)\)</span> 表示相位角。</p>
+<blockquote>
+<p><strong>例</strong>：Bode图 假设系统的传递函数为： <span
+class="math display">\[
+H(s)=\frac{A}{s+a}
+\]</span> <span
+class="math inline">\(s=\sigma+j\omega\)</span>，则传递函数可以写为：
+<span class="math display">\[
+H(\sigma+j\omega)=\frac{A}{(\sigma+j\omega)+a}
+\]</span> 此时传递函数的图像是三维的，有两个自变量<span
+class="math inline">\(\sigma 和
+\omega\)</span>，但是Bode图只关系其中的<span
+class="math inline">\(\omega\)</span>，将另一个变量视为0，<span
+class="math inline">\(\sigma=0\)</span>： <span class="math display">\[
+H(\omega)=\frac{A}{(j\omega)+a}
+\]</span> 上式的对数幅值和相角分别为： <span class="math display">\[
+L(\omega)=20\lg \big\vert H(\omega) \big \vert = 20\lg \bigg(
+\frac{A}{\sqrt{\omega^2+a^2}} \bigg )
+\]</span> <span class="math display">\[
+\varphi (\omega) = - \arctan \frac{\omega}{a}
+\]</span> 利用以上两式即可画出Bode图，横坐标均为<span
+class="math inline">\(\omega\)</span></p>
+</blockquote>
+<hr />
+<p>本文参考了以下博主分享的文章： * <a
+href="https://blog.csdn.net/Davidietop/article/details/105369349">信号处理趣学D8——关于拉氏变换和频谱图的那些事儿</a>
+* <a
+href="https://www.zhihu.com/question/22085329">傅里叶变换、拉普拉斯变换、Z
+变换的联系是什么？为什么要进行这些变换？</a> * <a
+href="https://blog.csdn.net/Davidietop/article/details/102768194">MATLAB频域分析,奈氏图、伯德图、对数幅相图绘制</a>
+* <a href="https://en.wikipedia.org/wiki/Bode_plot">Bode plot -
+Wikipeida</a> * <a
+href="https://zhuanlan.zhihu.com/p/148778408">傅里叶变换和拉普拉斯变换的物理解释及区别</a>
+* <a href="https://zhuanlan.zhihu.com/p/228219488">Bode
+Plots（伯德图）</a></p>
+]]></content>
+      <tags>
+        <tag>振动测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python基础知识</title>
+    <url>/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<h2 id="数据类型">数据类型</h2>
+<h3 id="字符-str">字符 str</h3>
+<ul>
+<li><strong>引号</strong>：在字符中显示单引号，则编程时用双引号将字符括起来；在字符中显示双引号，则编程时用单引号将字符括起来；
+字符中的单引号：<code>course = "He's finger"</code>
+字符串中的双引号：<code>words = 'Python is for "beginners"'</code></li>
+<li><strong>大小写</strong>：<code>course.upper()</code> 、
+<code>course.lower()</code>、<code>course.title()</code></li>
+<li><strong>查找替换</strong>：<code>course.find('xxx'),</code>和<code>course.replace('xxx','aaa')</code></li>
+<li><strong>字符长度</strong>：使用<code>len()</code></li>
+<li><strong>f与花括号</strong>：可以被用来格式化输出字符（在字符中嵌入变量）。
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">first_name=&#x27;John&#x27;</span><br><span class="line">last_name=&#x27;Smith&#x27;</span><br><span class="line">msg = f&quot;&#123;first_name&#125; [&#123;last_name&#125;] is a coder&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>整数 int 浮点数 float 复数 complex</p>
+<h3 id="数据索引">数据索引</h3>
+<ol type="1">
+<li>Python中的索引从0开始</li>
+<li>数据索引中的负号表示从结束端开始：<code>[1:-1]</code>是正确的，-1表示倒数第二个数据</li>
+</ol>
+<p><strong>数据切片索引</strong>
+与Matlab不同的是，<code>A[1:5]</code>返回的不是数列A中位于1、2、3、4、5号位置的数据；取而代之的是：
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="line">print(A[1:5])</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">[2, 3, 4, 5]</span><br><span class="line"></span><br><span class="line">      -------------------------------------------</span><br><span class="line">[A]:   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |</span><br><span class="line">cut:  -0---1---2---3---4---5---6---7---8---9----10- </span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h2 id="if">if</h2>
+<p>常用调用模式如下，用缩进控制开始和结束（与matlab不同）：
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if is_hot:</span><br><span class="line">    print(&#x27;xxxxx&#x27;)</span><br><span class="line">elif is_coldL:</span><br><span class="line">    print(&#x27;xxxxxx&#x27;)</span><br><span class="line">else:</span><br><span class="line">    print(&#x27;xxxx&#x27;)</span><br></pre></td></tr></table></figure></p>
+<p>常用逻辑运算符 1.
+和：<code>and</code>，例如：<code>is_hot and is_cold</code> 1.
+或：<code>or</code> 1.
+非：<code>not</code>，例如：<code>is_cold and not is_wind</code>，<code>not</code>会将其后的False转化为True；上例中如果<code>is_cold = True</code>、<code>is_wind = False</code>，则返回<code>True</code></p>
+<p>比大小： 1.
+大于：<code>&gt;</code>、小于:<code>&lt;</code>、等于:<code>==</code> 1.
+大于等于：<code>&gt;=</code>、小于等于：<code>&lt;=</code> 1.
+不等于：<code>!=</code></p>
+<h2 id="循环">循环</h2>
+<p><code>while</code>常用调用模式如下，<code>break</code>可以用来跳出程序：
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i=1</span><br><span class="line">while i&lt;=5：</span><br><span class="line">    print(&#x27;i&#x27;)</span><br><span class="line">    i = i + 1</span><br><span class="line">print(&#x27;Done&#x27;) #用缩进控制while的结束</span><br></pre></td></tr></table></figure></p>
+<p><code>for</code>常用调用模式 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for item in [1,2,3,4]</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure></p>
+<h2 id="函数">函数</h2>
+<h3 id="常用函数">常用函数</h3>
+<p>绝对值：<code>abs()</code> 四舍五入到整数：<code>round()</code>
+生成等间距数列：<code>range(5,10,2)</code>；step=2，from 5 to 10，输出 5
+7 9</p>
+<h2 id="常用命令">常用命令</h2>
+<h3 id="运算符号">运算符号</h3>
+<ol type="1">
+<li>加<code>+</code>；减<code>-</code>；乘<code>*</code>；除<code>/</code>；幂<code>**</code></li>
+<li>特殊除号：得到结果的整数部分<code>//</code>；得到结果的余数<code>%</code></li>
+<li>增广运算符<code>X += 3</code>与<code>x = x + 3</code>等价、<code>x -= 3</code>同理</li>
+</ol>
+<h3 id="import"><strong><em>import</em></strong></h3>
+<p>调用包：<code>import XXX</code>，例如<code>import math</code>;使用时<code>math.acos()</code></p>
+<h2 id="questions">Questions</h2>
+<ol type="1">
+<li>methods 和 function 在Python有何区别的？</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>通俗的理解何为变分</title>
     <url>/2021/08/24/%E9%80%9A%E4%BF%97%E7%9A%84%E7%90%86%E8%A7%A3%E4%BD%95%E4%B8%BA%E5%8F%98%E5%88%86/</url>
     <content><![CDATA[<h2 id="概述">概述</h2>
@@ -1052,96 +1159,6 @@ href="https://www.zhihu.com/question/30416914">微分、差分和变分的概念
 ]]></content>
       <tags>
         <tag>有限元</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FFT和伯德图 (Bode plot) 的区别与联系</title>
-    <url>/2021/08/06/FFT-and-Bode-plot/</url>
-    <content><![CDATA[<h2 id="概述">概述</h2>
-<p><strong>主要区别</strong>： *
-作用对象。FFT作用于<strong>时间序列信号</strong>；Bode图作用于系统<strong>传递函数</strong>
-<span class="math inline">\(H(s)\)</span> *
-目的。FFT的目的是得到一段信号的频谱；Bode图的目的是得到传递函数的幅频特性和相频特性
-*
-原理。FFT基于<strong>傅里叶变换</strong>；Bode图基于<strong>拉普拉斯变换</strong>
-*
-适用性。FFT分析的时间序列可以来自于线性系统或非线性系统；Bode图只能分析<strong>线性非时变系统</strong>的传递函数</p>
-<p><strong>主要联系</strong>： * 两者都得到频域下的结果 *
-在数学形式上，得到传递函数时使用的拉普拉斯变换退化后得到傅里叶变换</p>
-<h2 id="傅里叶变换">傅里叶变换</h2>
-<p><strong>傅里叶变换的目的</strong>：得到被采集信号包含的频率成分和每个频率成分在原信号中的占比，用图形表示则为频谱图。</p>
-<p>傅里叶变换简单通俗理解就是把看似杂乱无章的信号考虑成由一定振幅、相位、频率的基本正弦（余弦）信号组合而成，傅里叶变换的目的就是找出这些基本正弦（余弦）信号中振幅较大（能量较高）信号对应的频率，从而找出杂乱无章的信号中的主要振动频率特点。如减速机故障时，通过傅里叶变换做频谱分析，根据各级齿轮转速、齿数与杂音频谱中振幅大的对比，可以快速判断哪级齿轮损伤。</p>
-<p>傅里叶正变换可以写为： <span class="math display">\[
-X(j\omega) = \int^{+\infty}_ {-\infty} x(t)   e^{ -j \omega t} dt
-\]</span></p>
-<p>但是，我们发现傅里叶变换中的基函数是 <span
-class="math inline">\(e^{j\omega
-t}\)</span>，能用它拟合的函数具有共同特征，那就是，各个频率下的三角函数分量不随时间衰减。这个假设具有明显的局限性，要么是理想没有阻尼的系统，要么是研究有阻尼的系统对特定频率的瞬时响应。</p>
-<p>因此需要对傅里叶变换的基函数进行拓展，由此引出拉普拉斯变换：</p>
-<p><span class="math display">\[
-e^{\sigma t}e^{j\omega t}=e^{(\sigma+j\omega) t}=e^{st}
-\]</span></p>
-<p>其中，<span class="math inline">\(s=\sigma+j\omega\)</span>
-为拉普拉斯变换中的变量，表示复实数（<span
-class="math inline">\(j\)</span>为虚数单位）。</p>
-<p>PS：有关傅里叶变换的详细内容可以参照另一篇博客：<a
-href="https://alkaidwood.github.io/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">快速傅里叶变换（FFT）基本原理</a>。</p>
-<h2 id="拉普拉斯变换">拉普拉斯变换</h2>
-<p>拉普拉斯变换可以写为： <span class="math display">\[
-X(\sigma+j\omega)=\int^{+\infty}_ {-\infty} x(t)   e^{(\sigma+j\omega)
-t} dt=\int^{+\infty}_ {-\infty} x(t)   e^{s t} dt=X(s)
-\]</span></p>
-<p><span class="math display">\[
-X(s)=\int^{+\infty}_ {-\infty} x(t)   e^{s t} dt
-\]</span></p>
-<p>拓展傅里叶变换得到拉普拉斯变换。它是为简化计算而建立的实变量函数和复变量函数间的一种函数变换。对一个实变量函数作拉普拉斯变换，并在复数域中作各种运算，再将运算结果作拉普拉斯反变换来求得实数域中的相应结果，往往比直接在实数域中求出同样的结果在计算上容易得多。拉普拉斯变换的这种运算步骤对于求解线性微分方程尤为有效，它可把微分方程化为容易求解的代数方程来处理，从而使计算简化。在经典控制理论中，对控制系统的分析和综合，都是建立在拉普拉斯变换的基础上的。</p>
-<p><strong>引入拉普拉斯变换的一个主要优点，是可采用传递函数 <span
-class="math inline">\(H(s)\)</span>
-代替微分方程来描述系统的特性</strong>。这就为采用直观和简便的图解方法来确定控制系统的整个特性（见信号流程图、动态结构图）、分析控制系统的运动过程（见奈奎斯特稳定判据、根轨迹法），以及综合控制系统的校正装置（见控制系统校正方法）提供了可能性。</p>
-<h2 id="bode图">Bode图</h2>
-<p>刚才提到，通过拉普拉斯变换可以得到系统的传递函数；而传递函数可以直观的反应线性系统输入与输出之间的关系。当我们对传递函数可视化时往往就会用到<strong>Bode图</strong>。</p>
-<p>伯德图(bode)利用对数表示系统传递函数的幅频、相频特性,它分为两个图，一个是对数幅频图、一个是相频图，横坐标均为
-<span class="math inline">\(\omega\)</span> ，纵坐标一个为<span
-class="math inline">\(L(\omega)=20\lg A(\omega
-)\)</span>表示对数幅值，一个为<span class="math inline">\(\varphi
-(\omega)\)</span> 表示相位角。</p>
-<blockquote>
-<p><strong>例</strong>：Bode图 假设系统的传递函数为： <span
-class="math display">\[
-H(s)=\frac{A}{s+a}
-\]</span> <span
-class="math inline">\(s=\sigma+j\omega\)</span>，则传递函数可以写为：
-<span class="math display">\[
-H(\sigma+j\omega)=\frac{A}{(\sigma+j\omega)+a}
-\]</span> 此时传递函数的图像是三维的，有两个自变量<span
-class="math inline">\(\sigma 和
-\omega\)</span>，但是Bode图只关系其中的<span
-class="math inline">\(\omega\)</span>，将另一个变量视为0，<span
-class="math inline">\(\sigma=0\)</span>： <span class="math display">\[
-H(\omega)=\frac{A}{(j\omega)+a}
-\]</span> 上式的对数幅值和相角分别为： <span class="math display">\[
-L(\omega)=20\lg \big\vert H(\omega) \big \vert = 20\lg \bigg(
-\frac{A}{\sqrt{\omega^2+a^2}} \bigg )
-\]</span> <span class="math display">\[
-\varphi (\omega) = - \arctan \frac{\omega}{a}
-\]</span> 利用以上两式即可画出Bode图，横坐标均为<span
-class="math inline">\(\omega\)</span></p>
-</blockquote>
-<hr />
-<p>本文参考了以下博主分享的文章： * <a
-href="https://blog.csdn.net/Davidietop/article/details/105369349">信号处理趣学D8——关于拉氏变换和频谱图的那些事儿</a>
-* <a
-href="https://www.zhihu.com/question/22085329">傅里叶变换、拉普拉斯变换、Z
-变换的联系是什么？为什么要进行这些变换？</a> * <a
-href="https://blog.csdn.net/Davidietop/article/details/102768194">MATLAB频域分析,奈氏图、伯德图、对数幅相图绘制</a>
-* <a href="https://en.wikipedia.org/wiki/Bode_plot">Bode plot -
-Wikipeida</a> * <a
-href="https://zhuanlan.zhihu.com/p/148778408">傅里叶变换和拉普拉斯变换的物理解释及区别</a>
-* <a href="https://zhuanlan.zhihu.com/p/228219488">Bode
-Plots（伯德图）</a></p>
-]]></content>
-      <tags>
-        <tag>振动测试</tag>
       </tags>
   </entry>
   <entry>
@@ -1385,66 +1402,67 @@ class="math inline">\(\mathbf{K}\)</span> 是对称的。</p>
       </tags>
   </entry>
   <entry>
-    <title>Python基础知识</title>
-    <url>/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
-    <content><![CDATA[<h2 id="数据类型">数据类型</h2>
-<h3 id="字符-str">字符 str</h3>
+    <title>质心_形心_重心</title>
+    <url>/2022/03/08/%E8%B4%A8%E5%BF%83-%E5%BD%A2%E5%BF%83-%E9%87%8D%E5%BF%83/</url>
+    <content><![CDATA[<h2 id="三者存在的条件">三者存在的条件</h2>
 <ul>
-<li><strong>引号</strong>：在字符中显示单引号，则编程时用双引号将字符括起来；在字符中显示双引号，则编程时用单引号将字符括起来；
-字符中的单引号：<code>course = "He's finger"</code>
-字符串中的双引号：<code>words = 'Python is for "beginners"'</code></li>
-<li><strong>大小写</strong>：<code>course.upper()</code> 、
-<code>course.lower()</code>、<code>course.title()</code></li>
-<li><strong>查找替换</strong>：<code>course.find('xxx'),</code>和<code>course.replace('xxx','aaa')</code></li>
-<li><strong>字符长度</strong>：使用<code>len()</code></li>
-<li><strong>f与花括号</strong>：可以被用来格式化输出字符（在字符中嵌入变量）。
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">first_name=&#x27;John&#x27;</span><br><span class="line">last_name=&#x27;Smith&#x27;</span><br><span class="line">msg = f&quot;&#123;first_name&#125; [&#123;last_name&#125;] is a coder&quot;</span><br></pre></td></tr></table></figure></li>
+<li><strong>形心</strong>：目标具有几何外形；</li>
+<li><strong>质心</strong>：目标具有几何外形、具有质量；</li>
+<li><strong>重心</strong>：目标具有几何外形、具有质量、身处重力场。</li>
 </ul>
-<p>整数 int 浮点数 float 复数 complex</p>
-<h3 id="数据索引">数据索引</h3>
-<ol type="1">
-<li>Python中的索引从0开始</li>
-<li>数据索引中的负号表示从结束端开始：<code>[1:-1]</code>是正确的，-1表示倒数第二个数据</li>
-</ol>
-<p><strong>数据切片索引</strong>
-与Matlab不同的是，<code>A[1:5]</code>返回的不是数列A中位于1、2、3、4、5号位置的数据；取而代之的是：
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="line">print(A[1:5])</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">[2, 3, 4, 5]</span><br><span class="line"></span><br><span class="line">      -------------------------------------------</span><br><span class="line">[A]:   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |</span><br><span class="line">cut:  -0---1---2---3---4---5---6---7---8---9----10- </span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h2 id="if">if</h2>
-<p>常用调用模式如下，用缩进控制开始和结束（与matlab不同）：
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if is_hot:</span><br><span class="line">    print(&#x27;xxxxx&#x27;)</span><br><span class="line">elif is_coldL:</span><br><span class="line">    print(&#x27;xxxxxx&#x27;)</span><br><span class="line">else:</span><br><span class="line">    print(&#x27;xxxx&#x27;)</span><br></pre></td></tr></table></figure></p>
-<p>常用逻辑运算符 1.
-和：<code>and</code>，例如：<code>is_hot and is_cold</code> 1.
-或：<code>or</code> 1.
-非：<code>not</code>，例如：<code>is_cold and not is_wind</code>，<code>not</code>会将其后的False转化为True；上例中如果<code>is_cold = True</code>、<code>is_wind = False</code>，则返回<code>True</code></p>
-<p>比大小： 1.
-大于：<code>&gt;</code>、小于:<code>&lt;</code>、等于:<code>==</code> 1.
-大于等于：<code>&gt;=</code>、小于等于：<code>&lt;=</code> 1.
-不等于：<code>!=</code></p>
-<h2 id="循环">循环</h2>
-<p><code>while</code>常用调用模式如下，<code>break</code>可以用来跳出程序：
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i=1</span><br><span class="line">while i&lt;=5：</span><br><span class="line">    print(&#x27;i&#x27;)</span><br><span class="line">    i = i + 1</span><br><span class="line">print(&#x27;Done&#x27;) #用缩进控制while的结束</span><br></pre></td></tr></table></figure></p>
-<p><code>for</code>常用调用模式 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for item in [1,2,3,4]</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure></p>
-<h2 id="函数">函数</h2>
-<h3 id="常用函数">常用函数</h3>
-<p>绝对值：<code>abs()</code> 四舍五入到整数：<code>round()</code>
-生成等间距数列：<code>range(5,10,2)</code>；step=2，from 5 to 10，输出 5
-7 9</p>
-<h2 id="常用命令">常用命令</h2>
-<h3 id="运算符号">运算符号</h3>
-<ol type="1">
-<li>加<code>+</code>；减<code>-</code>；乘<code>*</code>；除<code>/</code>；幂<code>**</code></li>
-<li>特殊除号：得到结果的整数部分<code>//</code>；得到结果的余数<code>%</code></li>
-<li>增广运算符<code>X += 3</code>与<code>x = x + 3</code>等价、<code>x -= 3</code>同理</li>
-</ol>
-<h3 id="import"><strong><em>import</em></strong></h3>
-<p>调用包：<code>import XXX</code>，例如<code>import math</code>;使用时<code>math.acos()</code></p>
-<h2 id="questions">Questions</h2>
-<ol type="1">
-<li>methods 和 function 在Python有何区别的？</li>
-</ol>
+<h2 id="质心">质心</h2>
+<p><strong>定义</strong>：质心是多质点系统的质量中心。
+<strong>特点</strong>：若对该点施力，系统会沿着力的方向运动、不会旋转。
+<strong>质心位置</strong>：质点的位置对质量取加权平均值，求得质心位置。</p>
+<p>对于离散系统，三维物体的质心位置由下式求得：</p>
+<p><span class="math display">\[
+\bar{x} = \frac{\sum{x_k m_k}}{\sum{m_k}}, \bar{y} = \frac{\sum{y_k
+m_k}}{\sum{m_k}},  \bar{z} = \frac{\sum{z_k m_k}}{\sum{m_k}}
+\]</span></p>
+<p>对于连续系统，上式推广为： <span class="math display">\[
+\bar{x} = \frac{\int_{\Omega}{x \rho} \rm{d}V}{\int_{\Omega}{ \rho}
+\rm{d}V},  \bar{y} = \frac{\int_{\Omega}{y \rho} \rm{d}V}{\int_{\Omega}{
+\rho} \rm{d}V}, \bar{z} = \frac{\int_{\Omega}{z
+\rho}  \rm{d}V}{\int_{\Omega}{ \rho} \rm{d}V}
+\]</span></p>
+<p>其中，<span class="math inline">\(\rho\)</span> 是物体的密度，为
+<span class="math inline">\(x,y,z\)</span> 的函数。上式为在物体所在空间
+<span class="math inline">\(\Omega\)</span> 进行体积分。</p>
+<h2 id="形心">形心</h2>
+<p><strong>定义</strong>：形心又被称为几何中心。形心是将该物体分成“矩”相等的两部分的所有超平面的交点。
+<strong>形心位置</strong>：等价于取加权平均。</p>
+<p>对于二维图形，形心位置由下式给出： <span class="math display">\[
+\bar{x} = \frac{\int{x f(x)}\rm{d}x}{\int{f(x)}\rm{d}x}, \bar{y} =
+\frac{\int{y f(y)}\rm{d}y}{\int{f(y)}\rm{d}y}
+\]</span></p>
+<p>上式分子部分为 <span class="math inline">\(x\)</span> 和 <span
+class="math inline">\(y\)</span> 的一阶矩。其中，<span
+class="math inline">\(f(x)\)</span> 为几何图形的横坐标位于 <span
+class="math inline">\(x\)</span> 点时在 <span
+class="math inline">\(y\)</span> 方向上的长度；<span
+class="math inline">\(f(y)\)</span> 为几何图形的纵坐标位于 <span
+class="math inline">\(y\)</span> 点时在 <span
+class="math inline">\(x\)</span> 方向上的长度。</p>
+<p>上式的等价形式为： <span class="math display">\[
+\bar{x} = \frac{\int_D{x}\rm{d}S}{\int_D{ }\rm{d}S} =
+\frac{\int_D{x}\rm{d}S}{A}
+\]</span></p>
+<p>上式积分表示在几何图形所在二维空间 <span
+class="math inline">\(D\)</span> 进行面积分；<span
+class="math inline">\(A\)</span> 表示二维几何图形的面积。（<span
+class="math inline">\(y\)</span> 方向写法与之类似）</p>
+<p>将该式推广至三维空间可得： <span class="math display">\[
+\bar{x} = \frac{\int_\Omega{x}\rm{d}V}{\int_\Omega{ }\rm{d}V} =
+\frac{\int_\Omega{x}\rm{d}V}{V}
+\]</span></p>
+<p>对比发现，上式积分中如果加入密度项，则得到的质心的坐标。即，<strong>对于密度均匀的物体，其质心和形心重合</strong>。</p>
+<h2 id="重心">重心</h2>
+<p><strong>定义</strong>：重心是重力作用的平均位置。
+<strong>特点</strong>：各质点相对于重心的位置矢量乘上各质点的重力之和(合力矩)为零。</p>
+<p>在均匀的重力场中，重心等同于质心。在非均匀的重力场中，质心和重心往往不在同一点。</p>
 ]]></content>
       <tags>
-        <tag>Python</tag>
+        <tag>mechanics</tag>
       </tags>
   </entry>
   <entry>
@@ -1598,70 +1616,6 @@ class="math inline">\(f_s&lt;2f_m\)</span>，延拓后的信号会在频域内�
       </tags>
   </entry>
   <entry>
-    <title>质心_形心_重心</title>
-    <url>/2022/03/08/%E8%B4%A8%E5%BF%83-%E5%BD%A2%E5%BF%83-%E9%87%8D%E5%BF%83/</url>
-    <content><![CDATA[<h2 id="三者存在的条件">三者存在的条件</h2>
-<ul>
-<li><strong>形心</strong>：目标具有几何外形；</li>
-<li><strong>质心</strong>：目标具有几何外形、具有质量；</li>
-<li><strong>重心</strong>：目标具有几何外形、具有质量、身处重力场。</li>
-</ul>
-<h2 id="质心">质心</h2>
-<p><strong>定义</strong>：质心是多质点系统的质量中心。
-<strong>特点</strong>：若对该点施力，系统会沿着力的方向运动、不会旋转。
-<strong>质心位置</strong>：质点的位置对质量取加权平均值，求得质心位置。</p>
-<p>对于离散系统，三维物体的质心位置由下式求得：</p>
-<p><span class="math display">\[
-\bar{x} = \frac{\sum{x_k m_k}}{\sum{m_k}}, \bar{y} = \frac{\sum{y_k
-m_k}}{\sum{m_k}},  \bar{z} = \frac{\sum{z_k m_k}}{\sum{m_k}}
-\]</span></p>
-<p>对于连续系统，上式推广为： <span class="math display">\[
-\bar{x} = \frac{\int_{\Omega}{x \rho} \rm{d}V}{\int_{\Omega}{ \rho}
-\rm{d}V},  \bar{y} = \frac{\int_{\Omega}{y \rho} \rm{d}V}{\int_{\Omega}{
-\rho} \rm{d}V}, \bar{z} = \frac{\int_{\Omega}{z
-\rho}  \rm{d}V}{\int_{\Omega}{ \rho} \rm{d}V}
-\]</span></p>
-<p>其中，<span class="math inline">\(\rho\)</span> 是物体的密度，为
-<span class="math inline">\(x,y,z\)</span> 的函数。上式为在物体所在空间
-<span class="math inline">\(\Omega\)</span> 进行体积分。</p>
-<h2 id="形心">形心</h2>
-<p><strong>定义</strong>：形心又被称为几何中心。形心是将该物体分成“矩”相等的两部分的所有超平面的交点。
-<strong>形心位置</strong>：等价于取加权平均。</p>
-<p>对于二维图形，形心位置由下式给出： <span class="math display">\[
-\bar{x} = \frac{\int{x f(x)}\rm{d}x}{\int{f(x)}\rm{d}x}, \bar{y} =
-\frac{\int{y f(y)}\rm{d}y}{\int{f(y)}\rm{d}y}
-\]</span></p>
-<p>上式分子部分为 <span class="math inline">\(x\)</span> 和 <span
-class="math inline">\(y\)</span> 的一阶矩。其中，<span
-class="math inline">\(f(x)\)</span> 为几何图形的横坐标位于 <span
-class="math inline">\(x\)</span> 点时在 <span
-class="math inline">\(y\)</span> 方向上的长度；<span
-class="math inline">\(f(y)\)</span> 为几何图形的纵坐标位于 <span
-class="math inline">\(y\)</span> 点时在 <span
-class="math inline">\(x\)</span> 方向上的长度。</p>
-<p>上式的等价形式为： <span class="math display">\[
-\bar{x} = \frac{\int_D{x}\rm{d}S}{\int_D{ }\rm{d}S} =
-\frac{\int_D{x}\rm{d}S}{A}
-\]</span></p>
-<p>上式积分表示在几何图形所在二维空间 <span
-class="math inline">\(D\)</span> 进行面积分；<span
-class="math inline">\(A\)</span> 表示二维几何图形的面积。（<span
-class="math inline">\(y\)</span> 方向写法与之类似）</p>
-<p>将该式推广至三维空间可得： <span class="math display">\[
-\bar{x} = \frac{\int_\Omega{x}\rm{d}V}{\int_\Omega{ }\rm{d}V} =
-\frac{\int_\Omega{x}\rm{d}V}{V}
-\]</span></p>
-<p>对比发现，上式积分中如果加入密度项，则得到的质心的坐标。即，<strong>对于密度均匀的物体，其质心和形心重合</strong>。</p>
-<h2 id="重心">重心</h2>
-<p><strong>定义</strong>：重心是重力作用的平均位置。
-<strong>特点</strong>：各质点相对于重心的位置矢量乘上各质点的重力之和(合力矩)为零。</p>
-<p>在均匀的重力场中，重心等同于质心。在非均匀的重力场中，质心和重心往往不在同一点。</p>
-]]></content>
-      <tags>
-        <tag>mechanics</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Maple常用命令</title>
     <url>/2022/04/23/maple%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h2 id="基本操作">基本操作</h2>
@@ -1727,102 +1681,6 @@ href="https://pdc.capub.cn/search.html#/detail?id=yrcnjprstu53gy5l2gvknezqtg5lyo
 ]]></content>
       <tags>
         <tag>Maple</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>矩阵求导</title>
-    <url>/2022/04/23/%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC/</url>
-    <content><![CDATA[<h2 id="公约">公约</h2>
-<p>若<span class="math inline">\(\bar{y}=\Psi(\bar{x})\)</span>，其中
-<span class="math inline">\(\bar{y},\bar{x}\)</span> 分别是 <span
-class="math inline">\(m\times 1,n\times 1\)</span>
-向量，则有Jacobian矩阵： <span class="math display">\[
-\frac{\partial\bar{y}}{\partial\bar{x}} = \begin{bmatrix} \frac{\partial
-y_1}{\partial x_1} &amp; \frac{\partial y_1}{\partial x_2} &amp; \cdots
-&amp; \frac{\partial y_1}{\partial x_n} \\\\ \frac{\partial
-y_2}{\partial x_1} &amp; \frac{\partial y_2}{\partial x_2} &amp; \cdots
-&amp; \frac{\partial y_2}{\partial x_n} \\\\ \vdots &amp; \vdots &amp;
-\ddots &amp; \vdots \\\\ \frac{\partial y_n}{\partial x_1} &amp;
-\frac{\partial y_n}{\partial x_2} &amp; \cdots &amp;\frac{\partial
-y_n}{\partial x_n} \end{bmatrix}
-\]</span></p>
-<p>按照该公约：如果 <span class="math inline">\(x\)</span>
-是标量，则Jacobian矩阵是 <span class="math inline">\(m \times 1\)</span>
-列向量；如果 <span class="math inline">\(y\)</span>
-是标量，则Jacobian矩阵是 $ 1 n$ 行向量。</p>
-<h2 id="定理-1">定理 1</h2>
-<p>若 <span class="math inline">\(\bar{y}=\mathbf{A}
-\bar{x}\)</span>，则: <span class="math display">\[
-\frac{\partial\bar{y}}{\partial\bar{x}}=\mathbf{A}
-\]</span></p>
-<h2 id="定理-2">定理 2</h2>
-<p>若标量 <span class="math inline">\(\alpha\)</span> 满足 <span
-class="math inline">\(\alpha =\bar{y}^T\mathbf{A} \bar{x}\)</span>，则:
-<span class="math display">\[
-\frac{\partial \alpha}{\partial\bar{x}}=\bar{y}^T\mathbf{A},\;
-\frac{\partial \alpha}{\partial\bar{y}}=\bar{x}^T\mathbf{A}^T
-\]</span></p>
-<h2 id="定理-3">定理 3</h2>
-<p>若标量 <span class="math inline">\(\alpha\)</span> 满足 <span
-class="math inline">\(\alpha =\bar{x}^T\mathbf{A} \bar{x}\)</span>，则:
-<span class="math display">\[
-\frac{\partial \alpha}{\partial\bar{x}}=\bar{x}^T \left( \mathbf{A}^T +
-\mathbf{A} \right)
-\]</span></p>
-<hr />
-<ul>
-<li>上式证明过程参考：<a
-href="https://atmos.washington.edu/~dennis/MatrixCalculus.pdf">《Matrix
-Differentiation》 Randal J. Barnes</a></li>
-<li>矩阵相关变换参考：<a
-href="https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf">《Matrix
-Cookbook》 Kaare Brandt Petersen</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>math</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Timoshenko梁理论与有限元-参考书单及文献</title>
-    <url>/2022/04/23/%E6%A2%81%E7%90%86%E8%AE%BA%E4%B8%8E%E6%9C%89%E9%99%90%E5%85%83-%E5%8F%82%E8%80%83%E4%B9%A6%E5%8D%95%E5%8F%8A%E6%96%87%E7%8C%AE/</url>
-    <content><![CDATA[<h2 id="参考文献">参考文献</h2>
-<ul>
-<li><a
-href="https://www.tandfonline.com/doi/abs/10.1080/14786442108636264">Timoshenko本人的论文：</a>
-Timoshenko S P. LXVI. On the correction for shear of the differential
-equation for transverse vibrations of prismatic bars[J]. The London,
-Edinburgh, and Dublin Philosophical Magazine and Journal of Science,
-1921, 41(245): 744-746.</li>
-<li><a
-href="https://asmedigitalcollection.asme.org/mechanicaldesign/article/102/4/793/431834/A-Finite-Rotating-Shaft-Element-Using-Timoshenko">Timoshenko梁的有限元模型-必引论文：</a>
-Nelson, H. D. A Finite Rotating Shaft Element Using Timoshenko Beam
-Theory[J]. Journal of Mechanical Design, 1980, 102(4): 793-803.</li>
-</ul>
-<h2 id="参考书目">参考书目</h2>
-<ul>
-<li><a
-href="https://pdc.capub.cn/search.html#/detail?id=rxwi4bijhc2l2grniccyqg3m2wl4catiddfrywhwwstnyzzsqohdce3hws4qrli7wnjko63dk53cu&amp;from=1&amp;type=cip">《材料力学》刘鸿文，梁的基础知识：</a>
-刘鸿文. 材料力学[M]. 北京: 高等教育出版社, 2017.</li>
-<li><a
-href="https://books.google.nl/books?hl=zh-CN&amp;lr=&amp;id=V_UqEAAAQBAJ&amp;oi=fnd&amp;pg=PP12&amp;dq=Finite+Element+Analysis+Method,+Verification+and+Validation&amp;ots=Gpuk8J0Po8&amp;sig=3_tVof3D-jbk1w_f__rNXqe9xI8#v=onepage&amp;q=Finite%20Element%20Analysis%20Method%2C%20Verification%20and%20Validation&amp;f=false">《Finite
-Element Analysis》 第1章为有限元原理；第7章为梁模型：</a> Szabó B,
-Babuška I. Finite Element Analysis: Method, Verification and
-Validation[M]. Hoboken, USA: John Wiley &amp; Sons, Inc. 2021.</li>
-<li><a
-href="https://pdc.capub.cn/search.html#/detail?id=rr5ylx3wuwniyy5l2gvknezqteq75purtjaa3lg7ejbplby6by4q&amp;from=1&amp;type=marc">《航空发动机转子动力学》廖明夫，第14章第2节为有限元法推导Timoshenko梁模型过程：</a>
-廖明夫. 航空发动机转子动力学[M]. 西安：西北工业大学出版社, 2015.</li>
-<li><a
-href="https://pdc.capub.cn/search.html#/detail?id=te3qsklcdh7mpuxtasm3pfdgg5to2gqavwz25cggzqld4ff36lkq&amp;from=1&amp;type=marc">《转子系统动力学基础与数值仿真》马辉,
-第9章第2节为Timoshenko梁有限元模型：</a> 马辉, 韩清凯, 太兴宇, 闻邦椿.
-转子系统动力学基础与数值仿真[M]. 武汉：武汉理工大学出版社.</li>
-</ul>
-<p><strong>备注：</strong>
-注意区分各个文献中截面惯性矩、转动惯量、单位长度转动惯量；密度、线密度；面积、有效抗剪面积之间的区别。这些常系数会影响最终质量、刚度等矩阵前的系数。马辉与廖明夫的书中的有限元刚度、质量等矩阵是相等的，通过常系数之间的关系可以推导得到。</p>
-]]></content>
-      <tags>
-        <tag>有限元</tag>
-        <tag>mechanics</tag>
       </tags>
   </entry>
   <entry>
@@ -2335,23 +2193,161 @@ n}\)</span> 是非奇的</p>
       </tags>
   </entry>
   <entry>
-    <title>Geometrical Nonlinear and Material Nonlinear</title>
-    <url>/2022/08/02/geometricalNonlinearAndMaterialNonlinear/</url>
-    <content><![CDATA[<h2 id="geometrical-nonlinear">Geometrical Nonlinear</h2>
-<p>In the geometrical nonlinear case, the relationship internal
-force-displacements is nonlinear.</p>
-<h2 id="material-nonlinaer">Material Nonlinaer</h2>
-<p>In the material nonlinear case, the relationship of the stress-strain
-is nonlinear.</p>
-<p>Of course these cases may be independent of each other or
-combined.</p>
+    <title>Timoshenko梁理论与有限元-参考书单及文献</title>
+    <url>/2022/04/23/%E6%A2%81%E7%90%86%E8%AE%BA%E4%B8%8E%E6%9C%89%E9%99%90%E5%85%83-%E5%8F%82%E8%80%83%E4%B9%A6%E5%8D%95%E5%8F%8A%E6%96%87%E7%8C%AE/</url>
+    <content><![CDATA[<h2 id="参考文献">参考文献</h2>
 <ul>
-<li><strong>From Czeslaw Kazimierz Szymczak</strong>:
-https://www.researchgate.net/post/What_is_Geomertical_Nonlinearity/2</li>
+<li><a
+href="https://www.tandfonline.com/doi/abs/10.1080/14786442108636264">Timoshenko本人的论文：</a>
+Timoshenko S P. LXVI. On the correction for shear of the differential
+equation for transverse vibrations of prismatic bars[J]. The London,
+Edinburgh, and Dublin Philosophical Magazine and Journal of Science,
+1921, 41(245): 744-746.</li>
+<li><a
+href="https://asmedigitalcollection.asme.org/mechanicaldesign/article/102/4/793/431834/A-Finite-Rotating-Shaft-Element-Using-Timoshenko">Timoshenko梁的有限元模型-必引论文：</a>
+Nelson, H. D. A Finite Rotating Shaft Element Using Timoshenko Beam
+Theory[J]. Journal of Mechanical Design, 1980, 102(4): 793-803.</li>
+</ul>
+<h2 id="参考书目">参考书目</h2>
+<ul>
+<li><a
+href="https://pdc.capub.cn/search.html#/detail?id=rxwi4bijhc2l2grniccyqg3m2wl4catiddfrywhwwstnyzzsqohdce3hws4qrli7wnjko63dk53cu&amp;from=1&amp;type=cip">《材料力学》刘鸿文，梁的基础知识：</a>
+刘鸿文. 材料力学[M]. 北京: 高等教育出版社, 2017.</li>
+<li><a
+href="https://books.google.nl/books?hl=zh-CN&amp;lr=&amp;id=V_UqEAAAQBAJ&amp;oi=fnd&amp;pg=PP12&amp;dq=Finite+Element+Analysis+Method,+Verification+and+Validation&amp;ots=Gpuk8J0Po8&amp;sig=3_tVof3D-jbk1w_f__rNXqe9xI8#v=onepage&amp;q=Finite%20Element%20Analysis%20Method%2C%20Verification%20and%20Validation&amp;f=false">《Finite
+Element Analysis》 第1章为有限元原理；第7章为梁模型：</a> Szabó B,
+Babuška I. Finite Element Analysis: Method, Verification and
+Validation[M]. Hoboken, USA: John Wiley &amp; Sons, Inc. 2021.</li>
+<li><a
+href="https://pdc.capub.cn/search.html#/detail?id=rr5ylx3wuwniyy5l2gvknezqteq75purtjaa3lg7ejbplby6by4q&amp;from=1&amp;type=marc">《航空发动机转子动力学》廖明夫，第14章第2节为有限元法推导Timoshenko梁模型过程：</a>
+廖明夫. 航空发动机转子动力学[M]. 西安：西北工业大学出版社, 2015.</li>
+<li><a
+href="https://pdc.capub.cn/search.html#/detail?id=te3qsklcdh7mpuxtasm3pfdgg5to2gqavwz25cggzqld4ff36lkq&amp;from=1&amp;type=marc">《转子系统动力学基础与数值仿真》马辉,
+第9章第2节为Timoshenko梁有限元模型：</a> 马辉, 韩清凯, 太兴宇, 闻邦椿.
+转子系统动力学基础与数值仿真[M]. 武汉：武汉理工大学出版社.</li>
+</ul>
+<p><strong>备注：</strong>
+注意区分各个文献中截面惯性矩、转动惯量、单位长度转动惯量；密度、线密度；面积、有效抗剪面积之间的区别。这些常系数会影响最终质量、刚度等矩阵前的系数。马辉与廖明夫的书中的有限元刚度、质量等矩阵是相等的，通过常系数之间的关系可以推导得到。</p>
+]]></content>
+      <tags>
+        <tag>有限元</tag>
+        <tag>mechanics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>矩阵求导</title>
+    <url>/2022/04/23/%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC/</url>
+    <content><![CDATA[<h2 id="公约">公约</h2>
+<p>若<span class="math inline">\(\bar{y}=\Psi(\bar{x})\)</span>，其中
+<span class="math inline">\(\bar{y},\bar{x}\)</span> 分别是 <span
+class="math inline">\(m\times 1,n\times 1\)</span>
+向量，则有Jacobian矩阵： <span class="math display">\[
+\frac{\partial\bar{y}}{\partial\bar{x}} = \begin{bmatrix} \frac{\partial
+y_1}{\partial x_1} &amp; \frac{\partial y_1}{\partial x_2} &amp; \cdots
+&amp; \frac{\partial y_1}{\partial x_n} \\\\ \frac{\partial
+y_2}{\partial x_1} &amp; \frac{\partial y_2}{\partial x_2} &amp; \cdots
+&amp; \frac{\partial y_2}{\partial x_n} \\\\ \vdots &amp; \vdots &amp;
+\ddots &amp; \vdots \\\\ \frac{\partial y_n}{\partial x_1} &amp;
+\frac{\partial y_n}{\partial x_2} &amp; \cdots &amp;\frac{\partial
+y_n}{\partial x_n} \end{bmatrix}
+\]</span></p>
+<p>按照该公约：如果 <span class="math inline">\(x\)</span>
+是标量，则Jacobian矩阵是 <span class="math inline">\(m \times 1\)</span>
+列向量；如果 <span class="math inline">\(y\)</span>
+是标量，则Jacobian矩阵是 $ 1 n$ 行向量。</p>
+<h2 id="定理-1">定理 1</h2>
+<p>若 <span class="math inline">\(\bar{y}=\mathbf{A}
+\bar{x}\)</span>，则: <span class="math display">\[
+\frac{\partial\bar{y}}{\partial\bar{x}}=\mathbf{A}
+\]</span></p>
+<h2 id="定理-2">定理 2</h2>
+<p>若标量 <span class="math inline">\(\alpha\)</span> 满足 <span
+class="math inline">\(\alpha =\bar{y}^T\mathbf{A} \bar{x}\)</span>，则:
+<span class="math display">\[
+\frac{\partial \alpha}{\partial\bar{x}}=\bar{y}^T\mathbf{A},\;
+\frac{\partial \alpha}{\partial\bar{y}}=\bar{x}^T\mathbf{A}^T
+\]</span></p>
+<h2 id="定理-3">定理 3</h2>
+<p>若标量 <span class="math inline">\(\alpha\)</span> 满足 <span
+class="math inline">\(\alpha =\bar{x}^T\mathbf{A} \bar{x}\)</span>，则:
+<span class="math display">\[
+\frac{\partial \alpha}{\partial\bar{x}}=\bar{x}^T \left( \mathbf{A}^T +
+\mathbf{A} \right)
+\]</span></p>
+<hr />
+<ul>
+<li>上式证明过程参考：<a
+href="https://atmos.washington.edu/~dennis/MatrixCalculus.pdf">《Matrix
+Differentiation》 Randal J. Barnes</a></li>
+<li>矩阵相关变换参考：<a
+href="https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf">《Matrix
+Cookbook》 Kaare Brandt Petersen</a></li>
 </ul>
 ]]></content>
       <tags>
-        <tag>mechanics</tag>
+        <tag>math</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown 标记语言常用命令</title>
+    <url>/2021/06/12/Markdown%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="markdown基本语法">Markdown基本语法</h1>
+<h2 id="标题">标题</h2>
+<p>添加标题：在文本前加<code>#</code>，<code>#</code>的数目代表标题的级别，最高支持六级标题
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure> ## 字体 斜体：<code>*被添加斜体的文本*</code>
+加粗：<code>**被加粗文本**</code>
+倾斜加粗：<code>***被倾斜加粗的文本***</code>
+加删除线：<code>~~被加删除线的文本~~</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*被添加斜体的文本*  </span><br><span class="line">**被加粗文本**</span><br><span class="line">***被倾斜加粗的文本***</span><br><span class="line">~~被加删除线的文本~~</span><br></pre></td></tr></table></figure> 效果演示：
+<em>被添加斜体的文本</em> <strong>被加粗文本</strong>
+<strong><em>被倾斜加粗的文本</em></strong>
+<del>被加删除线的文本</del></p>
+<h2 id="分割线">分割线</h2>
+<p>在空行内输入<code>---</code>或<code>___</code>或<code>***</code>即可，符号中间也可插入空格。效果如下：</p>
+<hr />
+<h2 id="引用">引用</h2>
+<p>在被引用的文字前加<code>&gt;</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;这是一段引用内容，它很长很长很长很长很长很长很长------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">&gt;</span><br><span class="line">&gt;这是第二段引用内容，它很短</span><br></pre></td></tr></table></figure> 效果如下：
+&gt;这是一段引用内容，它很长很长很长很长很长很长很长------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+&gt; &gt;这是第二段引用内容，它很短</p>
+<p>也可以控制引用的级别，<code>&gt;</code>的个数代表级别 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;一级文本：对于命途多舛的人生，以及渺茫的时间，阻挡在我们之间这一事实，我们无可奈何。</span><br><span class="line">&gt;&gt;二级文本：彼方为谁，无我有问。九月露湿，待君之前。</span><br><span class="line">&gt;&gt;&gt;三级文本：但盼风雨来、能留你在此;即使天无雨、我亦留此地。</span><br></pre></td></tr></table></figure>
+效果如下：
+&gt;一级文本：对于命途多舛的人生，以及渺茫的时间，阻挡在我们之间这一事实，我们无可奈何。
+&gt;&gt;二级文本：彼方为谁，无我有问。九月露湿，待君之前。
+&gt;&gt;&gt;三级文本：但盼风雨来、能留你在此;即使天无雨、我亦留此地。 ##
+列表 <strong>列表分为无序列表和有序列表。</strong>
+无序列表使用<code>-</code>或<code>*</code>或<code>+</code>进行标记，标记和文本之间要有空格，不同标记可以混用，效果相同。
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- Harry James Potter</span><br><span class="line">* Hermione Jean Granger</span><br><span class="line">+ Ronald Bilius &quot;Ron&quot; Weasley</span><br></pre></td></tr></table></figure> 效果演示： - Harry James Potter * Hermione Jean Granger +
+Ronald Bilius "Ron" Weasley</p>
+<p>有序列表使用<code>1.</code>，即任意数字加英文句号进行标记，并且数字不影响最终编译效果。
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. Albus Percival Wulfric Brian Dumbledore</span><br><span class="line">8. Severus Snape</span><br><span class="line">10. Minerva McGonagall</span><br></pre></td></tr></table></figure> 1. Albus Percival Wulfric Brian Dumbledore 8. Severus
+Snape 10. Minerva McGonagall</p>
+<p><strong>列表可以嵌套</strong>
+在上一级与下一级列表之间敲三个空格即可。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* Lord Voldemort</span><br><span class="line">    * Lupin</span><br><span class="line">    * Dobby</span><br><span class="line">        * Winky</span><br><span class="line">        * Tom Riddle </span><br></pre></td></tr></table></figure> 效果演示： * Lord
+Voldemort * Lupin * Dobby * Winky * Tom Riddle</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. Lord Voldemort</span><br><span class="line">    1. Lupin</span><br><span class="line">    1. Dobby</span><br><span class="line">        1. Winky</span><br><span class="line">        1. Tom Riddle </span><br></pre></td></tr></table></figure>
+<p>效果演示： 1. Lord Voldemort 1. Lupin 1. Dobby 1. Winky 1. Tom
+Riddle</p>
+<p><strong>列表包含多个段落</strong>
+列表包含多个段落，每个项目下的段落都缩进4个空格或一个制表符。
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   Harry Potter, Protagonist, is a thin, black-haired youth wearing glasses on his forehead with a lightning-shaped scar, just as suddenly a short time overstating the children who, like flavor is not good. </span><br><span class="line">    He is a Magic School fifth-grade students, but also a man of Hogwarts. Since Voldemort after the resurrection, the scar on his forehead to his burning often endless.</span><br></pre></td></tr></table></figure> 效果演示： * Harry Potter, Protagonist, is a thin,
+black-haired youth wearing glasses on his forehead with a
+lightning-shaped scar, just as suddenly a short time overstating the
+children who, like flavor is not good. He is a Magic School fifth-grade
+students, but also a man of Hogwarts. Since Voldemort after the
+resurrection, the scar on his forehead to his burning often endless.</p>
+<h2 id="代码">代码</h2>
+<p><strong>在行内插入简短的代码</strong>
+把代码插入<code>``</code>之间即可 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">看起来`codes and codes`是这样的</span><br></pre></td></tr></table></figure> 效果演示：
+看起来<code>codes and codes</code>是这样的</p>
+<p><strong>在行间插入代码块</strong>
+把代码块放入两行<code>```</code>之间(<code>\</code>是为了防止转义，实际写作中是没有的)
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\```</span><br><span class="line">start</span><br><span class="line">codes and codes</span><br><span class="line">end</span><br><span class="line">\```</span><br></pre></td></tr></table></figure> 效果演示： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">start</span><br><span class="line">codes and codes</span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
+<h2 id="强制空行">强制空行</h2>
+<p>在空行内使用<code>\</code>即可 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">第一段</span><br><span class="line">\</span><br><span class="line">\</span><br><span class="line">第二段</span><br></pre></td></tr></table></figure> 效果演示： 第一段<br />
+<br />
+第二段</p>
+]]></content>
+      <tags>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -2449,65 +2445,69 @@ class="math inline">\(\mathrm{arctan}(-\frac{b_n}{a_n})\)</span>为复数的幅�
       </tags>
   </entry>
   <entry>
-    <title>Markdown 标记语言常用命令</title>
-    <url>/2021/06/12/Markdown%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="markdown基本语法">Markdown基本语法</h1>
-<h2 id="标题">标题</h2>
-<p>添加标题：在文本前加<code>#</code>，<code>#</code>的数目代表标题的级别，最高支持六级标题
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure> ## 字体 斜体：<code>*被添加斜体的文本*</code>
-加粗：<code>**被加粗文本**</code>
-倾斜加粗：<code>***被倾斜加粗的文本***</code>
-加删除线：<code>~~被加删除线的文本~~</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*被添加斜体的文本*  </span><br><span class="line">**被加粗文本**</span><br><span class="line">***被倾斜加粗的文本***</span><br><span class="line">~~被加删除线的文本~~</span><br></pre></td></tr></table></figure> 效果演示：
-<em>被添加斜体的文本</em> <strong>被加粗文本</strong>
-<strong><em>被倾斜加粗的文本</em></strong>
-<del>被加删除线的文本</del></p>
-<h2 id="分割线">分割线</h2>
-<p>在空行内输入<code>---</code>或<code>___</code>或<code>***</code>即可，符号中间也可插入空格。效果如下：</p>
-<hr />
-<h2 id="引用">引用</h2>
-<p>在被引用的文字前加<code>&gt;</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;这是一段引用内容，它很长很长很长很长很长很长很长------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">&gt;</span><br><span class="line">&gt;这是第二段引用内容，它很短</span><br></pre></td></tr></table></figure> 效果如下：
-&gt;这是一段引用内容，它很长很长很长很长很长很长很长------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-&gt; &gt;这是第二段引用内容，它很短</p>
-<p>也可以控制引用的级别，<code>&gt;</code>的个数代表级别 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;一级文本：对于命途多舛的人生，以及渺茫的时间，阻挡在我们之间这一事实，我们无可奈何。</span><br><span class="line">&gt;&gt;二级文本：彼方为谁，无我有问。九月露湿，待君之前。</span><br><span class="line">&gt;&gt;&gt;三级文本：但盼风雨来、能留你在此;即使天无雨、我亦留此地。</span><br></pre></td></tr></table></figure>
-效果如下：
-&gt;一级文本：对于命途多舛的人生，以及渺茫的时间，阻挡在我们之间这一事实，我们无可奈何。
-&gt;&gt;二级文本：彼方为谁，无我有问。九月露湿，待君之前。
-&gt;&gt;&gt;三级文本：但盼风雨来、能留你在此;即使天无雨、我亦留此地。 ##
-列表 <strong>列表分为无序列表和有序列表。</strong>
-无序列表使用<code>-</code>或<code>*</code>或<code>+</code>进行标记，标记和文本之间要有空格，不同标记可以混用，效果相同。
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- Harry James Potter</span><br><span class="line">* Hermione Jean Granger</span><br><span class="line">+ Ronald Bilius &quot;Ron&quot; Weasley</span><br></pre></td></tr></table></figure> 效果演示： - Harry James Potter * Hermione Jean Granger +
-Ronald Bilius "Ron" Weasley</p>
-<p>有序列表使用<code>1.</code>，即任意数字加英文句号进行标记，并且数字不影响最终编译效果。
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. Albus Percival Wulfric Brian Dumbledore</span><br><span class="line">8. Severus Snape</span><br><span class="line">10. Minerva McGonagall</span><br></pre></td></tr></table></figure> 1. Albus Percival Wulfric Brian Dumbledore 8. Severus
-Snape 10. Minerva McGonagall</p>
-<p><strong>列表可以嵌套</strong>
-在上一级与下一级列表之间敲三个空格即可。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* Lord Voldemort</span><br><span class="line">    * Lupin</span><br><span class="line">    * Dobby</span><br><span class="line">        * Winky</span><br><span class="line">        * Tom Riddle </span><br></pre></td></tr></table></figure> 效果演示： * Lord
-Voldemort * Lupin * Dobby * Winky * Tom Riddle</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. Lord Voldemort</span><br><span class="line">    1. Lupin</span><br><span class="line">    1. Dobby</span><br><span class="line">        1. Winky</span><br><span class="line">        1. Tom Riddle </span><br></pre></td></tr></table></figure>
-<p>效果演示： 1. Lord Voldemort 1. Lupin 1. Dobby 1. Winky 1. Tom
-Riddle</p>
-<p><strong>列表包含多个段落</strong>
-列表包含多个段落，每个项目下的段落都缩进4个空格或一个制表符。
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   Harry Potter, Protagonist, is a thin, black-haired youth wearing glasses on his forehead with a lightning-shaped scar, just as suddenly a short time overstating the children who, like flavor is not good. </span><br><span class="line">    He is a Magic School fifth-grade students, but also a man of Hogwarts. Since Voldemort after the resurrection, the scar on his forehead to his burning often endless.</span><br></pre></td></tr></table></figure> 效果演示： * Harry Potter, Protagonist, is a thin,
-black-haired youth wearing glasses on his forehead with a
-lightning-shaped scar, just as suddenly a short time overstating the
-children who, like flavor is not good. He is a Magic School fifth-grade
-students, but also a man of Hogwarts. Since Voldemort after the
-resurrection, the scar on his forehead to his burning often endless.</p>
-<h2 id="代码">代码</h2>
-<p><strong>在行内插入简短的代码</strong>
-把代码插入<code>``</code>之间即可 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">看起来`codes and codes`是这样的</span><br></pre></td></tr></table></figure> 效果演示：
-看起来<code>codes and codes</code>是这样的</p>
-<p><strong>在行间插入代码块</strong>
-把代码块放入两行<code>```</code>之间(<code>\</code>是为了防止转义，实际写作中是没有的)
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\```</span><br><span class="line">start</span><br><span class="line">codes and codes</span><br><span class="line">end</span><br><span class="line">\```</span><br></pre></td></tr></table></figure> 效果演示： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">start</span><br><span class="line">codes and codes</span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
-<h2 id="强制空行">强制空行</h2>
-<p>在空行内使用<code>\</code>即可 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">第一段</span><br><span class="line">\</span><br><span class="line">\</span><br><span class="line">第二段</span><br></pre></td></tr></table></figure> 效果演示： 第一段<br />
-<br />
-第二段</p>
+    <title>如何在论文中完美插入矢量图</title>
+    <url>/2021/06/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE/</url>
+    <content><![CDATA[<h2 id="问题背景">问题背景</h2>
+<p>论文写作时，我们往往需要插入矢量图，以保证图形被阅览时不会因缩放而出现难看的锯齿（失真）。</p>
+<p>需要矢量图的常用场景如下： * 纯矢量图 * 简单的折线、柱形、条形图等 *
+抽象的模型图、概念图、流程图、程序框图等 *
+混合类图形，混合了以上两种图形 * 矢量图与位图的混合 *
+色彩复杂的模型图（位图）旁配上文字、简单的折线图、流程图等 *
+在流程图中嵌入各种结果，如Science、Nature中常见的占用一页的超大混合类图形
+* 其他</p>
+<h2 id="各种类型图片的区别">各种类型图片的区别</h2>
+<h3 id="矢量图">矢量图</h3>
+<p>简单来说矢量图就像用几何图形来描述一幅图，在矢量图放大时，我们所记录的几何图形的各种角度、形状等并没有改变，所以无论是放大还是缩小，都不会影响矢量图的清晰度。</p>
+<p><strong>文件类型：</strong> Adobe
+Illustrator的<code>.AI</code>、<code>.EPS</code>和<code>.SVG</code>、AutoCAD的<code>.dwg</code>和<code>.dxf</code>、Corel
+DRAW的<code>.cdr</code>等。<code>.pdf</code>也常被用来保存矢量图。</p>
+<p><strong>制图：</strong> 使用Adobe
+Illustrator(AI)、CorelDRAW、FlashMX制图</p>
+<h3 id="位图">位图</h3>
+<p>位图又被称作点阵图或栅格图像，它的特点就是，整幅图由许多的‘点’组成，这些‘点’我们称为“像素”。在位图模式下，计算机会将图片的每个像素点进行保存。当位图放大到一定程度时，我们会发现图片是由一个一个的小方块组成，这些小方块就是像素点。</p>
+<p><strong>文件类型：</strong>
+<code>.jpg</code>、<code>.png</code>、<code>.bmp</code>、<code>.pcx</code>、<code>.gif</code>、<code>.tif</code>、<code>.psd</code>等。</p>
+<p><strong>制图：</strong>
+使用Photoshop、Painter和Windows系统自带的画图工具制图。</p>
+<h2 id="如何在论文中使用矢量图">如何在论文中使用矢量图</h2>
+<p><strong>这里主要讨论使用LaTex写作时，如何插入矢量图。</strong></p>
+<p><strong>第一步</strong>：使用任何软件得到矢量图形。如果使用Matlab、Python得到折线、柱形图等，直接输出为<code>.pdf</code>或<code>.eps</code>格式。如果使用Visio、PPT等软件绘制流程图、模型图，导出为<code>.pdf</code>。（貌似微软的办公软件不支持<code>.eps</code>）</p>
+<p>（如果是直接插入已得到的矢量图，请转至第三步）</p>
+<p><strong>第二步</strong>：使用Adobe
+Illustrator将多个矢量图组合在一起后用快捷键<code>Shift+o</code>裁剪画布，删去边框。将文件保存为<code>.eps</code>或<code>.pdf</code>。如果只是删除<code>.pdf</code>中的白边，使用Adobe
+Acrobat 的编辑功能就能轻松做到。</p>
+<p><strong>第三步</strong>：在LaTex中插入组合好的矢量图。</p>
+<p><strong>提示</strong>：在第一步制作矢量图时，最好调整好字号，图宽以适合出现在论文中或PPT中，并且使用Matlab时一定要保存一份<code>.fig</code>文件，便于以后查找修改。</p>
+<h2 id="office套件中插入矢量图">Office套件中插入矢量图</h2>
+<p>Office办公软件下插入矢量图，使用<code>.emf</code>即可。Office系列间的互通是较为方便的，如Visio、PPT、Word间相互插入文件。</p>
+<p>使用Word和Latex一段时间以后，还是非常推荐大家使用LaTex的（强迫症福音）。毕竟插入的行内、行间公式怎是一个“服服帖帖”就能概括的。更别说切换模板时，只需要改动导言区就ok啦，简直不要太方便。LaTex缺点也有，表格制作很麻烦QAQ…，整体学习成本略高。</p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>https://www.zhihu.com/question/378251607/answer/1160351444</li>
+</ul>
 ]]></content>
       <tags>
-        <tag>Markdown</tag>
+        <tag>论文写作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Geometrical Nonlinear and Material Nonlinear</title>
+    <url>/2022/08/02/geometricalNonlinearAndMaterialNonlinear/</url>
+    <content><![CDATA[<h2 id="geometrical-nonlinear">Geometrical Nonlinear</h2>
+<p>In the geometrical nonlinear case, the relationship internal
+force-displacements is nonlinear.</p>
+<h2 id="material-nonlinaer">Material Nonlinaer</h2>
+<p>In the material nonlinear case, the relationship of the stress-strain
+is nonlinear.</p>
+<p>Of course these cases may be independent of each other or
+combined.</p>
+<ul>
+<li><strong>From Czeslaw Kazimierz Szymczak</strong>:
+https://www.researchgate.net/post/What_is_Geomertical_Nonlinearity/2</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>mechanics</tag>
       </tags>
   </entry>
 </search>
