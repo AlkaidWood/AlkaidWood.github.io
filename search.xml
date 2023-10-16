@@ -198,49 +198,49 @@ class="math inline">\(D=80dB\)</span>，则幅值上限与下限之比达10000�
       </tags>
   </entry>
   <entry>
-    <title>Levenberg–Marquardt Algorithm</title>
-    <url>/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/</url>
+    <title>如何在论文中完美插入矢量图</title>
+    <url>/2021/06/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE/</url>
     <content><![CDATA[<h2 id="问题背景">问题背景</h2>
-<p>在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到
-<strong>Levenberg–Marquardt 算法</strong>。</p>
-<h2 id="levenbergmarquardt-算法">Levenberg–Marquardt 算法</h2>
-<p>Levenberg–Marquardt
-算法是一种最小二乘（模型拟合）算法。它可以解决以下问题：</p>
-<p><span class="math display">\[
-\min_{x}f(x)= \min_{x} \\| F(x) \\|^2_2 = \min_{x} \sum_i F_i^2(x)
-\]</span></p>
-<p>即求一个 <span class="math inline">\(x\)</span> 使 <span
-class="math inline">\(f(x)\)</span> 最小。</p>
-<p>1944年<a href="https://doi.org/10.1090/qam/10666">Kenneth
-Levenberg</a>首次提出该算法，1963年<a
-href="https://doi.org/10.1137/0111030">Donald
-Marquardt</a>也发现了该算法，后来这种算法被称作Levenberg–Marquardt。</p>
-<p>关于该算法的详细原理和实现可以参考 Flannery 等人的著作 <a
-href="http://www.nrbook.com/a/bookcpdf.php">Numerical recipes in
-C</a>。</p>
-<h2 id="levenbergmarquardt-算法与非线性方程组求根">Levenberg–Marquardt
-算法与非线性方程组求根</h2>
-<p>求解非线性方程组即求解一组 <span
-class="math inline">\(\bar{x}\)</span> 令其满足 <span
-class="math inline">\(\bar{F}(x)=0\)</span>。显然非线性方程组的根可以令上式成立。</p>
-<p>因此，给定初始值，通过Levenberg–Marquardt 算法求得的 <span
-class="math inline">\(\bar{x}\)</span> 就是非线性方程组 <span
-class="math inline">\(\bar{x}\)</span> 的一组近似根（初始值附近）。</p>
-<p>非线性方程组的根显然不止一组，而通过该方法只能得到距离初始值较近的根，要想得到全部的根，需要配合其他算法。</p>
+<p>论文写作时，我们往往需要插入矢量图，以保证图形被阅览时不会因缩放而出现难看的锯齿（失真）。</p>
+<p>需要矢量图的常用场景如下： * 纯矢量图 * 简单的折线、柱形、条形图等 *
+抽象的模型图、概念图、流程图、程序框图等 *
+混合类图形，混合了以上两种图形 * 矢量图与位图的混合 *
+色彩复杂的模型图（位图）旁配上文字、简单的折线图、流程图等 *
+在流程图中嵌入各种结果，如Science、Nature中常见的占用一页的超大混合类图形
+* 其他</p>
+<h2 id="各种类型图片的区别">各种类型图片的区别</h2>
+<h3 id="矢量图">矢量图</h3>
+<p>简单来说矢量图就像用几何图形来描述一幅图，在矢量图放大时，我们所记录的几何图形的各种角度、形状等并没有改变，所以无论是放大还是缩小，都不会影响矢量图的清晰度。</p>
+<p><strong>文件类型：</strong> Adobe
+Illustrator的<code>.AI</code>、<code>.EPS</code>和<code>.SVG</code>、AutoCAD的<code>.dwg</code>和<code>.dxf</code>、Corel
+DRAW的<code>.cdr</code>等。<code>.pdf</code>也常被用来保存矢量图。</p>
+<p><strong>制图：</strong> 使用Adobe
+Illustrator(AI)、CorelDRAW、FlashMX制图</p>
+<h3 id="位图">位图</h3>
+<p>位图又被称作点阵图或栅格图像，它的特点就是，整幅图由许多的‘点’组成，这些‘点’我们称为“像素”。在位图模式下，计算机会将图片的每个像素点进行保存。当位图放大到一定程度时，我们会发现图片是由一个一个的小方块组成，这些小方块就是像素点。</p>
+<p><strong>文件类型：</strong>
+<code>.jpg</code>、<code>.png</code>、<code>.bmp</code>、<code>.pcx</code>、<code>.gif</code>、<code>.tif</code>、<code>.psd</code>等。</p>
+<p><strong>制图：</strong>
+使用Photoshop、Painter和Windows系统自带的画图工具制图。</p>
+<h2 id="如何在论文中使用矢量图">如何在论文中使用矢量图</h2>
+<p><strong>这里主要讨论使用LaTex写作时，如何插入矢量图。</strong></p>
+<p><strong>第一步</strong>：使用任何软件得到矢量图形。如果使用Matlab、Python得到折线、柱形图等，直接输出为<code>.pdf</code>或<code>.eps</code>格式。如果使用Visio、PPT等软件绘制流程图、模型图，导出为<code>.pdf</code>。（貌似微软的办公软件不支持<code>.eps</code>）</p>
+<p>（如果是直接插入已得到的矢量图，请转至第三步）</p>
+<p><strong>第二步</strong>：使用Adobe
+Illustrator将多个矢量图组合在一起后用快捷键<code>Shift+o</code>裁剪画布，删去边框。将文件保存为<code>.eps</code>或<code>.pdf</code>。如果只是删除<code>.pdf</code>中的白边，使用Adobe
+Acrobat 的编辑功能就能轻松做到。</p>
+<p><strong>第三步</strong>：在LaTex中插入组合好的矢量图。</p>
+<p><strong>提示</strong>：在第一步制作矢量图时，最好调整好字号，图宽以适合出现在论文中或PPT中，并且使用Matlab时一定要保存一份<code>.fig</code>文件，便于以后查找修改。</p>
+<h2 id="office套件中插入矢量图">Office套件中插入矢量图</h2>
+<p>Office办公软件下插入矢量图，使用<code>.emf</code>即可。Office系列间的互通是较为方便的，如Visio、PPT、Word间相互插入文件。</p>
+<p>使用Word和Latex一段时间以后，还是非常推荐大家使用LaTex的（强迫症福音）。毕竟插入的行内、行间公式怎是一个“服服帖帖”就能概括的。更别说切换模板时，只需要改动导言区就ok啦，简直不要太方便。LaTex缺点也有，表格制作很麻烦QAQ…，整体学习成本略高。</p>
 <h2 id="参考文献">参考文献</h2>
 <ul>
-<li>Levenberg, K. (1944). A method for the solution of certain
-non-linear problems in least squares. <em>Quarterly of applied
-mathematics</em>, 2(2), 164-168.</li>
-<li>Mardquardt, D. W. (1963). An algorithm for least square estimation
-of parameters. <em>J. Soc. Ind. Appl. Math</em>, 11, 431-441.</li>
-<li>Flannery, B. P., Press, W. H., Teukolsky, S. A., &amp; Vetterling,
-W. (1992). Numerical recipes in C. <em>Press Syndicate of the University
-of Cambridge, New York</em>, 24(78), 36.</li>
+<li>https://www.zhihu.com/question/378251607/answer/1160351444</li>
 </ul>
 ]]></content>
       <tags>
-        <tag>math</tag>
+        <tag>论文写作</tag>
       </tags>
   </entry>
   <entry>
@@ -535,69 +535,49 @@ class="math inline">\(\bar{X}_N\)</span>
       </tags>
   </entry>
   <entry>
-    <title>如何在论文中完美插入矢量图</title>
-    <url>/2021/06/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE/</url>
+    <title>Levenberg–Marquardt Algorithm</title>
+    <url>/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/</url>
     <content><![CDATA[<h2 id="问题背景">问题背景</h2>
-<p>论文写作时，我们往往需要插入矢量图，以保证图形被阅览时不会因缩放而出现难看的锯齿（失真）。</p>
-<p>需要矢量图的常用场景如下： * 纯矢量图 * 简单的折线、柱形、条形图等 *
-抽象的模型图、概念图、流程图、程序框图等 *
-混合类图形，混合了以上两种图形 * 矢量图与位图的混合 *
-色彩复杂的模型图（位图）旁配上文字、简单的折线图、流程图等 *
-在流程图中嵌入各种结果，如Science、Nature中常见的占用一页的超大混合类图形
-* 其他</p>
-<h2 id="各种类型图片的区别">各种类型图片的区别</h2>
-<h3 id="矢量图">矢量图</h3>
-<p>简单来说矢量图就像用几何图形来描述一幅图，在矢量图放大时，我们所记录的几何图形的各种角度、形状等并没有改变，所以无论是放大还是缩小，都不会影响矢量图的清晰度。</p>
-<p><strong>文件类型：</strong> Adobe
-Illustrator的<code>.AI</code>、<code>.EPS</code>和<code>.SVG</code>、AutoCAD的<code>.dwg</code>和<code>.dxf</code>、Corel
-DRAW的<code>.cdr</code>等。<code>.pdf</code>也常被用来保存矢量图。</p>
-<p><strong>制图：</strong> 使用Adobe
-Illustrator(AI)、CorelDRAW、FlashMX制图</p>
-<h3 id="位图">位图</h3>
-<p>位图又被称作点阵图或栅格图像，它的特点就是，整幅图由许多的‘点’组成，这些‘点’我们称为“像素”。在位图模式下，计算机会将图片的每个像素点进行保存。当位图放大到一定程度时，我们会发现图片是由一个一个的小方块组成，这些小方块就是像素点。</p>
-<p><strong>文件类型：</strong>
-<code>.jpg</code>、<code>.png</code>、<code>.bmp</code>、<code>.pcx</code>、<code>.gif</code>、<code>.tif</code>、<code>.psd</code>等。</p>
-<p><strong>制图：</strong>
-使用Photoshop、Painter和Windows系统自带的画图工具制图。</p>
-<h2 id="如何在论文中使用矢量图">如何在论文中使用矢量图</h2>
-<p><strong>这里主要讨论使用LaTex写作时，如何插入矢量图。</strong></p>
-<p><strong>第一步</strong>：使用任何软件得到矢量图形。如果使用Matlab、Python得到折线、柱形图等，直接输出为<code>.pdf</code>或<code>.eps</code>格式。如果使用Visio、PPT等软件绘制流程图、模型图，导出为<code>.pdf</code>。（貌似微软的办公软件不支持<code>.eps</code>）</p>
-<p>（如果是直接插入已得到的矢量图，请转至第三步）</p>
-<p><strong>第二步</strong>：使用Adobe
-Illustrator将多个矢量图组合在一起后用快捷键<code>Shift+o</code>裁剪画布，删去边框。将文件保存为<code>.eps</code>或<code>.pdf</code>。如果只是删除<code>.pdf</code>中的白边，使用Adobe
-Acrobat 的编辑功能就能轻松做到。</p>
-<p><strong>第三步</strong>：在LaTex中插入组合好的矢量图。</p>
-<p><strong>提示</strong>：在第一步制作矢量图时，最好调整好字号，图宽以适合出现在论文中或PPT中，并且使用Matlab时一定要保存一份<code>.fig</code>文件，便于以后查找修改。</p>
-<h2 id="office套件中插入矢量图">Office套件中插入矢量图</h2>
-<p>Office办公软件下插入矢量图，使用<code>.emf</code>即可。Office系列间的互通是较为方便的，如Visio、PPT、Word间相互插入文件。</p>
-<p>使用Word和Latex一段时间以后，还是非常推荐大家使用LaTex的（强迫症福音）。毕竟插入的行内、行间公式怎是一个“服服帖帖”就能概括的。更别说切换模板时，只需要改动导言区就ok啦，简直不要太方便。LaTex缺点也有，表格制作很麻烦QAQ…，整体学习成本略高。</p>
+<p>在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到
+<strong>Levenberg–Marquardt 算法</strong>。</p>
+<h2 id="levenbergmarquardt-算法">Levenberg–Marquardt 算法</h2>
+<p>Levenberg–Marquardt
+算法是一种最小二乘（模型拟合）算法。它可以解决以下问题：</p>
+<p><span class="math display">\[
+\min_{x}f(x)= \min_{x} \\| F(x) \\|^2_2 = \min_{x} \sum_i F_i^2(x)
+\]</span></p>
+<p>即求一个 <span class="math inline">\(x\)</span> 使 <span
+class="math inline">\(f(x)\)</span> 最小。</p>
+<p>1944年<a href="https://doi.org/10.1090/qam/10666">Kenneth
+Levenberg</a>首次提出该算法，1963年<a
+href="https://doi.org/10.1137/0111030">Donald
+Marquardt</a>也发现了该算法，后来这种算法被称作Levenberg–Marquardt。</p>
+<p>关于该算法的详细原理和实现可以参考 Flannery 等人的著作 <a
+href="http://www.nrbook.com/a/bookcpdf.php">Numerical recipes in
+C</a>。</p>
+<h2 id="levenbergmarquardt-算法与非线性方程组求根">Levenberg–Marquardt
+算法与非线性方程组求根</h2>
+<p>求解非线性方程组即求解一组 <span
+class="math inline">\(\bar{x}\)</span> 令其满足 <span
+class="math inline">\(\bar{F}(x)=0\)</span>。显然非线性方程组的根可以令上式成立。</p>
+<p>因此，给定初始值，通过Levenberg–Marquardt 算法求得的 <span
+class="math inline">\(\bar{x}\)</span> 就是非线性方程组 <span
+class="math inline">\(\bar{x}\)</span> 的一组近似根（初始值附近）。</p>
+<p>非线性方程组的根显然不止一组，而通过该方法只能得到距离初始值较近的根，要想得到全部的根，需要配合其他算法。</p>
 <h2 id="参考文献">参考文献</h2>
 <ul>
-<li>https://www.zhihu.com/question/378251607/answer/1160351444</li>
+<li>Levenberg, K. (1944). A method for the solution of certain
+non-linear problems in least squares. <em>Quarterly of applied
+mathematics</em>, 2(2), 164-168.</li>
+<li>Mardquardt, D. W. (1963). An algorithm for least square estimation
+of parameters. <em>J. Soc. Ind. Appl. Math</em>, 11, 431-441.</li>
+<li>Flannery, B. P., Press, W. H., Teukolsky, S. A., &amp; Vetterling,
+W. (1992). Numerical recipes in C. <em>Press Syndicate of the University
+of Cambridge, New York</em>, 24(78), 36.</li>
 </ul>
 ]]></content>
       <tags>
-        <tag>论文写作</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>论文中的高频英语词汇</title>
-    <url>/2021/08/15/%E8%AE%BA%E6%96%87%E4%B8%AD%E7%9A%84%E9%AB%98%E9%A2%91%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/</url>
-    <content><![CDATA[<h2 id="动词">动词</h2>
-<p>引起学术界的广泛关注 generate a good deal of academic attention</p>
-<h2 id="名词">名词</h2>
-<p>发生 occur 处理 process &gt;&gt; deal with &gt; handle 大量关注 a lot
-of attention</p>
-<h2 id="形容词">形容词</h2>
-<p>各种各样的 various</p>
-<h2 id="副词">副词</h2>
-<p>特别地 in particular &gt; especially</p>
-<h2 id="连接词或短语">连接词或短语</h2>
-<p>同时 at the same time &gt;&gt; meanwhile 此外 furthermore = moreover
-在...的基础上 on the basis of 随后 in the fllowing</p>
-]]></content>
-      <tags>
-        <tag>论文写作</tag>
+        <tag>math</tag>
       </tags>
   </entry>
   <entry>
@@ -688,6 +668,26 @@ Plots（伯德图）</a></p>
 ]]></content>
       <tags>
         <tag>振动测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>论文中的高频英语词汇</title>
+    <url>/2021/08/15/%E8%AE%BA%E6%96%87%E4%B8%AD%E7%9A%84%E9%AB%98%E9%A2%91%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/</url>
+    <content><![CDATA[<h2 id="动词">动词</h2>
+<p>引起学术界的广泛关注 generate a good deal of academic attention</p>
+<h2 id="名词">名词</h2>
+<p>发生 occur 处理 process &gt;&gt; deal with &gt; handle 大量关注 a lot
+of attention</p>
+<h2 id="形容词">形容词</h2>
+<p>各种各样的 various</p>
+<h2 id="副词">副词</h2>
+<p>特别地 in particular &gt; especially</p>
+<h2 id="连接词或短语">连接词或短语</h2>
+<p>同时 at the same time &gt;&gt; meanwhile 此外 furthermore = moreover
+在...的基础上 on the basis of 随后 in the fllowing</p>
+]]></content>
+      <tags>
+        <tag>论文写作</tag>
       </tags>
   </entry>
   <entry>
@@ -1272,99 +1272,6 @@ class="math inline">\(\mathbf{K}\)</span> 是对称的。</p>
       </tags>
   </entry>
   <entry>
-    <title>压电加速度传感器基本原理</title>
-    <url>/2021/06/13/2021-6-13-%E5%8E%8B%E7%94%B5%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<h2 id="压电效应">压电效应</h2>
-<p>某些电介质在沿一定方向上受到外力的作用而变形时，其内部会产生极化现象，同时在它的两个相对表面上出现正负相反的电荷。当外力去掉后，它又会恢复到不带电的状态，这种现象称为正压电效应。当作用力的方向改变时，电荷的极性也随之改变。依据电介质压电效应研制的一类传感器称为压电传感器。</p>
-<h2 id="压电加速度传感器">压电加速度传感器</h2>
-<p>压电式加速度传感器又称压电加速计。
-<strong>工作原理</strong>：在加速度计受振时，质量块加在压电元件上的力也随之变化。当被测振动频率远低于加速度计的固有频率时，则力的变化与被测加速度成正比。压电式加速度传感器利用了某些物质的压电效应，可以将加在自身上的力转化为电荷的变化，即将机械信号转化为电信号，进而通过电信号的转化成功输出或储存被测物体的加速度信号。</p>
-<p>设 <span class="math inline">\(q\)</span> 为释放的电荷，<span
-class="math inline">\(F\)</span> 为作用力，<span
-class="math inline">\(A\)</span> 为电极化面面积，<span
-class="math inline">\(d_x\)</span> 是压电系数，单位为 <span
-class="math inline">\(C/N\)</span>（库伦/牛），则下列关系式成立：</p>
-<p><span class="math display">\[
-\frac{q}{A}=d_x\frac{F}{A}
-\]</span></p>
-<p>理论与试验研究表明，在一般情况下，表示机械量和电量之间关系的压电方程是很复杂的，但是在压电材料弹性变形范围内，电荷与作用力之间的关系可以用线性映射关系表现出来:</p>
-<p><span class="math display">\[
-\bar{q}=\textbf{D}\bar{F}
-\]</span></p>
-<figure>
-<img src="/image/zhendongceshi/yadianxiaoying1.jpg" alt="yadian" />
-<figcaption aria-hidden="true">yadian</figcaption>
-</figure>
-<p>如上所示，压电型加速度传感器，基座受到的加速度最终会以电压形式输出。电荷及电压输出都与加速度成一定比例关系，因此通过测量电荷和电压即可得出加速度。一般电荷输出称为电荷灵敏度，电压输出称为电压灵敏度。</p>
-]]></content>
-      <tags>
-        <tag>振动测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python基础知识</title>
-    <url>/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
-    <content><![CDATA[<h2 id="数据类型">数据类型</h2>
-<h3 id="字符-str">字符 str</h3>
-<ul>
-<li><strong>引号</strong>：在字符中显示单引号，则编程时用双引号将字符括起来；在字符中显示双引号，则编程时用单引号将字符括起来；
-字符中的单引号：<code>course = "He's finger"</code>
-字符串中的双引号：<code>words = 'Python is for "beginners"'</code></li>
-<li><strong>大小写</strong>：<code>course.upper()</code> 、
-<code>course.lower()</code>、<code>course.title()</code></li>
-<li><strong>查找替换</strong>：<code>course.find('xxx'),</code>和<code>course.replace('xxx','aaa')</code></li>
-<li><strong>字符长度</strong>：使用<code>len()</code></li>
-<li><strong>f与花括号</strong>：可以被用来格式化输出字符（在字符中嵌入变量）。
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">first_name=&#x27;John&#x27;</span><br><span class="line">last_name=&#x27;Smith&#x27;</span><br><span class="line">msg = f&quot;&#123;first_name&#125; [&#123;last_name&#125;] is a coder&quot;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>整数 int 浮点数 float 复数 complex</p>
-<h3 id="数据索引">数据索引</h3>
-<ol type="1">
-<li>Python中的索引从0开始</li>
-<li>数据索引中的负号表示从结束端开始：<code>[1:-1]</code>是正确的，-1表示倒数第二个数据</li>
-</ol>
-<p><strong>数据切片索引</strong>
-与Matlab不同的是，<code>A[1:5]</code>返回的不是数列A中位于1、2、3、4、5号位置的数据；取而代之的是：
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="line">print(A[1:5])</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">[2, 3, 4, 5]</span><br><span class="line"></span><br><span class="line">      -------------------------------------------</span><br><span class="line">[A]:   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |</span><br><span class="line">cut:  -0---1---2---3---4---5---6---7---8---9----10- </span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h2 id="if">if</h2>
-<p>常用调用模式如下，用缩进控制开始和结束（与matlab不同）：
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if is_hot:</span><br><span class="line">    print(&#x27;xxxxx&#x27;)</span><br><span class="line">elif is_coldL:</span><br><span class="line">    print(&#x27;xxxxxx&#x27;)</span><br><span class="line">else:</span><br><span class="line">    print(&#x27;xxxx&#x27;)</span><br></pre></td></tr></table></figure></p>
-<p>常用逻辑运算符 1.
-和：<code>and</code>，例如：<code>is_hot and is_cold</code> 1.
-或：<code>or</code> 1.
-非：<code>not</code>，例如：<code>is_cold and not is_wind</code>，<code>not</code>会将其后的False转化为True；上例中如果<code>is_cold = True</code>、<code>is_wind = False</code>，则返回<code>True</code></p>
-<p>比大小： 1.
-大于：<code>&gt;</code>、小于:<code>&lt;</code>、等于:<code>==</code> 1.
-大于等于：<code>&gt;=</code>、小于等于：<code>&lt;=</code> 1.
-不等于：<code>!=</code></p>
-<h2 id="循环">循环</h2>
-<p><code>while</code>常用调用模式如下，<code>break</code>可以用来跳出程序：
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i=1</span><br><span class="line">while i&lt;=5：</span><br><span class="line">    print(&#x27;i&#x27;)</span><br><span class="line">    i = i + 1</span><br><span class="line">print(&#x27;Done&#x27;) #用缩进控制while的结束</span><br></pre></td></tr></table></figure></p>
-<p><code>for</code>常用调用模式 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for item in [1,2,3,4]</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure></p>
-<h2 id="函数">函数</h2>
-<h3 id="常用函数">常用函数</h3>
-<p>绝对值：<code>abs()</code> 四舍五入到整数：<code>round()</code>
-生成等间距数列：<code>range(5,10,2)</code>；step=2，from 5 to 10，输出 5
-7 9</p>
-<h2 id="常用命令">常用命令</h2>
-<h3 id="运算符号">运算符号</h3>
-<ol type="1">
-<li>加<code>+</code>；减<code>-</code>；乘<code>*</code>；除<code>/</code>；幂<code>**</code></li>
-<li>特殊除号：得到结果的整数部分<code>//</code>；得到结果的余数<code>%</code></li>
-<li>增广运算符<code>X += 3</code>与<code>x = x + 3</code>等价、<code>x -= 3</code>同理</li>
-</ol>
-<h3 id="import"><strong><em>import</em></strong></h3>
-<p>调用包：<code>import XXX</code>，例如<code>import math</code>;使用时<code>math.acos()</code></p>
-<h2 id="questions">Questions</h2>
-<ol type="1">
-<li>methods 和 function 在Python有何区别的？</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>通俗的理解何为变分</title>
     <url>/2021/08/24/%E9%80%9A%E4%BF%97%E7%9A%84%E7%90%86%E8%A7%A3%E4%BD%95%E4%B8%BA%E5%8F%98%E5%88%86/</url>
     <content><![CDATA[<h2 id="概述">概述</h2>
@@ -1475,6 +1382,99 @@ href="https://www.zhihu.com/question/30416914">微分、差分和变分的概念
 ]]></content>
       <tags>
         <tag>有限元</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python基础知识</title>
+    <url>/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<h2 id="数据类型">数据类型</h2>
+<h3 id="字符-str">字符 str</h3>
+<ul>
+<li><strong>引号</strong>：在字符中显示单引号，则编程时用双引号将字符括起来；在字符中显示双引号，则编程时用单引号将字符括起来；
+字符中的单引号：<code>course = "He's finger"</code>
+字符串中的双引号：<code>words = 'Python is for "beginners"'</code></li>
+<li><strong>大小写</strong>：<code>course.upper()</code> 、
+<code>course.lower()</code>、<code>course.title()</code></li>
+<li><strong>查找替换</strong>：<code>course.find('xxx'),</code>和<code>course.replace('xxx','aaa')</code></li>
+<li><strong>字符长度</strong>：使用<code>len()</code></li>
+<li><strong>f与花括号</strong>：可以被用来格式化输出字符（在字符中嵌入变量）。
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">first_name=&#x27;John&#x27;</span><br><span class="line">last_name=&#x27;Smith&#x27;</span><br><span class="line">msg = f&quot;&#123;first_name&#125; [&#123;last_name&#125;] is a coder&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>整数 int 浮点数 float 复数 complex</p>
+<h3 id="数据索引">数据索引</h3>
+<ol type="1">
+<li>Python中的索引从0开始</li>
+<li>数据索引中的负号表示从结束端开始：<code>[1:-1]</code>是正确的，-1表示倒数第二个数据</li>
+</ol>
+<p><strong>数据切片索引</strong>
+与Matlab不同的是，<code>A[1:5]</code>返回的不是数列A中位于1、2、3、4、5号位置的数据；取而代之的是：
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="line">print(A[1:5])</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">[2, 3, 4, 5]</span><br><span class="line"></span><br><span class="line">      -------------------------------------------</span><br><span class="line">[A]:   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |</span><br><span class="line">cut:  -0---1---2---3---4---5---6---7---8---9----10- </span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h2 id="if">if</h2>
+<p>常用调用模式如下，用缩进控制开始和结束（与matlab不同）：
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if is_hot:</span><br><span class="line">    print(&#x27;xxxxx&#x27;)</span><br><span class="line">elif is_coldL:</span><br><span class="line">    print(&#x27;xxxxxx&#x27;)</span><br><span class="line">else:</span><br><span class="line">    print(&#x27;xxxx&#x27;)</span><br></pre></td></tr></table></figure></p>
+<p>常用逻辑运算符 1.
+和：<code>and</code>，例如：<code>is_hot and is_cold</code> 1.
+或：<code>or</code> 1.
+非：<code>not</code>，例如：<code>is_cold and not is_wind</code>，<code>not</code>会将其后的False转化为True；上例中如果<code>is_cold = True</code>、<code>is_wind = False</code>，则返回<code>True</code></p>
+<p>比大小： 1.
+大于：<code>&gt;</code>、小于:<code>&lt;</code>、等于:<code>==</code> 1.
+大于等于：<code>&gt;=</code>、小于等于：<code>&lt;=</code> 1.
+不等于：<code>!=</code></p>
+<h2 id="循环">循环</h2>
+<p><code>while</code>常用调用模式如下，<code>break</code>可以用来跳出程序：
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i=1</span><br><span class="line">while i&lt;=5：</span><br><span class="line">    print(&#x27;i&#x27;)</span><br><span class="line">    i = i + 1</span><br><span class="line">print(&#x27;Done&#x27;) #用缩进控制while的结束</span><br></pre></td></tr></table></figure></p>
+<p><code>for</code>常用调用模式 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for item in [1,2,3,4]</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure></p>
+<h2 id="函数">函数</h2>
+<h3 id="常用函数">常用函数</h3>
+<p>绝对值：<code>abs()</code> 四舍五入到整数：<code>round()</code>
+生成等间距数列：<code>range(5,10,2)</code>；step=2，from 5 to 10，输出 5
+7 9</p>
+<h2 id="常用命令">常用命令</h2>
+<h3 id="运算符号">运算符号</h3>
+<ol type="1">
+<li>加<code>+</code>；减<code>-</code>；乘<code>*</code>；除<code>/</code>；幂<code>**</code></li>
+<li>特殊除号：得到结果的整数部分<code>//</code>；得到结果的余数<code>%</code></li>
+<li>增广运算符<code>X += 3</code>与<code>x = x + 3</code>等价、<code>x -= 3</code>同理</li>
+</ol>
+<h3 id="import"><strong><em>import</em></strong></h3>
+<p>调用包：<code>import XXX</code>，例如<code>import math</code>;使用时<code>math.acos()</code></p>
+<h2 id="questions">Questions</h2>
+<ol type="1">
+<li>methods 和 function 在Python有何区别的？</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>压电加速度传感器基本原理</title>
+    <url>/2021/06/13/2021-6-13-%E5%8E%8B%E7%94%B5%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<h2 id="压电效应">压电效应</h2>
+<p>某些电介质在沿一定方向上受到外力的作用而变形时，其内部会产生极化现象，同时在它的两个相对表面上出现正负相反的电荷。当外力去掉后，它又会恢复到不带电的状态，这种现象称为正压电效应。当作用力的方向改变时，电荷的极性也随之改变。依据电介质压电效应研制的一类传感器称为压电传感器。</p>
+<h2 id="压电加速度传感器">压电加速度传感器</h2>
+<p>压电式加速度传感器又称压电加速计。
+<strong>工作原理</strong>：在加速度计受振时，质量块加在压电元件上的力也随之变化。当被测振动频率远低于加速度计的固有频率时，则力的变化与被测加速度成正比。压电式加速度传感器利用了某些物质的压电效应，可以将加在自身上的力转化为电荷的变化，即将机械信号转化为电信号，进而通过电信号的转化成功输出或储存被测物体的加速度信号。</p>
+<p>设 <span class="math inline">\(q\)</span> 为释放的电荷，<span
+class="math inline">\(F\)</span> 为作用力，<span
+class="math inline">\(A\)</span> 为电极化面面积，<span
+class="math inline">\(d_x\)</span> 是压电系数，单位为 <span
+class="math inline">\(C/N\)</span>（库伦/牛），则下列关系式成立：</p>
+<p><span class="math display">\[
+\frac{q}{A}=d_x\frac{F}{A}
+\]</span></p>
+<p>理论与试验研究表明，在一般情况下，表示机械量和电量之间关系的压电方程是很复杂的，但是在压电材料弹性变形范围内，电荷与作用力之间的关系可以用线性映射关系表现出来:</p>
+<p><span class="math display">\[
+\bar{q}=\textbf{D}\bar{F}
+\]</span></p>
+<figure>
+<img src="/image/zhendongceshi/yadianxiaoying1.jpg" alt="yadian" />
+<figcaption aria-hidden="true">yadian</figcaption>
+</figure>
+<p>如上所示，压电型加速度传感器，基座受到的加速度最终会以电压形式输出。电荷及电压输出都与加速度成一定比例关系，因此通过测量电荷和电压即可得出加速度。一般电荷输出称为电荷灵敏度，电压输出称为电压灵敏度。</p>
+]]></content>
+      <tags>
+        <tag>振动测试</tag>
       </tags>
   </entry>
   <entry>
@@ -1598,70 +1598,6 @@ class="math inline">\(f_s&lt;2f_m\)</span>，延拓后的信号会在频域内�
       </tags>
   </entry>
   <entry>
-    <title>质心_形心_重心</title>
-    <url>/2022/03/08/%E8%B4%A8%E5%BF%83-%E5%BD%A2%E5%BF%83-%E9%87%8D%E5%BF%83/</url>
-    <content><![CDATA[<h2 id="三者存在的条件">三者存在的条件</h2>
-<ul>
-<li><strong>形心</strong>：目标具有几何外形；</li>
-<li><strong>质心</strong>：目标具有几何外形、具有质量；</li>
-<li><strong>重心</strong>：目标具有几何外形、具有质量、身处重力场。</li>
-</ul>
-<h2 id="质心">质心</h2>
-<p><strong>定义</strong>：质心是多质点系统的质量中心。
-<strong>特点</strong>：若对该点施力，系统会沿着力的方向运动、不会旋转。
-<strong>质心位置</strong>：质点的位置对质量取加权平均值，求得质心位置。</p>
-<p>对于离散系统，三维物体的质心位置由下式求得：</p>
-<p><span class="math display">\[
-\bar{x} = \frac{\sum{x_k m_k}}{\sum{m_k}}, \bar{y} = \frac{\sum{y_k
-m_k}}{\sum{m_k}},  \bar{z} = \frac{\sum{z_k m_k}}{\sum{m_k}}
-\]</span></p>
-<p>对于连续系统，上式推广为： <span class="math display">\[
-\bar{x} = \frac{\int_{\Omega}{x \rho} \rm{d}V}{\int_{\Omega}{ \rho}
-\rm{d}V},  \bar{y} = \frac{\int_{\Omega}{y \rho} \rm{d}V}{\int_{\Omega}{
-\rho} \rm{d}V}, \bar{z} = \frac{\int_{\Omega}{z
-\rho}  \rm{d}V}{\int_{\Omega}{ \rho} \rm{d}V}
-\]</span></p>
-<p>其中，<span class="math inline">\(\rho\)</span> 是物体的密度，为
-<span class="math inline">\(x,y,z\)</span> 的函数。上式为在物体所在空间
-<span class="math inline">\(\Omega\)</span> 进行体积分。</p>
-<h2 id="形心">形心</h2>
-<p><strong>定义</strong>：形心又被称为几何中心。形心是将该物体分成“矩”相等的两部分的所有超平面的交点。
-<strong>形心位置</strong>：等价于取加权平均。</p>
-<p>对于二维图形，形心位置由下式给出： <span class="math display">\[
-\bar{x} = \frac{\int{x f(x)}\rm{d}x}{\int{f(x)}\rm{d}x}, \bar{y} =
-\frac{\int{y f(y)}\rm{d}y}{\int{f(y)}\rm{d}y}
-\]</span></p>
-<p>上式分子部分为 <span class="math inline">\(x\)</span> 和 <span
-class="math inline">\(y\)</span> 的一阶矩。其中，<span
-class="math inline">\(f(x)\)</span> 为几何图形的横坐标位于 <span
-class="math inline">\(x\)</span> 点时在 <span
-class="math inline">\(y\)</span> 方向上的长度；<span
-class="math inline">\(f(y)\)</span> 为几何图形的纵坐标位于 <span
-class="math inline">\(y\)</span> 点时在 <span
-class="math inline">\(x\)</span> 方向上的长度。</p>
-<p>上式的等价形式为： <span class="math display">\[
-\bar{x} = \frac{\int_D{x}\rm{d}S}{\int_D{ }\rm{d}S} =
-\frac{\int_D{x}\rm{d}S}{A}
-\]</span></p>
-<p>上式积分表示在几何图形所在二维空间 <span
-class="math inline">\(D\)</span> 进行面积分；<span
-class="math inline">\(A\)</span> 表示二维几何图形的面积。（<span
-class="math inline">\(y\)</span> 方向写法与之类似）</p>
-<p>将该式推广至三维空间可得： <span class="math display">\[
-\bar{x} = \frac{\int_\Omega{x}\rm{d}V}{\int_\Omega{ }\rm{d}V} =
-\frac{\int_\Omega{x}\rm{d}V}{V}
-\]</span></p>
-<p>对比发现，上式积分中如果加入密度项，则得到的质心的坐标。即，<strong>对于密度均匀的物体，其质心和形心重合</strong>。</p>
-<h2 id="重心">重心</h2>
-<p><strong>定义</strong>：重心是重力作用的平均位置。
-<strong>特点</strong>：各质点相对于重心的位置矢量乘上各质点的重力之和(合力矩)为零。</p>
-<p>在均匀的重力场中，重心等同于质心。在非均匀的重力场中，质心和重心往往不在同一点。</p>
-]]></content>
-      <tags>
-        <tag>mechanics</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Maple常用命令</title>
     <url>/2022/04/23/maple%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h2 id="基本操作">基本操作</h2>
@@ -1727,6 +1663,70 @@ href="https://pdc.capub.cn/search.html#/detail?id=yrcnjprstu53gy5l2gvknezqtg5lyo
 ]]></content>
       <tags>
         <tag>Maple</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>质心_形心_重心</title>
+    <url>/2022/03/08/%E8%B4%A8%E5%BF%83-%E5%BD%A2%E5%BF%83-%E9%87%8D%E5%BF%83/</url>
+    <content><![CDATA[<h2 id="三者存在的条件">三者存在的条件</h2>
+<ul>
+<li><strong>形心</strong>：目标具有几何外形；</li>
+<li><strong>质心</strong>：目标具有几何外形、具有质量；</li>
+<li><strong>重心</strong>：目标具有几何外形、具有质量、身处重力场。</li>
+</ul>
+<h2 id="质心">质心</h2>
+<p><strong>定义</strong>：质心是多质点系统的质量中心。
+<strong>特点</strong>：若对该点施力，系统会沿着力的方向运动、不会旋转。
+<strong>质心位置</strong>：质点的位置对质量取加权平均值，求得质心位置。</p>
+<p>对于离散系统，三维物体的质心位置由下式求得：</p>
+<p><span class="math display">\[
+\bar{x} = \frac{\sum{x_k m_k}}{\sum{m_k}}, \bar{y} = \frac{\sum{y_k
+m_k}}{\sum{m_k}},  \bar{z} = \frac{\sum{z_k m_k}}{\sum{m_k}}
+\]</span></p>
+<p>对于连续系统，上式推广为： <span class="math display">\[
+\bar{x} = \frac{\int_{\Omega}{x \rho} \rm{d}V}{\int_{\Omega}{ \rho}
+\rm{d}V},  \bar{y} = \frac{\int_{\Omega}{y \rho} \rm{d}V}{\int_{\Omega}{
+\rho} \rm{d}V}, \bar{z} = \frac{\int_{\Omega}{z
+\rho}  \rm{d}V}{\int_{\Omega}{ \rho} \rm{d}V}
+\]</span></p>
+<p>其中，<span class="math inline">\(\rho\)</span> 是物体的密度，为
+<span class="math inline">\(x,y,z\)</span> 的函数。上式为在物体所在空间
+<span class="math inline">\(\Omega\)</span> 进行体积分。</p>
+<h2 id="形心">形心</h2>
+<p><strong>定义</strong>：形心又被称为几何中心。形心是将该物体分成“矩”相等的两部分的所有超平面的交点。
+<strong>形心位置</strong>：等价于取加权平均。</p>
+<p>对于二维图形，形心位置由下式给出： <span class="math display">\[
+\bar{x} = \frac{\int{x f(x)}\rm{d}x}{\int{f(x)}\rm{d}x}, \bar{y} =
+\frac{\int{y f(y)}\rm{d}y}{\int{f(y)}\rm{d}y}
+\]</span></p>
+<p>上式分子部分为 <span class="math inline">\(x\)</span> 和 <span
+class="math inline">\(y\)</span> 的一阶矩。其中，<span
+class="math inline">\(f(x)\)</span> 为几何图形的横坐标位于 <span
+class="math inline">\(x\)</span> 点时在 <span
+class="math inline">\(y\)</span> 方向上的长度；<span
+class="math inline">\(f(y)\)</span> 为几何图形的纵坐标位于 <span
+class="math inline">\(y\)</span> 点时在 <span
+class="math inline">\(x\)</span> 方向上的长度。</p>
+<p>上式的等价形式为： <span class="math display">\[
+\bar{x} = \frac{\int_D{x}\rm{d}S}{\int_D{ }\rm{d}S} =
+\frac{\int_D{x}\rm{d}S}{A}
+\]</span></p>
+<p>上式积分表示在几何图形所在二维空间 <span
+class="math inline">\(D\)</span> 进行面积分；<span
+class="math inline">\(A\)</span> 表示二维几何图形的面积。（<span
+class="math inline">\(y\)</span> 方向写法与之类似）</p>
+<p>将该式推广至三维空间可得： <span class="math display">\[
+\bar{x} = \frac{\int_\Omega{x}\rm{d}V}{\int_\Omega{ }\rm{d}V} =
+\frac{\int_\Omega{x}\rm{d}V}{V}
+\]</span></p>
+<p>对比发现，上式积分中如果加入密度项，则得到的质心的坐标。即，<strong>对于密度均匀的物体，其质心和形心重合</strong>。</p>
+<h2 id="重心">重心</h2>
+<p><strong>定义</strong>：重心是重力作用的平均位置。
+<strong>特点</strong>：各质点相对于重心的位置矢量乘上各质点的重力之和(合力矩)为零。</p>
+<p>在均匀的重力场中，重心等同于质心。在非均匀的重力场中，质心和重心往往不在同一点。</p>
+]]></content>
+      <tags>
+        <tag>mechanics</tag>
       </tags>
   </entry>
   <entry>
@@ -1823,174 +1823,6 @@ Cookbook》 Kaare Brandt Petersen</a></li>
 ]]></content>
       <tags>
         <tag>math</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数学概念——同伦</title>
-    <url>/2022/07/29/%E6%95%B0%E5%AD%A6%E6%A6%82%E5%BF%B5-%E5%90%8C%E4%BC%A6/</url>
-    <content><![CDATA[<h2 id="概念">概念</h2>
-<p><strong>同伦</strong>：在数学和拓扑学上描述了两个对象间的“连续变化”。</p>
-<p>两个定义在拓扑空间之间的连续函数，如果其中一个能“连续地形变”为另一个，则这两个函数称为同伦的。这样的<strong>形变</strong>称为两个函数之间的同伦。</p>
-<p><img src="/image/homotopy/HomotopySmall.gif" width = "25%"  /></p>
-<h2 id="定义">定义</h2>
-<p>给定两个拓扑空间 <span class="math inline">\(X\)</span> 和 <span
-class="math inline">\(Y\)</span>。考虑两个连续函数 <span
-class="math inline">\(f, g: X\rightarrow
-Y\)</span>，若存在一个定义在空间 <span class="math inline">\(X\)</span>
-与单位区间 <span class="math inline">\([0,1]\)</span>
-的积空间上的连续映射 <span class="math inline">\(H: X \times [0,1]
-\rightarrow Y\)</span> 使得：</p>
-<ul>
-<li><span class="math inline">\(\forall x \in X,
-H(x,0)=f(x)\)</span></li>
-<li><span class="math inline">\(\forall x \in X,
-H(x,1)=g(x)\)</span></li>
-</ul>
-<p>则称 <span class="math inline">\(H\)</span> 是 <span
-class="math inline">\(f, g\)</span> 之间的一个同伦。</p>
-<p>如果我们将 <span class="math inline">\(H\)</span>
-的第二个参数当作时间，这样 <span class="math inline">\(H\)</span>
-相当于描述了一个从 <span class="math inline">\(f\)</span> 到 <span
-class="math inline">\(g\)</span> 的连续形变： 0 时刻得到函数 <span
-class="math inline">\(f\)</span>，1时刻得到函数 <span
-class="math inline">\(g\)</span>， 反之亦然。</p>
-<p><img src="/image/homotopy/Mug_and_Torus_morph.gif" width = "35%"  /></p>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a
-href="https://zh.wikipedia.org/wiki/%E5%90%8C%E5%80%AB">维基百科-同伦</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>math</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>非线性方程的延拓法</title>
-    <url>/2022/08/01/%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%9A%84%E5%BB%B6%E6%8B%93%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="概述">概述</h2>
-<ul>
-<li><strong>前置概念</strong>：<a
-href="/2022/07/29/数学概念-同伦/">同伦</a></li>
-<li><strong>作用对象</strong>：非线性方程组</li>
-<li><strong>目的</strong>：扩大非线性方程组的收敛域</li>
-</ul>
-<h2 id="延拓法的基本思想">延拓法的基本思想</h2>
-<ol type="1">
-<li>已知一个待求解的非线性方程组 <span
-class="math inline">\(F(x)=0\)</span></li>
-<li>在方程组中引入一个参数 <span
-class="math inline">\(\lambda\)</span>，构造 <span
-class="math inline">\(F(x)\)</span> 的<strong>同伦映射</strong> <span
-class="math inline">\(H(x,\lambda), \lambda \in [0,1]\)</span>, 使得
-<span class="math inline">\(H(x,0)=0, H(x,1)=F(x)\)</span><br />
-</li>
-<li>已知 <span class="math inline">\(H(x,0)=0\)</span> 的解是 <span
-class="math inline">\(x=x_0\)</span> (可以是零向量 <span
-class="math inline">\(\bar{0}\)</span> )</li>
-<li>数值迭代，求解满足 <span class="math inline">\(H(x,1)=0\)</span>
-的解 <span class="math inline">\(x^*\)</span>
-<ul>
-<li>构造序列 <span class="math inline">\(\\{ \lambda_i \\} =
-\\{0,...,\lambda_i,...1\\}, i = 0,1,2,...,N\)</span></li>
-<li>以 <span class="math inline">\(x_0\)</span> 为初值，求解 <span
-class="math inline">\(H(x,\lambda_1)=0\)</span>
-（例如，Netwon迭代），解为 <span class="math inline">\(x_1\)</span></li>
-<li>以 <span class="math inline">\(x_1\)</span> 为初值，求解 <span
-class="math inline">\(H(x,\lambda_2)=0\)</span>，解为 <span
-class="math inline">\(x_2\)</span></li>
-<li>以 <span class="math inline">\(x_i\)</span> 为初值，求解 <span
-class="math inline">\(H(x,\lambda_{i+1})=0\)</span>，解为 <span
-class="math inline">\(x_{i+1}\)</span></li>
-<li>最终求得 <span class="math inline">\(H(x,1)=0\)</span> 的解 <span
-class="math inline">\(x_N\)</span>, 即 <span
-class="math inline">\(F(x)=0\)</span>的解 <span
-class="math inline">\(x^*\)</span></li>
-</ul></li>
-<li>该方法的结果相当于扩大了传统非线性方程组迭代求解方法的收敛域</li>
-</ol>
-<p><strong>Mark 1</strong>：
-Newton迭代时，可只迭代一步，因为最终目标是求 <span
-class="math inline">\(\boldsymbol{x}^*\)</span> <strong>Mark
-2</strong>：<span class="math inline">\(N\)</span> 足够大</p>
-<h2 id="延拓法的数学表述">延拓法的数学表述</h2>
-<p>传统的求解非线性方程组求解方法是局部收敛的，只有初值 <span
-class="math inline">\(x_0\)</span>
-足够接近真值，迭代方法收敛。然而，延拓法作为可以扩大收敛域的有效方法，可以从任意的
-<span class="math inline">\(x_0\)</span> 出发，通过延拓求解得到方程的解
-<span class="math inline">\(x^*\)</span>。</p>
-<p>引入参数 <span
-class="math inline">\(\lambda\)</span>，构造一簇同伦映射 <span
-class="math inline">\(\boldsymbol{H}:D\times[0,1] \subset
-\mathbf{R}^{n+1}\rightarrow \mathbf{R}^n\)</span> 代替单映射 <span
-class="math inline">\(\boldsymbol{F}(\boldsymbol{x})\)</span>，令 <span
-class="math inline">\(\boldsymbol{H}\)</span> 满足条件：</p>
-<p><span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x}_0,0)=\boldsymbol{0}
-\]</span></p>
-<p><span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x},1)=\boldsymbol{F}(\boldsymbol{x})
-\]</span></p>
-<p>它表明当 <span class="math inline">\(\lambda=0\)</span> 时，<span
-class="math inline">\(\boldsymbol{H}(\boldsymbol{x},0)=\boldsymbol{0}\)</span>
-的解 <span class="math inline">\(\boldsymbol{x}_0\)</span> 已知；当
-<span class="math inline">\(\lambda=1\)</span> 时，<span
-class="math inline">\(\boldsymbol{H}(\boldsymbol{x},1)=\boldsymbol{F}(\boldsymbol{x})=0\)</span>
-的解 <span class="math inline">\(\boldsymbol{x}^*\)</span>
-为非线性方程组的解。</p>
-<p>现考虑同伦方程：</p>
-<p><span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x},\lambda)=\boldsymbol{0} \\quad
-\lambda \in [0,1],\boldsymbol{x}\in D \subset\mathbf{R}^n
-\]</span></p>
-<p>如果对每个 <span class="math inline">\(\lambda
-\in[0,1]\)</span>，上述方程有解 <span
-class="math inline">\(\boldsymbol{x}=\boldsymbol{x}(\lambda),
-\boldsymbol{x}:[0,1]\rightarrow D\)</span> 且连续，则 <span
-class="math inline">\(\boldsymbol{x}=\boldsymbol{x}(\lambda)\)</span>
-是关于参数 <span class="math inline">\(\lambda\in[0,1]\)</span> 在 <span
-class="math inline">\(\mathbf{R}^{n+1}\)</span>
-中的一条曲线。该曲线的一端为已知点 <span
-class="math inline">\((\boldsymbol{x}_0,0)\)</span>，另一端是点 <span
-class="math inline">\((\boldsymbol{x}^*,1)\)</span>，<span
-class="math inline">\(\boldsymbol{x}^*\)</span>
-即为非线性方程组的解，这就是<strong>延拓法</strong>，也被称作<strong>同伦法</strong>。</p>
-<p>满足条件的同伦可以有各种不同的取法，常用的有两种。</p>
-<p>牛顿同伦： <span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x},\lambda)
-=\boldsymbol{F}(\boldsymbol{x})
-+(\lambda-1)\boldsymbol{F}(\boldsymbol{x}_0)
-\]</span></p>
-<p>凸同伦： <span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x},\lambda)
-= t \boldsymbol{F}(\boldsymbol{x})
-+(1-\lambda)\boldsymbol{A}(\boldsymbol{x} - \boldsymbol{x}_0)
-\]</span></p>
-<p>其中 <span class="math inline">\(\boldsymbol{A}\in\mathbf{R}^{n\times
-n}\)</span> 是非奇的</p>
-]]></content>
-      <tags>
-        <tag>math</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Geometrical Nonlinear and Material Nonlinear</title>
-    <url>/2022/08/02/geometricalNonlinearAndMaterialNonlinear/</url>
-    <content><![CDATA[<h2 id="geometrical-nonlinear">Geometrical Nonlinear</h2>
-<p>In the geometrical nonlinear case, the relationship internal
-force-displacements is nonlinear.</p>
-<h2 id="material-nonlinaer">Material Nonlinaer</h2>
-<p>In the material nonlinear case, the relationship of the stress-strain
-is nonlinear.</p>
-<p>Of course these cases may be independent of each other or
-combined.</p>
-<ul>
-<li><strong>From Czeslaw Kazimierz Szymczak</strong>:
-https://www.researchgate.net/post/What_is_Geomertical_Nonlinearity/2</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>mechanics</tag>
       </tags>
   </entry>
   <entry>
@@ -2355,6 +2187,236 @@ href="https://www.zhihu.com/question/296107343/answer/1625307850">材料力学�
       </tags>
   </entry>
   <entry>
+    <title>非线性方程的延拓法</title>
+    <url>/2022/08/01/%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%9A%84%E5%BB%B6%E6%8B%93%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="概述">概述</h2>
+<ul>
+<li><strong>前置概念</strong>：<a
+href="/2022/07/29/数学概念-同伦/">同伦</a></li>
+<li><strong>作用对象</strong>：非线性方程组</li>
+<li><strong>目的</strong>：扩大非线性方程组的收敛域</li>
+</ul>
+<h2 id="延拓法的基本思想">延拓法的基本思想</h2>
+<ol type="1">
+<li>已知一个待求解的非线性方程组 <span
+class="math inline">\(F(x)=0\)</span></li>
+<li>在方程组中引入一个参数 <span
+class="math inline">\(\lambda\)</span>，构造 <span
+class="math inline">\(F(x)\)</span> 的<strong>同伦映射</strong> <span
+class="math inline">\(H(x,\lambda), \lambda \in [0,1]\)</span>, 使得
+<span class="math inline">\(H(x,0)=0, H(x,1)=F(x)\)</span><br />
+</li>
+<li>已知 <span class="math inline">\(H(x,0)=0\)</span> 的解是 <span
+class="math inline">\(x=x_0\)</span> (可以是零向量 <span
+class="math inline">\(\bar{0}\)</span> )</li>
+<li>数值迭代，求解满足 <span class="math inline">\(H(x,1)=0\)</span>
+的解 <span class="math inline">\(x^*\)</span>
+<ul>
+<li>构造序列 <span class="math inline">\(\\{ \lambda_i \\} =
+\\{0,...,\lambda_i,...1\\}, i = 0,1,2,...,N\)</span></li>
+<li>以 <span class="math inline">\(x_0\)</span> 为初值，求解 <span
+class="math inline">\(H(x,\lambda_1)=0\)</span>
+（例如，Netwon迭代），解为 <span class="math inline">\(x_1\)</span></li>
+<li>以 <span class="math inline">\(x_1\)</span> 为初值，求解 <span
+class="math inline">\(H(x,\lambda_2)=0\)</span>，解为 <span
+class="math inline">\(x_2\)</span></li>
+<li>以 <span class="math inline">\(x_i\)</span> 为初值，求解 <span
+class="math inline">\(H(x,\lambda_{i+1})=0\)</span>，解为 <span
+class="math inline">\(x_{i+1}\)</span></li>
+<li>最终求得 <span class="math inline">\(H(x,1)=0\)</span> 的解 <span
+class="math inline">\(x_N\)</span>, 即 <span
+class="math inline">\(F(x)=0\)</span>的解 <span
+class="math inline">\(x^*\)</span></li>
+</ul></li>
+<li>该方法的结果相当于扩大了传统非线性方程组迭代求解方法的收敛域</li>
+</ol>
+<p><strong>Mark 1</strong>：
+Newton迭代时，可只迭代一步，因为最终目标是求 <span
+class="math inline">\(\boldsymbol{x}^*\)</span> <strong>Mark
+2</strong>：<span class="math inline">\(N\)</span> 足够大</p>
+<h2 id="延拓法的数学表述">延拓法的数学表述</h2>
+<p>传统的求解非线性方程组求解方法是局部收敛的，只有初值 <span
+class="math inline">\(x_0\)</span>
+足够接近真值，迭代方法收敛。然而，延拓法作为可以扩大收敛域的有效方法，可以从任意的
+<span class="math inline">\(x_0\)</span> 出发，通过延拓求解得到方程的解
+<span class="math inline">\(x^*\)</span>。</p>
+<p>引入参数 <span
+class="math inline">\(\lambda\)</span>，构造一簇同伦映射 <span
+class="math inline">\(\boldsymbol{H}:D\times[0,1] \subset
+\mathbf{R}^{n+1}\rightarrow \mathbf{R}^n\)</span> 代替单映射 <span
+class="math inline">\(\boldsymbol{F}(\boldsymbol{x})\)</span>，令 <span
+class="math inline">\(\boldsymbol{H}\)</span> 满足条件：</p>
+<p><span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x}_0,0)=\boldsymbol{0}
+\]</span></p>
+<p><span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x},1)=\boldsymbol{F}(\boldsymbol{x})
+\]</span></p>
+<p>它表明当 <span class="math inline">\(\lambda=0\)</span> 时，<span
+class="math inline">\(\boldsymbol{H}(\boldsymbol{x},0)=\boldsymbol{0}\)</span>
+的解 <span class="math inline">\(\boldsymbol{x}_0\)</span> 已知；当
+<span class="math inline">\(\lambda=1\)</span> 时，<span
+class="math inline">\(\boldsymbol{H}(\boldsymbol{x},1)=\boldsymbol{F}(\boldsymbol{x})=0\)</span>
+的解 <span class="math inline">\(\boldsymbol{x}^*\)</span>
+为非线性方程组的解。</p>
+<p>现考虑同伦方程：</p>
+<p><span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x},\lambda)=\boldsymbol{0} \\quad
+\lambda \in [0,1],\boldsymbol{x}\in D \subset\mathbf{R}^n
+\]</span></p>
+<p>如果对每个 <span class="math inline">\(\lambda
+\in[0,1]\)</span>，上述方程有解 <span
+class="math inline">\(\boldsymbol{x}=\boldsymbol{x}(\lambda),
+\boldsymbol{x}:[0,1]\rightarrow D\)</span> 且连续，则 <span
+class="math inline">\(\boldsymbol{x}=\boldsymbol{x}(\lambda)\)</span>
+是关于参数 <span class="math inline">\(\lambda\in[0,1]\)</span> 在 <span
+class="math inline">\(\mathbf{R}^{n+1}\)</span>
+中的一条曲线。该曲线的一端为已知点 <span
+class="math inline">\((\boldsymbol{x}_0,0)\)</span>，另一端是点 <span
+class="math inline">\((\boldsymbol{x}^*,1)\)</span>，<span
+class="math inline">\(\boldsymbol{x}^*\)</span>
+即为非线性方程组的解，这就是<strong>延拓法</strong>，也被称作<strong>同伦法</strong>。</p>
+<p>满足条件的同伦可以有各种不同的取法，常用的有两种。</p>
+<p>牛顿同伦： <span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x},\lambda)
+=\boldsymbol{F}(\boldsymbol{x})
++(\lambda-1)\boldsymbol{F}(\boldsymbol{x}_0)
+\]</span></p>
+<p>凸同伦： <span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x},\lambda)
+= t \boldsymbol{F}(\boldsymbol{x})
++(1-\lambda)\boldsymbol{A}(\boldsymbol{x} - \boldsymbol{x}_0)
+\]</span></p>
+<p>其中 <span class="math inline">\(\boldsymbol{A}\in\mathbf{R}^{n\times
+n}\)</span> 是非奇的</p>
+]]></content>
+      <tags>
+        <tag>math</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学概念——同伦</title>
+    <url>/2022/07/29/%E6%95%B0%E5%AD%A6%E6%A6%82%E5%BF%B5-%E5%90%8C%E4%BC%A6/</url>
+    <content><![CDATA[<h2 id="概念">概念</h2>
+<p><strong>同伦</strong>：在数学和拓扑学上描述了两个对象间的“连续变化”。</p>
+<p>两个定义在拓扑空间之间的连续函数，如果其中一个能“连续地形变”为另一个，则这两个函数称为同伦的。这样的<strong>形变</strong>称为两个函数之间的同伦。</p>
+<p><img src="/image/homotopy/HomotopySmall.gif" width = "25%"  /></p>
+<h2 id="定义">定义</h2>
+<p>给定两个拓扑空间 <span class="math inline">\(X\)</span> 和 <span
+class="math inline">\(Y\)</span>。考虑两个连续函数 <span
+class="math inline">\(f, g: X\rightarrow
+Y\)</span>，若存在一个定义在空间 <span class="math inline">\(X\)</span>
+与单位区间 <span class="math inline">\([0,1]\)</span>
+的积空间上的连续映射 <span class="math inline">\(H: X \times [0,1]
+\rightarrow Y\)</span> 使得：</p>
+<ul>
+<li><span class="math inline">\(\forall x \in X,
+H(x,0)=f(x)\)</span></li>
+<li><span class="math inline">\(\forall x \in X,
+H(x,1)=g(x)\)</span></li>
+</ul>
+<p>则称 <span class="math inline">\(H\)</span> 是 <span
+class="math inline">\(f, g\)</span> 之间的一个同伦。</p>
+<p>如果我们将 <span class="math inline">\(H\)</span>
+的第二个参数当作时间，这样 <span class="math inline">\(H\)</span>
+相当于描述了一个从 <span class="math inline">\(f\)</span> 到 <span
+class="math inline">\(g\)</span> 的连续形变： 0 时刻得到函数 <span
+class="math inline">\(f\)</span>，1时刻得到函数 <span
+class="math inline">\(g\)</span>， 反之亦然。</p>
+<p><img src="/image/homotopy/Mug_and_Torus_morph.gif" width = "35%"  /></p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a
+href="https://zh.wikipedia.org/wiki/%E5%90%8C%E5%80%AB">维基百科-同伦</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>math</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Geometrical Nonlinear and Material Nonlinear</title>
+    <url>/2022/08/02/geometricalNonlinearAndMaterialNonlinear/</url>
+    <content><![CDATA[<h2 id="geometrical-nonlinear">Geometrical Nonlinear</h2>
+<p>In the geometrical nonlinear case, the relationship internal
+force-displacements is nonlinear.</p>
+<h2 id="material-nonlinaer">Material Nonlinaer</h2>
+<p>In the material nonlinear case, the relationship of the stress-strain
+is nonlinear.</p>
+<p>Of course these cases may be independent of each other or
+combined.</p>
+<ul>
+<li><strong>From Czeslaw Kazimierz Szymczak</strong>:
+https://www.researchgate.net/post/What_is_Geomertical_Nonlinearity/2</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>mechanics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown 标记语言常用命令</title>
+    <url>/2021/06/12/Markdown%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="markdown基本语法">Markdown基本语法</h1>
+<h2 id="标题">标题</h2>
+<p>添加标题：在文本前加<code>#</code>，<code>#</code>的数目代表标题的级别，最高支持六级标题
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure> ## 字体 斜体：<code>*被添加斜体的文本*</code>
+加粗：<code>**被加粗文本**</code>
+倾斜加粗：<code>***被倾斜加粗的文本***</code>
+加删除线：<code>~~被加删除线的文本~~</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*被添加斜体的文本*  </span><br><span class="line">**被加粗文本**</span><br><span class="line">***被倾斜加粗的文本***</span><br><span class="line">~~被加删除线的文本~~</span><br></pre></td></tr></table></figure> 效果演示：
+<em>被添加斜体的文本</em> <strong>被加粗文本</strong>
+<strong><em>被倾斜加粗的文本</em></strong>
+<del>被加删除线的文本</del></p>
+<h2 id="分割线">分割线</h2>
+<p>在空行内输入<code>---</code>或<code>___</code>或<code>***</code>即可，符号中间也可插入空格。效果如下：</p>
+<hr />
+<h2 id="引用">引用</h2>
+<p>在被引用的文字前加<code>&gt;</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;这是一段引用内容，它很长很长很长很长很长很长很长------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">&gt;</span><br><span class="line">&gt;这是第二段引用内容，它很短</span><br></pre></td></tr></table></figure> 效果如下：
+&gt;这是一段引用内容，它很长很长很长很长很长很长很长------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+&gt; &gt;这是第二段引用内容，它很短</p>
+<p>也可以控制引用的级别，<code>&gt;</code>的个数代表级别 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;一级文本：对于命途多舛的人生，以及渺茫的时间，阻挡在我们之间这一事实，我们无可奈何。</span><br><span class="line">&gt;&gt;二级文本：彼方为谁，无我有问。九月露湿，待君之前。</span><br><span class="line">&gt;&gt;&gt;三级文本：但盼风雨来、能留你在此;即使天无雨、我亦留此地。</span><br></pre></td></tr></table></figure>
+效果如下：
+&gt;一级文本：对于命途多舛的人生，以及渺茫的时间，阻挡在我们之间这一事实，我们无可奈何。
+&gt;&gt;二级文本：彼方为谁，无我有问。九月露湿，待君之前。
+&gt;&gt;&gt;三级文本：但盼风雨来、能留你在此;即使天无雨、我亦留此地。 ##
+列表 <strong>列表分为无序列表和有序列表。</strong>
+无序列表使用<code>-</code>或<code>*</code>或<code>+</code>进行标记，标记和文本之间要有空格，不同标记可以混用，效果相同。
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- Harry James Potter</span><br><span class="line">* Hermione Jean Granger</span><br><span class="line">+ Ronald Bilius &quot;Ron&quot; Weasley</span><br></pre></td></tr></table></figure> 效果演示： - Harry James Potter * Hermione Jean Granger +
+Ronald Bilius "Ron" Weasley</p>
+<p>有序列表使用<code>1.</code>，即任意数字加英文句号进行标记，并且数字不影响最终编译效果。
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. Albus Percival Wulfric Brian Dumbledore</span><br><span class="line">8. Severus Snape</span><br><span class="line">10. Minerva McGonagall</span><br></pre></td></tr></table></figure> 1. Albus Percival Wulfric Brian Dumbledore 8. Severus
+Snape 10. Minerva McGonagall</p>
+<p><strong>列表可以嵌套</strong>
+在上一级与下一级列表之间敲三个空格即可。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* Lord Voldemort</span><br><span class="line">    * Lupin</span><br><span class="line">    * Dobby</span><br><span class="line">        * Winky</span><br><span class="line">        * Tom Riddle </span><br></pre></td></tr></table></figure> 效果演示： * Lord
+Voldemort * Lupin * Dobby * Winky * Tom Riddle</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. Lord Voldemort</span><br><span class="line">    1. Lupin</span><br><span class="line">    1. Dobby</span><br><span class="line">        1. Winky</span><br><span class="line">        1. Tom Riddle </span><br></pre></td></tr></table></figure>
+<p>效果演示： 1. Lord Voldemort 1. Lupin 1. Dobby 1. Winky 1. Tom
+Riddle</p>
+<p><strong>列表包含多个段落</strong>
+列表包含多个段落，每个项目下的段落都缩进4个空格或一个制表符。
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   Harry Potter, Protagonist, is a thin, black-haired youth wearing glasses on his forehead with a lightning-shaped scar, just as suddenly a short time overstating the children who, like flavor is not good. </span><br><span class="line">    He is a Magic School fifth-grade students, but also a man of Hogwarts. Since Voldemort after the resurrection, the scar on his forehead to his burning often endless.</span><br></pre></td></tr></table></figure> 效果演示： * Harry Potter, Protagonist, is a thin,
+black-haired youth wearing glasses on his forehead with a
+lightning-shaped scar, just as suddenly a short time overstating the
+children who, like flavor is not good. He is a Magic School fifth-grade
+students, but also a man of Hogwarts. Since Voldemort after the
+resurrection, the scar on his forehead to his burning often endless.</p>
+<h2 id="代码">代码</h2>
+<p><strong>在行内插入简短的代码</strong>
+把代码插入<code>``</code>之间即可 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">看起来`codes and codes`是这样的</span><br></pre></td></tr></table></figure> 效果演示：
+看起来<code>codes and codes</code>是这样的</p>
+<p><strong>在行间插入代码块</strong>
+把代码块放入两行<code>```</code>之间(<code>\</code>是为了防止转义，实际写作中是没有的)
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\```</span><br><span class="line">start</span><br><span class="line">codes and codes</span><br><span class="line">end</span><br><span class="line">\```</span><br></pre></td></tr></table></figure> 效果演示： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">start</span><br><span class="line">codes and codes</span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
+<h2 id="强制空行">强制空行</h2>
+<p>在空行内使用<code>\</code>即可 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">第一段</span><br><span class="line">\</span><br><span class="line">\</span><br><span class="line">第二段</span><br></pre></td></tr></table></figure> 效果演示： 第一段<br />
+<br />
+第二段</p>
+]]></content>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>三角函数型与指数型傅里叶变换的联系</title>
     <url>/2023/07/03/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%9E%8B%E4%B8%8E%E6%8C%87%E6%95%B0%E5%9E%8B%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E8%81%94%E7%B3%BB/</url>
     <content><![CDATA[<h2 id="三角函数型">三角函数型</h2>
@@ -2446,68 +2508,6 @@ class="math inline">\(\mathrm{arctan}(-\frac{b_n}{a_n})\)</span>为复数的幅�
 ]]></content>
       <tags>
         <tag>振动测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown 标记语言常用命令</title>
-    <url>/2021/06/12/Markdown%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="markdown基本语法">Markdown基本语法</h1>
-<h2 id="标题">标题</h2>
-<p>添加标题：在文本前加<code>#</code>，<code>#</code>的数目代表标题的级别，最高支持六级标题
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure> ## 字体 斜体：<code>*被添加斜体的文本*</code>
-加粗：<code>**被加粗文本**</code>
-倾斜加粗：<code>***被倾斜加粗的文本***</code>
-加删除线：<code>~~被加删除线的文本~~</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*被添加斜体的文本*  </span><br><span class="line">**被加粗文本**</span><br><span class="line">***被倾斜加粗的文本***</span><br><span class="line">~~被加删除线的文本~~</span><br></pre></td></tr></table></figure> 效果演示：
-<em>被添加斜体的文本</em> <strong>被加粗文本</strong>
-<strong><em>被倾斜加粗的文本</em></strong>
-<del>被加删除线的文本</del></p>
-<h2 id="分割线">分割线</h2>
-<p>在空行内输入<code>---</code>或<code>___</code>或<code>***</code>即可，符号中间也可插入空格。效果如下：</p>
-<hr />
-<h2 id="引用">引用</h2>
-<p>在被引用的文字前加<code>&gt;</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;这是一段引用内容，它很长很长很长很长很长很长很长------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">&gt;</span><br><span class="line">&gt;这是第二段引用内容，它很短</span><br></pre></td></tr></table></figure> 效果如下：
-&gt;这是一段引用内容，它很长很长很长很长很长很长很长------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-&gt; &gt;这是第二段引用内容，它很短</p>
-<p>也可以控制引用的级别，<code>&gt;</code>的个数代表级别 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;一级文本：对于命途多舛的人生，以及渺茫的时间，阻挡在我们之间这一事实，我们无可奈何。</span><br><span class="line">&gt;&gt;二级文本：彼方为谁，无我有问。九月露湿，待君之前。</span><br><span class="line">&gt;&gt;&gt;三级文本：但盼风雨来、能留你在此;即使天无雨、我亦留此地。</span><br></pre></td></tr></table></figure>
-效果如下：
-&gt;一级文本：对于命途多舛的人生，以及渺茫的时间，阻挡在我们之间这一事实，我们无可奈何。
-&gt;&gt;二级文本：彼方为谁，无我有问。九月露湿，待君之前。
-&gt;&gt;&gt;三级文本：但盼风雨来、能留你在此;即使天无雨、我亦留此地。 ##
-列表 <strong>列表分为无序列表和有序列表。</strong>
-无序列表使用<code>-</code>或<code>*</code>或<code>+</code>进行标记，标记和文本之间要有空格，不同标记可以混用，效果相同。
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- Harry James Potter</span><br><span class="line">* Hermione Jean Granger</span><br><span class="line">+ Ronald Bilius &quot;Ron&quot; Weasley</span><br></pre></td></tr></table></figure> 效果演示： - Harry James Potter * Hermione Jean Granger +
-Ronald Bilius "Ron" Weasley</p>
-<p>有序列表使用<code>1.</code>，即任意数字加英文句号进行标记，并且数字不影响最终编译效果。
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. Albus Percival Wulfric Brian Dumbledore</span><br><span class="line">8. Severus Snape</span><br><span class="line">10. Minerva McGonagall</span><br></pre></td></tr></table></figure> 1. Albus Percival Wulfric Brian Dumbledore 8. Severus
-Snape 10. Minerva McGonagall</p>
-<p><strong>列表可以嵌套</strong>
-在上一级与下一级列表之间敲三个空格即可。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* Lord Voldemort</span><br><span class="line">    * Lupin</span><br><span class="line">    * Dobby</span><br><span class="line">        * Winky</span><br><span class="line">        * Tom Riddle </span><br></pre></td></tr></table></figure> 效果演示： * Lord
-Voldemort * Lupin * Dobby * Winky * Tom Riddle</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. Lord Voldemort</span><br><span class="line">    1. Lupin</span><br><span class="line">    1. Dobby</span><br><span class="line">        1. Winky</span><br><span class="line">        1. Tom Riddle </span><br></pre></td></tr></table></figure>
-<p>效果演示： 1. Lord Voldemort 1. Lupin 1. Dobby 1. Winky 1. Tom
-Riddle</p>
-<p><strong>列表包含多个段落</strong>
-列表包含多个段落，每个项目下的段落都缩进4个空格或一个制表符。
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   Harry Potter, Protagonist, is a thin, black-haired youth wearing glasses on his forehead with a lightning-shaped scar, just as suddenly a short time overstating the children who, like flavor is not good. </span><br><span class="line">    He is a Magic School fifth-grade students, but also a man of Hogwarts. Since Voldemort after the resurrection, the scar on his forehead to his burning often endless.</span><br></pre></td></tr></table></figure> 效果演示： * Harry Potter, Protagonist, is a thin,
-black-haired youth wearing glasses on his forehead with a
-lightning-shaped scar, just as suddenly a short time overstating the
-children who, like flavor is not good. He is a Magic School fifth-grade
-students, but also a man of Hogwarts. Since Voldemort after the
-resurrection, the scar on his forehead to his burning often endless.</p>
-<h2 id="代码">代码</h2>
-<p><strong>在行内插入简短的代码</strong>
-把代码插入<code>``</code>之间即可 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">看起来`codes and codes`是这样的</span><br></pre></td></tr></table></figure> 效果演示：
-看起来<code>codes and codes</code>是这样的</p>
-<p><strong>在行间插入代码块</strong>
-把代码块放入两行<code>```</code>之间(<code>\</code>是为了防止转义，实际写作中是没有的)
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\```</span><br><span class="line">start</span><br><span class="line">codes and codes</span><br><span class="line">end</span><br><span class="line">\```</span><br></pre></td></tr></table></figure> 效果演示： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">start</span><br><span class="line">codes and codes</span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
-<h2 id="强制空行">强制空行</h2>
-<p>在空行内使用<code>\</code>即可 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">第一段</span><br><span class="line">\</span><br><span class="line">\</span><br><span class="line">第二段</span><br></pre></td></tr></table></figure> 效果演示： 第一段<br />
-<br />
-第二段</p>
-]]></content>
-      <tags>
-        <tag>Markdown</tag>
       </tags>
   </entry>
 </search>
