@@ -198,52 +198,6 @@ class="math inline">\(D=80dB\)</span>，则幅值上限与下限之比达10000�
       </tags>
   </entry>
   <entry>
-    <title>如何在论文中完美插入矢量图</title>
-    <url>/2021/06/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE/</url>
-    <content><![CDATA[<h2 id="问题背景">问题背景</h2>
-<p>论文写作时，我们往往需要插入矢量图，以保证图形被阅览时不会因缩放而出现难看的锯齿（失真）。</p>
-<p>需要矢量图的常用场景如下： * 纯矢量图 * 简单的折线、柱形、条形图等 *
-抽象的模型图、概念图、流程图、程序框图等 *
-混合类图形，混合了以上两种图形 * 矢量图与位图的混合 *
-色彩复杂的模型图（位图）旁配上文字、简单的折线图、流程图等 *
-在流程图中嵌入各种结果，如Science、Nature中常见的占用一页的超大混合类图形
-* 其他</p>
-<h2 id="各种类型图片的区别">各种类型图片的区别</h2>
-<h3 id="矢量图">矢量图</h3>
-<p>简单来说矢量图就像用几何图形来描述一幅图，在矢量图放大时，我们所记录的几何图形的各种角度、形状等并没有改变，所以无论是放大还是缩小，都不会影响矢量图的清晰度。</p>
-<p><strong>文件类型：</strong> Adobe
-Illustrator的<code>.AI</code>、<code>.EPS</code>和<code>.SVG</code>、AutoCAD的<code>.dwg</code>和<code>.dxf</code>、Corel
-DRAW的<code>.cdr</code>等。<code>.pdf</code>也常被用来保存矢量图。</p>
-<p><strong>制图：</strong> 使用Adobe
-Illustrator(AI)、CorelDRAW、FlashMX制图</p>
-<h3 id="位图">位图</h3>
-<p>位图又被称作点阵图或栅格图像，它的特点就是，整幅图由许多的‘点’组成，这些‘点’我们称为“像素”。在位图模式下，计算机会将图片的每个像素点进行保存。当位图放大到一定程度时，我们会发现图片是由一个一个的小方块组成，这些小方块就是像素点。</p>
-<p><strong>文件类型：</strong>
-<code>.jpg</code>、<code>.png</code>、<code>.bmp</code>、<code>.pcx</code>、<code>.gif</code>、<code>.tif</code>、<code>.psd</code>等。</p>
-<p><strong>制图：</strong>
-使用Photoshop、Painter和Windows系统自带的画图工具制图。</p>
-<h2 id="如何在论文中使用矢量图">如何在论文中使用矢量图</h2>
-<p><strong>这里主要讨论使用LaTex写作时，如何插入矢量图。</strong></p>
-<p><strong>第一步</strong>：使用任何软件得到矢量图形。如果使用Matlab、Python得到折线、柱形图等，直接输出为<code>.pdf</code>或<code>.eps</code>格式。如果使用Visio、PPT等软件绘制流程图、模型图，导出为<code>.pdf</code>。（貌似微软的办公软件不支持<code>.eps</code>）</p>
-<p>（如果是直接插入已得到的矢量图，请转至第三步）</p>
-<p><strong>第二步</strong>：使用Adobe
-Illustrator将多个矢量图组合在一起后用快捷键<code>Shift+o</code>裁剪画布，删去边框。将文件保存为<code>.eps</code>或<code>.pdf</code>。如果只是删除<code>.pdf</code>中的白边，使用Adobe
-Acrobat 的编辑功能就能轻松做到。</p>
-<p><strong>第三步</strong>：在LaTex中插入组合好的矢量图。</p>
-<p><strong>提示</strong>：在第一步制作矢量图时，最好调整好字号，图宽以适合出现在论文中或PPT中，并且使用Matlab时一定要保存一份<code>.fig</code>文件，便于以后查找修改。</p>
-<h2 id="office套件中插入矢量图">Office套件中插入矢量图</h2>
-<p>Office办公软件下插入矢量图，使用<code>.emf</code>即可。Office系列间的互通是较为方便的，如Visio、PPT、Word间相互插入文件。</p>
-<p>使用Word和Latex一段时间以后，还是非常推荐大家使用LaTex的（强迫症福音）。毕竟插入的行内、行间公式怎是一个“服服帖帖”就能概括的。更别说切换模板时，只需要改动导言区就ok啦，简直不要太方便。LaTex缺点也有，表格制作很麻烦QAQ…，整体学习成本略高。</p>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li>https://www.zhihu.com/question/378251607/answer/1160351444</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>论文写作</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>快速傅里叶变换（FFT）基本原理</title>
     <url>/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<h2 id="引言">引言</h2>
@@ -671,6 +625,52 @@ Plots（伯德图）</a></p>
       </tags>
   </entry>
   <entry>
+    <title>如何在论文中完美插入矢量图</title>
+    <url>/2021/06/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE/</url>
+    <content><![CDATA[<h2 id="问题背景">问题背景</h2>
+<p>论文写作时，我们往往需要插入矢量图，以保证图形被阅览时不会因缩放而出现难看的锯齿（失真）。</p>
+<p>需要矢量图的常用场景如下： * 纯矢量图 * 简单的折线、柱形、条形图等 *
+抽象的模型图、概念图、流程图、程序框图等 *
+混合类图形，混合了以上两种图形 * 矢量图与位图的混合 *
+色彩复杂的模型图（位图）旁配上文字、简单的折线图、流程图等 *
+在流程图中嵌入各种结果，如Science、Nature中常见的占用一页的超大混合类图形
+* 其他</p>
+<h2 id="各种类型图片的区别">各种类型图片的区别</h2>
+<h3 id="矢量图">矢量图</h3>
+<p>简单来说矢量图就像用几何图形来描述一幅图，在矢量图放大时，我们所记录的几何图形的各种角度、形状等并没有改变，所以无论是放大还是缩小，都不会影响矢量图的清晰度。</p>
+<p><strong>文件类型：</strong> Adobe
+Illustrator的<code>.AI</code>、<code>.EPS</code>和<code>.SVG</code>、AutoCAD的<code>.dwg</code>和<code>.dxf</code>、Corel
+DRAW的<code>.cdr</code>等。<code>.pdf</code>也常被用来保存矢量图。</p>
+<p><strong>制图：</strong> 使用Adobe
+Illustrator(AI)、CorelDRAW、FlashMX制图</p>
+<h3 id="位图">位图</h3>
+<p>位图又被称作点阵图或栅格图像，它的特点就是，整幅图由许多的‘点’组成，这些‘点’我们称为“像素”。在位图模式下，计算机会将图片的每个像素点进行保存。当位图放大到一定程度时，我们会发现图片是由一个一个的小方块组成，这些小方块就是像素点。</p>
+<p><strong>文件类型：</strong>
+<code>.jpg</code>、<code>.png</code>、<code>.bmp</code>、<code>.pcx</code>、<code>.gif</code>、<code>.tif</code>、<code>.psd</code>等。</p>
+<p><strong>制图：</strong>
+使用Photoshop、Painter和Windows系统自带的画图工具制图。</p>
+<h2 id="如何在论文中使用矢量图">如何在论文中使用矢量图</h2>
+<p><strong>这里主要讨论使用LaTex写作时，如何插入矢量图。</strong></p>
+<p><strong>第一步</strong>：使用任何软件得到矢量图形。如果使用Matlab、Python得到折线、柱形图等，直接输出为<code>.pdf</code>或<code>.eps</code>格式。如果使用Visio、PPT等软件绘制流程图、模型图，导出为<code>.pdf</code>。（貌似微软的办公软件不支持<code>.eps</code>）</p>
+<p>（如果是直接插入已得到的矢量图，请转至第三步）</p>
+<p><strong>第二步</strong>：使用Adobe
+Illustrator将多个矢量图组合在一起后用快捷键<code>Shift+o</code>裁剪画布，删去边框。将文件保存为<code>.eps</code>或<code>.pdf</code>。如果只是删除<code>.pdf</code>中的白边，使用Adobe
+Acrobat 的编辑功能就能轻松做到。</p>
+<p><strong>第三步</strong>：在LaTex中插入组合好的矢量图。</p>
+<p><strong>提示</strong>：在第一步制作矢量图时，最好调整好字号，图宽以适合出现在论文中或PPT中，并且使用Matlab时一定要保存一份<code>.fig</code>文件，便于以后查找修改。</p>
+<h2 id="office套件中插入矢量图">Office套件中插入矢量图</h2>
+<p>Office办公软件下插入矢量图，使用<code>.emf</code>即可。Office系列间的互通是较为方便的，如Visio、PPT、Word间相互插入文件。</p>
+<p>使用Word和Latex一段时间以后，还是非常推荐大家使用LaTex的（强迫症福音）。毕竟插入的行内、行间公式怎是一个“服服帖帖”就能概括的。更别说切换模板时，只需要改动导言区就ok啦，简直不要太方便。LaTex缺点也有，表格制作很麻烦QAQ…，整体学习成本略高。</p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>https://www.zhihu.com/question/378251607/answer/1160351444</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>论文写作</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>论文中的高频英语词汇</title>
     <url>/2021/08/15/%E8%AE%BA%E6%96%87%E4%B8%AD%E7%9A%84%E9%AB%98%E9%A2%91%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/</url>
     <content><![CDATA[<h2 id="动词">动词</h2>
@@ -1032,6 +1032,119 @@ href="https://zhuanlan.zhihu.com/p/26261872">弹性力学变分提法随记 -
       </tags>
   </entry>
   <entry>
+    <title>通俗的理解何为变分</title>
+    <url>/2021/08/24/%E9%80%9A%E4%BF%97%E7%9A%84%E7%90%86%E8%A7%A3%E4%BD%95%E4%B8%BA%E5%8F%98%E5%88%86/</url>
+    <content><![CDATA[<h2 id="概述">概述</h2>
+<p>我们可以从微分的概念出发理解变分。</p>
+<p><strong>微分</strong>：设有一个自变量 <span
+class="math inline">\(x\in(a,b)\)</span> ，这个自变量的微小变化量记为
+<span
+class="math inline">\(\mathrm{d}x\)</span>，称为微分。此时我们关心的是，当自变量有微小变化
+(<span class="math inline">\(\mathrm{d}x\)</span>) 时，函数 (<span
+class="math inline">\(y(x)\)</span>) 变化了多少。</p>
+<p><strong>变分</strong>：设有一个函数（泛函） <span
+class="math inline">\(I=G(y,y^{\prime})\)</span>，其中 <span
+class="math inline">\(y=y(x)\)</span>
+是另一个函数（定义在某一个函数空间内是不确定的）。这个函数 <span
+class="math inline">\(y\)</span> 的微小变化量记为 <span
+class="math inline">\(\delta
+y\)</span>，称为变分。此时我们关心的是，当函数 <span
+class="math inline">\(y\)</span> 有微小变化时，函数（泛函） <span
+class="math inline">\(I\)</span> 变化了多少。</p>
+<p>简而言之，变分就是微分在函数空间的拓展，其精神内涵是一致的。</p>
+<blockquote>
+<p><strong>泛函</strong>：是将函数空间（无限维空间）映射到数域，就是把一个函数映射成一个数。打个比方，从A点到B点有无数条路径，每一条路径都是一个函数。这无数条路径，每一条函数（路径）的长度都是一个数。从这无数个路径当中选一个路径最短或者最长的，就是求泛函的极值问题。</p>
+</blockquote>
+<h2 id="变分">变分</h2>
+<p>假设我们有两个定点 <span class="math inline">\((a,p)\)</span> 和
+<span class="math inline">\((b,p)\)</span>，连接这两点的任意曲线的方程
+<span class="math inline">\(y=y(x)\)</span> 都将满足如下的边界条件：</p>
+<p><span class="math display">\[
+y(a)=p,\quad y(b)=q
+\]</span></p>
+<p>现在考虑如下形式的定积分：</p>
+<p><span class="math display">\[
+I=\int_{a}^{b} f\left(y, y^{\prime}\right) \mathrm{d} x
+\]</span></p>
+<p>其中 <span class="math inline">\(f(y, y^{\prime})\)</span> 是关于
+<span class="math inline">\(y(x)\)</span> 和它的一阶导数 <span
+class="math inline">\(y^{\prime}(x)\)</span>
+的函数，在实际问题中，我们有时需要找到一个具体的 <span
+class="math inline">\(y(x)\)</span> 使得 <span
+class="math inline">\(I\)</span> 有极值。</p>
+<p>注意在一般的极值问题中，我们考察的是自变量 <span
+class="math inline">\(x\)</span> 的变化：<span
+class="math inline">\(x\)</span>
+取值多少时，函数会有极值。这个新问题的不同之处在于，我们考察的是函数
+<span class="math inline">\(y(x)\)</span> 的变化：<span
+class="math inline">\(y(x)\)</span> 是什么形式时，<span
+class="math inline">\(I\)</span> 会有极值（<span
+class="math inline">\(I\)</span> 称作函数 <span
+class="math inline">\(y(x)\)</span>
+的<strong>泛函</strong>）。然而这两类问题依然有共通之处：当 <span
+class="math inline">\(I\)</span> 取极值时，对 <span
+class="math inline">\(y(x)\)</span> 作微小的变化，<span
+class="math inline">\(I\)</span> 在一级近似下应该保持不变。</p>
+<p><img src="/image/FiniteElement/bianfen.png" width = "50%" height = "50%"  align=center /></p>
+<p>如果 <span class="math inline">\(y(x)\)</span> 有微小改变 <span
+class="math inline">\(\delta y(x)\)</span>（高大上叫法：<span
+class="math inline">\(\delta y(x)\)</span> 称作函数 <span
+class="math inline">\(y(x)\)</span> 的变分），那么 <span
+class="math inline">\(f\left(y, y^{\prime}\right)\)</span>
+的变化为：</p>
+<p><span class="math display">\[
+\delta f=\frac{\partial f}{\partial y} \delta y+\frac{\partial
+f}{\partial y^{\prime}} \delta y^{\prime}
+\]</span></p>
+<p><span class="math inline">\(I\)</span> 相应的变化为：</p>
+<p><span class="math display">\[
+\delta I=\int_{a}^{b}\left[\frac{\partial f}{\partial y} \delta
+y+\frac{\partial f}{\partial y^{\prime}} \delta y^{\prime}\right]
+\mathrm{d} x
+\]</span></p>
+<p>方括号里的第二项可以改写成 <span class="math inline">\(\frac{\partial
+f}{\partial y^{\prime}} \frac{\mathrm{d}(\delta y)}{\mathrm{d}
+x}\)</span>，然后可以进行分部积分:</p>
+<p><span class="math display">\[
+\int_{a}^{b} \frac{\partial f}{\partial y^{\prime}} \delta y^{\prime}
+\mathrm{d} x =\int_{a}^{b} \frac{\partial f}{\partial y^{\prime}}
+\mathrm{d}(\delta y) = \frac{\partial f}{\partial y^{\prime}} \delta y
+{\bigg|} _{a} ^{b} -\int _{a} ^{b} \delta y \frac{\mathrm{d}}{\mathrm{d}
+x}\left(\frac{\partial f}{\partial y^{\prime}}\right) \mathrm{d} x
+\]</span></p>
+<p>由于 <span class="math inline">\(y(x)\)</span> 的边界条件固定，<span
+class="math inline">\(\delta y(a)=\delta
+y(b)=0\)</span>，所以分部积分出来的第一项为零，仅第二项有贡献。上式化简为：</p>
+<p><span class="math display">\[
+\delta I=\int_{a}^{b}\left[\frac{\partial f}{\partial
+y}-\frac{\mathrm{d}}{\mathrm{d}x}\left(\frac{\partial f}{\partial
+y^{\prime}}\right)\right] \delta y(x) \mathrm{d}x
+\]</span></p>
+<p>如果 <span class="math inline">\(I\)</span>
+有极值，对任意满足边界条件的 <span class="math inline">\(\delta
+y(x)\)</span> 都必须有 <span class="math inline">\(\delta
+I=0\)</span>，这就要求：</p>
+<p><span class="math display">\[
+\frac{\partial f}{\partial y}-\frac{\mathrm{d}}{\mathrm{d}
+x}\left(\frac{\partial f}{\partial y^{\prime}}\right)=0
+\]</span></p>
+<p>这便是 <strong>Euler-Lagrange
+方程</strong>，它是变分法的核心定理。有了它，原则上就可以找出所寻求的极值函数
+<span class="math inline">\(y(x)\)</span>。</p>
+<blockquote>
+<p>Euler-Lagrange
+方程的应用：两点间最短路径问题、最速降曲线问题、悬链线等。</p>
+</blockquote>
+<hr />
+<p>本文参考了以下博主分享的文章： * <a
+href="https://zhuanlan.zhihu.com/p/139018146">浅谈变分原理</a> * <a
+href="https://www.zhihu.com/question/30416914">微分、差分和变分的概念有什么异同？</a></p>
+]]></content>
+      <tags>
+        <tag>有限元</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>加权残值伽辽金法</title>
     <url>/2021/08/26/%E5%8A%A0%E6%9D%83%E6%AE%8B%E5%80%BCGalerkin%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h2 id="概述">概述</h2>
@@ -1272,116 +1385,33 @@ class="math inline">\(\mathbf{K}\)</span> 是对称的。</p>
       </tags>
   </entry>
   <entry>
-    <title>通俗的理解何为变分</title>
-    <url>/2021/08/24/%E9%80%9A%E4%BF%97%E7%9A%84%E7%90%86%E8%A7%A3%E4%BD%95%E4%B8%BA%E5%8F%98%E5%88%86/</url>
-    <content><![CDATA[<h2 id="概述">概述</h2>
-<p>我们可以从微分的概念出发理解变分。</p>
-<p><strong>微分</strong>：设有一个自变量 <span
-class="math inline">\(x\in(a,b)\)</span> ，这个自变量的微小变化量记为
-<span
-class="math inline">\(\mathrm{d}x\)</span>，称为微分。此时我们关心的是，当自变量有微小变化
-(<span class="math inline">\(\mathrm{d}x\)</span>) 时，函数 (<span
-class="math inline">\(y(x)\)</span>) 变化了多少。</p>
-<p><strong>变分</strong>：设有一个函数（泛函） <span
-class="math inline">\(I=G(y,y^{\prime})\)</span>，其中 <span
-class="math inline">\(y=y(x)\)</span>
-是另一个函数（定义在某一个函数空间内是不确定的）。这个函数 <span
-class="math inline">\(y\)</span> 的微小变化量记为 <span
-class="math inline">\(\delta
-y\)</span>，称为变分。此时我们关心的是，当函数 <span
-class="math inline">\(y\)</span> 有微小变化时，函数（泛函） <span
-class="math inline">\(I\)</span> 变化了多少。</p>
-<p>简而言之，变分就是微分在函数空间的拓展，其精神内涵是一致的。</p>
-<blockquote>
-<p><strong>泛函</strong>：是将函数空间（无限维空间）映射到数域，就是把一个函数映射成一个数。打个比方，从A点到B点有无数条路径，每一条路径都是一个函数。这无数条路径，每一条函数（路径）的长度都是一个数。从这无数个路径当中选一个路径最短或者最长的，就是求泛函的极值问题。</p>
-</blockquote>
-<h2 id="变分">变分</h2>
-<p>假设我们有两个定点 <span class="math inline">\((a,p)\)</span> 和
-<span class="math inline">\((b,p)\)</span>，连接这两点的任意曲线的方程
-<span class="math inline">\(y=y(x)\)</span> 都将满足如下的边界条件：</p>
+    <title>压电加速度传感器基本原理</title>
+    <url>/2021/06/13/2021-6-13-%E5%8E%8B%E7%94%B5%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<h2 id="压电效应">压电效应</h2>
+<p>某些电介质在沿一定方向上受到外力的作用而变形时，其内部会产生极化现象，同时在它的两个相对表面上出现正负相反的电荷。当外力去掉后，它又会恢复到不带电的状态，这种现象称为正压电效应。当作用力的方向改变时，电荷的极性也随之改变。依据电介质压电效应研制的一类传感器称为压电传感器。</p>
+<h2 id="压电加速度传感器">压电加速度传感器</h2>
+<p>压电式加速度传感器又称压电加速计。
+<strong>工作原理</strong>：在加速度计受振时，质量块加在压电元件上的力也随之变化。当被测振动频率远低于加速度计的固有频率时，则力的变化与被测加速度成正比。压电式加速度传感器利用了某些物质的压电效应，可以将加在自身上的力转化为电荷的变化，即将机械信号转化为电信号，进而通过电信号的转化成功输出或储存被测物体的加速度信号。</p>
+<p>设 <span class="math inline">\(q\)</span> 为释放的电荷，<span
+class="math inline">\(F\)</span> 为作用力，<span
+class="math inline">\(A\)</span> 为电极化面面积，<span
+class="math inline">\(d_x\)</span> 是压电系数，单位为 <span
+class="math inline">\(C/N\)</span>（库伦/牛），则下列关系式成立：</p>
 <p><span class="math display">\[
-y(a)=p,\quad y(b)=q
+\frac{q}{A}=d_x\frac{F}{A}
 \]</span></p>
-<p>现在考虑如下形式的定积分：</p>
+<p>理论与试验研究表明，在一般情况下，表示机械量和电量之间关系的压电方程是很复杂的，但是在压电材料弹性变形范围内，电荷与作用力之间的关系可以用线性映射关系表现出来:</p>
 <p><span class="math display">\[
-I=\int_{a}^{b} f\left(y, y^{\prime}\right) \mathrm{d} x
+\bar{q}=\textbf{D}\bar{F}
 \]</span></p>
-<p>其中 <span class="math inline">\(f(y, y^{\prime})\)</span> 是关于
-<span class="math inline">\(y(x)\)</span> 和它的一阶导数 <span
-class="math inline">\(y^{\prime}(x)\)</span>
-的函数，在实际问题中，我们有时需要找到一个具体的 <span
-class="math inline">\(y(x)\)</span> 使得 <span
-class="math inline">\(I\)</span> 有极值。</p>
-<p>注意在一般的极值问题中，我们考察的是自变量 <span
-class="math inline">\(x\)</span> 的变化：<span
-class="math inline">\(x\)</span>
-取值多少时，函数会有极值。这个新问题的不同之处在于，我们考察的是函数
-<span class="math inline">\(y(x)\)</span> 的变化：<span
-class="math inline">\(y(x)\)</span> 是什么形式时，<span
-class="math inline">\(I\)</span> 会有极值（<span
-class="math inline">\(I\)</span> 称作函数 <span
-class="math inline">\(y(x)\)</span>
-的<strong>泛函</strong>）。然而这两类问题依然有共通之处：当 <span
-class="math inline">\(I\)</span> 取极值时，对 <span
-class="math inline">\(y(x)\)</span> 作微小的变化，<span
-class="math inline">\(I\)</span> 在一级近似下应该保持不变。</p>
-<p><img src="/image/FiniteElement/bianfen.png" width = "50%" height = "50%"  align=center /></p>
-<p>如果 <span class="math inline">\(y(x)\)</span> 有微小改变 <span
-class="math inline">\(\delta y(x)\)</span>（高大上叫法：<span
-class="math inline">\(\delta y(x)\)</span> 称作函数 <span
-class="math inline">\(y(x)\)</span> 的变分），那么 <span
-class="math inline">\(f\left(y, y^{\prime}\right)\)</span>
-的变化为：</p>
-<p><span class="math display">\[
-\delta f=\frac{\partial f}{\partial y} \delta y+\frac{\partial
-f}{\partial y^{\prime}} \delta y^{\prime}
-\]</span></p>
-<p><span class="math inline">\(I\)</span> 相应的变化为：</p>
-<p><span class="math display">\[
-\delta I=\int_{a}^{b}\left[\frac{\partial f}{\partial y} \delta
-y+\frac{\partial f}{\partial y^{\prime}} \delta y^{\prime}\right]
-\mathrm{d} x
-\]</span></p>
-<p>方括号里的第二项可以改写成 <span class="math inline">\(\frac{\partial
-f}{\partial y^{\prime}} \frac{\mathrm{d}(\delta y)}{\mathrm{d}
-x}\)</span>，然后可以进行分部积分:</p>
-<p><span class="math display">\[
-\int_{a}^{b} \frac{\partial f}{\partial y^{\prime}} \delta y^{\prime}
-\mathrm{d} x =\int_{a}^{b} \frac{\partial f}{\partial y^{\prime}}
-\mathrm{d}(\delta y) = \frac{\partial f}{\partial y^{\prime}} \delta y
-{\bigg|} _{a} ^{b} -\int _{a} ^{b} \delta y \frac{\mathrm{d}}{\mathrm{d}
-x}\left(\frac{\partial f}{\partial y^{\prime}}\right) \mathrm{d} x
-\]</span></p>
-<p>由于 <span class="math inline">\(y(x)\)</span> 的边界条件固定，<span
-class="math inline">\(\delta y(a)=\delta
-y(b)=0\)</span>，所以分部积分出来的第一项为零，仅第二项有贡献。上式化简为：</p>
-<p><span class="math display">\[
-\delta I=\int_{a}^{b}\left[\frac{\partial f}{\partial
-y}-\frac{\mathrm{d}}{\mathrm{d}x}\left(\frac{\partial f}{\partial
-y^{\prime}}\right)\right] \delta y(x) \mathrm{d}x
-\]</span></p>
-<p>如果 <span class="math inline">\(I\)</span>
-有极值，对任意满足边界条件的 <span class="math inline">\(\delta
-y(x)\)</span> 都必须有 <span class="math inline">\(\delta
-I=0\)</span>，这就要求：</p>
-<p><span class="math display">\[
-\frac{\partial f}{\partial y}-\frac{\mathrm{d}}{\mathrm{d}
-x}\left(\frac{\partial f}{\partial y^{\prime}}\right)=0
-\]</span></p>
-<p>这便是 <strong>Euler-Lagrange
-方程</strong>，它是变分法的核心定理。有了它，原则上就可以找出所寻求的极值函数
-<span class="math inline">\(y(x)\)</span>。</p>
-<blockquote>
-<p>Euler-Lagrange
-方程的应用：两点间最短路径问题、最速降曲线问题、悬链线等。</p>
-</blockquote>
-<hr />
-<p>本文参考了以下博主分享的文章： * <a
-href="https://zhuanlan.zhihu.com/p/139018146">浅谈变分原理</a> * <a
-href="https://www.zhihu.com/question/30416914">微分、差分和变分的概念有什么异同？</a></p>
+<figure>
+<img src="/image/zhendongceshi/yadianxiaoying1.jpg" alt="yadian" />
+<figcaption aria-hidden="true">yadian</figcaption>
+</figure>
+<p>如上所示，压电型加速度传感器，基座受到的加速度最终会以电压形式输出。电荷及电压输出都与加速度成一定比例关系，因此通过测量电荷和电压即可得出加速度。一般电荷输出称为电荷灵敏度，电压输出称为电压灵敏度。</p>
 ]]></content>
       <tags>
-        <tag>有限元</tag>
+        <tag>振动测试</tag>
       </tags>
   </entry>
   <entry>
@@ -1445,36 +1475,6 @@ href="https://www.zhihu.com/question/30416914">微分、差分和变分的概念
 ]]></content>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>压电加速度传感器基本原理</title>
-    <url>/2021/06/13/2021-6-13-%E5%8E%8B%E7%94%B5%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<h2 id="压电效应">压电效应</h2>
-<p>某些电介质在沿一定方向上受到外力的作用而变形时，其内部会产生极化现象，同时在它的两个相对表面上出现正负相反的电荷。当外力去掉后，它又会恢复到不带电的状态，这种现象称为正压电效应。当作用力的方向改变时，电荷的极性也随之改变。依据电介质压电效应研制的一类传感器称为压电传感器。</p>
-<h2 id="压电加速度传感器">压电加速度传感器</h2>
-<p>压电式加速度传感器又称压电加速计。
-<strong>工作原理</strong>：在加速度计受振时，质量块加在压电元件上的力也随之变化。当被测振动频率远低于加速度计的固有频率时，则力的变化与被测加速度成正比。压电式加速度传感器利用了某些物质的压电效应，可以将加在自身上的力转化为电荷的变化，即将机械信号转化为电信号，进而通过电信号的转化成功输出或储存被测物体的加速度信号。</p>
-<p>设 <span class="math inline">\(q\)</span> 为释放的电荷，<span
-class="math inline">\(F\)</span> 为作用力，<span
-class="math inline">\(A\)</span> 为电极化面面积，<span
-class="math inline">\(d_x\)</span> 是压电系数，单位为 <span
-class="math inline">\(C/N\)</span>（库伦/牛），则下列关系式成立：</p>
-<p><span class="math display">\[
-\frac{q}{A}=d_x\frac{F}{A}
-\]</span></p>
-<p>理论与试验研究表明，在一般情况下，表示机械量和电量之间关系的压电方程是很复杂的，但是在压电材料弹性变形范围内，电荷与作用力之间的关系可以用线性映射关系表现出来:</p>
-<p><span class="math display">\[
-\bar{q}=\textbf{D}\bar{F}
-\]</span></p>
-<figure>
-<img src="/image/zhendongceshi/yadianxiaoying1.jpg" alt="yadian" />
-<figcaption aria-hidden="true">yadian</figcaption>
-</figure>
-<p>如上所示，压电型加速度传感器，基座受到的加速度最终会以电压形式输出。电荷及电压输出都与加速度成一定比例关系，因此通过测量电荷和电压即可得出加速度。一般电荷输出称为电荷灵敏度，电压输出称为电压灵敏度。</p>
-]]></content>
-      <tags>
-        <tag>振动测试</tag>
       </tags>
   </entry>
   <entry>
@@ -1598,6 +1598,70 @@ class="math inline">\(f_s&lt;2f_m\)</span>，延拓后的信号会在频域内�
       </tags>
   </entry>
   <entry>
+    <title>质心_形心_重心</title>
+    <url>/2022/03/08/%E8%B4%A8%E5%BF%83-%E5%BD%A2%E5%BF%83-%E9%87%8D%E5%BF%83/</url>
+    <content><![CDATA[<h2 id="三者存在的条件">三者存在的条件</h2>
+<ul>
+<li><strong>形心</strong>：目标具有几何外形；</li>
+<li><strong>质心</strong>：目标具有几何外形、具有质量；</li>
+<li><strong>重心</strong>：目标具有几何外形、具有质量、身处重力场。</li>
+</ul>
+<h2 id="质心">质心</h2>
+<p><strong>定义</strong>：质心是多质点系统的质量中心。
+<strong>特点</strong>：若对该点施力，系统会沿着力的方向运动、不会旋转。
+<strong>质心位置</strong>：质点的位置对质量取加权平均值，求得质心位置。</p>
+<p>对于离散系统，三维物体的质心位置由下式求得：</p>
+<p><span class="math display">\[
+\bar{x} = \frac{\sum{x_k m_k}}{\sum{m_k}}, \bar{y} = \frac{\sum{y_k
+m_k}}{\sum{m_k}},  \bar{z} = \frac{\sum{z_k m_k}}{\sum{m_k}}
+\]</span></p>
+<p>对于连续系统，上式推广为： <span class="math display">\[
+\bar{x} = \frac{\int_{\Omega}{x \rho} \rm{d}V}{\int_{\Omega}{ \rho}
+\rm{d}V},  \bar{y} = \frac{\int_{\Omega}{y \rho} \rm{d}V}{\int_{\Omega}{
+\rho} \rm{d}V}, \bar{z} = \frac{\int_{\Omega}{z
+\rho}  \rm{d}V}{\int_{\Omega}{ \rho} \rm{d}V}
+\]</span></p>
+<p>其中，<span class="math inline">\(\rho\)</span> 是物体的密度，为
+<span class="math inline">\(x,y,z\)</span> 的函数。上式为在物体所在空间
+<span class="math inline">\(\Omega\)</span> 进行体积分。</p>
+<h2 id="形心">形心</h2>
+<p><strong>定义</strong>：形心又被称为几何中心。形心是将该物体分成“矩”相等的两部分的所有超平面的交点。
+<strong>形心位置</strong>：等价于取加权平均。</p>
+<p>对于二维图形，形心位置由下式给出： <span class="math display">\[
+\bar{x} = \frac{\int{x f(x)}\rm{d}x}{\int{f(x)}\rm{d}x}, \bar{y} =
+\frac{\int{y f(y)}\rm{d}y}{\int{f(y)}\rm{d}y}
+\]</span></p>
+<p>上式分子部分为 <span class="math inline">\(x\)</span> 和 <span
+class="math inline">\(y\)</span> 的一阶矩。其中，<span
+class="math inline">\(f(x)\)</span> 为几何图形的横坐标位于 <span
+class="math inline">\(x\)</span> 点时在 <span
+class="math inline">\(y\)</span> 方向上的长度；<span
+class="math inline">\(f(y)\)</span> 为几何图形的纵坐标位于 <span
+class="math inline">\(y\)</span> 点时在 <span
+class="math inline">\(x\)</span> 方向上的长度。</p>
+<p>上式的等价形式为： <span class="math display">\[
+\bar{x} = \frac{\int_D{x}\rm{d}S}{\int_D{ }\rm{d}S} =
+\frac{\int_D{x}\rm{d}S}{A}
+\]</span></p>
+<p>上式积分表示在几何图形所在二维空间 <span
+class="math inline">\(D\)</span> 进行面积分；<span
+class="math inline">\(A\)</span> 表示二维几何图形的面积。（<span
+class="math inline">\(y\)</span> 方向写法与之类似）</p>
+<p>将该式推广至三维空间可得： <span class="math display">\[
+\bar{x} = \frac{\int_\Omega{x}\rm{d}V}{\int_\Omega{ }\rm{d}V} =
+\frac{\int_\Omega{x}\rm{d}V}{V}
+\]</span></p>
+<p>对比发现，上式积分中如果加入密度项，则得到的质心的坐标。即，<strong>对于密度均匀的物体，其质心和形心重合</strong>。</p>
+<h2 id="重心">重心</h2>
+<p><strong>定义</strong>：重心是重力作用的平均位置。
+<strong>特点</strong>：各质点相对于重心的位置矢量乘上各质点的重力之和(合力矩)为零。</p>
+<p>在均匀的重力场中，重心等同于质心。在非均匀的重力场中，质心和重心往往不在同一点。</p>
+]]></content>
+      <tags>
+        <tag>mechanics</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Maple常用命令</title>
     <url>/2022/04/23/maple%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h2 id="基本操作">基本操作</h2>
@@ -1663,70 +1727,6 @@ href="https://pdc.capub.cn/search.html#/detail?id=yrcnjprstu53gy5l2gvknezqtg5lyo
 ]]></content>
       <tags>
         <tag>Maple</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>质心_形心_重心</title>
-    <url>/2022/03/08/%E8%B4%A8%E5%BF%83-%E5%BD%A2%E5%BF%83-%E9%87%8D%E5%BF%83/</url>
-    <content><![CDATA[<h2 id="三者存在的条件">三者存在的条件</h2>
-<ul>
-<li><strong>形心</strong>：目标具有几何外形；</li>
-<li><strong>质心</strong>：目标具有几何外形、具有质量；</li>
-<li><strong>重心</strong>：目标具有几何外形、具有质量、身处重力场。</li>
-</ul>
-<h2 id="质心">质心</h2>
-<p><strong>定义</strong>：质心是多质点系统的质量中心。
-<strong>特点</strong>：若对该点施力，系统会沿着力的方向运动、不会旋转。
-<strong>质心位置</strong>：质点的位置对质量取加权平均值，求得质心位置。</p>
-<p>对于离散系统，三维物体的质心位置由下式求得：</p>
-<p><span class="math display">\[
-\bar{x} = \frac{\sum{x_k m_k}}{\sum{m_k}}, \bar{y} = \frac{\sum{y_k
-m_k}}{\sum{m_k}},  \bar{z} = \frac{\sum{z_k m_k}}{\sum{m_k}}
-\]</span></p>
-<p>对于连续系统，上式推广为： <span class="math display">\[
-\bar{x} = \frac{\int_{\Omega}{x \rho} \rm{d}V}{\int_{\Omega}{ \rho}
-\rm{d}V},  \bar{y} = \frac{\int_{\Omega}{y \rho} \rm{d}V}{\int_{\Omega}{
-\rho} \rm{d}V}, \bar{z} = \frac{\int_{\Omega}{z
-\rho}  \rm{d}V}{\int_{\Omega}{ \rho} \rm{d}V}
-\]</span></p>
-<p>其中，<span class="math inline">\(\rho\)</span> 是物体的密度，为
-<span class="math inline">\(x,y,z\)</span> 的函数。上式为在物体所在空间
-<span class="math inline">\(\Omega\)</span> 进行体积分。</p>
-<h2 id="形心">形心</h2>
-<p><strong>定义</strong>：形心又被称为几何中心。形心是将该物体分成“矩”相等的两部分的所有超平面的交点。
-<strong>形心位置</strong>：等价于取加权平均。</p>
-<p>对于二维图形，形心位置由下式给出： <span class="math display">\[
-\bar{x} = \frac{\int{x f(x)}\rm{d}x}{\int{f(x)}\rm{d}x}, \bar{y} =
-\frac{\int{y f(y)}\rm{d}y}{\int{f(y)}\rm{d}y}
-\]</span></p>
-<p>上式分子部分为 <span class="math inline">\(x\)</span> 和 <span
-class="math inline">\(y\)</span> 的一阶矩。其中，<span
-class="math inline">\(f(x)\)</span> 为几何图形的横坐标位于 <span
-class="math inline">\(x\)</span> 点时在 <span
-class="math inline">\(y\)</span> 方向上的长度；<span
-class="math inline">\(f(y)\)</span> 为几何图形的纵坐标位于 <span
-class="math inline">\(y\)</span> 点时在 <span
-class="math inline">\(x\)</span> 方向上的长度。</p>
-<p>上式的等价形式为： <span class="math display">\[
-\bar{x} = \frac{\int_D{x}\rm{d}S}{\int_D{ }\rm{d}S} =
-\frac{\int_D{x}\rm{d}S}{A}
-\]</span></p>
-<p>上式积分表示在几何图形所在二维空间 <span
-class="math inline">\(D\)</span> 进行面积分；<span
-class="math inline">\(A\)</span> 表示二维几何图形的面积。（<span
-class="math inline">\(y\)</span> 方向写法与之类似）</p>
-<p>将该式推广至三维空间可得： <span class="math display">\[
-\bar{x} = \frac{\int_\Omega{x}\rm{d}V}{\int_\Omega{ }\rm{d}V} =
-\frac{\int_\Omega{x}\rm{d}V}{V}
-\]</span></p>
-<p>对比发现，上式积分中如果加入密度项，则得到的质心的坐标。即，<strong>对于密度均匀的物体，其质心和形心重合</strong>。</p>
-<h2 id="重心">重心</h2>
-<p><strong>定义</strong>：重心是重力作用的平均位置。
-<strong>特点</strong>：各质点相对于重心的位置矢量乘上各质点的重力之和(合力矩)为零。</p>
-<p>在均匀的重力场中，重心等同于质心。在非均匀的重力场中，质心和重心往往不在同一点。</p>
-]]></content>
-      <tags>
-        <tag>mechanics</tag>
       </tags>
   </entry>
   <entry>
@@ -2187,6 +2187,46 @@ href="https://www.zhihu.com/question/296107343/answer/1625307850">材料力学�
       </tags>
   </entry>
   <entry>
+    <title>数学概念——同伦</title>
+    <url>/2022/07/29/%E6%95%B0%E5%AD%A6%E6%A6%82%E5%BF%B5-%E5%90%8C%E4%BC%A6/</url>
+    <content><![CDATA[<h2 id="概念">概念</h2>
+<p><strong>同伦</strong>：在数学和拓扑学上描述了两个对象间的“连续变化”。</p>
+<p>两个定义在拓扑空间之间的连续函数，如果其中一个能“连续地形变”为另一个，则这两个函数称为同伦的。这样的<strong>形变</strong>称为两个函数之间的同伦。</p>
+<p><img src="/image/homotopy/HomotopySmall.gif" width = "25%"  /></p>
+<h2 id="定义">定义</h2>
+<p>给定两个拓扑空间 <span class="math inline">\(X\)</span> 和 <span
+class="math inline">\(Y\)</span>。考虑两个连续函数 <span
+class="math inline">\(f, g: X\rightarrow
+Y\)</span>，若存在一个定义在空间 <span class="math inline">\(X\)</span>
+与单位区间 <span class="math inline">\([0,1]\)</span>
+的积空间上的连续映射 <span class="math inline">\(H: X \times [0,1]
+\rightarrow Y\)</span> 使得：</p>
+<ul>
+<li><span class="math inline">\(\forall x \in X,
+H(x,0)=f(x)\)</span></li>
+<li><span class="math inline">\(\forall x \in X,
+H(x,1)=g(x)\)</span></li>
+</ul>
+<p>则称 <span class="math inline">\(H\)</span> 是 <span
+class="math inline">\(f, g\)</span> 之间的一个同伦。</p>
+<p>如果我们将 <span class="math inline">\(H\)</span>
+的第二个参数当作时间，这样 <span class="math inline">\(H\)</span>
+相当于描述了一个从 <span class="math inline">\(f\)</span> 到 <span
+class="math inline">\(g\)</span> 的连续形变： 0 时刻得到函数 <span
+class="math inline">\(f\)</span>，1时刻得到函数 <span
+class="math inline">\(g\)</span>， 反之亦然。</p>
+<p><img src="/image/homotopy/Mug_and_Torus_morph.gif" width = "35%"  /></p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a
+href="https://zh.wikipedia.org/wiki/%E5%90%8C%E5%80%AB">维基百科-同伦</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>math</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>非线性方程的延拓法</title>
     <url>/2022/08/01/%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%9A%84%E5%BB%B6%E6%8B%93%E6%B3%95/</url>
     <content><![CDATA[<h2 id="概述">概述</h2>
@@ -2295,46 +2335,6 @@ n}\)</span> 是非奇的</p>
       </tags>
   </entry>
   <entry>
-    <title>数学概念——同伦</title>
-    <url>/2022/07/29/%E6%95%B0%E5%AD%A6%E6%A6%82%E5%BF%B5-%E5%90%8C%E4%BC%A6/</url>
-    <content><![CDATA[<h2 id="概念">概念</h2>
-<p><strong>同伦</strong>：在数学和拓扑学上描述了两个对象间的“连续变化”。</p>
-<p>两个定义在拓扑空间之间的连续函数，如果其中一个能“连续地形变”为另一个，则这两个函数称为同伦的。这样的<strong>形变</strong>称为两个函数之间的同伦。</p>
-<p><img src="/image/homotopy/HomotopySmall.gif" width = "25%"  /></p>
-<h2 id="定义">定义</h2>
-<p>给定两个拓扑空间 <span class="math inline">\(X\)</span> 和 <span
-class="math inline">\(Y\)</span>。考虑两个连续函数 <span
-class="math inline">\(f, g: X\rightarrow
-Y\)</span>，若存在一个定义在空间 <span class="math inline">\(X\)</span>
-与单位区间 <span class="math inline">\([0,1]\)</span>
-的积空间上的连续映射 <span class="math inline">\(H: X \times [0,1]
-\rightarrow Y\)</span> 使得：</p>
-<ul>
-<li><span class="math inline">\(\forall x \in X,
-H(x,0)=f(x)\)</span></li>
-<li><span class="math inline">\(\forall x \in X,
-H(x,1)=g(x)\)</span></li>
-</ul>
-<p>则称 <span class="math inline">\(H\)</span> 是 <span
-class="math inline">\(f, g\)</span> 之间的一个同伦。</p>
-<p>如果我们将 <span class="math inline">\(H\)</span>
-的第二个参数当作时间，这样 <span class="math inline">\(H\)</span>
-相当于描述了一个从 <span class="math inline">\(f\)</span> 到 <span
-class="math inline">\(g\)</span> 的连续形变： 0 时刻得到函数 <span
-class="math inline">\(f\)</span>，1时刻得到函数 <span
-class="math inline">\(g\)</span>， 反之亦然。</p>
-<p><img src="/image/homotopy/Mug_and_Torus_morph.gif" width = "35%"  /></p>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a
-href="https://zh.wikipedia.org/wiki/%E5%90%8C%E5%80%AB">维基百科-同伦</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>math</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Geometrical Nonlinear and Material Nonlinear</title>
     <url>/2022/08/02/geometricalNonlinearAndMaterialNonlinear/</url>
     <content><![CDATA[<h2 id="geometrical-nonlinear">Geometrical Nonlinear</h2>
@@ -2352,68 +2352,6 @@ https://www.researchgate.net/post/What_is_Geomertical_Nonlinearity/2</li>
 ]]></content>
       <tags>
         <tag>mechanics</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown 标记语言常用命令</title>
-    <url>/2021/06/12/Markdown%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="markdown基本语法">Markdown基本语法</h1>
-<h2 id="标题">标题</h2>
-<p>添加标题：在文本前加<code>#</code>，<code>#</code>的数目代表标题的级别，最高支持六级标题
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure> ## 字体 斜体：<code>*被添加斜体的文本*</code>
-加粗：<code>**被加粗文本**</code>
-倾斜加粗：<code>***被倾斜加粗的文本***</code>
-加删除线：<code>~~被加删除线的文本~~</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*被添加斜体的文本*  </span><br><span class="line">**被加粗文本**</span><br><span class="line">***被倾斜加粗的文本***</span><br><span class="line">~~被加删除线的文本~~</span><br></pre></td></tr></table></figure> 效果演示：
-<em>被添加斜体的文本</em> <strong>被加粗文本</strong>
-<strong><em>被倾斜加粗的文本</em></strong>
-<del>被加删除线的文本</del></p>
-<h2 id="分割线">分割线</h2>
-<p>在空行内输入<code>---</code>或<code>___</code>或<code>***</code>即可，符号中间也可插入空格。效果如下：</p>
-<hr />
-<h2 id="引用">引用</h2>
-<p>在被引用的文字前加<code>&gt;</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;这是一段引用内容，它很长很长很长很长很长很长很长------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">&gt;</span><br><span class="line">&gt;这是第二段引用内容，它很短</span><br></pre></td></tr></table></figure> 效果如下：
-&gt;这是一段引用内容，它很长很长很长很长很长很长很长------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-&gt; &gt;这是第二段引用内容，它很短</p>
-<p>也可以控制引用的级别，<code>&gt;</code>的个数代表级别 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;一级文本：对于命途多舛的人生，以及渺茫的时间，阻挡在我们之间这一事实，我们无可奈何。</span><br><span class="line">&gt;&gt;二级文本：彼方为谁，无我有问。九月露湿，待君之前。</span><br><span class="line">&gt;&gt;&gt;三级文本：但盼风雨来、能留你在此;即使天无雨、我亦留此地。</span><br></pre></td></tr></table></figure>
-效果如下：
-&gt;一级文本：对于命途多舛的人生，以及渺茫的时间，阻挡在我们之间这一事实，我们无可奈何。
-&gt;&gt;二级文本：彼方为谁，无我有问。九月露湿，待君之前。
-&gt;&gt;&gt;三级文本：但盼风雨来、能留你在此;即使天无雨、我亦留此地。 ##
-列表 <strong>列表分为无序列表和有序列表。</strong>
-无序列表使用<code>-</code>或<code>*</code>或<code>+</code>进行标记，标记和文本之间要有空格，不同标记可以混用，效果相同。
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- Harry James Potter</span><br><span class="line">* Hermione Jean Granger</span><br><span class="line">+ Ronald Bilius &quot;Ron&quot; Weasley</span><br></pre></td></tr></table></figure> 效果演示： - Harry James Potter * Hermione Jean Granger +
-Ronald Bilius "Ron" Weasley</p>
-<p>有序列表使用<code>1.</code>，即任意数字加英文句号进行标记，并且数字不影响最终编译效果。
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. Albus Percival Wulfric Brian Dumbledore</span><br><span class="line">8. Severus Snape</span><br><span class="line">10. Minerva McGonagall</span><br></pre></td></tr></table></figure> 1. Albus Percival Wulfric Brian Dumbledore 8. Severus
-Snape 10. Minerva McGonagall</p>
-<p><strong>列表可以嵌套</strong>
-在上一级与下一级列表之间敲三个空格即可。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* Lord Voldemort</span><br><span class="line">    * Lupin</span><br><span class="line">    * Dobby</span><br><span class="line">        * Winky</span><br><span class="line">        * Tom Riddle </span><br></pre></td></tr></table></figure> 效果演示： * Lord
-Voldemort * Lupin * Dobby * Winky * Tom Riddle</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. Lord Voldemort</span><br><span class="line">    1. Lupin</span><br><span class="line">    1. Dobby</span><br><span class="line">        1. Winky</span><br><span class="line">        1. Tom Riddle </span><br></pre></td></tr></table></figure>
-<p>效果演示： 1. Lord Voldemort 1. Lupin 1. Dobby 1. Winky 1. Tom
-Riddle</p>
-<p><strong>列表包含多个段落</strong>
-列表包含多个段落，每个项目下的段落都缩进4个空格或一个制表符。
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   Harry Potter, Protagonist, is a thin, black-haired youth wearing glasses on his forehead with a lightning-shaped scar, just as suddenly a short time overstating the children who, like flavor is not good. </span><br><span class="line">    He is a Magic School fifth-grade students, but also a man of Hogwarts. Since Voldemort after the resurrection, the scar on his forehead to his burning often endless.</span><br></pre></td></tr></table></figure> 效果演示： * Harry Potter, Protagonist, is a thin,
-black-haired youth wearing glasses on his forehead with a
-lightning-shaped scar, just as suddenly a short time overstating the
-children who, like flavor is not good. He is a Magic School fifth-grade
-students, but also a man of Hogwarts. Since Voldemort after the
-resurrection, the scar on his forehead to his burning often endless.</p>
-<h2 id="代码">代码</h2>
-<p><strong>在行内插入简短的代码</strong>
-把代码插入<code>``</code>之间即可 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">看起来`codes and codes`是这样的</span><br></pre></td></tr></table></figure> 效果演示：
-看起来<code>codes and codes</code>是这样的</p>
-<p><strong>在行间插入代码块</strong>
-把代码块放入两行<code>```</code>之间(<code>\</code>是为了防止转义，实际写作中是没有的)
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\```</span><br><span class="line">start</span><br><span class="line">codes and codes</span><br><span class="line">end</span><br><span class="line">\```</span><br></pre></td></tr></table></figure> 效果演示： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">start</span><br><span class="line">codes and codes</span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
-<h2 id="强制空行">强制空行</h2>
-<p>在空行内使用<code>\</code>即可 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">第一段</span><br><span class="line">\</span><br><span class="line">\</span><br><span class="line">第二段</span><br></pre></td></tr></table></figure> 效果演示： 第一段<br />
-<br />
-第二段</p>
-]]></content>
-      <tags>
-        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -2508,6 +2446,68 @@ class="math inline">\(\mathrm{arctan}(-\frac{b_n}{a_n})\)</span>为复数的幅�
 ]]></content>
       <tags>
         <tag>振动测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown 标记语言常用命令</title>
+    <url>/2021/06/12/Markdown%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="markdown基本语法">Markdown基本语法</h1>
+<h2 id="标题">标题</h2>
+<p>添加标题：在文本前加<code>#</code>，<code>#</code>的数目代表标题的级别，最高支持六级标题
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure> ## 字体 斜体：<code>*被添加斜体的文本*</code>
+加粗：<code>**被加粗文本**</code>
+倾斜加粗：<code>***被倾斜加粗的文本***</code>
+加删除线：<code>~~被加删除线的文本~~</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*被添加斜体的文本*  </span><br><span class="line">**被加粗文本**</span><br><span class="line">***被倾斜加粗的文本***</span><br><span class="line">~~被加删除线的文本~~</span><br></pre></td></tr></table></figure> 效果演示：
+<em>被添加斜体的文本</em> <strong>被加粗文本</strong>
+<strong><em>被倾斜加粗的文本</em></strong>
+<del>被加删除线的文本</del></p>
+<h2 id="分割线">分割线</h2>
+<p>在空行内输入<code>---</code>或<code>___</code>或<code>***</code>即可，符号中间也可插入空格。效果如下：</p>
+<hr />
+<h2 id="引用">引用</h2>
+<p>在被引用的文字前加<code>&gt;</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;这是一段引用内容，它很长很长很长很长很长很长很长------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">&gt;</span><br><span class="line">&gt;这是第二段引用内容，它很短</span><br></pre></td></tr></table></figure> 效果如下：
+&gt;这是一段引用内容，它很长很长很长很长很长很长很长------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+&gt; &gt;这是第二段引用内容，它很短</p>
+<p>也可以控制引用的级别，<code>&gt;</code>的个数代表级别 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;一级文本：对于命途多舛的人生，以及渺茫的时间，阻挡在我们之间这一事实，我们无可奈何。</span><br><span class="line">&gt;&gt;二级文本：彼方为谁，无我有问。九月露湿，待君之前。</span><br><span class="line">&gt;&gt;&gt;三级文本：但盼风雨来、能留你在此;即使天无雨、我亦留此地。</span><br></pre></td></tr></table></figure>
+效果如下：
+&gt;一级文本：对于命途多舛的人生，以及渺茫的时间，阻挡在我们之间这一事实，我们无可奈何。
+&gt;&gt;二级文本：彼方为谁，无我有问。九月露湿，待君之前。
+&gt;&gt;&gt;三级文本：但盼风雨来、能留你在此;即使天无雨、我亦留此地。 ##
+列表 <strong>列表分为无序列表和有序列表。</strong>
+无序列表使用<code>-</code>或<code>*</code>或<code>+</code>进行标记，标记和文本之间要有空格，不同标记可以混用，效果相同。
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- Harry James Potter</span><br><span class="line">* Hermione Jean Granger</span><br><span class="line">+ Ronald Bilius &quot;Ron&quot; Weasley</span><br></pre></td></tr></table></figure> 效果演示： - Harry James Potter * Hermione Jean Granger +
+Ronald Bilius "Ron" Weasley</p>
+<p>有序列表使用<code>1.</code>，即任意数字加英文句号进行标记，并且数字不影响最终编译效果。
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. Albus Percival Wulfric Brian Dumbledore</span><br><span class="line">8. Severus Snape</span><br><span class="line">10. Minerva McGonagall</span><br></pre></td></tr></table></figure> 1. Albus Percival Wulfric Brian Dumbledore 8. Severus
+Snape 10. Minerva McGonagall</p>
+<p><strong>列表可以嵌套</strong>
+在上一级与下一级列表之间敲三个空格即可。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* Lord Voldemort</span><br><span class="line">    * Lupin</span><br><span class="line">    * Dobby</span><br><span class="line">        * Winky</span><br><span class="line">        * Tom Riddle </span><br></pre></td></tr></table></figure> 效果演示： * Lord
+Voldemort * Lupin * Dobby * Winky * Tom Riddle</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. Lord Voldemort</span><br><span class="line">    1. Lupin</span><br><span class="line">    1. Dobby</span><br><span class="line">        1. Winky</span><br><span class="line">        1. Tom Riddle </span><br></pre></td></tr></table></figure>
+<p>效果演示： 1. Lord Voldemort 1. Lupin 1. Dobby 1. Winky 1. Tom
+Riddle</p>
+<p><strong>列表包含多个段落</strong>
+列表包含多个段落，每个项目下的段落都缩进4个空格或一个制表符。
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*   Harry Potter, Protagonist, is a thin, black-haired youth wearing glasses on his forehead with a lightning-shaped scar, just as suddenly a short time overstating the children who, like flavor is not good. </span><br><span class="line">    He is a Magic School fifth-grade students, but also a man of Hogwarts. Since Voldemort after the resurrection, the scar on his forehead to his burning often endless.</span><br></pre></td></tr></table></figure> 效果演示： * Harry Potter, Protagonist, is a thin,
+black-haired youth wearing glasses on his forehead with a
+lightning-shaped scar, just as suddenly a short time overstating the
+children who, like flavor is not good. He is a Magic School fifth-grade
+students, but also a man of Hogwarts. Since Voldemort after the
+resurrection, the scar on his forehead to his burning often endless.</p>
+<h2 id="代码">代码</h2>
+<p><strong>在行内插入简短的代码</strong>
+把代码插入<code>``</code>之间即可 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">看起来`codes and codes`是这样的</span><br></pre></td></tr></table></figure> 效果演示：
+看起来<code>codes and codes</code>是这样的</p>
+<p><strong>在行间插入代码块</strong>
+把代码块放入两行<code>```</code>之间(<code>\</code>是为了防止转义，实际写作中是没有的)
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\```</span><br><span class="line">start</span><br><span class="line">codes and codes</span><br><span class="line">end</span><br><span class="line">\```</span><br></pre></td></tr></table></figure> 效果演示： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">start</span><br><span class="line">codes and codes</span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
+<h2 id="强制空行">强制空行</h2>
+<p>在空行内使用<code>\</code>即可 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">第一段</span><br><span class="line">\</span><br><span class="line">\</span><br><span class="line">第二段</span><br></pre></td></tr></table></figure> 效果演示： 第一段<br />
+<br />
+第二段</p>
+]]></content>
+      <tags>
+        <tag>Markdown</tag>
       </tags>
   </entry>
 </search>
