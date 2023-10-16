@@ -1,82 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>振动传感器主要性能指标</title>
-    <url>/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</url>
-    <content><![CDATA[<h2 id="灵敏度">灵敏度</h2>
-<p>灵敏度是指沿传感器的测量方向，对应于每一单位简谐机械量的输入，其开路时电信号的输出，即输出比输入。</p>
-<ul>
-<li>输入的机械量：<span class="math inline">\(x=X\sin(\omega t
-+\alpha)\)</span></li>
-<li>输出的电信号：<span class="math inline">\(e=E\sin (\omega t+ \alpha
-- \theta)\)</span>，<span class="math inline">\(\theta\)</span>
-为相移，即输出的电信号<span
-class="math inline">\(e\)</span>对被测机械量<span
-class="math inline">\(x\)</span>的相位滞后</li>
-<li>灵敏度：<span class="math inline">\(s=E/X\)</span> （电信号单位 /
-机械量单位）</li>
-</ul>
-<p>通常，<span class="math inline">\(X\)</span>
-是位移、速度、加速度、力、应变等，<span class="math inline">\(E\)</span>
-是电压、电荷等。</p>
-<h2 id="分辨率">分辨率</h2>
-<p>分辨率是指传感器可感受到的被测量的最小变化的能力。</p>
-<p>也就是说，如果输入量从某一非零值缓慢地变化，但变化值未超过某一数值
-<span class="math inline">\(\Delta X\)</span> 时，传感器的输出变化量
-<span class="math inline">\(\Delta E =0\)</span>
-，即传感器对此输入量的变化是分辨不出来的。只有当输入量的变化超过分辨率时，其输出才会发生变化。</p>
-<p><span class="math inline">\(\Delta X\)</span>
-越小，灵敏度越高，分辨率也越高。灵敏度越高，传感器的信噪比将相应下降，这将降低测量结果的精度，故应综合考虑。</p>
-<h2 id="线性度和线性范围">线性度和线性范围</h2>
-<p>通常情况下，传感器的实际静态特性输出是条曲线而非直线。在实际工作中，为使仪表具有均匀刻度的读数，常用一条拟合直线近似地代表实际的特性曲线。</p>
-<p><strong>线性度</strong>（非线性误差）<span
-class="math inline">\(\gamma\)</span>
-就是这个近似程度的一个性能指标，定义为在全量程范围内实际特性曲线与拟合直线之间的最大偏差值与满量程输出值之比。</p>
-<p><span class="math display">\[
-\gamma=\frac{ \Delta E }{  E_{max} -  E_{min} } \times 100 \\%
-\]</span></p>
-<p><strong>线性范围</strong>是指传感器测量量与实际被测量之间保持近似线性关系的范围。</p>
-<p><img src="/image/zhendongceshi/xianxingdu.png" width = "60%" height = "60%"  align=center /></p>
-<h2 id="频率范围">频率范围</h2>
-<p><strong>频率范围</strong>是指传感器的灵敏度随频率的变化量不超出某一给定的误差限的频率范围（频率上限和下限）。传感器的频率范围取决于：
-1. 机械接收部分的频率特性。 1. 机电变换部分和所用二次仪表的频率特性。 1.
-传感器的安装条件也影响频率上限。</p>
-<p>备注： * 在制定测量方案时，首先要看传感器的频率范围是否满足测量的要求
-* 压电式加速度传感器具有较宽的频率范围，而且频率上限也比较高 *
-电阻式、压阻式和伺服式等三种加速度传感器都具有零频率响应，其中压阻式也具有较高的上限频率</p>
-<h2 id="固有频率与安装谐振频率">固有频率与安装谐振频率</h2>
-<p>对于惯性式接收传感器，其机械接收部分是由质量块、阻尼器、弹簧构成的单自由度振动系统，其质量、阻尼、刚度分别为
-<span class="math inline">\(m, c,
-k\)</span>。该振系统无阻尼自由振动的频率 $ _n = $
-被称为传感器的<strong>固有频率</strong>。</p>
-<p>传感器产生共振时的最低频率称为<strong>安装谐振频率</strong>，若安装刚度是有限的（实际上也很难达到无穷大），则其对传感器的接收特性将有较大影响。</p>
-<h2 id="工作范围">工作范围</h2>
-<p>频率范围和线性范围一起决定了传感器的<strong>工作范围</strong>。工作范围可以从诺谟图（Nomogram）中得到</p>
-<p><img src="/image/zhendongceshi/nuomotu.jpg" width = "50%" height = "50%"  align=center /></p>
-<h2 id="横向灵敏度与方向特性">横向灵敏度与方向特性</h2>
-<p>横向灵敏度主要是由于最大灵敏度轴与传感器的几何轴线不重合而引起的。这是由于传感器加工、安装上的间歇误差等条件造成的。最大灵敏度的轴线与几何轴线间的夹角为
-<span
-class="math inline">\(\theta\)</span>，<strong>最大的横向灵敏度</strong>表示为：</p>
-<p><span class="math display">\[
-s_t=\tan \theta
-\]</span></p>
-<p>备注： * 加速度传感器的外壳上的红点被用来表示横向灵敏度的方向。 *
-一般令红点和传感器中心的连线，与振幅最大的非被测振动方向垂直，以减少测量误差。</p>
-<h2 id="动态范围">动态范围</h2>
-<p><strong>动态范围</strong>是指某一输入机械量的幅值范围（用分贝表示），该范围内传感器的灵敏度随输入机械量幅值的变化量不超出某一给定的误差限。</p>
-<p><span class="math display">\[
-D=20 \lg \frac{X_{max}}{X_{min}}
-\]</span></p>
-<p>动态范围越大，说明传感器对幅值变化的适应能力越强。比如 <span
-class="math inline">\(D=80dB\)</span>，则幅值上限与下限之比达10000倍。传感器的量程即是指其幅值上限与下限值的代数差。</p>
-<h2 id="其他">其他</h2>
-<p>传感器的其它性能参数还包括其质量、重复性、稳定性、输入输出阻抗、阻尼、迟滞、零飘、过载能力、以及它的工作环境条件等。</p>
-]]></content>
-      <tags>
-        <tag>振动测试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>实验模态分析的基本原理与主要过程</title>
     <url>/2021/06/14/%E5%AE%9E%E9%AA%8C%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8E%E4%B8%BB%E8%A6%81%E8%BF%87%E7%A8%8B/</url>
     <content><![CDATA[<h2 id="基本概念">基本概念</h2>
@@ -198,49 +122,370 @@ id="实验传递矩阵和模态参数的关系">实验、传递矩阵和模态�
       </tags>
   </entry>
   <entry>
-    <title>Levenberg–Marquardt Algorithm</title>
-    <url>/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/</url>
-    <content><![CDATA[<h2 id="问题背景">问题背景</h2>
-<p>在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到
-<strong>Levenberg–Marquardt 算法</strong>。</p>
-<h2 id="levenbergmarquardt-算法">Levenberg–Marquardt 算法</h2>
-<p>Levenberg–Marquardt
-算法是一种最小二乘（模型拟合）算法。它可以解决以下问题：</p>
-<p><span class="math display">\[
-\min_{x}f(x)= \min_{x} \\| F(x) \\|^2_2 = \min_{x} \sum_i F_i^2(x)
-\]</span></p>
-<p>即求一个 <span class="math inline">\(x\)</span> 使 <span
-class="math inline">\(f(x)\)</span> 最小。</p>
-<p>1944年<a href="https://doi.org/10.1090/qam/10666">Kenneth
-Levenberg</a>首次提出该算法，1963年<a
-href="https://doi.org/10.1137/0111030">Donald
-Marquardt</a>也发现了该算法，后来这种算法被称作Levenberg–Marquardt。</p>
-<p>关于该算法的详细原理和实现可以参考 Flannery 等人的著作 <a
-href="http://www.nrbook.com/a/bookcpdf.php">Numerical recipes in
-C</a>。</p>
-<h2 id="levenbergmarquardt-算法与非线性方程组求根">Levenberg–Marquardt
-算法与非线性方程组求根</h2>
-<p>求解非线性方程组即求解一组 <span
-class="math inline">\(\bar{x}\)</span> 令其满足 <span
-class="math inline">\(\bar{F}(x)=0\)</span>。显然非线性方程组的根可以令上式成立。</p>
-<p>因此，给定初始值，通过Levenberg–Marquardt 算法求得的 <span
-class="math inline">\(\bar{x}\)</span> 就是非线性方程组 <span
-class="math inline">\(\bar{x}\)</span> 的一组近似根（初始值附近）。</p>
-<p>非线性方程组的根显然不止一组，而通过该方法只能得到距离初始值较近的根，要想得到全部的根，需要配合其他算法。</p>
-<h2 id="参考文献">参考文献</h2>
+    <title>振动传感器主要性能指标</title>
+    <url>/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</url>
+    <content><![CDATA[<h2 id="灵敏度">灵敏度</h2>
+<p>灵敏度是指沿传感器的测量方向，对应于每一单位简谐机械量的输入，其开路时电信号的输出，即输出比输入。</p>
 <ul>
-<li>Levenberg, K. (1944). A method for the solution of certain
-non-linear problems in least squares. <em>Quarterly of applied
-mathematics</em>, 2(2), 164-168.</li>
-<li>Mardquardt, D. W. (1963). An algorithm for least square estimation
-of parameters. <em>J. Soc. Ind. Appl. Math</em>, 11, 431-441.</li>
-<li>Flannery, B. P., Press, W. H., Teukolsky, S. A., &amp; Vetterling,
-W. (1992). Numerical recipes in C. <em>Press Syndicate of the University
-of Cambridge, New York</em>, 24(78), 36.</li>
+<li>输入的机械量：<span class="math inline">\(x=X\sin(\omega t
++\alpha)\)</span></li>
+<li>输出的电信号：<span class="math inline">\(e=E\sin (\omega t+ \alpha
+- \theta)\)</span>，<span class="math inline">\(\theta\)</span>
+为相移，即输出的电信号<span
+class="math inline">\(e\)</span>对被测机械量<span
+class="math inline">\(x\)</span>的相位滞后</li>
+<li>灵敏度：<span class="math inline">\(s=E/X\)</span> （电信号单位 /
+机械量单位）</li>
 </ul>
+<p>通常，<span class="math inline">\(X\)</span>
+是位移、速度、加速度、力、应变等，<span class="math inline">\(E\)</span>
+是电压、电荷等。</p>
+<h2 id="分辨率">分辨率</h2>
+<p>分辨率是指传感器可感受到的被测量的最小变化的能力。</p>
+<p>也就是说，如果输入量从某一非零值缓慢地变化，但变化值未超过某一数值
+<span class="math inline">\(\Delta X\)</span> 时，传感器的输出变化量
+<span class="math inline">\(\Delta E =0\)</span>
+，即传感器对此输入量的变化是分辨不出来的。只有当输入量的变化超过分辨率时，其输出才会发生变化。</p>
+<p><span class="math inline">\(\Delta X\)</span>
+越小，灵敏度越高，分辨率也越高。灵敏度越高，传感器的信噪比将相应下降，这将降低测量结果的精度，故应综合考虑。</p>
+<h2 id="线性度和线性范围">线性度和线性范围</h2>
+<p>通常情况下，传感器的实际静态特性输出是条曲线而非直线。在实际工作中，为使仪表具有均匀刻度的读数，常用一条拟合直线近似地代表实际的特性曲线。</p>
+<p><strong>线性度</strong>（非线性误差）<span
+class="math inline">\(\gamma\)</span>
+就是这个近似程度的一个性能指标，定义为在全量程范围内实际特性曲线与拟合直线之间的最大偏差值与满量程输出值之比。</p>
+<p><span class="math display">\[
+\gamma=\frac{ \Delta E }{  E_{max} -  E_{min} } \times 100 \\%
+\]</span></p>
+<p><strong>线性范围</strong>是指传感器测量量与实际被测量之间保持近似线性关系的范围。</p>
+<p><img src="/image/zhendongceshi/xianxingdu.png" width = "60%" height = "60%"  align=center /></p>
+<h2 id="频率范围">频率范围</h2>
+<p><strong>频率范围</strong>是指传感器的灵敏度随频率的变化量不超出某一给定的误差限的频率范围（频率上限和下限）。传感器的频率范围取决于：
+1. 机械接收部分的频率特性。 1. 机电变换部分和所用二次仪表的频率特性。 1.
+传感器的安装条件也影响频率上限。</p>
+<p>备注： * 在制定测量方案时，首先要看传感器的频率范围是否满足测量的要求
+* 压电式加速度传感器具有较宽的频率范围，而且频率上限也比较高 *
+电阻式、压阻式和伺服式等三种加速度传感器都具有零频率响应，其中压阻式也具有较高的上限频率</p>
+<h2 id="固有频率与安装谐振频率">固有频率与安装谐振频率</h2>
+<p>对于惯性式接收传感器，其机械接收部分是由质量块、阻尼器、弹簧构成的单自由度振动系统，其质量、阻尼、刚度分别为
+<span class="math inline">\(m, c,
+k\)</span>。该振系统无阻尼自由振动的频率 $ _n = $
+被称为传感器的<strong>固有频率</strong>。</p>
+<p>传感器产生共振时的最低频率称为<strong>安装谐振频率</strong>，若安装刚度是有限的（实际上也很难达到无穷大），则其对传感器的接收特性将有较大影响。</p>
+<h2 id="工作范围">工作范围</h2>
+<p>频率范围和线性范围一起决定了传感器的<strong>工作范围</strong>。工作范围可以从诺谟图（Nomogram）中得到</p>
+<p><img src="/image/zhendongceshi/nuomotu.jpg" width = "50%" height = "50%"  align=center /></p>
+<h2 id="横向灵敏度与方向特性">横向灵敏度与方向特性</h2>
+<p>横向灵敏度主要是由于最大灵敏度轴与传感器的几何轴线不重合而引起的。这是由于传感器加工、安装上的间歇误差等条件造成的。最大灵敏度的轴线与几何轴线间的夹角为
+<span
+class="math inline">\(\theta\)</span>，<strong>最大的横向灵敏度</strong>表示为：</p>
+<p><span class="math display">\[
+s_t=\tan \theta
+\]</span></p>
+<p>备注： * 加速度传感器的外壳上的红点被用来表示横向灵敏度的方向。 *
+一般令红点和传感器中心的连线，与振幅最大的非被测振动方向垂直，以减少测量误差。</p>
+<h2 id="动态范围">动态范围</h2>
+<p><strong>动态范围</strong>是指某一输入机械量的幅值范围（用分贝表示），该范围内传感器的灵敏度随输入机械量幅值的变化量不超出某一给定的误差限。</p>
+<p><span class="math display">\[
+D=20 \lg \frac{X_{max}}{X_{min}}
+\]</span></p>
+<p>动态范围越大，说明传感器对幅值变化的适应能力越强。比如 <span
+class="math inline">\(D=80dB\)</span>，则幅值上限与下限之比达10000倍。传感器的量程即是指其幅值上限与下限值的代数差。</p>
+<h2 id="其他">其他</h2>
+<p>传感器的其它性能参数还包括其质量、重复性、稳定性、输入输出阻抗、阻尼、迟滞、零飘、过载能力、以及它的工作环境条件等。</p>
 ]]></content>
       <tags>
-        <tag>math</tag>
+        <tag>振动测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>快速傅里叶变换（FFT）基本原理</title>
+    <url>/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<h2 id="引言">引言</h2>
+<p>快速傅里叶变换（FFT）是离散傅里叶变换（DFT）的加速算法，而DFT则是将连续的傅里叶变换离散化（在时域和频域离散），连续傅里叶变换可由傅里叶展开式推导得出。</p>
+<p>正向逻辑为： 傅里叶展开式 <span
+class="math inline">\(\rightarrow\)</span> 推导得到 <span
+class="math inline">\(\rightarrow\)</span> 连续傅里叶变换对 <span
+class="math inline">\(\rightarrow\)</span> 离散后得到 <span
+class="math inline">\(\rightarrow\)</span> 离散傅里叶变换 <span
+class="math inline">\(\rightarrow\)</span> 开发加速算法 <span
+class="math inline">\(\rightarrow\)</span> 快速傅里叶变换 ## 傅里叶变换
+### 三角函数形式 对于一个周期为 <span class="math inline">\(T\)</span>
+的信号 <span class="math inline">\(x(t)\)</span>，其基频为 <span
+class="math inline">\(f_1=1/T\)</span>。对 <span
+class="math inline">\(x(t)\)</span> 进行傅里叶展开：</p>
+<p><span class="math display">\[
+x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ a_n \cos\left(2\pi n
+f_1 t \right) + b_n \sin\left(2\pi n f_1 t \right) \right]
+\]</span></p>
+<p>上式中的 <span class="math inline">\(a_n\)</span> 和 <span
+class="math inline">\(b_n\)</span> 是傅里叶系数：</p>
+<p><span class="math display">\[
+a_n = \frac{2}{T} \int^T_ 0 x(t) \cos \left( 2\pi n f_1 t \right) dt
+\]</span></p>
+<p><span class="math display">\[
+b_n = \frac{2}{T} \int^T_ 0 x(t) \sin \left( 2\pi n f_1 t \right) dt
+\]</span></p>
+<h3 id="指数形式">指数形式</h3>
+<p>根据欧拉公式，可以将傅里叶变换式写为指数形式，指数形式看起来更为简洁，利于推导。
+根据欧拉公式，有以下变换：</p>
+<p><span class="math display">\[
+\cos \left( 2\pi n f_1 t \right) = \frac{1}{2} \left[ e^{j2\pi n f_1 t}
++  e^{-j2\pi n f_1 t} \right]
+\]</span></p>
+<p><span class="math display">\[
+\sin \left( 2\pi n f_1 t \right) = \frac{1}{2j} \left[ e^{j2\pi n f_1 t}
+-  e^{-j2\pi n f_1 t} \right]
+\]</span></p>
+<blockquote>
+<p>欧拉公式：<span class="math inline">\(e^{ix} = \cos x + i \sin
+x\)</span></p>
+</blockquote>
+<p>带入傅里叶展开式，可得：</p>
+<p><span class="math display">\[
+x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ \frac{a_n}{2} \left[
+e^{ j 2\pi n f_1 t } + e^{ -j 2\pi n f_1 t } \right] + \frac{b_n}{2j}
+\left[ e^{ j 2\pi n f_1 t } - e^{ -j 2\pi n f_1 t } \right]  \right]
+\]</span></p>
+<p>合并同类项可得：</p>
+<p><span class="math display">\[
+x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ \frac{a_n - j
+b_n}{2}  e^{ j 2\pi n f_1 t }  + \frac{a_n + b_n}{2}  e^{ -j 2\pi n f_1
+t } \right]
+\]</span></p>
+<p>观察指数项前的系数，令</p>
+<p><span class="math display">\[
+X(2\pi n f_1) = \frac{a_n - j b_n}{2}
+\]</span></p>
+<p>则有：</p>
+<p><span class="math display">\[
+X(-2\pi n f_1) = \frac{a_n + j b_n}{2}
+\]</span></p>
+<p>发现指数项前的系数具有奇偶性，利用奇偶性并改变求和符号的下限，将展开式改写为：</p>
+<p><span class="math display">\[
+x(t) = \sum^{\infty}_ {n=-\infty}  X(2\pi n f_1)   e^{ j 2\pi n f_1 t
+}   
+\]</span></p>
+<p>注意，此时求和符号的下限由一变为负无穷，<span class="math inline">\(1
+\rightarrow -\infty\)</span>。式中的 $X(2n f_1) $ 展开后为：</p>
+<p><span class="math display">\[
+\begin{gathered}
+X(2\pi n f_1) =\frac{1}{2} \left[ \frac{2}{T} \int^T_ 0 x(t) \cos \left(
+2\pi n f_1 t \right) dt - \frac{2j}{T} \int^T_ 0 x(t) \sin \left( 2\pi n
+f_1 t \right) dt \right] \\\\
+= \frac{1}{T} \int^T_ 0 x(t) \left[ \cos \left( 2\pi n f_1 t \right) - j
+\sin \left( 2\pi n f_1 t \right) \right] dt
+\end{gathered}
+\]</span></p>
+<p>再利用欧拉公式，可得：</p>
+<p><span class="math display">\[
+X(2\pi n f_1) = \frac{1}{T} \int^T_ 0 x(t)   e^{ -j 2\pi n f_1 t} dt
+\]</span></p>
+<p><strong>总结上述推导过程，得到指数形式的傅里叶变换对：</strong></p>
+<p><span class="math display">\[
+x(t) = \sum^{\infty}_ {n=-\infty}  X(2\pi n f_1)   e^{ j 2\pi n f_1 t
+}   
+\]</span></p>
+<p><span class="math display">\[
+X(2\pi n f_1) = \frac{1}{T} \int^T_ 0 x(t)   e^{ -j 2\pi n f_1 t} dt
+\]</span></p>
+<p>以上两个公式中，第二式才是<strong>傅里叶变换</strong>，第一式是傅里叶变换反演公式。</p>
+<p>当信号没有周期，即周期无穷大时 <span
+class="math inline">\(T\rightarrow \infty\)</span>，有<span
+class="math inline">\(f_1\rightarrow
+0\)</span>，此时第一式的求和符号可以改写为积分号，<span
+class="math inline">\(f_1\)</span>
+可以被当作是一个连续变化的量，傅里叶变换对就被改写为了连续形式。</p>
+<h3 id="傅里叶变换的实际意义">傅里叶变换的实际意义</h3>
+<p>傅里叶变换对第一式：表示被采集信号 <span
+class="math inline">\(x(t)\)</span> 可以由具有不同频率（<span
+class="math inline">\(2\pi n f_1\)</span>）和幅值（<span
+class="math inline">\(X(2\pi n f_1)\)</span>）的周期信号叠加得到。</p>
+<p>傅里叶变换对第二式：为傅里叶变换，表示不同频率分量前的系数，可以理解为，该频率分量在被采集信号中的占比。</p>
+<p><strong>傅里叶变换的目的</strong>：得到被采集信号包含的频率成分和每个频率成分在原信号中的占比，用图形表示则为频谱图。</p>
+<h2 id="离散傅里叶变换">离散傅里叶变换</h2>
+<p>离散傅里叶变换对应的是在时域、频域都有限长，且都是离散的一类变换。</p>
+<p>现有一个时域模拟信号 <span
+class="math inline">\(x(t)\)</span>，对其进行采样，采样长度为 <span
+class="math inline">\(T\)</span>, 采样点有 <span
+class="math inline">\(N\)</span> 个，采样时间间隔为 <span
+class="math inline">\(\Delta t\)</span>。</p>
+<p>则采样长度与采样点的关系为：</p>
+<p><span class="math display">\[
+T=N\Delta t
+\]</span></p>
+<p>采样频率为：</p>
+<p><span class="math display">\[
+f_s = \frac{1}{\Delta t}
+\]</span></p>
+<p>频谱的基频是<span class="math inline">\(f_1\)</span>，即：</p>
+<p><span class="math display">\[
+f_1=\frac{1}{T}
+\]</span></p>
+<p>根据傅里叶变换公式，由傅里叶变换求得的频谱谱线都是基频的整数倍，即频谱谱线的间隔：</p>
+<p><span class="math display">\[
+\Delta f=f_1=\frac{1}{T} = \frac{1}{N\Delta t}
+\]</span></p>
+<p>记采样得到的离散的时域数字信号为<span class="math inline">\(x(k\Delta
+t)\)</span>，把傅里叶变换式中的连续变量替换为离散变量</p>
+<p><span class="math display">\[
+t=k\Delta t,\quad 2\pi nf_1=2\pi n \Delta f
+\]</span></p>
+<p>再将<span class="math inline">\(T=N\Delta
+t\)</span>带入傅里叶变换对，对时间积分变为有限时间段内求和，即，<span
+class="math inline">\(\int \rightarrow \sum\)</span>，<span
+class="math inline">\(dt\rightarrow\Delta t\)</span>，得到：</p>
+<p><span class="math display">\[
+x(k\Delta t) = x(k)= \sum^{N-1}_ {n=0}  X(2\pi n \Delta f)   e^{ j 2\pi
+n k / N }   
+\]</span></p>
+<p><span class="math display">\[
+X(2\pi n \Delta f) =X(n)= \frac{1}{N} \sum^{N-1}_ {k=0}  x(k\Delta t)
+e^{ -j 2\pi n k /N}
+\]</span></p>
+<p>习惯上将标定因子 <span class="math inline">\(N\)</span>
+移至反变换式中去，并且用 <span class="math inline">\(n\)</span> 表示第
+<span class="math inline">\(n\)</span> 个采样点，用 <span
+class="math inline">\(k\)</span> 表示第 <span
+class="math inline">\(k\)</span> 条谱线（频率分量），即将上式中 <span
+class="math inline">\(n\)</span> 和 <span
+class="math inline">\(k\)</span> 的位置互换。总结上述结论有：</p>
+<p><span class="math display">\[
+x(n) = \frac{1}{N} \sum^{N-1}_ {n=0}  X(k)   e^{ j 2\pi n k / N }   
+\]</span></p>
+<p><span class="math display">\[
+X(k) = \sum^{N-1}_ {k=0}  x(n) e^{ -j 2\pi n k /N}
+\]</span></p>
+<p>上式就是<strong>离散傅里叶变换式</strong>。式中：</p>
+<p><span class="math display">\[
+k= 0,1,2\dots,N-1; \quad n= 0,1,2\dots,N-1
+\]</span></p>
+<p>根据离散傅里叶变换式可以求出第 <span class="math inline">\(n\)</span>
+条谱线对应的傅里叶系数的值，即该频率分量在整个信号中的占比。</p>
+<p>我们注意到离散傅里叶变换式中求和符号的上下限改变了，不再是正负无穷。再改为正负无穷可以吗？改了之后两个公式含义还一样吗？答案是一样的，要用采样定理回答该问题。虽然标注是无穷，但是采样频率一定要大于2倍的被采样信号最高频率：</p>
+<p><span class="math display">\[
+f_s=\frac{1}{\Delta t}&gt;2f_m
+\]</span></p>
+<p>当采样频率已经确定为 <span class="math inline">\(1/ \Delta t\)</span>
+时，满足采样定理的 <span class="math inline">\(x(t)\)</span>
+的最高频率分量是：</p>
+<p><span class="math display">\[
+f_m&lt;\frac{1}{2}f_s=\frac{1}{2\Delta t} = \frac{1}{2} N \Delta f
+\]</span></p>
+<p>即满足采样定理的最后一根谱线所在的频率为<span
+class="math inline">\(1/(2N\Delta f)\)</span>，换而言之 <span
+class="math inline">\(k\)</span> 最大为 <span
+class="math inline">\(N/2\)</span>。</p>
+<h2 id="快速傅里叶变换">快速傅里叶变换</h2>
+<h3 id="fft提出的背景">FFT提出的背景</h3>
+<p>使用离散傅里叶变换时，计算一点的 <span
+class="math inline">\(X(n)\)</span> 需要 <span
+class="math inline">\(N\)</span> 次复数乘法和 <span
+class="math inline">\(N-1\)</span> 次复数加法运算；计算全部的频谱需要
+<span class="math inline">\(N^2\)</span> 次复数乘法和 <span
+class="math inline">\(N(N-1)\)</span>
+次复数加法。而实现1次复数乘法需要4次实数乘法和2次实数加法，实现1次复数加法，需要2次实数加法。<span
+class="math inline">\(N=1024\)</span>时，需要 <span
+class="math inline">\(1048576\)</span> 次复数乘法运算。</p>
+<p>有没有什么方法可以缩短计算时间呢？</p>
+<p>1965年J. W. Cooley 和 J. W. Tukey
+提出了一种快速求解DFT的算法，将乘法运算量由 <span
+class="math inline">\(N^2\)</span> 降低至 <span
+class="math inline">\(\frac{N}{2} \log_ 2 N\)</span> 次。以 <span
+class="math inline">\(N=1024\)</span> 为例，他们提出的算法，只需要 <span
+class="math inline">\(5120\)</span> 次复数乘法运算。</p>
+<p><strong>值得注意的是FFT不是特指某一种算法，而是指一类算法</strong>，自1965年后也有许多优秀学者提出了新的FFT算法。</p>
+<h3 id="fft基本原理">FFT基本原理</h3>
+<p>对于 <span class="math inline">\(N\)</span> 点序列 <span
+class="math inline">\(x(n)\)</span>，其 DFT变换对为：</p>
+<p><span class="math display">\[
+x(n) = \frac{1}{N} \sum^{N-1}_ {n=0}  X(k) W^{-nk}_ N
+\]</span></p>
+<p><span class="math display">\[
+X(k) = \sum^{N-1}_ {k=0}  x(n) W^{nk}_ N
+\]</span></p>
+<p>其中，<span class="math inline">\(W_ N = e^{-j2\pi /N}\)</span>
+。</p>
+<p>DFT还可以写成矩阵形式，定义 <span
+class="math inline">\(\mathbf{W}_N\)</span> 为：</p>
+<p><span class="math display">\[
+\mathbf{W}_N = \left[ W^{nk} \right]= \begin{bmatrix} W^0 &amp; W^0
+&amp; W^0 &amp; \cdots &amp; W^0 \\\\  W^0 &amp; W^1 &amp; W^2 &amp;
+\cdots &amp; W^{N-1} \\\\ W^0 &amp; W^2 &amp; W^4 &amp; \cdots &amp;
+W^{2(N-1)} \\\\  \vdots &amp; \vdots &amp; \vdots &amp; \vdots
+&amp;  \vdots  \\\\  W^0 &amp; W^{(N-1)} &amp; W^{2(N-1)} &amp; \cdots
+&amp; W^{(N-1)(N-1)} \end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\bar{X}_N = \begin{bmatrix} X(0) &amp;  X(1) &amp;  \cdots &amp;  X(N-1)
+\end{bmatrix}^\mathrm{T}
+\]</span></p>
+<p><span class="math display">\[
+\bar{x}_N = \begin{bmatrix} x(0) &amp;  x(1) &amp;  \cdots &amp;  x(N-1)
+\end{bmatrix}^\mathrm{T}
+\]</span></p>
+<p>则DFT的矩阵表达式为：</p>
+<p><span class="math display">\[
+\bar{X}_N = \mathbf{W}_N \bar{x}_N
+\]</span></p>
+<p>观察矩阵形式的DFT表达式，可以发现DFT中包含大量重复运算，矩阵 <span
+class="math inline">\(\mathbf{W}_N\)</span> 虽然有 <span
+class="math inline">\(N^2\)</span> 个元素，但是其中只有 <span
+class="math inline">\(N\)</span>
+个独立值，并且一部分元素的值极为简单。<span
+class="math inline">\(W\)</span> 因子的取值有如下特点：</p>
+<ul>
+<li><span class="math inline">\(W^0=1\)</span>, <span
+class="math inline">\(W^{N/2}=-1\)</span></li>
+<li><span class="math inline">\(W^{N+r}=W^r\)</span>, <span
+class="math inline">\(W^{N/2+r}=-W^r\)</span></li>
+</ul>
+<p>对于4点的DFT，需要 <span class="math inline">\(4^2=16\)</span>
+次复数乘法，但是利用 <span class="math inline">\(W\)</span>
+因子的周期性和对称性可以大大简化计算，相关的DFT矩阵格式为：</p>
+<p><span class="math display">\[
+\begin{bmatrix} X(0) \\\\  X(1) \\\\  X(2) \\\\  X(3) \end{bmatrix} =
+\begin{bmatrix} 1 &amp;  1 &amp;  1 &amp;  1 \\\\  1 &amp;  W^1
+&amp;  -1 &amp;  -W^1 \\\\  1 &amp;  -1 &amp;  1 &amp;  -1 \\\\ 1
+&amp;  -W^1 &amp;  -1 &amp;  W^1  \end{bmatrix}\begin{bmatrix} x(0)
+\\\\  x(1) \\\\  x(2) \\\\  x(3) \end{bmatrix}
+\]</span></p>
+<p>将矩阵的第二列和第三列交换，可得：</p>
+<p><span class="math display">\[
+\begin{bmatrix} X(0) \\\\  X(1) \\\\  X(2) \\\\  X(3) \end{bmatrix} =
+\begin{bmatrix} 1 &amp;  1 &amp;  1 &amp;  1 \\\\  1 &amp;  -1
+&amp;  W^1 &amp;  -W^1 \\\\  1 &amp;  1 &amp;  -1 &amp;  -1 \\\\ 1
+&amp;  -1 &amp;  -W^1 &amp;  W^1  \end{bmatrix}\begin{bmatrix} x(0)
+\\\\  x(2) \\\\  x(1) \\\\  x(3) \end{bmatrix}
+\]</span></p>
+<p>由此可得：</p>
+<p><span class="math display">\[
+\begin{gathered}
+X(0) = [x(0) + x(2)] + [x(1) + x(3)]  \\\\
+X(1) = [x(0) - x(2)] + [x(1) - x(3)] W^1  \\\\
+X(2) = [x(0) + x(2)] - [x(1) + x(3)] W^1 \\\\
+X(3) = [x(0) - x(2)] - [x(1) - x(3)]  
+\end{gathered}
+\]</span></p>
+<p>利用上式计算DFT只需要 <span class="math inline">\(1\)</span>
+次复数乘法运算。处理长序列时，只需要将长序列分成类似于上式或比上式更简短的序列后，进行简单的运算，再按一定方式组合起来即可。</p>
+<p>因此，<strong>FFT的基本原理是</strong>：先将原始的序列分解为一系列的短序列，充分利用
+<span class="math inline">\(W\)</span>
+因子的周期性和对称性，进而求出这些短序列相应的DFT并进行适当组合，达到删除重复计算，减少乘法运算和简化结构的目的。</p>
+<p>对于大部分FFT算法，有一些通用的概念和规律： *
+<strong>级</strong>：将原信号每次折半，分为更小的单元，每折半一次，多出一级
+*
+<strong>蝶形单元</strong>：在FFT计算过程中，计算并不是顺序的，画出信号流图会发现，信号流图中包含着大量8字型（类似于蝴蝶）的计算单元
+* <strong>组</strong>：每一级的蝶形单元，按照其特性可以分为若干组 *
+<strong><span
+class="math inline">\(W\)</span>因子的分布</strong>：每一级的 <span
+class="math inline">\(W\)</span> 因子具有一定的分布规律 *
+<strong>码位倒置</strong>：使用FFT时，输出序列 <span
+class="math inline">\(\bar{X}_N\)</span>
+依照正序排列，但是输入序列的次序不再是自然序列，其排布次序和二进制码翻转、二进制与十进制转换有关</p>
+<p>本文不再详细叙述具体的FFT算法。</p>
+]]></content>
+      <tags>
+        <tag>振动测试</tag>
       </tags>
   </entry>
   <entry>
@@ -287,6 +532,52 @@ Acrobat 的编辑功能就能轻松做到。</p>
 ]]></content>
       <tags>
         <tag>论文写作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Levenberg–Marquardt Algorithm</title>
+    <url>/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/</url>
+    <content><![CDATA[<h2 id="问题背景">问题背景</h2>
+<p>在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到
+<strong>Levenberg–Marquardt 算法</strong>。</p>
+<h2 id="levenbergmarquardt-算法">Levenberg–Marquardt 算法</h2>
+<p>Levenberg–Marquardt
+算法是一种最小二乘（模型拟合）算法。它可以解决以下问题：</p>
+<p><span class="math display">\[
+\min_{x}f(x)= \min_{x} \\| F(x) \\|^2_2 = \min_{x} \sum_i F_i^2(x)
+\]</span></p>
+<p>即求一个 <span class="math inline">\(x\)</span> 使 <span
+class="math inline">\(f(x)\)</span> 最小。</p>
+<p>1944年<a href="https://doi.org/10.1090/qam/10666">Kenneth
+Levenberg</a>首次提出该算法，1963年<a
+href="https://doi.org/10.1137/0111030">Donald
+Marquardt</a>也发现了该算法，后来这种算法被称作Levenberg–Marquardt。</p>
+<p>关于该算法的详细原理和实现可以参考 Flannery 等人的著作 <a
+href="http://www.nrbook.com/a/bookcpdf.php">Numerical recipes in
+C</a>。</p>
+<h2 id="levenbergmarquardt-算法与非线性方程组求根">Levenberg–Marquardt
+算法与非线性方程组求根</h2>
+<p>求解非线性方程组即求解一组 <span
+class="math inline">\(\bar{x}\)</span> 令其满足 <span
+class="math inline">\(\bar{F}(x)=0\)</span>。显然非线性方程组的根可以令上式成立。</p>
+<p>因此，给定初始值，通过Levenberg–Marquardt 算法求得的 <span
+class="math inline">\(\bar{x}\)</span> 就是非线性方程组 <span
+class="math inline">\(\bar{x}\)</span> 的一组近似根（初始值附近）。</p>
+<p>非线性方程组的根显然不止一组，而通过该方法只能得到距离初始值较近的根，要想得到全部的根，需要配合其他算法。</p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Levenberg, K. (1944). A method for the solution of certain
+non-linear problems in least squares. <em>Quarterly of applied
+mathematics</em>, 2(2), 164-168.</li>
+<li>Mardquardt, D. W. (1963). An algorithm for least square estimation
+of parameters. <em>J. Soc. Ind. Appl. Math</em>, 11, 431-441.</li>
+<li>Flannery, B. P., Press, W. H., Teukolsky, S. A., &amp; Vetterling,
+W. (1992). Numerical recipes in C. <em>Press Syndicate of the University
+of Cambridge, New York</em>, 24(78), 36.</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>math</tag>
       </tags>
   </entry>
   <entry>
@@ -741,297 +1032,6 @@ href="https://zhuanlan.zhihu.com/p/26261872">弹性力学变分提法随记 -
       </tags>
   </entry>
   <entry>
-    <title>快速傅里叶变换（FFT）基本原理</title>
-    <url>/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<h2 id="引言">引言</h2>
-<p>快速傅里叶变换（FFT）是离散傅里叶变换（DFT）的加速算法，而DFT则是将连续的傅里叶变换离散化（在时域和频域离散），连续傅里叶变换可由傅里叶展开式推导得出。</p>
-<p>正向逻辑为： 傅里叶展开式 <span
-class="math inline">\(\rightarrow\)</span> 推导得到 <span
-class="math inline">\(\rightarrow\)</span> 连续傅里叶变换对 <span
-class="math inline">\(\rightarrow\)</span> 离散后得到 <span
-class="math inline">\(\rightarrow\)</span> 离散傅里叶变换 <span
-class="math inline">\(\rightarrow\)</span> 开发加速算法 <span
-class="math inline">\(\rightarrow\)</span> 快速傅里叶变换 ## 傅里叶变换
-### 三角函数形式 对于一个周期为 <span class="math inline">\(T\)</span>
-的信号 <span class="math inline">\(x(t)\)</span>，其基频为 <span
-class="math inline">\(f_1=1/T\)</span>。对 <span
-class="math inline">\(x(t)\)</span> 进行傅里叶展开：</p>
-<p><span class="math display">\[
-x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ a_n \cos\left(2\pi n
-f_1 t \right) + b_n \sin\left(2\pi n f_1 t \right) \right]
-\]</span></p>
-<p>上式中的 <span class="math inline">\(a_n\)</span> 和 <span
-class="math inline">\(b_n\)</span> 是傅里叶系数：</p>
-<p><span class="math display">\[
-a_n = \frac{2}{T} \int^T_ 0 x(t) \cos \left( 2\pi n f_1 t \right) dt
-\]</span></p>
-<p><span class="math display">\[
-b_n = \frac{2}{T} \int^T_ 0 x(t) \sin \left( 2\pi n f_1 t \right) dt
-\]</span></p>
-<h3 id="指数形式">指数形式</h3>
-<p>根据欧拉公式，可以将傅里叶变换式写为指数形式，指数形式看起来更为简洁，利于推导。
-根据欧拉公式，有以下变换：</p>
-<p><span class="math display">\[
-\cos \left( 2\pi n f_1 t \right) = \frac{1}{2} \left[ e^{j2\pi n f_1 t}
-+  e^{-j2\pi n f_1 t} \right]
-\]</span></p>
-<p><span class="math display">\[
-\sin \left( 2\pi n f_1 t \right) = \frac{1}{2j} \left[ e^{j2\pi n f_1 t}
--  e^{-j2\pi n f_1 t} \right]
-\]</span></p>
-<blockquote>
-<p>欧拉公式：<span class="math inline">\(e^{ix} = \cos x + i \sin
-x\)</span></p>
-</blockquote>
-<p>带入傅里叶展开式，可得：</p>
-<p><span class="math display">\[
-x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ \frac{a_n}{2} \left[
-e^{ j 2\pi n f_1 t } + e^{ -j 2\pi n f_1 t } \right] + \frac{b_n}{2j}
-\left[ e^{ j 2\pi n f_1 t } - e^{ -j 2\pi n f_1 t } \right]  \right]
-\]</span></p>
-<p>合并同类项可得：</p>
-<p><span class="math display">\[
-x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ \frac{a_n - j
-b_n}{2}  e^{ j 2\pi n f_1 t }  + \frac{a_n + b_n}{2}  e^{ -j 2\pi n f_1
-t } \right]
-\]</span></p>
-<p>观察指数项前的系数，令</p>
-<p><span class="math display">\[
-X(2\pi n f_1) = \frac{a_n - j b_n}{2}
-\]</span></p>
-<p>则有：</p>
-<p><span class="math display">\[
-X(-2\pi n f_1) = \frac{a_n + j b_n}{2}
-\]</span></p>
-<p>发现指数项前的系数具有奇偶性，利用奇偶性并改变求和符号的下限，将展开式改写为：</p>
-<p><span class="math display">\[
-x(t) = \sum^{\infty}_ {n=-\infty}  X(2\pi n f_1)   e^{ j 2\pi n f_1 t
-}   
-\]</span></p>
-<p>注意，此时求和符号的下限由一变为负无穷，<span class="math inline">\(1
-\rightarrow -\infty\)</span>。式中的 $X(2n f_1) $ 展开后为：</p>
-<p><span class="math display">\[
-\begin{gathered}
-X(2\pi n f_1) =\frac{1}{2} \left[ \frac{2}{T} \int^T_ 0 x(t) \cos \left(
-2\pi n f_1 t \right) dt - \frac{2j}{T} \int^T_ 0 x(t) \sin \left( 2\pi n
-f_1 t \right) dt \right] \\\\
-= \frac{1}{T} \int^T_ 0 x(t) \left[ \cos \left( 2\pi n f_1 t \right) - j
-\sin \left( 2\pi n f_1 t \right) \right] dt
-\end{gathered}
-\]</span></p>
-<p>再利用欧拉公式，可得：</p>
-<p><span class="math display">\[
-X(2\pi n f_1) = \frac{1}{T} \int^T_ 0 x(t)   e^{ -j 2\pi n f_1 t} dt
-\]</span></p>
-<p><strong>总结上述推导过程，得到指数形式的傅里叶变换对：</strong></p>
-<p><span class="math display">\[
-x(t) = \sum^{\infty}_ {n=-\infty}  X(2\pi n f_1)   e^{ j 2\pi n f_1 t
-}   
-\]</span></p>
-<p><span class="math display">\[
-X(2\pi n f_1) = \frac{1}{T} \int^T_ 0 x(t)   e^{ -j 2\pi n f_1 t} dt
-\]</span></p>
-<p>以上两个公式中，第二式才是<strong>傅里叶变换</strong>，第一式是傅里叶变换反演公式。</p>
-<p>当信号没有周期，即周期无穷大时 <span
-class="math inline">\(T\rightarrow \infty\)</span>，有<span
-class="math inline">\(f_1\rightarrow
-0\)</span>，此时第一式的求和符号可以改写为积分号，<span
-class="math inline">\(f_1\)</span>
-可以被当作是一个连续变化的量，傅里叶变换对就被改写为了连续形式。</p>
-<h3 id="傅里叶变换的实际意义">傅里叶变换的实际意义</h3>
-<p>傅里叶变换对第一式：表示被采集信号 <span
-class="math inline">\(x(t)\)</span> 可以由具有不同频率（<span
-class="math inline">\(2\pi n f_1\)</span>）和幅值（<span
-class="math inline">\(X(2\pi n f_1)\)</span>）的周期信号叠加得到。</p>
-<p>傅里叶变换对第二式：为傅里叶变换，表示不同频率分量前的系数，可以理解为，该频率分量在被采集信号中的占比。</p>
-<p><strong>傅里叶变换的目的</strong>：得到被采集信号包含的频率成分和每个频率成分在原信号中的占比，用图形表示则为频谱图。</p>
-<h2 id="离散傅里叶变换">离散傅里叶变换</h2>
-<p>离散傅里叶变换对应的是在时域、频域都有限长，且都是离散的一类变换。</p>
-<p>现有一个时域模拟信号 <span
-class="math inline">\(x(t)\)</span>，对其进行采样，采样长度为 <span
-class="math inline">\(T\)</span>, 采样点有 <span
-class="math inline">\(N\)</span> 个，采样时间间隔为 <span
-class="math inline">\(\Delta t\)</span>。</p>
-<p>则采样长度与采样点的关系为：</p>
-<p><span class="math display">\[
-T=N\Delta t
-\]</span></p>
-<p>采样频率为：</p>
-<p><span class="math display">\[
-f_s = \frac{1}{\Delta t}
-\]</span></p>
-<p>频谱的基频是<span class="math inline">\(f_1\)</span>，即：</p>
-<p><span class="math display">\[
-f_1=\frac{1}{T}
-\]</span></p>
-<p>根据傅里叶变换公式，由傅里叶变换求得的频谱谱线都是基频的整数倍，即频谱谱线的间隔：</p>
-<p><span class="math display">\[
-\Delta f=f_1=\frac{1}{T} = \frac{1}{N\Delta t}
-\]</span></p>
-<p>记采样得到的离散的时域数字信号为<span class="math inline">\(x(k\Delta
-t)\)</span>，把傅里叶变换式中的连续变量替换为离散变量</p>
-<p><span class="math display">\[
-t=k\Delta t,\quad 2\pi nf_1=2\pi n \Delta f
-\]</span></p>
-<p>再将<span class="math inline">\(T=N\Delta
-t\)</span>带入傅里叶变换对，对时间积分变为有限时间段内求和，即，<span
-class="math inline">\(\int \rightarrow \sum\)</span>，<span
-class="math inline">\(dt\rightarrow\Delta t\)</span>，得到：</p>
-<p><span class="math display">\[
-x(k\Delta t) = x(k)= \sum^{N-1}_ {n=0}  X(2\pi n \Delta f)   e^{ j 2\pi
-n k / N }   
-\]</span></p>
-<p><span class="math display">\[
-X(2\pi n \Delta f) =X(n)= \frac{1}{N} \sum^{N-1}_ {k=0}  x(k\Delta t)
-e^{ -j 2\pi n k /N}
-\]</span></p>
-<p>习惯上将标定因子 <span class="math inline">\(N\)</span>
-移至反变换式中去，并且用 <span class="math inline">\(n\)</span> 表示第
-<span class="math inline">\(n\)</span> 个采样点，用 <span
-class="math inline">\(k\)</span> 表示第 <span
-class="math inline">\(k\)</span> 条谱线（频率分量），即将上式中 <span
-class="math inline">\(n\)</span> 和 <span
-class="math inline">\(k\)</span> 的位置互换。总结上述结论有：</p>
-<p><span class="math display">\[
-x(n) = \frac{1}{N} \sum^{N-1}_ {n=0}  X(k)   e^{ j 2\pi n k / N }   
-\]</span></p>
-<p><span class="math display">\[
-X(k) = \sum^{N-1}_ {k=0}  x(n) e^{ -j 2\pi n k /N}
-\]</span></p>
-<p>上式就是<strong>离散傅里叶变换式</strong>。式中：</p>
-<p><span class="math display">\[
-k= 0,1,2\dots,N-1; \quad n= 0,1,2\dots,N-1
-\]</span></p>
-<p>根据离散傅里叶变换式可以求出第 <span class="math inline">\(n\)</span>
-条谱线对应的傅里叶系数的值，即该频率分量在整个信号中的占比。</p>
-<p>我们注意到离散傅里叶变换式中求和符号的上下限改变了，不再是正负无穷。再改为正负无穷可以吗？改了之后两个公式含义还一样吗？答案是一样的，要用采样定理回答该问题。虽然标注是无穷，但是采样频率一定要大于2倍的被采样信号最高频率：</p>
-<p><span class="math display">\[
-f_s=\frac{1}{\Delta t}&gt;2f_m
-\]</span></p>
-<p>当采样频率已经确定为 <span class="math inline">\(1/ \Delta t\)</span>
-时，满足采样定理的 <span class="math inline">\(x(t)\)</span>
-的最高频率分量是：</p>
-<p><span class="math display">\[
-f_m&lt;\frac{1}{2}f_s=\frac{1}{2\Delta t} = \frac{1}{2} N \Delta f
-\]</span></p>
-<p>即满足采样定理的最后一根谱线所在的频率为<span
-class="math inline">\(1/(2N\Delta f)\)</span>，换而言之 <span
-class="math inline">\(k\)</span> 最大为 <span
-class="math inline">\(N/2\)</span>。</p>
-<h2 id="快速傅里叶变换">快速傅里叶变换</h2>
-<h3 id="fft提出的背景">FFT提出的背景</h3>
-<p>使用离散傅里叶变换时，计算一点的 <span
-class="math inline">\(X(n)\)</span> 需要 <span
-class="math inline">\(N\)</span> 次复数乘法和 <span
-class="math inline">\(N-1\)</span> 次复数加法运算；计算全部的频谱需要
-<span class="math inline">\(N^2\)</span> 次复数乘法和 <span
-class="math inline">\(N(N-1)\)</span>
-次复数加法。而实现1次复数乘法需要4次实数乘法和2次实数加法，实现1次复数加法，需要2次实数加法。<span
-class="math inline">\(N=1024\)</span>时，需要 <span
-class="math inline">\(1048576\)</span> 次复数乘法运算。</p>
-<p>有没有什么方法可以缩短计算时间呢？</p>
-<p>1965年J. W. Cooley 和 J. W. Tukey
-提出了一种快速求解DFT的算法，将乘法运算量由 <span
-class="math inline">\(N^2\)</span> 降低至 <span
-class="math inline">\(\frac{N}{2} \log_ 2 N\)</span> 次。以 <span
-class="math inline">\(N=1024\)</span> 为例，他们提出的算法，只需要 <span
-class="math inline">\(5120\)</span> 次复数乘法运算。</p>
-<p><strong>值得注意的是FFT不是特指某一种算法，而是指一类算法</strong>，自1965年后也有许多优秀学者提出了新的FFT算法。</p>
-<h3 id="fft基本原理">FFT基本原理</h3>
-<p>对于 <span class="math inline">\(N\)</span> 点序列 <span
-class="math inline">\(x(n)\)</span>，其 DFT变换对为：</p>
-<p><span class="math display">\[
-x(n) = \frac{1}{N} \sum^{N-1}_ {n=0}  X(k) W^{-nk}_ N
-\]</span></p>
-<p><span class="math display">\[
-X(k) = \sum^{N-1}_ {k=0}  x(n) W^{nk}_ N
-\]</span></p>
-<p>其中，<span class="math inline">\(W_ N = e^{-j2\pi /N}\)</span>
-。</p>
-<p>DFT还可以写成矩阵形式，定义 <span
-class="math inline">\(\mathbf{W}_N\)</span> 为：</p>
-<p><span class="math display">\[
-\mathbf{W}_N = \left[ W^{nk} \right]= \begin{bmatrix} W^0 &amp; W^0
-&amp; W^0 &amp; \cdots &amp; W^0 \\\\  W^0 &amp; W^1 &amp; W^2 &amp;
-\cdots &amp; W^{N-1} \\\\ W^0 &amp; W^2 &amp; W^4 &amp; \cdots &amp;
-W^{2(N-1)} \\\\  \vdots &amp; \vdots &amp; \vdots &amp; \vdots
-&amp;  \vdots  \\\\  W^0 &amp; W^{(N-1)} &amp; W^{2(N-1)} &amp; \cdots
-&amp; W^{(N-1)(N-1)} \end{bmatrix}
-\]</span></p>
-<p><span class="math display">\[
-\bar{X}_N = \begin{bmatrix} X(0) &amp;  X(1) &amp;  \cdots &amp;  X(N-1)
-\end{bmatrix}^\mathrm{T}
-\]</span></p>
-<p><span class="math display">\[
-\bar{x}_N = \begin{bmatrix} x(0) &amp;  x(1) &amp;  \cdots &amp;  x(N-1)
-\end{bmatrix}^\mathrm{T}
-\]</span></p>
-<p>则DFT的矩阵表达式为：</p>
-<p><span class="math display">\[
-\bar{X}_N = \mathbf{W}_N \bar{x}_N
-\]</span></p>
-<p>观察矩阵形式的DFT表达式，可以发现DFT中包含大量重复运算，矩阵 <span
-class="math inline">\(\mathbf{W}_N\)</span> 虽然有 <span
-class="math inline">\(N^2\)</span> 个元素，但是其中只有 <span
-class="math inline">\(N\)</span>
-个独立值，并且一部分元素的值极为简单。<span
-class="math inline">\(W\)</span> 因子的取值有如下特点：</p>
-<ul>
-<li><span class="math inline">\(W^0=1\)</span>, <span
-class="math inline">\(W^{N/2}=-1\)</span></li>
-<li><span class="math inline">\(W^{N+r}=W^r\)</span>, <span
-class="math inline">\(W^{N/2+r}=-W^r\)</span></li>
-</ul>
-<p>对于4点的DFT，需要 <span class="math inline">\(4^2=16\)</span>
-次复数乘法，但是利用 <span class="math inline">\(W\)</span>
-因子的周期性和对称性可以大大简化计算，相关的DFT矩阵格式为：</p>
-<p><span class="math display">\[
-\begin{bmatrix} X(0) \\\\  X(1) \\\\  X(2) \\\\  X(3) \end{bmatrix} =
-\begin{bmatrix} 1 &amp;  1 &amp;  1 &amp;  1 \\\\  1 &amp;  W^1
-&amp;  -1 &amp;  -W^1 \\\\  1 &amp;  -1 &amp;  1 &amp;  -1 \\\\ 1
-&amp;  -W^1 &amp;  -1 &amp;  W^1  \end{bmatrix}\begin{bmatrix} x(0)
-\\\\  x(1) \\\\  x(2) \\\\  x(3) \end{bmatrix}
-\]</span></p>
-<p>将矩阵的第二列和第三列交换，可得：</p>
-<p><span class="math display">\[
-\begin{bmatrix} X(0) \\\\  X(1) \\\\  X(2) \\\\  X(3) \end{bmatrix} =
-\begin{bmatrix} 1 &amp;  1 &amp;  1 &amp;  1 \\\\  1 &amp;  -1
-&amp;  W^1 &amp;  -W^1 \\\\  1 &amp;  1 &amp;  -1 &amp;  -1 \\\\ 1
-&amp;  -1 &amp;  -W^1 &amp;  W^1  \end{bmatrix}\begin{bmatrix} x(0)
-\\\\  x(2) \\\\  x(1) \\\\  x(3) \end{bmatrix}
-\]</span></p>
-<p>由此可得：</p>
-<p><span class="math display">\[
-\begin{gathered}
-X(0) = [x(0) + x(2)] + [x(1) + x(3)]  \\\\
-X(1) = [x(0) - x(2)] + [x(1) - x(3)] W^1  \\\\
-X(2) = [x(0) + x(2)] - [x(1) + x(3)] W^1 \\\\
-X(3) = [x(0) - x(2)] - [x(1) - x(3)]  
-\end{gathered}
-\]</span></p>
-<p>利用上式计算DFT只需要 <span class="math inline">\(1\)</span>
-次复数乘法运算。处理长序列时，只需要将长序列分成类似于上式或比上式更简短的序列后，进行简单的运算，再按一定方式组合起来即可。</p>
-<p>因此，<strong>FFT的基本原理是</strong>：先将原始的序列分解为一系列的短序列，充分利用
-<span class="math inline">\(W\)</span>
-因子的周期性和对称性，进而求出这些短序列相应的DFT并进行适当组合，达到删除重复计算，减少乘法运算和简化结构的目的。</p>
-<p>对于大部分FFT算法，有一些通用的概念和规律： *
-<strong>级</strong>：将原信号每次折半，分为更小的单元，每折半一次，多出一级
-*
-<strong>蝶形单元</strong>：在FFT计算过程中，计算并不是顺序的，画出信号流图会发现，信号流图中包含着大量8字型（类似于蝴蝶）的计算单元
-* <strong>组</strong>：每一级的蝶形单元，按照其特性可以分为若干组 *
-<strong><span
-class="math inline">\(W\)</span>因子的分布</strong>：每一级的 <span
-class="math inline">\(W\)</span> 因子具有一定的分布规律 *
-<strong>码位倒置</strong>：使用FFT时，输出序列 <span
-class="math inline">\(\bar{X}_N\)</span>
-依照正序排列，但是输入序列的次序不再是自然序列，其排布次序和二进制码翻转、二进制与十进制转换有关</p>
-<p>本文不再详细叙述具体的FFT算法。</p>
-]]></content>
-      <tags>
-        <tag>振动测试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>通俗的理解何为变分</title>
     <url>/2021/08/24/%E9%80%9A%E4%BF%97%E7%9A%84%E7%90%86%E8%A7%A3%E4%BD%95%E4%B8%BA%E5%8F%98%E5%88%86/</url>
     <content><![CDATA[<h2 id="概述">概述</h2>
@@ -1142,6 +1142,69 @@ href="https://www.zhihu.com/question/30416914">微分、差分和变分的概念
 ]]></content>
       <tags>
         <tag>有限元</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python基础知识</title>
+    <url>/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<h2 id="数据类型">数据类型</h2>
+<h3 id="字符-str">字符 str</h3>
+<ul>
+<li><strong>引号</strong>：在字符中显示单引号，则编程时用双引号将字符括起来；在字符中显示双引号，则编程时用单引号将字符括起来；
+字符中的单引号：<code>course = "He's finger"</code>
+字符串中的双引号：<code>words = 'Python is for "beginners"'</code></li>
+<li><strong>大小写</strong>：<code>course.upper()</code> 、
+<code>course.lower()</code>、<code>course.title()</code></li>
+<li><strong>查找替换</strong>：<code>course.find('xxx'),</code>和<code>course.replace('xxx','aaa')</code></li>
+<li><strong>字符长度</strong>：使用<code>len()</code></li>
+<li><strong>f与花括号</strong>：可以被用来格式化输出字符（在字符中嵌入变量）。
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">first_name=&#x27;John&#x27;</span><br><span class="line">last_name=&#x27;Smith&#x27;</span><br><span class="line">msg = f&quot;&#123;first_name&#125; [&#123;last_name&#125;] is a coder&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>整数 int 浮点数 float 复数 complex</p>
+<h3 id="数据索引">数据索引</h3>
+<ol type="1">
+<li>Python中的索引从0开始</li>
+<li>数据索引中的负号表示从结束端开始：<code>[1:-1]</code>是正确的，-1表示倒数第二个数据</li>
+</ol>
+<p><strong>数据切片索引</strong>
+与Matlab不同的是，<code>A[1:5]</code>返回的不是数列A中位于1、2、3、4、5号位置的数据；取而代之的是：
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="line">print(A[1:5])</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">[2, 3, 4, 5]</span><br><span class="line"></span><br><span class="line">      -------------------------------------------</span><br><span class="line">[A]:   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |</span><br><span class="line">cut:  -0---1---2---3---4---5---6---7---8---9----10- </span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h2 id="if">if</h2>
+<p>常用调用模式如下，用缩进控制开始和结束（与matlab不同）：
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if is_hot:</span><br><span class="line">    print(&#x27;xxxxx&#x27;)</span><br><span class="line">elif is_coldL:</span><br><span class="line">    print(&#x27;xxxxxx&#x27;)</span><br><span class="line">else:</span><br><span class="line">    print(&#x27;xxxx&#x27;)</span><br></pre></td></tr></table></figure></p>
+<p>常用逻辑运算符 1.
+和：<code>and</code>，例如：<code>is_hot and is_cold</code> 1.
+或：<code>or</code> 1.
+非：<code>not</code>，例如：<code>is_cold and not is_wind</code>，<code>not</code>会将其后的False转化为True；上例中如果<code>is_cold = True</code>、<code>is_wind = False</code>，则返回<code>True</code></p>
+<p>比大小： 1.
+大于：<code>&gt;</code>、小于:<code>&lt;</code>、等于:<code>==</code> 1.
+大于等于：<code>&gt;=</code>、小于等于：<code>&lt;=</code> 1.
+不等于：<code>!=</code></p>
+<h2 id="循环">循环</h2>
+<p><code>while</code>常用调用模式如下，<code>break</code>可以用来跳出程序：
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i=1</span><br><span class="line">while i&lt;=5：</span><br><span class="line">    print(&#x27;i&#x27;)</span><br><span class="line">    i = i + 1</span><br><span class="line">print(&#x27;Done&#x27;) #用缩进控制while的结束</span><br></pre></td></tr></table></figure></p>
+<p><code>for</code>常用调用模式 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for item in [1,2,3,4]</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure></p>
+<h2 id="函数">函数</h2>
+<h3 id="常用函数">常用函数</h3>
+<p>绝对值：<code>abs()</code> 四舍五入到整数：<code>round()</code>
+生成等间距数列：<code>range(5,10,2)</code>；step=2，from 5 to 10，输出 5
+7 9</p>
+<h2 id="常用命令">常用命令</h2>
+<h3 id="运算符号">运算符号</h3>
+<ol type="1">
+<li>加<code>+</code>；减<code>-</code>；乘<code>*</code>；除<code>/</code>；幂<code>**</code></li>
+<li>特殊除号：得到结果的整数部分<code>//</code>；得到结果的余数<code>%</code></li>
+<li>增广运算符<code>X += 3</code>与<code>x = x + 3</code>等价、<code>x -= 3</code>同理</li>
+</ol>
+<h3 id="import"><strong><em>import</em></strong></h3>
+<p>调用包：<code>import XXX</code>，例如<code>import math</code>;使用时<code>math.acos()</code></p>
+<h2 id="questions">Questions</h2>
+<ol type="1">
+<li>methods 和 function 在Python有何区别的？</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -1415,69 +1478,6 @@ class="math inline">\(C/N\)</span>（库伦/牛），则下列关系式成立：
       </tags>
   </entry>
   <entry>
-    <title>Python基础知识</title>
-    <url>/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
-    <content><![CDATA[<h2 id="数据类型">数据类型</h2>
-<h3 id="字符-str">字符 str</h3>
-<ul>
-<li><strong>引号</strong>：在字符中显示单引号，则编程时用双引号将字符括起来；在字符中显示双引号，则编程时用单引号将字符括起来；
-字符中的单引号：<code>course = "He's finger"</code>
-字符串中的双引号：<code>words = 'Python is for "beginners"'</code></li>
-<li><strong>大小写</strong>：<code>course.upper()</code> 、
-<code>course.lower()</code>、<code>course.title()</code></li>
-<li><strong>查找替换</strong>：<code>course.find('xxx'),</code>和<code>course.replace('xxx','aaa')</code></li>
-<li><strong>字符长度</strong>：使用<code>len()</code></li>
-<li><strong>f与花括号</strong>：可以被用来格式化输出字符（在字符中嵌入变量）。
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">first_name=&#x27;John&#x27;</span><br><span class="line">last_name=&#x27;Smith&#x27;</span><br><span class="line">msg = f&quot;&#123;first_name&#125; [&#123;last_name&#125;] is a coder&quot;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>整数 int 浮点数 float 复数 complex</p>
-<h3 id="数据索引">数据索引</h3>
-<ol type="1">
-<li>Python中的索引从0开始</li>
-<li>数据索引中的负号表示从结束端开始：<code>[1:-1]</code>是正确的，-1表示倒数第二个数据</li>
-</ol>
-<p><strong>数据切片索引</strong>
-与Matlab不同的是，<code>A[1:5]</code>返回的不是数列A中位于1、2、3、4、5号位置的数据；取而代之的是：
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="line">print(A[1:5])</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">[2, 3, 4, 5]</span><br><span class="line"></span><br><span class="line">      -------------------------------------------</span><br><span class="line">[A]:   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |</span><br><span class="line">cut:  -0---1---2---3---4---5---6---7---8---9----10- </span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h2 id="if">if</h2>
-<p>常用调用模式如下，用缩进控制开始和结束（与matlab不同）：
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if is_hot:</span><br><span class="line">    print(&#x27;xxxxx&#x27;)</span><br><span class="line">elif is_coldL:</span><br><span class="line">    print(&#x27;xxxxxx&#x27;)</span><br><span class="line">else:</span><br><span class="line">    print(&#x27;xxxx&#x27;)</span><br></pre></td></tr></table></figure></p>
-<p>常用逻辑运算符 1.
-和：<code>and</code>，例如：<code>is_hot and is_cold</code> 1.
-或：<code>or</code> 1.
-非：<code>not</code>，例如：<code>is_cold and not is_wind</code>，<code>not</code>会将其后的False转化为True；上例中如果<code>is_cold = True</code>、<code>is_wind = False</code>，则返回<code>True</code></p>
-<p>比大小： 1.
-大于：<code>&gt;</code>、小于:<code>&lt;</code>、等于:<code>==</code> 1.
-大于等于：<code>&gt;=</code>、小于等于：<code>&lt;=</code> 1.
-不等于：<code>!=</code></p>
-<h2 id="循环">循环</h2>
-<p><code>while</code>常用调用模式如下，<code>break</code>可以用来跳出程序：
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">i=1</span><br><span class="line">while i&lt;=5：</span><br><span class="line">    print(&#x27;i&#x27;)</span><br><span class="line">    i = i + 1</span><br><span class="line">print(&#x27;Done&#x27;) #用缩进控制while的结束</span><br></pre></td></tr></table></figure></p>
-<p><code>for</code>常用调用模式 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for item in [1,2,3,4]</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure></p>
-<h2 id="函数">函数</h2>
-<h3 id="常用函数">常用函数</h3>
-<p>绝对值：<code>abs()</code> 四舍五入到整数：<code>round()</code>
-生成等间距数列：<code>range(5,10,2)</code>；step=2，from 5 to 10，输出 5
-7 9</p>
-<h2 id="常用命令">常用命令</h2>
-<h3 id="运算符号">运算符号</h3>
-<ol type="1">
-<li>加<code>+</code>；减<code>-</code>；乘<code>*</code>；除<code>/</code>；幂<code>**</code></li>
-<li>特殊除号：得到结果的整数部分<code>//</code>；得到结果的余数<code>%</code></li>
-<li>增广运算符<code>X += 3</code>与<code>x = x + 3</code>等价、<code>x -= 3</code>同理</li>
-</ol>
-<h3 id="import"><strong><em>import</em></strong></h3>
-<p>调用包：<code>import XXX</code>，例如<code>import math</code>;使用时<code>math.acos()</code></p>
-<h2 id="questions">Questions</h2>
-<ol type="1">
-<li>methods 和 function 在Python有何区别的？</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>质心_形心_重心</title>
     <url>/2022/03/08/%E8%B4%A8%E5%BF%83-%E5%BD%A2%E5%BF%83-%E9%87%8D%E5%BF%83/</url>
     <content><![CDATA[<h2 id="三者存在的条件">三者存在的条件</h2>
@@ -1662,6 +1662,74 @@ class="math inline">\(f_s&lt;2f_m\)</span>，延拓后的信号会在频域内�
       </tags>
   </entry>
   <entry>
+    <title>Maple常用命令</title>
+    <url>/2022/04/23/maple%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="基本操作">基本操作</h2>
+<p><strong>赋值</strong>： <code>：=</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a :=b   #表示将 a 的值赋予 b</span><br></pre></td></tr></table></figure></p>
+<p><strong>相等</strong>： <code>=</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a = b           # 创建了一个表达式</span><br><span class="line">equn:= a=b      #将表达式 a=b 赋值给 equn</span><br></pre></td></tr></table></figure></p>
+<p><strong>执行但不输出结果</strong>： <code>:</code></p>
+<p><strong>上标</strong>： <code>^</code></p>
+<p><strong>下标</strong>： <code>__</code> （双下划线）</p>
+<p><strong>乘</strong>： <code></code> （空格）</p>
+<p><strong>构造矩阵</strong>： <code>&lt; &gt;</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;&lt;a, b, c&gt; | &lt;x, y,z&gt;&gt;</span><br></pre></td></tr></table></figure>
+输出结果为： <span class="math display">\[
+\begin{bmatrix} a &amp; x \\\\ b &amp; y \\\\ c &amp; z \end{bmatrix}
+\]</span></p>
+<p><strong>构造函数</strong> <code>F:=x-&gt;2*x</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">F := (x, y) -&gt; 2*x + y</span><br><span class="line">F(2,1)</span><br></pre></td></tr></table></figure>
+输出结果为 <code>4</code></p>
+<h2 id="最常用的数据类型">最常用的数据类型</h2>
+<p><strong>序列</strong>： <code>a := 1, 2, 3</code>
+特点：有顺序、可组合 <code>b:=a,4,5</code> （输出结果为
+<code>1,2,3,4,5</code>），典型应用是函数的输入参数 生成序列的函数
+<code>seq()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">seq(x^i,i=1..11,2)</span><br></pre></td></tr></table></figure> 输出结果为： <span
+class="math inline">\(x,x^3,x^5,x^9,x^{11}\)</span></p>
+<p><strong>列表</strong>： 是用 <code>[  ]</code> 封装的序列
+与序列的不同：列表中嵌入列表展开方式不同
+与集合的不同：列表中元素项顺序是固定的，且会保留重复项 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a:=[1,2,3]:</span><br><span class="line">b:=[a,4,5]</span><br><span class="line">b[1]</span><br><span class="line">b[2]</span><br></pre></td></tr></table></figure>
+输出结果为：<code>b:=[[1,2,3],4,5]</code> 和 <code>[1,2,3]</code> 和
+<code>4</code></p>
+<h2 id="表达式的处理">表达式的处理</h2>
+<p><strong>简化</strong>： <code>simplify()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">equn :=a (a+b+2 a)</span><br><span class="line">simplify(equn)                          #处理单个表达式或矩阵</span><br><span class="line">equns := a (a+b+2 a), x+3x+y, m+n+n+n   #生成表达式序列</span><br><span class="line">simplify(equns)                         #会报错</span><br><span class="line">seq( simplify(equns[i]), i=1..3 )       #正常化简，生成一个化简后的序列</span><br><span class="line">simplify([equns])                       #正常化简，生成一个化简后的列表</span><br></pre></td></tr></table></figure></p>
+<p><strong>展开</strong>： <code>expand()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a:= x ( x+2 + x (x+3) )</span><br><span class="line">expand(a)                               #结果为 x^3 + 4*x^2 + 2*x</span><br><span class="line">b:= x ( x+2 + x (x+3) ), 2 y ( y+21 - 5 y (y+1) )</span><br><span class="line">expand(b)                               #只展开前一项，后一项被当作输入参数</span><br><span class="line">seq(expand(b[i]),i=1..2)                #正常展开，结果为序列 x^3 + 4*x^2 + 2*x, -10*y^3 - 8*y^2 + 42*y</span><br><span class="line">expand([b])                             #正常展开，结果为列表 [x^3 + 4*x^2 + 2*x, -10*y^3 - 8*y^2 + 42*y]</span><br></pre></td></tr></table></figure></p>
+<p><strong>整理</strong>：<code>collect()</code> 和 <code>sort()</code>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">equn := x*y*(x + y*(x + y + y*(x^2 + 1)))</span><br><span class="line">equn := expand(equn)            #先展开 结果为 x^3*y^3 + x^2*y^2 + 2*x*y^3 + x^2*y</span><br><span class="line">collect(equn, y)                #再按照 y 整理各项，结果为 (x^3 + 2*x)*y^3 + x^2*y^2 + x^2*y</span><br><span class="line">sort(equn, y, ascending)        #按 y 降次排列，结果为 x^2*y + x^2*y^2 + x^3*y^3 + 2*x*y^3</span><br></pre></td></tr></table></figure></p>
+<p><strong>变量替换</strong>：<code>subs()</code> 和
+<code>algsubs()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a := x + 3*y</span><br><span class="line">subs(x = z, a)          #用 z 替换表达式 a 中的 x，结果为 z + 3*y</span><br><span class="line">subs(z = x, a)          #因等式中无 z，故结果为 x + 3*y；等式左端为表示中已有变量，右端为替换后的变量</span><br><span class="line">subs（x = 2 z,a）       #结果为 2*z + 3*y</span><br><span class="line">subs（2 y = z,a）       #结果为 x + 3*y；因为subs只用来替换单变量不进行表达式的计算，该情况使用 algsubs()</span><br><span class="line">algsubs(2*y = z, a)     #结果为 x + (3*z)/2</span><br></pre></td></tr></table></figure></p>
+<p><strong>微分</strong>： <code>diff()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一般求导--------------------------------------------------------</span><br><span class="line">equn:=x^3 + 2*x*y^2 + x*y + y^2 + x</span><br><span class="line">diff(equn,x)                    #对 equn 关于 x 求导数，结果为 3*x^2 + 2*y^2 + y + 1</span><br><span class="line"># 对 x(t) 求导----------------------------------------------------</span><br><span class="line">equn2：= x(t) +x(t)^2</span><br><span class="line">diff(equn3, t)                  #可以对 t 直接求导，结果为diff(x(t), t) + 2*x(t)*diff(x(t), t)</span><br><span class="line">diff(equn2,x)                   #结果为0，因为maple不会将 x(t) 认定为 x</span><br><span class="line">diff(equn2, x(t))               #报错，不能对 x(t) 直接求导</span><br><span class="line">equn3 := subs(x(t) = x, equn3)  #先用 x 代换 x(t)，再求导</span><br><span class="line">equn3 := diff(equn3, x)</span><br><span class="line">equn3 := subs(x = x(t), equn3)  #再反代换回去，结果为 2*x(t) + 1</span><br></pre></td></tr></table></figure></p>
+<p><strong>积分</strong>：<code>int()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">integrand:= x+x^2</span><br><span class="line">int(integrand, x = 0 .. 1)      #被积函数是 integrand，积分下限是0，上限是1</span><br></pre></td></tr></table></figure></p>
+<p><strong>选择特定项并移除</strong>： <code>select()</code> 和
+<code>remove()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">integers := [seq(10 .. 20)]     #结果为 [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]</span><br><span class="line">select(isprime, integers)       #选择列表 integers 里的质数，结果为[11, 13, 17, 19]</span><br><span class="line">remove(isprime, integers)       #移除列表 integers 里的质数，结果为[10, 12, 14, 15, 16, 18, 20]</span><br></pre></td></tr></table></figure></p>
+<p><strong>解方程</strong>： <code>solve()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># solve() 的输入参数可以是序列或列表-------------------------------</span><br><span class="line">equns1 := x + y + z = 3:</span><br><span class="line">equns2 := 2*x + 4*y + z = 7:</span><br><span class="line">equns3 := x + y + 3*z = 5:</span><br><span class="line">equns := [equns1, equns2, equns3]:</span><br><span class="line">vars := [x, y, z]:</span><br><span class="line">solve(equns, vars)     #结果为 [[x = 1, y = 1, z = 1]]</span><br></pre></td></tr></table></figure></p>
+<p><strong>转换</strong>： <code>convert()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">integers:=[seq(1..5),1 ]                #此时 integers 为列表，结果为 [1, 2, 3, 4, 5, 1]</span><br><span class="line">integers:=convert(integers,list)        #此时 integers 为集合，结果为 &#123;1, 2, 3, 4, 5&#125; 因为集合无顺序且删去重复的元素</span><br></pre></td></tr></table></figure></p>
+<p><strong>获取等式的左边/右边</strong>：<code>lhs()</code> 和
+<code>rhs()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">equn := x + y = a - b</span><br><span class="line">lhs(equn)                   #获取等式左边，结果为 x + y</span><br><span class="line">rhs(equn)                   #获取等式左边，结果为 a - b</span><br></pre></td></tr></table></figure></p>
+<p><strong>函数映射</strong>： <code>map()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 将某个函数（自定义的或系统自带的）映射到某个对象（例如矩阵）的全部元素中去</span><br><span class="line">test1 := &lt;&lt;1 | 2 | 3&gt;, &lt;4 | 5 | 6&gt;, &lt;7 | 8 | 9&gt;&gt;</span><br><span class="line">f := x -&gt; x^2：</span><br><span class="line">test2:=map(f, test1)</span><br></pre></td></tr></table></figure>
+结果为： <span class="math display">\[
+test1=\begin{bmatrix}1 &amp; 2 &amp; 3 \\\\4 &amp; 5 &amp; 6 \\\\7 &amp;
+8 &amp; 9 \end{bmatrix},test2=\begin{bmatrix}1 &amp; 4 &amp; 9 \\\\16
+&amp; 25 &amp; 36 \\\\49 &amp; 64 &amp; 81 \end{bmatrix}
+\]</span></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">test := &lt;&lt;1 | 2 | 3&gt;, &lt;4 | 5 | 6&gt;, &lt;7 | 8 | 9&gt;&gt;     #创建矩阵</span><br><span class="line">int(test, x = 0 .. 2)                               #报错，不可以直接对矩阵进行积分</span><br><span class="line">map(int, test, x = 0 .. 2)                          #将 int() 映射到矩阵中的每个元素，进行积分</span><br></pre></td></tr></table></figure>
+<p>结果为： <span class="math display">\[
+test=\begin{bmatrix}2 &amp; 4 &amp; 6 \\\\8 &amp; 10 &amp; 12 \\\\14
+&amp; 16 &amp; 18 \end{bmatrix}
+\]</span></p>
+<h2 id="参考书目">参考书目</h2>
+<ul>
+<li><a
+href="https://www.maplesoft.com.cn/support/documentation/PDF/maple2020/Maple2020%E4%B8%AD%E6%96%87%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.pdf">《Maple2020中文用户手册》</a></li>
+<li><a
+href="https://www.maplesoft.com.cn/support/documentation/">Maple文档中心</a></li>
+<li><a
+href="https://pdc.capub.cn/search.html#/detail?id=yrcnjprstu53gy5l2gvknezqtg5lyoocv7kzwrpwvcxul7qhho7q&amp;from=1&amp;type=marc">《Maple理论力学》
+李银山</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Maple</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>矩阵求导</title>
     <url>/2022/04/23/%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC/</url>
     <content><![CDATA[<h2 id="公约">公约</h2>
@@ -1758,40 +1826,108 @@ href="https://pdc.capub.cn/search.html#/detail?id=te3qsklcdh7mpuxtasm3pfdgg5to2g
       </tags>
   </entry>
   <entry>
-    <title>数学概念——同伦</title>
-    <url>/2022/07/29/%E6%95%B0%E5%AD%A6%E6%A6%82%E5%BF%B5-%E5%90%8C%E4%BC%A6/</url>
-    <content><![CDATA[<h2 id="概念">概念</h2>
-<p><strong>同伦</strong>：在数学和拓扑学上描述了两个对象间的“连续变化”。</p>
-<p>两个定义在拓扑空间之间的连续函数，如果其中一个能“连续地形变”为另一个，则这两个函数称为同伦的。这样的<strong>形变</strong>称为两个函数之间的同伦。</p>
-<p><img src="/image/homotopy/HomotopySmall.gif" width = "25%"  /></p>
-<h2 id="定义">定义</h2>
-<p>给定两个拓扑空间 <span class="math inline">\(X\)</span> 和 <span
-class="math inline">\(Y\)</span>。考虑两个连续函数 <span
-class="math inline">\(f, g: X\rightarrow
-Y\)</span>，若存在一个定义在空间 <span class="math inline">\(X\)</span>
-与单位区间 <span class="math inline">\([0,1]\)</span>
-的积空间上的连续映射 <span class="math inline">\(H: X \times [0,1]
-\rightarrow Y\)</span> 使得：</p>
+    <title>非线性方程的延拓法</title>
+    <url>/2022/08/01/%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%9A%84%E5%BB%B6%E6%8B%93%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="概述">概述</h2>
 <ul>
-<li><span class="math inline">\(\forall x \in X,
-H(x,0)=f(x)\)</span></li>
-<li><span class="math inline">\(\forall x \in X,
-H(x,1)=g(x)\)</span></li>
+<li><strong>前置概念</strong>：<a
+href="/2022/07/29/数学概念-同伦/">同伦</a></li>
+<li><strong>作用对象</strong>：非线性方程组</li>
+<li><strong>目的</strong>：扩大非线性方程组的收敛域</li>
 </ul>
-<p>则称 <span class="math inline">\(H\)</span> 是 <span
-class="math inline">\(f, g\)</span> 之间的一个同伦。</p>
-<p>如果我们将 <span class="math inline">\(H\)</span>
-的第二个参数当作时间，这样 <span class="math inline">\(H\)</span>
-相当于描述了一个从 <span class="math inline">\(f\)</span> 到 <span
-class="math inline">\(g\)</span> 的连续形变： 0 时刻得到函数 <span
-class="math inline">\(f\)</span>，1时刻得到函数 <span
-class="math inline">\(g\)</span>， 反之亦然。</p>
-<p><img src="/image/homotopy/Mug_and_Torus_morph.gif" width = "35%"  /></p>
-<h2 id="reference">Reference</h2>
+<h2 id="延拓法的基本思想">延拓法的基本思想</h2>
+<ol type="1">
+<li>已知一个待求解的非线性方程组 <span
+class="math inline">\(F(x)=0\)</span></li>
+<li>在方程组中引入一个参数 <span
+class="math inline">\(\lambda\)</span>，构造 <span
+class="math inline">\(F(x)\)</span> 的<strong>同伦映射</strong> <span
+class="math inline">\(H(x,\lambda), \lambda \in [0,1]\)</span>, 使得
+<span class="math inline">\(H(x,0)=0, H(x,1)=F(x)\)</span><br />
+</li>
+<li>已知 <span class="math inline">\(H(x,0)=0\)</span> 的解是 <span
+class="math inline">\(x=x_0\)</span> (可以是零向量 <span
+class="math inline">\(\bar{0}\)</span> )</li>
+<li>数值迭代，求解满足 <span class="math inline">\(H(x,1)=0\)</span>
+的解 <span class="math inline">\(x^*\)</span>
 <ul>
-<li><a
-href="https://zh.wikipedia.org/wiki/%E5%90%8C%E5%80%AB">维基百科-同伦</a></li>
-</ul>
+<li>构造序列 <span class="math inline">\(\\{ \lambda_i \\} =
+\\{0,...,\lambda_i,...1\\}, i = 0,1,2,...,N\)</span></li>
+<li>以 <span class="math inline">\(x_0\)</span> 为初值，求解 <span
+class="math inline">\(H(x,\lambda_1)=0\)</span>
+（例如，Netwon迭代），解为 <span class="math inline">\(x_1\)</span></li>
+<li>以 <span class="math inline">\(x_1\)</span> 为初值，求解 <span
+class="math inline">\(H(x,\lambda_2)=0\)</span>，解为 <span
+class="math inline">\(x_2\)</span></li>
+<li>以 <span class="math inline">\(x_i\)</span> 为初值，求解 <span
+class="math inline">\(H(x,\lambda_{i+1})=0\)</span>，解为 <span
+class="math inline">\(x_{i+1}\)</span></li>
+<li>最终求得 <span class="math inline">\(H(x,1)=0\)</span> 的解 <span
+class="math inline">\(x_N\)</span>, 即 <span
+class="math inline">\(F(x)=0\)</span>的解 <span
+class="math inline">\(x^*\)</span></li>
+</ul></li>
+<li>该方法的结果相当于扩大了传统非线性方程组迭代求解方法的收敛域</li>
+</ol>
+<p><strong>Mark 1</strong>：
+Newton迭代时，可只迭代一步，因为最终目标是求 <span
+class="math inline">\(\boldsymbol{x}^*\)</span> <strong>Mark
+2</strong>：<span class="math inline">\(N\)</span> 足够大</p>
+<h2 id="延拓法的数学表述">延拓法的数学表述</h2>
+<p>传统的求解非线性方程组求解方法是局部收敛的，只有初值 <span
+class="math inline">\(x_0\)</span>
+足够接近真值，迭代方法收敛。然而，延拓法作为可以扩大收敛域的有效方法，可以从任意的
+<span class="math inline">\(x_0\)</span> 出发，通过延拓求解得到方程的解
+<span class="math inline">\(x^*\)</span>。</p>
+<p>引入参数 <span
+class="math inline">\(\lambda\)</span>，构造一簇同伦映射 <span
+class="math inline">\(\boldsymbol{H}:D\times[0,1] \subset
+\mathbf{R}^{n+1}\rightarrow \mathbf{R}^n\)</span> 代替单映射 <span
+class="math inline">\(\boldsymbol{F}(\boldsymbol{x})\)</span>，令 <span
+class="math inline">\(\boldsymbol{H}\)</span> 满足条件：</p>
+<p><span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x}_0,0)=\boldsymbol{0}
+\]</span></p>
+<p><span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x},1)=\boldsymbol{F}(\boldsymbol{x})
+\]</span></p>
+<p>它表明当 <span class="math inline">\(\lambda=0\)</span> 时，<span
+class="math inline">\(\boldsymbol{H}(\boldsymbol{x},0)=\boldsymbol{0}\)</span>
+的解 <span class="math inline">\(\boldsymbol{x}_0\)</span> 已知；当
+<span class="math inline">\(\lambda=1\)</span> 时，<span
+class="math inline">\(\boldsymbol{H}(\boldsymbol{x},1)=\boldsymbol{F}(\boldsymbol{x})=0\)</span>
+的解 <span class="math inline">\(\boldsymbol{x}^*\)</span>
+为非线性方程组的解。</p>
+<p>现考虑同伦方程：</p>
+<p><span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x},\lambda)=\boldsymbol{0} \\quad
+\lambda \in [0,1],\boldsymbol{x}\in D \subset\mathbf{R}^n
+\]</span></p>
+<p>如果对每个 <span class="math inline">\(\lambda
+\in[0,1]\)</span>，上述方程有解 <span
+class="math inline">\(\boldsymbol{x}=\boldsymbol{x}(\lambda),
+\boldsymbol{x}:[0,1]\rightarrow D\)</span> 且连续，则 <span
+class="math inline">\(\boldsymbol{x}=\boldsymbol{x}(\lambda)\)</span>
+是关于参数 <span class="math inline">\(\lambda\in[0,1]\)</span> 在 <span
+class="math inline">\(\mathbf{R}^{n+1}\)</span>
+中的一条曲线。该曲线的一端为已知点 <span
+class="math inline">\((\boldsymbol{x}_0,0)\)</span>，另一端是点 <span
+class="math inline">\((\boldsymbol{x}^*,1)\)</span>，<span
+class="math inline">\(\boldsymbol{x}^*\)</span>
+即为非线性方程组的解，这就是<strong>延拓法</strong>，也被称作<strong>同伦法</strong>。</p>
+<p>满足条件的同伦可以有各种不同的取法，常用的有两种。</p>
+<p>牛顿同伦： <span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x},\lambda)
+=\boldsymbol{F}(\boldsymbol{x})
++(\lambda-1)\boldsymbol{F}(\boldsymbol{x}_0)
+\]</span></p>
+<p>凸同伦： <span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x},\lambda)
+= t \boldsymbol{F}(\boldsymbol{x})
++(1-\lambda)\boldsymbol{A}(\boldsymbol{x} - \boldsymbol{x}_0)
+\]</span></p>
+<p>其中 <span class="math inline">\(\boldsymbol{A}\in\mathbf{R}^{n\times
+n}\)</span> 是非奇的</p>
 ]]></content>
       <tags>
         <tag>math</tag>
@@ -2159,71 +2295,63 @@ href="https://www.zhihu.com/question/296107343/answer/1625307850">材料力学�
       </tags>
   </entry>
   <entry>
-    <title>Maple常用命令</title>
-    <url>/2022/04/23/maple%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h2 id="基本操作">基本操作</h2>
-<p><strong>赋值</strong>： <code>：=</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a :=b   #表示将 a 的值赋予 b</span><br></pre></td></tr></table></figure></p>
-<p><strong>相等</strong>： <code>=</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a = b           # 创建了一个表达式</span><br><span class="line">equn:= a=b      #将表达式 a=b 赋值给 equn</span><br></pre></td></tr></table></figure></p>
-<p><strong>执行但不输出结果</strong>： <code>:</code></p>
-<p><strong>上标</strong>： <code>^</code></p>
-<p><strong>下标</strong>： <code>__</code> （双下划线）</p>
-<p><strong>乘</strong>： <code></code> （空格）</p>
-<p><strong>构造矩阵</strong>： <code>&lt; &gt;</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;&lt;a, b, c&gt; | &lt;x, y,z&gt;&gt;</span><br></pre></td></tr></table></figure>
-输出结果为： <span class="math display">\[
-\begin{bmatrix} a &amp; x \\\\ b &amp; y \\\\ c &amp; z \end{bmatrix}
-\]</span></p>
-<p><strong>构造函数</strong> <code>F:=x-&gt;2*x</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">F := (x, y) -&gt; 2*x + y</span><br><span class="line">F(2,1)</span><br></pre></td></tr></table></figure>
-输出结果为 <code>4</code></p>
-<h2 id="最常用的数据类型">最常用的数据类型</h2>
-<p><strong>序列</strong>： <code>a := 1, 2, 3</code>
-特点：有顺序、可组合 <code>b:=a,4,5</code> （输出结果为
-<code>1,2,3,4,5</code>），典型应用是函数的输入参数 生成序列的函数
-<code>seq()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">seq(x^i,i=1..11,2)</span><br></pre></td></tr></table></figure> 输出结果为： <span
-class="math inline">\(x,x^3,x^5,x^9,x^{11}\)</span></p>
-<p><strong>列表</strong>： 是用 <code>[  ]</code> 封装的序列
-与序列的不同：列表中嵌入列表展开方式不同
-与集合的不同：列表中元素项顺序是固定的，且会保留重复项 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a:=[1,2,3]:</span><br><span class="line">b:=[a,4,5]</span><br><span class="line">b[1]</span><br><span class="line">b[2]</span><br></pre></td></tr></table></figure>
-输出结果为：<code>b:=[[1,2,3],4,5]</code> 和 <code>[1,2,3]</code> 和
-<code>4</code></p>
-<h2 id="表达式的处理">表达式的处理</h2>
-<p><strong>简化</strong>： <code>simplify()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">equn :=a (a+b+2 a)</span><br><span class="line">simplify(equn)                          #处理单个表达式或矩阵</span><br><span class="line">equns := a (a+b+2 a), x+3x+y, m+n+n+n   #生成表达式序列</span><br><span class="line">simplify(equns)                         #会报错</span><br><span class="line">seq( simplify(equns[i]), i=1..3 )       #正常化简，生成一个化简后的序列</span><br><span class="line">simplify([equns])                       #正常化简，生成一个化简后的列表</span><br></pre></td></tr></table></figure></p>
-<p><strong>展开</strong>： <code>expand()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a:= x ( x+2 + x (x+3) )</span><br><span class="line">expand(a)                               #结果为 x^3 + 4*x^2 + 2*x</span><br><span class="line">b:= x ( x+2 + x (x+3) ), 2 y ( y+21 - 5 y (y+1) )</span><br><span class="line">expand(b)                               #只展开前一项，后一项被当作输入参数</span><br><span class="line">seq(expand(b[i]),i=1..2)                #正常展开，结果为序列 x^3 + 4*x^2 + 2*x, -10*y^3 - 8*y^2 + 42*y</span><br><span class="line">expand([b])                             #正常展开，结果为列表 [x^3 + 4*x^2 + 2*x, -10*y^3 - 8*y^2 + 42*y]</span><br></pre></td></tr></table></figure></p>
-<p><strong>整理</strong>：<code>collect()</code> 和 <code>sort()</code>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">equn := x*y*(x + y*(x + y + y*(x^2 + 1)))</span><br><span class="line">equn := expand(equn)            #先展开 结果为 x^3*y^3 + x^2*y^2 + 2*x*y^3 + x^2*y</span><br><span class="line">collect(equn, y)                #再按照 y 整理各项，结果为 (x^3 + 2*x)*y^3 + x^2*y^2 + x^2*y</span><br><span class="line">sort(equn, y, ascending)        #按 y 降次排列，结果为 x^2*y + x^2*y^2 + x^3*y^3 + 2*x*y^3</span><br></pre></td></tr></table></figure></p>
-<p><strong>变量替换</strong>：<code>subs()</code> 和
-<code>algsubs()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a := x + 3*y</span><br><span class="line">subs(x = z, a)          #用 z 替换表达式 a 中的 x，结果为 z + 3*y</span><br><span class="line">subs(z = x, a)          #因等式中无 z，故结果为 x + 3*y；等式左端为表示中已有变量，右端为替换后的变量</span><br><span class="line">subs（x = 2 z,a）       #结果为 2*z + 3*y</span><br><span class="line">subs（2 y = z,a）       #结果为 x + 3*y；因为subs只用来替换单变量不进行表达式的计算，该情况使用 algsubs()</span><br><span class="line">algsubs(2*y = z, a)     #结果为 x + (3*z)/2</span><br></pre></td></tr></table></figure></p>
-<p><strong>微分</strong>： <code>diff()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一般求导--------------------------------------------------------</span><br><span class="line">equn:=x^3 + 2*x*y^2 + x*y + y^2 + x</span><br><span class="line">diff(equn,x)                    #对 equn 关于 x 求导数，结果为 3*x^2 + 2*y^2 + y + 1</span><br><span class="line"># 对 x(t) 求导----------------------------------------------------</span><br><span class="line">equn2：= x(t) +x(t)^2</span><br><span class="line">diff(equn3, t)                  #可以对 t 直接求导，结果为diff(x(t), t) + 2*x(t)*diff(x(t), t)</span><br><span class="line">diff(equn2,x)                   #结果为0，因为maple不会将 x(t) 认定为 x</span><br><span class="line">diff(equn2, x(t))               #报错，不能对 x(t) 直接求导</span><br><span class="line">equn3 := subs(x(t) = x, equn3)  #先用 x 代换 x(t)，再求导</span><br><span class="line">equn3 := diff(equn3, x)</span><br><span class="line">equn3 := subs(x = x(t), equn3)  #再反代换回去，结果为 2*x(t) + 1</span><br></pre></td></tr></table></figure></p>
-<p><strong>积分</strong>：<code>int()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">integrand:= x+x^2</span><br><span class="line">int(integrand, x = 0 .. 1)      #被积函数是 integrand，积分下限是0，上限是1</span><br></pre></td></tr></table></figure></p>
-<p><strong>选择特定项并移除</strong>： <code>select()</code> 和
-<code>remove()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">integers := [seq(10 .. 20)]     #结果为 [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]</span><br><span class="line">select(isprime, integers)       #选择列表 integers 里的质数，结果为[11, 13, 17, 19]</span><br><span class="line">remove(isprime, integers)       #移除列表 integers 里的质数，结果为[10, 12, 14, 15, 16, 18, 20]</span><br></pre></td></tr></table></figure></p>
-<p><strong>解方程</strong>： <code>solve()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># solve() 的输入参数可以是序列或列表-------------------------------</span><br><span class="line">equns1 := x + y + z = 3:</span><br><span class="line">equns2 := 2*x + 4*y + z = 7:</span><br><span class="line">equns3 := x + y + 3*z = 5:</span><br><span class="line">equns := [equns1, equns2, equns3]:</span><br><span class="line">vars := [x, y, z]:</span><br><span class="line">solve(equns, vars)     #结果为 [[x = 1, y = 1, z = 1]]</span><br></pre></td></tr></table></figure></p>
-<p><strong>转换</strong>： <code>convert()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">integers:=[seq(1..5),1 ]                #此时 integers 为列表，结果为 [1, 2, 3, 4, 5, 1]</span><br><span class="line">integers:=convert(integers,list)        #此时 integers 为集合，结果为 &#123;1, 2, 3, 4, 5&#125; 因为集合无顺序且删去重复的元素</span><br></pre></td></tr></table></figure></p>
-<p><strong>获取等式的左边/右边</strong>：<code>lhs()</code> 和
-<code>rhs()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">equn := x + y = a - b</span><br><span class="line">lhs(equn)                   #获取等式左边，结果为 x + y</span><br><span class="line">rhs(equn)                   #获取等式左边，结果为 a - b</span><br></pre></td></tr></table></figure></p>
-<p><strong>函数映射</strong>： <code>map()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 将某个函数（自定义的或系统自带的）映射到某个对象（例如矩阵）的全部元素中去</span><br><span class="line">test1 := &lt;&lt;1 | 2 | 3&gt;, &lt;4 | 5 | 6&gt;, &lt;7 | 8 | 9&gt;&gt;</span><br><span class="line">f := x -&gt; x^2：</span><br><span class="line">test2:=map(f, test1)</span><br></pre></td></tr></table></figure>
-结果为： <span class="math display">\[
-test1=\begin{bmatrix}1 &amp; 2 &amp; 3 \\\\4 &amp; 5 &amp; 6 \\\\7 &amp;
-8 &amp; 9 \end{bmatrix},test2=\begin{bmatrix}1 &amp; 4 &amp; 9 \\\\16
-&amp; 25 &amp; 36 \\\\49 &amp; 64 &amp; 81 \end{bmatrix}
-\]</span></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">test := &lt;&lt;1 | 2 | 3&gt;, &lt;4 | 5 | 6&gt;, &lt;7 | 8 | 9&gt;&gt;     #创建矩阵</span><br><span class="line">int(test, x = 0 .. 2)                               #报错，不可以直接对矩阵进行积分</span><br><span class="line">map(int, test, x = 0 .. 2)                          #将 int() 映射到矩阵中的每个元素，进行积分</span><br></pre></td></tr></table></figure>
-<p>结果为： <span class="math display">\[
-test=\begin{bmatrix}2 &amp; 4 &amp; 6 \\\\8 &amp; 10 &amp; 12 \\\\14
-&amp; 16 &amp; 18 \end{bmatrix}
-\]</span></p>
-<h2 id="参考书目">参考书目</h2>
+    <title>数学概念——同伦</title>
+    <url>/2022/07/29/%E6%95%B0%E5%AD%A6%E6%A6%82%E5%BF%B5-%E5%90%8C%E4%BC%A6/</url>
+    <content><![CDATA[<h2 id="概念">概念</h2>
+<p><strong>同伦</strong>：在数学和拓扑学上描述了两个对象间的“连续变化”。</p>
+<p>两个定义在拓扑空间之间的连续函数，如果其中一个能“连续地形变”为另一个，则这两个函数称为同伦的。这样的<strong>形变</strong>称为两个函数之间的同伦。</p>
+<p><img src="/image/homotopy/HomotopySmall.gif" width = "25%"  /></p>
+<h2 id="定义">定义</h2>
+<p>给定两个拓扑空间 <span class="math inline">\(X\)</span> 和 <span
+class="math inline">\(Y\)</span>。考虑两个连续函数 <span
+class="math inline">\(f, g: X\rightarrow
+Y\)</span>，若存在一个定义在空间 <span class="math inline">\(X\)</span>
+与单位区间 <span class="math inline">\([0,1]\)</span>
+的积空间上的连续映射 <span class="math inline">\(H: X \times [0,1]
+\rightarrow Y\)</span> 使得：</p>
+<ul>
+<li><span class="math inline">\(\forall x \in X,
+H(x,0)=f(x)\)</span></li>
+<li><span class="math inline">\(\forall x \in X,
+H(x,1)=g(x)\)</span></li>
+</ul>
+<p>则称 <span class="math inline">\(H\)</span> 是 <span
+class="math inline">\(f, g\)</span> 之间的一个同伦。</p>
+<p>如果我们将 <span class="math inline">\(H\)</span>
+的第二个参数当作时间，这样 <span class="math inline">\(H\)</span>
+相当于描述了一个从 <span class="math inline">\(f\)</span> 到 <span
+class="math inline">\(g\)</span> 的连续形变： 0 时刻得到函数 <span
+class="math inline">\(f\)</span>，1时刻得到函数 <span
+class="math inline">\(g\)</span>， 反之亦然。</p>
+<p><img src="/image/homotopy/Mug_and_Torus_morph.gif" width = "35%"  /></p>
+<h2 id="reference">Reference</h2>
 <ul>
 <li><a
-href="https://www.maplesoft.com.cn/support/documentation/PDF/maple2020/Maple2020%E4%B8%AD%E6%96%87%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.pdf">《Maple2020中文用户手册》</a></li>
-<li><a
-href="https://www.maplesoft.com.cn/support/documentation/">Maple文档中心</a></li>
-<li><a
-href="https://pdc.capub.cn/search.html#/detail?id=yrcnjprstu53gy5l2gvknezqtg5lyoocv7kzwrpwvcxul7qhho7q&amp;from=1&amp;type=marc">《Maple理论力学》
-李银山</a></li>
+href="https://zh.wikipedia.org/wiki/%E5%90%8C%E5%80%AB">维基百科-同伦</a></li>
 </ul>
 ]]></content>
       <tags>
-        <tag>Maple</tag>
+        <tag>math</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Geometrical Nonlinear and Material Nonlinear</title>
+    <url>/2022/08/02/geometricalNonlinearAndMaterialNonlinear/</url>
+    <content><![CDATA[<h2 id="geometrical-nonlinear">Geometrical Nonlinear</h2>
+<p>In the geometrical nonlinear case, the relationship internal
+force-displacements is nonlinear.</p>
+<h2 id="material-nonlinaer">Material Nonlinaer</h2>
+<p>In the material nonlinear case, the relationship of the stress-strain
+is nonlinear.</p>
+<p>Of course these cases may be independent of each other or
+combined.</p>
+<ul>
+<li><strong>From Czeslaw Kazimierz Szymczak</strong>:
+https://www.researchgate.net/post/What_is_Geomertical_Nonlinearity/2</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>mechanics</tag>
       </tags>
   </entry>
   <entry>
@@ -2318,134 +2446,6 @@ class="math inline">\(\mathrm{arctan}(-\frac{b_n}{a_n})\)</span>为复数的幅�
 ]]></content>
       <tags>
         <tag>振动测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Geometrical Nonlinear and Material Nonlinear</title>
-    <url>/2022/08/02/geometricalNonlinearAndMaterialNonlinear/</url>
-    <content><![CDATA[<h2 id="geometrical-nonlinear">Geometrical Nonlinear</h2>
-<p>In the geometrical nonlinear case, the relationship internal
-force-displacements is nonlinear.</p>
-<h2 id="material-nonlinaer">Material Nonlinaer</h2>
-<p>In the material nonlinear case, the relationship of the stress-strain
-is nonlinear.</p>
-<p>Of course these cases may be independent of each other or
-combined.</p>
-<ul>
-<li><strong>From Czeslaw Kazimierz Szymczak</strong>:
-https://www.researchgate.net/post/What_is_Geomertical_Nonlinearity/2</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>mechanics</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>非线性方程的延拓法</title>
-    <url>/2022/08/01/%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%9A%84%E5%BB%B6%E6%8B%93%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="概述">概述</h2>
-<ul>
-<li><strong>前置概念</strong>：<a
-href="/2022/07/29/数学概念-同伦/">同伦</a></li>
-<li><strong>作用对象</strong>：非线性方程组</li>
-<li><strong>目的</strong>：扩大非线性方程组的收敛域</li>
-</ul>
-<h2 id="延拓法的基本思想">延拓法的基本思想</h2>
-<ol type="1">
-<li>已知一个待求解的非线性方程组 <span
-class="math inline">\(F(x)=0\)</span></li>
-<li>在方程组中引入一个参数 <span
-class="math inline">\(\lambda\)</span>，构造 <span
-class="math inline">\(F(x)\)</span> 的<strong>同伦映射</strong> <span
-class="math inline">\(H(x,\lambda), \lambda \in [0,1]\)</span>, 使得
-<span class="math inline">\(H(x,0)=0, H(x,1)=F(x)\)</span><br />
-</li>
-<li>已知 <span class="math inline">\(H(x,0)=0\)</span> 的解是 <span
-class="math inline">\(x=x_0\)</span> (可以是零向量 <span
-class="math inline">\(\bar{0}\)</span> )</li>
-<li>数值迭代，求解满足 <span class="math inline">\(H(x,1)=0\)</span>
-的解 <span class="math inline">\(x^*\)</span>
-<ul>
-<li>构造序列 <span class="math inline">\(\\{ \lambda_i \\} =
-\\{0,...,\lambda_i,...1\\}, i = 0,1,2,...,N\)</span></li>
-<li>以 <span class="math inline">\(x_0\)</span> 为初值，求解 <span
-class="math inline">\(H(x,\lambda_1)=0\)</span>
-（例如，Netwon迭代），解为 <span class="math inline">\(x_1\)</span></li>
-<li>以 <span class="math inline">\(x_1\)</span> 为初值，求解 <span
-class="math inline">\(H(x,\lambda_2)=0\)</span>，解为 <span
-class="math inline">\(x_2\)</span></li>
-<li>以 <span class="math inline">\(x_i\)</span> 为初值，求解 <span
-class="math inline">\(H(x,\lambda_{i+1})=0\)</span>，解为 <span
-class="math inline">\(x_{i+1}\)</span></li>
-<li>最终求得 <span class="math inline">\(H(x,1)=0\)</span> 的解 <span
-class="math inline">\(x_N\)</span>, 即 <span
-class="math inline">\(F(x)=0\)</span>的解 <span
-class="math inline">\(x^*\)</span></li>
-</ul></li>
-<li>该方法的结果相当于扩大了传统非线性方程组迭代求解方法的收敛域</li>
-</ol>
-<p><strong>Mark 1</strong>：
-Newton迭代时，可只迭代一步，因为最终目标是求 <span
-class="math inline">\(\boldsymbol{x}^*\)</span> <strong>Mark
-2</strong>：<span class="math inline">\(N\)</span> 足够大</p>
-<h2 id="延拓法的数学表述">延拓法的数学表述</h2>
-<p>传统的求解非线性方程组求解方法是局部收敛的，只有初值 <span
-class="math inline">\(x_0\)</span>
-足够接近真值，迭代方法收敛。然而，延拓法作为可以扩大收敛域的有效方法，可以从任意的
-<span class="math inline">\(x_0\)</span> 出发，通过延拓求解得到方程的解
-<span class="math inline">\(x^*\)</span>。</p>
-<p>引入参数 <span
-class="math inline">\(\lambda\)</span>，构造一簇同伦映射 <span
-class="math inline">\(\boldsymbol{H}:D\times[0,1] \subset
-\mathbf{R}^{n+1}\rightarrow \mathbf{R}^n\)</span> 代替单映射 <span
-class="math inline">\(\boldsymbol{F}(\boldsymbol{x})\)</span>，令 <span
-class="math inline">\(\boldsymbol{H}\)</span> 满足条件：</p>
-<p><span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x}_0,0)=\boldsymbol{0}
-\]</span></p>
-<p><span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x},1)=\boldsymbol{F}(\boldsymbol{x})
-\]</span></p>
-<p>它表明当 <span class="math inline">\(\lambda=0\)</span> 时，<span
-class="math inline">\(\boldsymbol{H}(\boldsymbol{x},0)=\boldsymbol{0}\)</span>
-的解 <span class="math inline">\(\boldsymbol{x}_0\)</span> 已知；当
-<span class="math inline">\(\lambda=1\)</span> 时，<span
-class="math inline">\(\boldsymbol{H}(\boldsymbol{x},1)=\boldsymbol{F}(\boldsymbol{x})=0\)</span>
-的解 <span class="math inline">\(\boldsymbol{x}^*\)</span>
-为非线性方程组的解。</p>
-<p>现考虑同伦方程：</p>
-<p><span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x},\lambda)=\boldsymbol{0} \\quad
-\lambda \in [0,1],\boldsymbol{x}\in D \subset\mathbf{R}^n
-\]</span></p>
-<p>如果对每个 <span class="math inline">\(\lambda
-\in[0,1]\)</span>，上述方程有解 <span
-class="math inline">\(\boldsymbol{x}=\boldsymbol{x}(\lambda),
-\boldsymbol{x}:[0,1]\rightarrow D\)</span> 且连续，则 <span
-class="math inline">\(\boldsymbol{x}=\boldsymbol{x}(\lambda)\)</span>
-是关于参数 <span class="math inline">\(\lambda\in[0,1]\)</span> 在 <span
-class="math inline">\(\mathbf{R}^{n+1}\)</span>
-中的一条曲线。该曲线的一端为已知点 <span
-class="math inline">\((\boldsymbol{x}_0,0)\)</span>，另一端是点 <span
-class="math inline">\((\boldsymbol{x}^*,1)\)</span>，<span
-class="math inline">\(\boldsymbol{x}^*\)</span>
-即为非线性方程组的解，这就是<strong>延拓法</strong>，也被称作<strong>同伦法</strong>。</p>
-<p>满足条件的同伦可以有各种不同的取法，常用的有两种。</p>
-<p>牛顿同伦： <span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x},\lambda)
-=\boldsymbol{F}(\boldsymbol{x})
-+(\lambda-1)\boldsymbol{F}(\boldsymbol{x}_0)
-\]</span></p>
-<p>凸同伦： <span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x},\lambda)
-= t \boldsymbol{F}(\boldsymbol{x})
-+(1-\lambda)\boldsymbol{A}(\boldsymbol{x} - \boldsymbol{x}_0)
-\]</span></p>
-<p>其中 <span class="math inline">\(\boldsymbol{A}\in\mathbf{R}^{n\times
-n}\)</span> 是非奇的</p>
-]]></content>
-      <tags>
-        <tag>math</tag>
       </tags>
   </entry>
   <entry>
