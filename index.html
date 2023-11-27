@@ -156,13 +156,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -187,6 +187,285 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2023/11/25/contact-stiffness-for-bearing/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/image/aboutme/conference-photo.jpg">
+      <meta itemprop="name" content="Haopeng Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Haopeng's Blog">
+      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Haopeng's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/25/contact-stiffness-for-bearing/" class="post-title-link" itemprop="url">Calculate Contact Stiffness for dynamic rolling bearing model</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-25 16:38:29" itemprop="dateCreated datePublished" datetime="2023-11-25T16:38:29+08:00">2023-11-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-27 16:01:50" itemprop="dateModified" datetime="2023-11-27T16:01:50+08:00">2023-11-27</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>1.2k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>4 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="circular-contact">Circular Contact</h2>
+<p><img src="/image/contactStiffness/circleContact.png" width = "40%"  /></p>
+<p><img src="/image/contactStiffness/contact_R.png" width = "50%"  /></p>
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li><span class="math inline">\(\delta\)</span>: distance between two
+spheres</li>
+<li><span class="math inline">\(E_i,\nu_i\)</span>: the elastic modulus
+and Poisson's ratio for the i-th sphere</li>
+<li><span class="math inline">\(R_i\)</span>: the radius of the i-th
+sphere</li>
+<li><span class="math inline">\(F\)</span>: force on spheres</li>
+<li><span class="math inline">\(b\)</span>: the half width of
+contact</li>
+<li><span class="math inline">\(E^*\)</span>: the combined modulus of
+two spheres</li>
+<li><span class="math inline">\(R^*\)</span>: reciprocal of relative
+curvature for two spheres</li>
+</ul>
+<h3 id="equations">Equations</h3>
+<p><span class="math display">\[
+{\delta}^3=
+\left(\frac{3}{4E^*}\right)^2
+\frac{F^2}{R^*}
+\]</span></p>
+<p><span class="math display">\[
+F = \left( \frac{4E^*\sqrt{R^*}}{3} \right)
+\delta^\frac{3}{2}=k_{\mathrm{Hertz}} \; \delta^\frac{3}{2}
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{E^*} = \frac{(1-\nu_1^2)}{E_1} + \frac{(1-\nu_2^2)}{E_2}
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{R^*}
+= \frac{1}{R_1} + \frac{1}{R_2}
+\]</span></p>
+<h3 id="case">Case</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br><span class="line">close all</span><br><span class="line">% choose the bearing to calculte contact stiffness</span><br><span class="line">bearingType = 6212;</span><br><span class="line">switch bearingType</span><br><span class="line">    case 6204</span><br><span class="line">        % SKF 6204 bearing</span><br><span class="line">        % Physics parameters</span><br><span class="line">        E1 = 210e9; % elastic modulus (Pa)</span><br><span class="line">        nu1 = 0.3; % poison&#x27;s ratio</span><br><span class="line">        E2 = E1;</span><br><span class="line">        nu2 = nu1;</span><br><span class="line">        % Geometrics parameters</span><br><span class="line">        R1 = 3.97e-3; % radius of sphere 1 (m)</span><br><span class="line">        R2 = -20.7e-3;</span><br><span class="line">        disRange = 1e-3; % clearance + deformation</span><br><span class="line">    case 6212</span><br><span class="line">        % SKF 6212 bearing</span><br><span class="line">        % Physics parameters</span><br><span class="line">        E1 = 210e9; % elastic modulus (Pa)</span><br><span class="line">        nu1 = 0.3; % poison&#x27;s ratio</span><br><span class="line">        E2 = E1;</span><br><span class="line">        nu2 = nu1;</span><br><span class="line">        % Geometrics parameters</span><br><span class="line">        R1 = 7.94e-3; % radius of sphere 1 (m)</span><br><span class="line">        R2 = -50.43e-3;</span><br><span class="line">        disRange = 1.3e-3; % clearance + deformation</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% calculated parameters</span><br><span class="line">Ec = ((1-nu1^2)/E1 + (1-nu2^2)/E2)^-1; % combined modulus</span><br><span class="line">Rc = (1/R1 + 1/R2)^-1;</span><br><span class="line">kHertz = 4/3 * (Ec*Rc^(1/2));</span><br><span class="line"></span><br><span class="line">% Force and displacement</span><br><span class="line">num = 1000;</span><br><span class="line">delta = linspace(0,disRange,num);</span><br><span class="line">FCircle = kHertz * delta.^(3/2);</span><br><span class="line"></span><br><span class="line">% plot delta-F</span><br><span class="line">plot(delta,FCircle)</span><br><span class="line">xlabel(&#x27;$\delta$ (m)&#x27;,&#x27;Interpreter&#x27;,&quot;latex&quot;)</span><br><span class="line">ylabel(&#x27;$F$ (N)&#x27;,&#x27;Interpreter&#x27;,&quot;latex&quot;)</span><br><span class="line">title(&#x27;Circle Contact&#x27;)</span><br></pre></td></tr></table></figure>
+<p><strong>Output:</strong></p>
+<p><img src="/image/contactStiffness/6212-ball-analytics.svg" width = "70%"  /></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fprintf(&#x27;kHertz = %d&#x27;, kHertz);</span><br></pre></td></tr></table></figure>
+<p><strong>Output:</strong></p>
+<p>kHertz = 1.493475e+10</p>
+<h2 id="line-contact">Line Contact</h2>
+<p><img src="/image/contactStiffness/lineContact.png" width = "50%"  /></p>
+<h3 id="symbols-1">Symbols</h3>
+<ul>
+<li><span class="math inline">\(\delta\)</span>: distance between two
+cylinders</li>
+<li><span class="math inline">\(E_i,\nu_i\)</span>: the elastic modulus
+and Poisson's ratio for the i-th cylinder</li>
+<li><span class="math inline">\(R_i\)</span>: the radius of the i-th
+cylinder</li>
+<li><span class="math inline">\(F\)</span>: force on cylinders</li>
+<li><span class="math inline">\(b\)</span>: the half width of
+contact</li>
+<li><span class="math inline">\(E^*\)</span>: the combined modulus of
+two cylinders</li>
+<li><span class="math inline">\(R^*\)</span>: reciprocal of relative
+curvature for two cylinders</li>
+<li><span class="math inline">\(L\)</span>: the length of the contact
+area</li>
+</ul>
+<h3 id="equations-radzimovsky-model">Equations (Radzimovsky Model)</h3>
+<p><span class="math display">\[
+\delta = \frac{F}{\pi LE^*}  \left( \ln{\frac{4R_1}{b}}  +
+\ln{\frac{4R_2}{b}}  + \frac{2}{3}\right)
+\]</span></p>
+<p><span class="math display">\[
+b = 2 \sqrt{\frac{FR^*}{\pi L E^*}}
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{E^*}  = \frac{(1-\nu_1^2)}{E_1} + \frac{(1-\nu_2^2)}{E_2}
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{R^*} = \frac{1}{R_1} + \frac{1}{R_2}
+\]</span></p>
+<h3 id="equations-johnsons-model">Equations (Johnson's Model)</h3>
+<p>There is another model called Johnson's model.</p>
+<p><span class="math display">\[
+\delta(F) = \delta_1(F) + \delta_2(F)
+\]</span></p>
+<p><span class="math display">\[
+\delta_i(F) = \frac{F(1-\nu_i^2)}{\pi L E_i} \left( 2 \ln{\frac{4R_1}{b}
+- 1} \right)
+\]</span></p>
+<p><span class="math display">\[
+b = 2 \sqrt{\frac{FR^*}{\pi L E^*}}
+\]</span></p>
+<p>Consider <span class="math inline">\(E_1 = E_2 = E,\; R_1 = R_2
+=R\)</span>, the above equations could be simplified:</p>
+<p><span class="math display">\[
+\delta = \delta_1 + \delta_2 = \frac{2F(1-\nu^2)}{\pi LE}  \left(
+\ln{\frac{4R_1}{b}}  + \ln{\frac{4R_2}{b}}  - 1\right)
+\]</span></p>
+<p>As Pereira said "Only the Johson and the Radzimovsky models are
+suitable to describe the contact involving colliding cylinders in most
+of practical applications."</p>
+<h3 id="case-1">Case</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">% the physics and geometrics parameters are same as circle contact</span><br><span class="line">L = 4*R1; % the length of contact</span><br><span class="line"></span><br><span class="line">b = @(F) 2*((F*Rc)/(pi*L*Ec)).^(1/2); % half width of contact</span><br><span class="line">% nonlinear funciton respect to F (Radzimovsky model)</span><br><span class="line">fdeltaRadzi = @(F) F./(pi*L*Ec) .*(log(4*abs(R1)./b(F))+log(4*abs(R2)./b(F)+2/3));</span><br><span class="line"></span><br><span class="line">% nonlinear funciton respect to F (Johnson model)</span><br><span class="line">fdeltaJohnsoni = @(F,nu,E,R) F.*(1-nu^2)/(pi*L*E) .* (2*log(4*abs(R)./b(F)) - 1);</span><br><span class="line">fdeltaJohnson = @(F,nu1,E1,R1,nu2,E2,R2) fdeltaJohnsoni(F,nu1,E1,R1) + fdeltaJohnsoni(F,nu2,E2,R2);</span><br><span class="line"></span><br><span class="line">% calculte relation</span><br><span class="line">F = linspace(0.1,1e6,num);</span><br><span class="line">deltaRadzi = fdeltaRadzi(F);</span><br><span class="line">deltaJohnson = fdeltaJohnson(F,nu1,E1,R1,nu2,E2,R2);</span><br><span class="line"></span><br><span class="line">% plot</span><br><span class="line">plot(deltaRadzi, F, &quot;LineWidth&quot;,2); hold on</span><br><span class="line">plot(deltaJohnson, F, &quot;LineWidth&quot;,2)</span><br><span class="line">xlabel(&#x27;$\delta$ (m)&#x27;,&#x27;Interpreter&#x27;,&quot;latex&quot;)</span><br><span class="line">ylabel(&#x27;$F$ (N)&#x27;,&#x27;Interpreter&#x27;,&quot;latex&quot;)</span><br><span class="line">title(&#x27;Line Contact - Analytical Model&#x27;)</span><br><span class="line">legend(&#x27;Radzimovsky Model&#x27;,&#x27;Johnson Model&#x27;,&quot;Location&quot;,&quot;best&quot;)</span><br><span class="line">hold off</span><br></pre></td></tr></table></figure>
+<p><img src="/image/contactStiffness/line-contact-analytics.svg" width = "70%"  /></p>
+<h3
+id="polynomial-interpolation-to-calculate-contact-stiffness">Polynomial
+Interpolation to Calculate Contact Stiffness</h3>
+<p>In general, we used to use a approximate polynomial to fit the
+nonlinear equation about the line contact. The polynomial looks
+like:</p>
+<p><span class="math display">\[
+F = k_{Hertz} \; \delta^n
+\]</span></p>
+<p>where <span class="math inline">\(n=10/9\)</span> for line
+contact.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">% initial value for fit</span><br><span class="line">n = 10/9;</span><br><span class="line">k0 = 1e10; </span><br><span class="line">n0 = 1; </span><br><span class="line">% fitfun1(): k is unknown</span><br><span class="line">fitfun1 = @(k,delta) k.*delta.^n; % n = 9/10</span><br><span class="line">% fitfun2(): k and n are unknown</span><br><span class="line">fitfun2 = @(para,delta) para(1).*delta.^para(2); % para is established for nlinfit()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">% fit for Radzimovasky model</span><br><span class="line">% fitfun1</span><br><span class="line">[kRadzi1, ~,~,~,MSERadzi1,~] = nlinfit(deltaRadzi, F, fitfun1, k0); </span><br><span class="line">% fitfun2</span><br><span class="line">[fitParaResult, ~,~,~,MSERadzi2,~] = nlinfit(deltaRadzi, F, fitfun2, [k0, n0]); </span><br><span class="line">kRadzi2 = fitParaResult(1);</span><br><span class="line">nRadzi2 = fitParaResult(2); </span><br><span class="line">% plot for Radzimovasky model</span><br><span class="line">plot(deltaRadzi,F,...</span><br><span class="line">     &quot;LineWidth&quot;,2); hold on</span><br><span class="line">plot(deltaRadzi,fitfun1(kRadzi1,deltaRadzi),...</span><br><span class="line">     &#x27;o&#x27;,...</span><br><span class="line">     &#x27;MarkerIndices&#x27;, 1:num/20:num); hold on</span><br><span class="line">plot(deltaRadzi,fitfun2([kRadzi2,nRadzi2],deltaRadzi),...</span><br><span class="line">     &#x27;s&#x27;,...</span><br><span class="line">     &#x27;MarkerIndices&#x27;, 1:num/20:num); hold off</span><br><span class="line">xlabel(&#x27;$\delta$ (m)&#x27;,&#x27;Interpreter&#x27;,&quot;latex&quot;)</span><br><span class="line">ylabel(&#x27;$F$ (N)&#x27;,&#x27;Interpreter&#x27;,&quot;latex&quot;)</span><br><span class="line">title(&#x27;Line Contact - Fit Model - Radzimovasky&#x27;)</span><br><span class="line">legend( &#x27;Radzimovasky model&#x27;,...</span><br><span class="line">        &#x27;$F = k_&#123;Hertz&#125; \delta^&#123;10/9&#125;$&#x27;,...</span><br><span class="line">        &#x27;$F = k_&#123;Hertz&#125; \delta^n$&#x27;,...</span><br><span class="line">        &#x27;Interpreter&#x27;,&quot;latex&quot;,...</span><br><span class="line">        &quot;Location&quot;,&quot;best&quot;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/image/contactStiffness/line-contact-radimovasky.svg" width = "70%"  /></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">% print fit result</span><br><span class="line">fprintf([&#x27;       k unknow  k and n unknow\n&#x27; ...</span><br><span class="line">         &#x27;n      %6.6f  %6.6f\n&#x27;...</span><br><span class="line">         &#x27;KHertz %6.2e  %6.2e\n&#x27;...</span><br><span class="line">         &#x27;MSE    %6.2e  %6.2e&#x27;],...</span><br><span class="line">         n, nRadzi2,...</span><br><span class="line">         kRadzi1, kRadzi2,...</span><br><span class="line">         MSERadzi1, MSERadzi2); </span><br></pre></td></tr></table></figure>
+<p><strong>Output:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>k unknow</th>
+<th>k and n unknow</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>n</td>
+<td>1.111111</td>
+<td>1.138093</td>
+</tr>
+<tr class="even">
+<td>KHertz</td>
+<td>3.39e+09</td>
+<td>4.17e+09</td>
+</tr>
+<tr class="odd">
+<td>MSE</td>
+<td>2.19e+07</td>
+<td>9.76e+05</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">% fit for Johnson model</span><br><span class="line">% fitfun1</span><br><span class="line">[kJohnson1, ~,~,~,MSEJohnson1,~] = nlinfit(deltaJohnson, F, fitfun1, k0); </span><br><span class="line">% fitfun2</span><br><span class="line">[fitParaResult, ~,~,~,MSEJohnson2,~] = nlinfit(deltaJohnson, F, fitfun2, [k0, n0]); </span><br><span class="line">kJohnson2 = fitParaResult(1);</span><br><span class="line">nJohnson2 = fitParaResult(2); </span><br><span class="line">% plot for Radzimovasky model</span><br><span class="line">plot(deltaJohnson,F,...</span><br><span class="line">     &quot;LineWidth&quot;,2); hold on</span><br><span class="line">plot(deltaJohnson,fitfun1(kJohnson1,deltaJohnson),...</span><br><span class="line">     &#x27;o&#x27;,...</span><br><span class="line">     &#x27;MarkerIndices&#x27;, 1:num/20:num); hold on</span><br><span class="line">plot(deltaJohnson,fitfun2([kJohnson2,nJohnson2],deltaJohnson),...</span><br><span class="line">     &#x27;s&#x27;,...</span><br><span class="line">     &#x27;MarkerIndices&#x27;, 1:num/20:num); hold off</span><br><span class="line">xlabel(&#x27;$\delta$ (m)&#x27;,&#x27;Interpreter&#x27;,&quot;latex&quot;)</span><br><span class="line">ylabel(&#x27;$F$ (N)&#x27;,&#x27;Interpreter&#x27;,&quot;latex&quot;)</span><br><span class="line">title(&#x27;Line Contact - Fit Model - Johnson&#x27;)</span><br><span class="line">legend( &#x27;Johnson model&#x27;,...</span><br><span class="line">        &#x27;$F = k_&#123;Hertz&#125; \delta^&#123;10/9&#125;$&#x27;,...</span><br><span class="line">        &#x27;$F = k_&#123;Hertz&#125; \delta^n$&#x27;,...</span><br><span class="line">        &#x27;Interpreter&#x27;,&quot;latex&quot;,...</span><br><span class="line">        &quot;Location&quot;,&quot;best&quot;)</span><br></pre></td></tr></table></figure>
+<p><img src="/image/contactStiffness/line-contact-johnson.svg" width = "70%"  /></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">% print fit result</span><br><span class="line">fprintf([&#x27;       k unknow  k and n unknow\n&#x27; ...</span><br><span class="line">         &#x27;n      %6.6f  %6.6f\n&#x27;...</span><br><span class="line">         &#x27;KHertz %6.2e  %6.2e\n&#x27;...</span><br><span class="line">         &#x27;MSE    %6.2e  %6.2e&#x27;],...</span><br><span class="line">         n, nJohnson2,...</span><br><span class="line">         kJohnson1, kJohnson2,...</span><br><span class="line">         MSEJohnson1, MSEJohnson2); </span><br></pre></td></tr></table></figure>
+<p><strong>Output:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>k unknow</th>
+<th>k and n unknow</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>n</td>
+<td>1.111111</td>
+<td>1.160895</td>
+</tr>
+<tr class="even">
+<td>KHertz</td>
+<td>3.94e+09</td>
+<td>5.80e+09</td>
+</tr>
+<tr class="odd">
+<td>MSE</td>
+<td>7.10e+07</td>
+<td>1.72e+06</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reference">Reference</h2>
+<ol type="1">
+<li>Hale, Layton C. Appendix C: Contact Mechanics, in "Principles and
+techniques for desiging precision machines." MIT PhD Thesis, 1999. pp.
+417-426.</li>
+<li>K. L. Johnson, “Non-Hertzian normal contact of elastic bodies,” in
+Contact Mechanics, Cambridge: Cambridge University Press, 1985, pp.
+107–152.</li>
+<li>A. C. Fischer-Cripps, "Elastic Contact," In Introduction to Contact
+Mechanics. Mechanical Engineering Series, Boston: Springer, 2007, pp.
+101-114.</li>
+<li>Cândida M. Pereira, Amílcar L. Ramalho, Jorge A. Ambrósio. A
+critical overview of internal and external cylinder contact force
+models. Nonlinear Dynamics, 2010, 63 (4), pp.681-697.</li>
+<li>Some slids in web:
+https://my.mech.utah.edu/~me7960/lectures/Topic2-FundamentalsOfErrors.pdf</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1740,151 +2019,6 @@ class="math inline">\(y\)</span> 方向写法与之类似）</p>
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/image/aboutme/conference-photo.jpg">
-      <meta itemprop="name" content="Haopeng Zhang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Haopeng's Blog">
-      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Haopeng's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">Python基础知识</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-11-09 21:43:59" itemprop="dateCreated datePublished" datetime="2021-11-09T21:43:59+08:00">2021-11-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2021-11-10 18:22:59" itemprop="dateModified" datetime="2021-11-10T18:22:59+08:00">2021-11-10</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>559</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>2 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="数据类型">数据类型</h2>
-<h3 id="字符-str">字符 str</h3>
-<ul>
-<li><strong>引号</strong>：在字符中显示单引号，则编程时用双引号将字符括起来；在字符中显示双引号，则编程时用单引号将字符括起来；
-字符中的单引号：<code>course = "He's finger"</code>
-字符串中的双引号：<code>words = 'Python is for "beginners"'</code></li>
-<li><strong>大小写</strong>：<code>course.upper()</code> 、
-<code>course.lower()</code>、<code>course.title()</code></li>
-<li><strong>查找替换</strong>：<code>course.find('xxx'),</code>和<code>course.replace('xxx','aaa')</code></li>
-<li><strong>字符长度</strong>：使用<code>len()</code></li>
-<li><strong>f与花括号</strong>：可以被用来格式化输出字符（在字符中嵌入变量）。
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">first_name=&#x27;John&#x27;</span><br><span class="line">last_name=&#x27;Smith&#x27;</span><br><span class="line">msg = f&quot;&#123;first_name&#125; [&#123;last_name&#125;] is a coder&quot;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>整数 int 浮点数 float 复数 complex</p>
-<h3 id="数据索引">数据索引</h3>
-<ol type="1">
-<li>Python中的索引从0开始</li>
-<li>数据索引中的负号表示从结束端开始：<code>[1:-1]</code>是正确的，-1表示倒数第二个数据</li>
-</ol>
-<p><strong>数据切片索引</strong>
-与Matlab不同的是，<code>A[1:5]</code>返回的不是数列A中位于1、2、3、4、5号位置的数据；取而代之的是：
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="line">print(A[1:5])</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">[2, 3, 4, 5]</span><br><span class="line"></span><br><span class="line">      -------------------------------------------</span><br><span class="line">[A]:   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |</span><br><span class="line">cut:  -0---1---2---3---4---5---6---7---8---9----10- </span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h2 id="if">if</h2>
-<p>常用调用模式如下，用缩进控制开始和结束（与matlab不同）：
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if is_hot:</span><br><span class="line">    print(&#x27;xxxxx&#x27;)</span><br><span class="line">elif is_coldL:</span><br><span class="line">    print(&#x27;xxxxxx&#x27;)</span><br><span class="line">else:</span><br><span class="line">    print(&#x27;xxxx&#x27;)</span><br></pre></td></tr></table></figure></p>
-<p>常用逻辑运算符 1.
-和：<code>and</code>，例如：<code>is_hot and is_cold</code> 1.
-或：<code>or</code> 1.
-非：<code>not</code>，例如：<code>is_cold and not is_wind</code>，<code>not</code>会将其后的False转化为True；上例中如果<code>is_cold = True</code>、<code>is_wind = False</code>，则返回<code>True</code></p>
-<p>比大小： 1.
-大于：<code>&gt;</code>、小于:<code>&lt;</code>、等于:<code>==</code> 1.
-大于等于：<code>&gt;=</code>、小于等于：<code>&lt;=</code> 1.
-不等于：<code>!=</code></p>
-<h2 id="循环">循环</h2>
-<p><code>while</code>常用调用模式如下，<code>break</code>可以用来跳出程序：
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i=1</span><br><span class="line">while i&lt;=5：</span><br><span class="line">    print(&#x27;i&#x27;)</span><br><span class="line">    i = i + 1</span><br><span class="line">print(&#x27;Done&#x27;) #用缩进控制while的结束</span><br></pre></td></tr></table></figure></p>
-<p><code>for</code>常用调用模式 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for item in [1,2,3,4]</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure></p>
-<h2 id="函数">函数</h2>
-<h3 id="常用函数">常用函数</h3>
-<p>绝对值：<code>abs()</code> 四舍五入到整数：<code>round()</code>
-生成等间距数列：<code>range(5,10,2)</code>；step=2，from 5 to 10，输出 5
-7 9</p>
-<h2 id="常用命令">常用命令</h2>
-<h3 id="运算符号">运算符号</h3>
-<ol type="1">
-<li>加<code>+</code>；减<code>-</code>；乘<code>*</code>；除<code>/</code>；幂<code>**</code></li>
-<li>特殊除号：得到结果的整数部分<code>//</code>；得到结果的余数<code>%</code></li>
-<li>增广运算符<code>X += 3</code>与<code>x = x + 3</code>等价、<code>x -= 3</code>同理</li>
-</ol>
-<h3 id="import"><strong><em>import</em></strong></h3>
-<p>调用包：<code>import XXX</code>，例如<code>import math</code>;使用时<code>math.acos()</code></p>
-<h2 id="questions">Questions</h2>
-<ol type="1">
-<li>methods 和 function 在Python有何区别的？</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
@@ -1908,13 +2042,13 @@ class="math inline">\(y\)</span> 方向写法与之类似）</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Word count total">24k</span>
+    <span title="Word count total">25k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:26</span>
+    <span title="Reading time total">1:30</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>

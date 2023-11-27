@@ -156,13 +156,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -187,6 +187,151 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/image/aboutme/conference-photo.jpg">
+      <meta itemprop="name" content="Haopeng Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Haopeng's Blog">
+      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Haopeng's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">Python基础知识</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-11-09 21:43:59" itemprop="dateCreated datePublished" datetime="2021-11-09T21:43:59+08:00">2021-11-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2021-11-10 18:22:59" itemprop="dateModified" datetime="2021-11-10T18:22:59+08:00">2021-11-10</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>559</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>2 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="数据类型">数据类型</h2>
+<h3 id="字符-str">字符 str</h3>
+<ul>
+<li><strong>引号</strong>：在字符中显示单引号，则编程时用双引号将字符括起来；在字符中显示双引号，则编程时用单引号将字符括起来；
+字符中的单引号：<code>course = "He's finger"</code>
+字符串中的双引号：<code>words = 'Python is for "beginners"'</code></li>
+<li><strong>大小写</strong>：<code>course.upper()</code> 、
+<code>course.lower()</code>、<code>course.title()</code></li>
+<li><strong>查找替换</strong>：<code>course.find('xxx'),</code>和<code>course.replace('xxx','aaa')</code></li>
+<li><strong>字符长度</strong>：使用<code>len()</code></li>
+<li><strong>f与花括号</strong>：可以被用来格式化输出字符（在字符中嵌入变量）。
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">first_name=&#x27;John&#x27;</span><br><span class="line">last_name=&#x27;Smith&#x27;</span><br><span class="line">msg = f&quot;&#123;first_name&#125; [&#123;last_name&#125;] is a coder&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>整数 int 浮点数 float 复数 complex</p>
+<h3 id="数据索引">数据索引</h3>
+<ol type="1">
+<li>Python中的索引从0开始</li>
+<li>数据索引中的负号表示从结束端开始：<code>[1:-1]</code>是正确的，-1表示倒数第二个数据</li>
+</ol>
+<p><strong>数据切片索引</strong>
+与Matlab不同的是，<code>A[1:5]</code>返回的不是数列A中位于1、2、3、4、5号位置的数据；取而代之的是：
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="line">print(A[1:5])</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">[2, 3, 4, 5]</span><br><span class="line"></span><br><span class="line">      -------------------------------------------</span><br><span class="line">[A]:   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |</span><br><span class="line">cut:  -0---1---2---3---4---5---6---7---8---9----10- </span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h2 id="if">if</h2>
+<p>常用调用模式如下，用缩进控制开始和结束（与matlab不同）：
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if is_hot:</span><br><span class="line">    print(&#x27;xxxxx&#x27;)</span><br><span class="line">elif is_coldL:</span><br><span class="line">    print(&#x27;xxxxxx&#x27;)</span><br><span class="line">else:</span><br><span class="line">    print(&#x27;xxxx&#x27;)</span><br></pre></td></tr></table></figure></p>
+<p>常用逻辑运算符 1.
+和：<code>and</code>，例如：<code>is_hot and is_cold</code> 1.
+或：<code>or</code> 1.
+非：<code>not</code>，例如：<code>is_cold and not is_wind</code>，<code>not</code>会将其后的False转化为True；上例中如果<code>is_cold = True</code>、<code>is_wind = False</code>，则返回<code>True</code></p>
+<p>比大小： 1.
+大于：<code>&gt;</code>、小于:<code>&lt;</code>、等于:<code>==</code> 1.
+大于等于：<code>&gt;=</code>、小于等于：<code>&lt;=</code> 1.
+不等于：<code>!=</code></p>
+<h2 id="循环">循环</h2>
+<p><code>while</code>常用调用模式如下，<code>break</code>可以用来跳出程序：
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i=1</span><br><span class="line">while i&lt;=5：</span><br><span class="line">    print(&#x27;i&#x27;)</span><br><span class="line">    i = i + 1</span><br><span class="line">print(&#x27;Done&#x27;) #用缩进控制while的结束</span><br></pre></td></tr></table></figure></p>
+<p><code>for</code>常用调用模式 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for item in [1,2,3,4]</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure></p>
+<h2 id="函数">函数</h2>
+<h3 id="常用函数">常用函数</h3>
+<p>绝对值：<code>abs()</code> 四舍五入到整数：<code>round()</code>
+生成等间距数列：<code>range(5,10,2)</code>；step=2，from 5 to 10，输出 5
+7 9</p>
+<h2 id="常用命令">常用命令</h2>
+<h3 id="运算符号">运算符号</h3>
+<ol type="1">
+<li>加<code>+</code>；减<code>-</code>；乘<code>*</code>；除<code>/</code>；幂<code>**</code></li>
+<li>特殊除号：得到结果的整数部分<code>//</code>；得到结果的余数<code>%</code></li>
+<li>增广运算符<code>X += 3</code>与<code>x = x + 3</code>等价、<code>x -= 3</code>同理</li>
+</ol>
+<h3 id="import"><strong><em>import</em></strong></h3>
+<p>调用包：<code>import XXX</code>，例如<code>import math</code>;使用时<code>math.acos()</code></p>
+<h2 id="questions">Questions</h2>
+<ol type="1">
+<li>methods 和 function 在Python有何区别的？</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -2215,164 +2360,6 @@ id="实验传递矩阵和模态参数的关系">实验、传递矩阵和模态�
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/image/aboutme/conference-photo.jpg">
-      <meta itemprop="name" content="Haopeng Zhang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Haopeng's Blog">
-      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Haopeng's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/" class="post-title-link" itemprop="url">振动传感器主要性能指标</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-06-14 16:51:27" itemprop="dateCreated datePublished" datetime="2021-06-14T16:51:27+08:00">2021-06-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2021-06-16 16:17:29" itemprop="dateModified" datetime="2021-06-16T16:17:29+08:00">2021-06-16</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>1.2k</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>4 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="灵敏度">灵敏度</h2>
-<p>灵敏度是指沿传感器的测量方向，对应于每一单位简谐机械量的输入，其开路时电信号的输出，即输出比输入。</p>
-<ul>
-<li>输入的机械量：<span class="math inline">\(x=X\sin(\omega t
-+\alpha)\)</span></li>
-<li>输出的电信号：<span class="math inline">\(e=E\sin (\omega t+ \alpha
-- \theta)\)</span>，<span class="math inline">\(\theta\)</span>
-为相移，即输出的电信号<span
-class="math inline">\(e\)</span>对被测机械量<span
-class="math inline">\(x\)</span>的相位滞后</li>
-<li>灵敏度：<span class="math inline">\(s=E/X\)</span> （电信号单位 /
-机械量单位）</li>
-</ul>
-<p>通常，<span class="math inline">\(X\)</span>
-是位移、速度、加速度、力、应变等，<span class="math inline">\(E\)</span>
-是电压、电荷等。</p>
-<h2 id="分辨率">分辨率</h2>
-<p>分辨率是指传感器可感受到的被测量的最小变化的能力。</p>
-<p>也就是说，如果输入量从某一非零值缓慢地变化，但变化值未超过某一数值
-<span class="math inline">\(\Delta X\)</span> 时，传感器的输出变化量
-<span class="math inline">\(\Delta E =0\)</span>
-，即传感器对此输入量的变化是分辨不出来的。只有当输入量的变化超过分辨率时，其输出才会发生变化。</p>
-<p><span class="math inline">\(\Delta X\)</span>
-越小，灵敏度越高，分辨率也越高。灵敏度越高，传感器的信噪比将相应下降，这将降低测量结果的精度，故应综合考虑。</p>
-<h2 id="线性度和线性范围">线性度和线性范围</h2>
-<p>通常情况下，传感器的实际静态特性输出是条曲线而非直线。在实际工作中，为使仪表具有均匀刻度的读数，常用一条拟合直线近似地代表实际的特性曲线。</p>
-<p><strong>线性度</strong>（非线性误差）<span
-class="math inline">\(\gamma\)</span>
-就是这个近似程度的一个性能指标，定义为在全量程范围内实际特性曲线与拟合直线之间的最大偏差值与满量程输出值之比。</p>
-<p><span class="math display">\[
-\gamma=\frac{ \Delta E }{  E_{max} -  E_{min} } \times 100 \\%
-\]</span></p>
-<p><strong>线性范围</strong>是指传感器测量量与实际被测量之间保持近似线性关系的范围。</p>
-<p><img src="/image/zhendongceshi/xianxingdu.png" width = "60%" height = "60%"  align=center /></p>
-<h2 id="频率范围">频率范围</h2>
-<p><strong>频率范围</strong>是指传感器的灵敏度随频率的变化量不超出某一给定的误差限的频率范围（频率上限和下限）。传感器的频率范围取决于：
-1. 机械接收部分的频率特性。 1. 机电变换部分和所用二次仪表的频率特性。 1.
-传感器的安装条件也影响频率上限。</p>
-<p>备注： * 在制定测量方案时，首先要看传感器的频率范围是否满足测量的要求
-* 压电式加速度传感器具有较宽的频率范围，而且频率上限也比较高 *
-电阻式、压阻式和伺服式等三种加速度传感器都具有零频率响应，其中压阻式也具有较高的上限频率</p>
-<h2 id="固有频率与安装谐振频率">固有频率与安装谐振频率</h2>
-<p>对于惯性式接收传感器，其机械接收部分是由质量块、阻尼器、弹簧构成的单自由度振动系统，其质量、阻尼、刚度分别为
-<span class="math inline">\(m, c,
-k\)</span>。该振系统无阻尼自由振动的频率 $ _n = $
-被称为传感器的<strong>固有频率</strong>。</p>
-<p>传感器产生共振时的最低频率称为<strong>安装谐振频率</strong>，若安装刚度是有限的（实际上也很难达到无穷大），则其对传感器的接收特性将有较大影响。</p>
-<h2 id="工作范围">工作范围</h2>
-<p>频率范围和线性范围一起决定了传感器的<strong>工作范围</strong>。工作范围可以从诺谟图（Nomogram）中得到</p>
-<p><img src="/image/zhendongceshi/nuomotu.jpg" width = "50%" height = "50%"  align=center /></p>
-<h2 id="横向灵敏度与方向特性">横向灵敏度与方向特性</h2>
-<p>横向灵敏度主要是由于最大灵敏度轴与传感器的几何轴线不重合而引起的。这是由于传感器加工、安装上的间歇误差等条件造成的。最大灵敏度的轴线与几何轴线间的夹角为
-<span
-class="math inline">\(\theta\)</span>，<strong>最大的横向灵敏度</strong>表示为：</p>
-<p><span class="math display">\[
-s_t=\tan \theta
-\]</span></p>
-<p>备注： * 加速度传感器的外壳上的红点被用来表示横向灵敏度的方向。 *
-一般令红点和传感器中心的连线，与振幅最大的非被测振动方向垂直，以减少测量误差。</p>
-<h2 id="动态范围">动态范围</h2>
-<p><strong>动态范围</strong>是指某一输入机械量的幅值范围（用分贝表示），该范围内传感器的灵敏度随输入机械量幅值的变化量不超出某一给定的误差限。</p>
-<p><span class="math display">\[
-D=20 \lg \frac{X_{max}}{X_{min}}
-\]</span></p>
-<p>动态范围越大，说明传感器对幅值变化的适应能力越强。比如 <span
-class="math inline">\(D=80dB\)</span>，则幅值上限与下限之比达10000倍。传感器的量程即是指其幅值上限与下限值的代数差。</p>
-<h2 id="其他">其他</h2>
-<p>传感器的其它性能参数还包括其质量、重复性、稳定性、输入输出阻抗、阻尼、迟滞、零飘、过载能力、以及它的工作环境条件等。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
@@ -2396,13 +2383,13 @@ class="math inline">\(D=80dB\)</span>，则幅值上限与下限之比达10000�
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Word count total">24k</span>
+    <span title="Word count total">25k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:26</span>
+    <span title="Reading time total">1:30</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
