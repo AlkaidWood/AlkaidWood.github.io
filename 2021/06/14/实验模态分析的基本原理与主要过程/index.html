@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="true">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"alkaidwood.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":-1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="基本概念 模态分析 模态分析是研究结构动力特性一种方法，一般应用在工程振动领域。 其中，模态是指机械结构的固有振动特性，每一个模态都有特定的固有频率、阻尼比和模态振型。分析这些模态参数的过程称为模态分析。 按计算方法，模态分析可分为： * 计算模态分析：由有限元计算的方法取得待识别参数 * 试验模态分析：通过试验将采集的系统输入与输出信号经过参数识别获得待识别参数 通常，模态分析都是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实验模态分析的基本原理与主要过程">
+<meta property="og:url" content="https://alkaidwood.github.io/2021/06/14/%E5%AE%9E%E9%AA%8C%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8E%E4%B8%BB%E8%A6%81%E8%BF%87%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Haopeng&#39;s Blog">
+<meta property="og:description" content="基本概念 模态分析 模态分析是研究结构动力特性一种方法，一般应用在工程振动领域。 其中，模态是指机械结构的固有振动特性，每一个模态都有特定的固有频率、阻尼比和模态振型。分析这些模态参数的过程称为模态分析。 按计算方法，模态分析可分为： * 计算模态分析：由有限元计算的方法取得待识别参数 * 试验模态分析：通过试验将采集的系统输入与输出信号经过参数识别获得待识别参数 通常，模态分析都是">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://alkaidwood.github.io/image/zhendongceshi/motaifenxiguocheng.png">
+<meta property="article:published_time" content="2021-06-14T10:47:21.000Z">
+<meta property="article:modified_time" content="2024-09-20T13:47:12.602Z">
+<meta property="article:author" content="Haopeng Zhang">
+<meta property="article:tag" content="振动测试">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://alkaidwood.github.io/image/zhendongceshi/motaifenxiguocheng.png">
+
+
+<link rel="canonical" href="https://alkaidwood.github.io/2021/06/14/%E5%AE%9E%E9%AA%8C%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8E%E4%B8%BB%E8%A6%81%E8%BF%87%E7%A8%8B/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://alkaidwood.github.io/2021/06/14/%E5%AE%9E%E9%AA%8C%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8E%E4%B8%BB%E8%A6%81%E8%BF%87%E7%A8%8B/","path":"2021/06/14/实验模态分析的基本原理与主要过程/","title":"实验模态分析的基本原理与主要过程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>实验模态分析的基本原理与主要过程 | Haopeng's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-289336754-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-289336754-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Haopeng's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share equ happiness</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90"><span class="nav-number">1.1.</span> <span class="nav-text">模态分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90"><span class="nav-number">1.2.</span> <span class="nav-text">实验模态分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%85%E8%AF%86%E5%88%AB%E5%8F%82%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">待识别参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-number">1.4.</span> <span class="nav-text">模态分析系统的组成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">实验模态分析的基本原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">基本原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0%E4%B8%8E%E6%A8%A1%E6%80%81%E5%8F%82%E6%95%B0%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">2.2.</span> <span class="nav-text">传递函数与模态参数的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E4%BC%A0%E9%80%92%E7%9F%A9%E9%98%B5%E5%92%8C%E6%A8%A1%E6%80%81%E5%8F%82%E6%95%B0%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">2.3.</span> <span class="nav-text">实验、传递矩阵和模态参数的关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E4%B8%BB%E8%A6%81%E8%BF%87%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">实验模态分析的主要过程</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Haopeng Zhang"
+      src="/image/aboutme/conference-photo.jpg">
+  <p class="site-author-name" itemprop="name">Haopeng Zhang</p>
+  <div class="site-description" itemprop="description">PhD in Northwestern Polytecnical University</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:zhanghaopeng@mail.nwpu.edu.cn" title="E-Mail → mailto:zhanghaopeng@mail.nwpu.edu.cn" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://orcid.org/0000-0003-2428-1583" title="ORCID → https:&#x2F;&#x2F;orcid.org&#x2F;0000-0003-2428-1583" rel="noopener me" target="_blank"><i class="fa fa-user fa-fw"></i>ORCID</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2021/06/14/%E5%AE%9E%E9%AA%8C%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8E%E4%B8%BB%E8%A6%81%E8%BF%87%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/image/aboutme/conference-photo.jpg">
+      <meta itemprop="name" content="Haopeng Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Haopeng's Blog">
+      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="实验模态分析的基本原理与主要过程 | Haopeng's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          实验模态分析的基本原理与主要过程
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-06-14 18:47:21" itemprop="dateCreated datePublished" datetime="2021-06-14T18:47:21+08:00">2021-06-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-09-20 21:47:12" itemprop="dateModified" datetime="2024-09-20T21:47:12+08:00">2024-09-20</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>6 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="基本概念">基本概念</h2>
+<h3 id="模态分析">模态分析</h3>
+<p><strong>模态分析</strong>是研究结构动力特性一种方法，一般应用在工程振动领域。</p>
+<p>其中，<strong>模态</strong>是指机械结构的固有振动特性，每一个模态都有特定的固有频率、阻尼比和模态振型。分析这些模态参数的过程称为模态分析。</p>
+<p>按计算方法，模态分析可分为： *
+计算模态分析：由有限元计算的方法取得待识别参数 *
+试验模态分析：通过试验将采集的系统输入与输出信号经过参数识别获得待识别参数</p>
+<p><strong>通常，模态分析都是指试验模态分析。</strong></p>
+<h3 id="实验模态分析">实验模态分析</h3>
+<p><strong>实验模态分析</strong>主要是通过模态试验，测量系统的振动响应信号或同时测量系统的激励信号和响应信号，从测量信号中，识别描述系统动力特征的有关参数。</p>
+<p>试验模态分析结果可以验证和修改结构数学模型、综合试验分析模型、校核动态计算分析结果的有效性、分析结构产品性能、检查结构中的薄弱部位、鉴定结构总体设计的合理性。</p>
+<h3 id="待识别参数">待识别参数</h3>
+<ul>
+<li>物理参数：质量矩阵、刚度矩阵、阻尼矩阵等</li>
+<li>模态参数：固有频率、衰减系数、模态矢量、模态刚度、模态阻尼</li>
+</ul>
+<h3 id="模态分析系统的组成">模态分析系统的组成</h3>
+<ul>
+<li>激振系统：使得系统产生稳态、瞬态或随机振动
+<ul>
+<li>稳态正弦激振法</li>
+<li>瞬态激振法
+<ul>
+<li>快速正弦扫描激振法</li>
+<li>脉冲锤击激振法</li>
+</ul></li>
+<li>随机激振法
+<ul>
+<li>纯随机激振法</li>
+<li>伪随机激振法</li>
+<li>周期随机激振法</li>
+</ul></li>
+</ul></li>
+<li>测量系统：用传感器测量实验对象的各个主要部位上的位移、速度或加速度信号，然后将这些信号与激振信号一起记录并保存</li>
+<li>分析系统：将保存的激励信号和响应信号经过数模转换，采样并输入数字式分析仪或计算机中，用硬件或软件系统识别振动系统的模态参数</li>
+</ul>
+<h2 id="实验模态分析的基本原理">实验模态分析的基本原理</h2>
+<h3 id="基本原理">基本原理</h3>
+<p>本部分以多自由度动力学系统为例，阐明了实验模态分析的<strong>基本原理</strong>：
+对于多自由度动力学常微分方程 <span
+class="math inline">\(\rightarrow\)</span> 对其拉氏变换 <span
+class="math inline">\(\rightarrow\)</span> 得到传递函数 <span
+class="math inline">\(\rightarrow\)</span> 通过振型的正交性 <span
+class="math inline">\(\rightarrow\)</span>
+发现传递函数中含有模态参数的信息 <span
+class="math inline">\(\rightarrow\)</span>
+因此可以通过实验可以得到传递函数 <span
+class="math inline">\(\rightarrow\)</span>
+再从传递函数中识别得到振动系统有关参数 <span
+class="math inline">\(\rightarrow\)</span>
+最后进一步计算得到待求模态参数</p>
+<h3 id="传递函数与模态参数的关系">传递函数与模态参数的关系</h3>
+<p>对于多自由度动力学系统，其动力学方程为：</p>
+<p><span class="math display">\[
+\textbf{M}\bar{\ddot{x} }+\textbf{C}\bar{ \dot{x}
+}+\textbf{K}\bar{x}=\bar{f}
+\]</span></p>
+<p>对其进行拉氏变换：</p>
+<p><span class="math display">\[
+\textbf{M}\left[ s^2 \bar{X}(s) - s\bar{x}(0) - \bar{\dot{x} }(0)
+\right] + \textbf{C} \left[  s\bar{X}(s) - \bar{x}(0) \right] +
+\textbf{K} \bar{X}(s) = \bar{F}(s)
+\]</span></p>
+<p>初始条件全为0时：</p>
+<p><span class="math display">\[
+\left[ s^2 \textbf{M} + s \textbf{C} + \textbf{K} \right] \bar{X}(s) =
+\bar{F}(s)
+\]</span></p>
+<p>根据传递函数的定义，系统的传递函数为：</p>
+<p><span class="math display">\[
+\textbf{H}(s)=\frac{\bar{X}(s)}{\bar{F}(s)} = \frac{ 1}{ s^2 \textbf{M}
++ s \textbf{C} + \textbf{K} }
+\]</span></p>
+<blockquote>
+<p>机械系统中<strong>传递函数的定义</strong>：零初始条件下线性系统响应（即输出）量的拉普拉斯变换与激励（即输入）量的拉普拉斯变换之比。</p>
+</blockquote>
+<p>利用振型的正交性，当模态振型矩阵为$ []
+$时，模态质量矩阵、模态阻尼矩阵、模态刚度矩阵为：</p>
+<p><span class="math display">\[
+\textbf{M}_r = [\varphi]^\mathrm{T}\textbf{M}[\varphi] =
+\mathrm{diag}(m_1 \, \cdots \, m_r \, \cdots \, m_N)
+\]</span></p>
+<p><span class="math display">\[
+\textbf{C}_r = [\varphi]^\mathrm{T}\textbf{C}[\varphi]
+=  \mathrm{diag}(c_1 \, \cdots \, c_r \, \cdots \, c_N)
+\]</span></p>
+<p><span class="math display">\[
+\textbf{K}_r = [\varphi]^\mathrm{T}\textbf{K}[\varphi] =
+\mathrm{diag}(k_1 \, \cdots \, k_r \, \cdots \, k_N)
+\]</span></p>
+<p>将上式代入传递函数，可得到：</p>
+<p><span class="math display">\[
+\textbf{H}(s)= [\varphi] \left[ s^2 \textbf{M}_r + s \textbf{C}_r +
+\textbf{K}_r \right]^\mathrm{-1}[\varphi]^\mathrm{T}
+\]</span></p>
+<p>将传递函数矩阵展开可以发现，它的每一行或每一列都包含有所有的模态信息：模态质量矩阵、模态阻尼矩阵、模态刚度矩阵中所有元素以及所有模态矢量。</p>
+<h3
+id="实验传递矩阵和模态参数的关系">实验、传递矩阵和模态参数的关系</h3>
+<p>若固定在一点测量振动响应信号，而不断改变激励信号的作用点，这样就测量出了传递函数的一行；若固定在一点进行激励，而在不同点进行振动响应信号测量，这样就测量出了传递函数的一列。</p>
+<p>从上一节的分析中可知，传递函数矩阵的每一行或每一列都包含有所有的模态信息。<strong>因此，只要通过实验测得传递函数矩阵的一行或一列再加以分析计算，就可以得到全部的模态信息。</strong></p>
+<p>从传递函数中求出模态参数的方法，被称为<strong>参数识别方法</strong>。一般通用的参数识别方法有两种：图解法和曲线拟合法。</p>
+<ul>
+<li><p>图解法是利用频响函数曲线直接进行模态识别的方法。其优点是简便、直观，缺点是精度差、不能排除外界干扰。</p></li>
+<li><p>曲线拟合法是用一条连续曲线去拟合一组离散的实验数据，然后利用拟合曲线识别有关参数的方法。该方法常利用图解法所识别的参数作为初始值进行迭代优化计算，直到满足精度为止，从而可以从传递函数中识别得到振动系统有关参数，最后进一步计算得到待求模态参数。</p></li>
+</ul>
+<h2 id="实验模态分析的主要过程">实验模态分析的主要过程</h2>
+<p>根据实验模态分析的基本原理，现将实验模态分析的主要过程总结如下： 1.
+确定实验模型，将实验结构支撑起来（边界条件的确定） 1.
+进行模态试验，利用上述激振方法进行激励实验结构（一般用锤击法），记录原点和各测点的激励、响应时间历程曲线
+1.
+对各测点的时间历程数据进行数字处理，利用传递函数与模态参数的关系和时/频域转换技术求出各测点的传递函数，并组成传递函数矩阵
+1. 利用参数识别方法进行参数识别，求得模态参数 1. 进行模态动画展示</p>
+<p><img src="/image/zhendongceshi/motaifenxiguocheng.png" width = "45%" height = "45%"  align=center /></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8C%AF%E5%8A%A8%E6%B5%8B%E8%AF%95/" rel="tag"># 振动测试</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/" rel="prev" title="振动传感器主要性能指标">
+                  <i class="fa fa-angle-left"></i> 振动传感器主要性能指标
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/" rel="next" title="快速傅里叶变换（FFT）基本原理">
+                  快速傅里叶变换（FFT）基本原理 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Haopeng Zhang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="Word count total">25k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">1:30</span>
+  </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
