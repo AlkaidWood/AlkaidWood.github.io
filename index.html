@@ -156,13 +156,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -187,6 +187,181 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2024/09/21/Unit-in-Abaqus/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/image/aboutme/conference-photo.jpg">
+      <meta itemprop="name" content="Haopeng Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Haopeng's Blog">
+      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Haopeng's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/09/21/Unit-in-Abaqus/" class="post-title-link" itemprop="url">Unit in Abaqus</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-09-21 11:13:56 / Modified: 12:01:37" itemprop="dateCreated datePublished" datetime="2024-09-21T11:13:56+08:00">2024-09-21</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>71</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>1 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="units-in-abaqus">Units in Abaqus</h2>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Quantity</th>
+<th style="text-align: center;">SI (Based on <span
+class="math inline">\(m\)</span>)</th>
+<th style="text-align: center;">SI (Based on <span
+class="math inline">\(mm\)</span>)</th>
+<th style="text-align: center;">Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Length</td>
+<td style="text-align: center;">$ m $</td>
+<td style="text-align: center;">$ mm $</td>
+<td style="text-align: center;"><span
+class="math inline">\(10^3\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Force</td>
+<td style="text-align: center;"><span
+class="math inline">\(N\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(N\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Mass</td>
+<td style="text-align: center;"><span
+class="math inline">\(kg\)</span></td>
+<td style="text-align: center;">tonne (<span class="math inline">\(10^3
+kg\)</span>)</td>
+<td style="text-align: center;"><span
+class="math inline">\(10^-3\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Stress</td>
+<td style="text-align: center;"><span class="math inline">\(Pa
+(N/m^2)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(MPa
+(N/mm^2)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(10^-6\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Energy</td>
+<td style="text-align: center;"><span
+class="math inline">\(J\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(mJ
+(10^{-3}J)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(10^3\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Density</td>
+<td style="text-align: center;"><span
+class="math inline">\(kg/m^3\)</span></td>
+<td style="text-align: center;">tonne <span
+class="math inline">\(/mm^3\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(10^{-12}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Acceleration</td>
+<td style="text-align: center;"><span
+class="math inline">\(m/s^2\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(mm/s^2\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(10^3\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Time</td>
+<td style="text-align: center;"><span
+class="math inline">\(s\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(s\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1891,152 +2066,6 @@ Differentiation》 Randal J. Barnes</a></li>
 target="_blank" rel="noopener" href="https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf">《Matrix
 Cookbook》 Kaare Brandt Petersen</a></li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://alkaidwood.github.io/2022/03/08/%E8%B4%A8%E5%BF%83-%E5%BD%A2%E5%BF%83-%E9%87%8D%E5%BF%83/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/image/aboutme/conference-photo.jpg">
-      <meta itemprop="name" content="Haopeng Zhang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Haopeng's Blog">
-      <meta itemprop="description" content="PhD in Northwestern Polytecnical University">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Haopeng's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/08/%E8%B4%A8%E5%BF%83-%E5%BD%A2%E5%BF%83-%E9%87%8D%E5%BF%83/" class="post-title-link" itemprop="url">质心_形心_重心</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-03-08 19:29:11" itemprop="dateCreated datePublished" datetime="2022-03-08T19:29:11+08:00">2022-03-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-09-20 21:47:12" itemprop="dateModified" datetime="2024-09-20T21:47:12+08:00">2024-09-20</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>641</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>2 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="三者存在的条件">三者存在的条件</h2>
-<ul>
-<li><strong>形心</strong>：目标具有几何外形；</li>
-<li><strong>质心</strong>：目标具有几何外形、具有质量；</li>
-<li><strong>重心</strong>：目标具有几何外形、具有质量、身处重力场。</li>
-</ul>
-<h2 id="质心">质心</h2>
-<p><strong>定义</strong>：质心是多质点系统的质量中心。
-<strong>特点</strong>：若对该点施力，系统会沿着力的方向运动、不会旋转。
-<strong>质心位置</strong>：质点的位置对质量取加权平均值，求得质心位置。</p>
-<p>对于离散系统，三维物体的质心位置由下式求得：</p>
-<p><span class="math display">\[
-\bar{x} = \frac{\sum{x_k m_k}}{\sum{m_k}}, \bar{y} = \frac{\sum{y_k
-m_k}}{\sum{m_k}},  \bar{z} = \frac{\sum{z_k m_k}}{\sum{m_k}}
-\]</span></p>
-<p>对于连续系统，上式推广为： <span class="math display">\[
-\bar{x} = \frac{\int_{\Omega}{x \rho} \rm{d}V}{\int_{\Omega}{ \rho}
-\rm{d}V},  \bar{y} = \frac{\int_{\Omega}{y \rho} \rm{d}V}{\int_{\Omega}{
-\rho} \rm{d}V}, \bar{z} = \frac{\int_{\Omega}{z
-\rho}  \rm{d}V}{\int_{\Omega}{ \rho} \rm{d}V}
-\]</span></p>
-<p>其中，<span class="math inline">\(\rho\)</span> 是物体的密度，为
-<span class="math inline">\(x,y,z\)</span> 的函数。上式为在物体所在空间
-<span class="math inline">\(\Omega\)</span> 进行体积分。</p>
-<h2 id="形心">形心</h2>
-<p><strong>定义</strong>：形心又被称为几何中心。形心是将该物体分成“矩”相等的两部分的所有超平面的交点。
-<strong>形心位置</strong>：等价于取加权平均。</p>
-<p>对于二维图形，形心位置由下式给出： <span class="math display">\[
-\bar{x} = \frac{\int{x f(x)}\rm{d}x}{\int{f(x)}\rm{d}x}, \bar{y} =
-\frac{\int{y f(y)}\rm{d}y}{\int{f(y)}\rm{d}y}
-\]</span></p>
-<p>上式分子部分为 <span class="math inline">\(x\)</span> 和 <span
-class="math inline">\(y\)</span> 的一阶矩。其中，<span
-class="math inline">\(f(x)\)</span> 为几何图形的横坐标位于 <span
-class="math inline">\(x\)</span> 点时在 <span
-class="math inline">\(y\)</span> 方向上的长度；<span
-class="math inline">\(f(y)\)</span> 为几何图形的纵坐标位于 <span
-class="math inline">\(y\)</span> 点时在 <span
-class="math inline">\(x\)</span> 方向上的长度。</p>
-<p>上式的等价形式为： <span class="math display">\[
-\bar{x} = \frac{\int_D{x}\rm{d}S}{\int_D{ }\rm{d}S} =
-\frac{\int_D{x}\rm{d}S}{A}
-\]</span></p>
-<p>上式积分表示在几何图形所在二维空间 <span
-class="math inline">\(D\)</span> 进行面积分；<span
-class="math inline">\(A\)</span> 表示二维几何图形的面积。（<span
-class="math inline">\(y\)</span> 方向写法与之类似）</p>
-<p>将该式推广至三维空间可得： <span class="math display">\[
-\bar{x} = \frac{\int_\Omega{x}\rm{d}V}{\int_\Omega{ }\rm{d}V} =
-\frac{\int_\Omega{x}\rm{d}V}{V}
-\]</span></p>
-<p>对比发现，上式积分中如果加入密度项，则得到的质心的坐标。即，<strong>对于密度均匀的物体，其质心和形心重合</strong>。</p>
-<h2 id="重心">重心</h2>
-<p><strong>定义</strong>：重心是重力作用的平均位置。
-<strong>特点</strong>：各质点相对于重心的位置矢量乘上各质点的重力之和(合力矩)为零。</p>
-<p>在均匀的重力场中，重心等同于质心。在非均匀的重力场中，质心和重心往往不在同一点。</p>
 
       
     </div>

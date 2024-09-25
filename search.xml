@@ -1,82 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>振动传感器主要性能指标</title>
-    <url>/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</url>
-    <content><![CDATA[<h2 id="灵敏度">灵敏度</h2>
-<p>灵敏度是指沿传感器的测量方向，对应于每一单位简谐机械量的输入，其开路时电信号的输出，即输出比输入。</p>
-<ul>
-<li>输入的机械量：<span class="math inline">\(x=X\sin(\omega t
-+\alpha)\)</span></li>
-<li>输出的电信号：<span class="math inline">\(e=E\sin (\omega t+ \alpha
-- \theta)\)</span>，<span class="math inline">\(\theta\)</span>
-为相移，即输出的电信号<span
-class="math inline">\(e\)</span>对被测机械量<span
-class="math inline">\(x\)</span>的相位滞后</li>
-<li>灵敏度：<span class="math inline">\(s=E/X\)</span> （电信号单位 /
-机械量单位）</li>
-</ul>
-<p>通常，<span class="math inline">\(X\)</span>
-是位移、速度、加速度、力、应变等，<span class="math inline">\(E\)</span>
-是电压、电荷等。</p>
-<h2 id="分辨率">分辨率</h2>
-<p>分辨率是指传感器可感受到的被测量的最小变化的能力。</p>
-<p>也就是说，如果输入量从某一非零值缓慢地变化，但变化值未超过某一数值
-<span class="math inline">\(\Delta X\)</span> 时，传感器的输出变化量
-<span class="math inline">\(\Delta E =0\)</span>
-，即传感器对此输入量的变化是分辨不出来的。只有当输入量的变化超过分辨率时，其输出才会发生变化。</p>
-<p><span class="math inline">\(\Delta X\)</span>
-越小，灵敏度越高，分辨率也越高。灵敏度越高，传感器的信噪比将相应下降，这将降低测量结果的精度，故应综合考虑。</p>
-<h2 id="线性度和线性范围">线性度和线性范围</h2>
-<p>通常情况下，传感器的实际静态特性输出是条曲线而非直线。在实际工作中，为使仪表具有均匀刻度的读数，常用一条拟合直线近似地代表实际的特性曲线。</p>
-<p><strong>线性度</strong>（非线性误差）<span
-class="math inline">\(\gamma\)</span>
-就是这个近似程度的一个性能指标，定义为在全量程范围内实际特性曲线与拟合直线之间的最大偏差值与满量程输出值之比。</p>
-<p><span class="math display">\[
-\gamma=\frac{ \Delta E }{  E_{max} -  E_{min} } \times 100 \\%
-\]</span></p>
-<p><strong>线性范围</strong>是指传感器测量量与实际被测量之间保持近似线性关系的范围。</p>
-<p><img src="/image/zhendongceshi/xianxingdu.png" width = "60%" height = "60%"  align=center /></p>
-<h2 id="频率范围">频率范围</h2>
-<p><strong>频率范围</strong>是指传感器的灵敏度随频率的变化量不超出某一给定的误差限的频率范围（频率上限和下限）。传感器的频率范围取决于：
-1. 机械接收部分的频率特性。 1. 机电变换部分和所用二次仪表的频率特性。 1.
-传感器的安装条件也影响频率上限。</p>
-<p>备注： * 在制定测量方案时，首先要看传感器的频率范围是否满足测量的要求
-* 压电式加速度传感器具有较宽的频率范围，而且频率上限也比较高 *
-电阻式、压阻式和伺服式等三种加速度传感器都具有零频率响应，其中压阻式也具有较高的上限频率</p>
-<h2 id="固有频率与安装谐振频率">固有频率与安装谐振频率</h2>
-<p>对于惯性式接收传感器，其机械接收部分是由质量块、阻尼器、弹簧构成的单自由度振动系统，其质量、阻尼、刚度分别为
-<span class="math inline">\(m, c,
-k\)</span>。该振系统无阻尼自由振动的频率 $ _n = $
-被称为传感器的<strong>固有频率</strong>。</p>
-<p>传感器产生共振时的最低频率称为<strong>安装谐振频率</strong>，若安装刚度是有限的（实际上也很难达到无穷大），则其对传感器的接收特性将有较大影响。</p>
-<h2 id="工作范围">工作范围</h2>
-<p>频率范围和线性范围一起决定了传感器的<strong>工作范围</strong>。工作范围可以从诺谟图（Nomogram）中得到</p>
-<p><img src="/image/zhendongceshi/nuomotu.jpg" width = "50%" height = "50%"  align=center /></p>
-<h2 id="横向灵敏度与方向特性">横向灵敏度与方向特性</h2>
-<p>横向灵敏度主要是由于最大灵敏度轴与传感器的几何轴线不重合而引起的。这是由于传感器加工、安装上的间歇误差等条件造成的。最大灵敏度的轴线与几何轴线间的夹角为
-<span
-class="math inline">\(\theta\)</span>，<strong>最大的横向灵敏度</strong>表示为：</p>
-<p><span class="math display">\[
-s_t=\tan \theta
-\]</span></p>
-<p>备注： * 加速度传感器的外壳上的红点被用来表示横向灵敏度的方向。 *
-一般令红点和传感器中心的连线，与振幅最大的非被测振动方向垂直，以减少测量误差。</p>
-<h2 id="动态范围">动态范围</h2>
-<p><strong>动态范围</strong>是指某一输入机械量的幅值范围（用分贝表示），该范围内传感器的灵敏度随输入机械量幅值的变化量不超出某一给定的误差限。</p>
-<p><span class="math display">\[
-D=20 \lg \frac{X_{max}}{X_{min}}
-\]</span></p>
-<p>动态范围越大，说明传感器对幅值变化的适应能力越强。比如 <span
-class="math inline">\(D=80dB\)</span>，则幅值上限与下限之比达10000倍。传感器的量程即是指其幅值上限与下限值的代数差。</p>
-<h2 id="其他">其他</h2>
-<p>传感器的其它性能参数还包括其质量、重复性、稳定性、输入输出阻抗、阻尼、迟滞、零飘、过载能力、以及它的工作环境条件等。</p>
-]]></content>
-      <tags>
-        <tag>振动测试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>实验模态分析的基本原理与主要过程</title>
     <url>/2021/06/14/%E5%AE%9E%E9%AA%8C%E6%A8%A1%E6%80%81%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8E%E4%B8%BB%E8%A6%81%E8%BF%87%E7%A8%8B/</url>
     <content><![CDATA[<h2 id="基本概念">基本概念</h2>
@@ -195,6 +119,52 @@ id="实验传递矩阵和模态参数的关系">实验、传递矩阵和模态�
 ]]></content>
       <tags>
         <tag>振动测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Levenberg–Marquardt Algorithm</title>
+    <url>/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/</url>
+    <content><![CDATA[<h2 id="问题背景">问题背景</h2>
+<p>在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到
+<strong>Levenberg–Marquardt 算法</strong>。</p>
+<h2 id="levenbergmarquardt-算法">Levenberg–Marquardt 算法</h2>
+<p>Levenberg–Marquardt
+算法是一种最小二乘（模型拟合）算法。它可以解决以下问题：</p>
+<p><span class="math display">\[
+\min_{x}f(x)= \min_{x} \\| F(x) \\|^2_2 = \min_{x} \sum_i F_i^2(x)
+\]</span></p>
+<p>即求一个 <span class="math inline">\(x\)</span> 使 <span
+class="math inline">\(f(x)\)</span> 最小。</p>
+<p>1944年<a href="https://doi.org/10.1090/qam/10666">Kenneth
+Levenberg</a>首次提出该算法，1963年<a
+href="https://doi.org/10.1137/0111030">Donald
+Marquardt</a>也发现了该算法，后来这种算法被称作Levenberg–Marquardt。</p>
+<p>关于该算法的详细原理和实现可以参考 Flannery 等人的著作 <a
+href="http://www.nrbook.com/a/bookcpdf.php">Numerical recipes in
+C</a>。</p>
+<h2 id="levenbergmarquardt-算法与非线性方程组求根">Levenberg–Marquardt
+算法与非线性方程组求根</h2>
+<p>求解非线性方程组即求解一组 <span
+class="math inline">\(\bar{x}\)</span> 令其满足 <span
+class="math inline">\(\bar{F}(x)=0\)</span>。显然非线性方程组的根可以令上式成立。</p>
+<p>因此，给定初始值，通过Levenberg–Marquardt 算法求得的 <span
+class="math inline">\(\bar{x}\)</span> 就是非线性方程组 <span
+class="math inline">\(\bar{x}\)</span> 的一组近似根（初始值附近）。</p>
+<p>非线性方程组的根显然不止一组，而通过该方法只能得到距离初始值较近的根，要想得到全部的根，需要配合其他算法。</p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>Levenberg, K. (1944). A method for the solution of certain
+non-linear problems in least squares. <em>Quarterly of applied
+mathematics</em>, 2(2), 164-168.</li>
+<li>Mardquardt, D. W. (1963). An algorithm for least square estimation
+of parameters. <em>J. Soc. Ind. Appl. Math</em>, 11, 431-441.</li>
+<li>Flannery, B. P., Press, W. H., Teukolsky, S. A., &amp; Vetterling,
+W. (1992). Numerical recipes in C. <em>Press Syndicate of the University
+of Cambridge, New York</em>, 24(78), 36.</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>math</tag>
       </tags>
   </entry>
   <entry>
@@ -489,98 +459,6 @@ class="math inline">\(\bar{X}_N\)</span>
       </tags>
   </entry>
   <entry>
-    <title>如何在论文中完美插入矢量图</title>
-    <url>/2021/06/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE/</url>
-    <content><![CDATA[<h2 id="问题背景">问题背景</h2>
-<p>论文写作时，我们往往需要插入矢量图，以保证图形被阅览时不会因缩放而出现难看的锯齿（失真）。</p>
-<p>需要矢量图的常用场景如下： * 纯矢量图 * 简单的折线、柱形、条形图等 *
-抽象的模型图、概念图、流程图、程序框图等 *
-混合类图形，混合了以上两种图形 * 矢量图与位图的混合 *
-色彩复杂的模型图（位图）旁配上文字、简单的折线图、流程图等 *
-在流程图中嵌入各种结果，如Science、Nature中常见的占用一页的超大混合类图形
-* 其他</p>
-<h2 id="各种类型图片的区别">各种类型图片的区别</h2>
-<h3 id="矢量图">矢量图</h3>
-<p>简单来说矢量图就像用几何图形来描述一幅图，在矢量图放大时，我们所记录的几何图形的各种角度、形状等并没有改变，所以无论是放大还是缩小，都不会影响矢量图的清晰度。</p>
-<p><strong>文件类型：</strong> Adobe
-Illustrator的<code>.AI</code>、<code>.EPS</code>和<code>.SVG</code>、AutoCAD的<code>.dwg</code>和<code>.dxf</code>、Corel
-DRAW的<code>.cdr</code>等。<code>.pdf</code>也常被用来保存矢量图。</p>
-<p><strong>制图：</strong> 使用Adobe
-Illustrator(AI)、CorelDRAW、FlashMX制图</p>
-<h3 id="位图">位图</h3>
-<p>位图又被称作点阵图或栅格图像，它的特点就是，整幅图由许多的‘点’组成，这些‘点’我们称为“像素”。在位图模式下，计算机会将图片的每个像素点进行保存。当位图放大到一定程度时，我们会发现图片是由一个一个的小方块组成，这些小方块就是像素点。</p>
-<p><strong>文件类型：</strong>
-<code>.jpg</code>、<code>.png</code>、<code>.bmp</code>、<code>.pcx</code>、<code>.gif</code>、<code>.tif</code>、<code>.psd</code>等。</p>
-<p><strong>制图：</strong>
-使用Photoshop、Painter和Windows系统自带的画图工具制图。</p>
-<h2 id="如何在论文中使用矢量图">如何在论文中使用矢量图</h2>
-<p><strong>这里主要讨论使用LaTex写作时，如何插入矢量图。</strong></p>
-<p><strong>第一步</strong>：使用任何软件得到矢量图形。如果使用Matlab、Python得到折线、柱形图等，直接输出为<code>.pdf</code>或<code>.eps</code>格式。如果使用Visio、PPT等软件绘制流程图、模型图，导出为<code>.pdf</code>。（貌似微软的办公软件不支持<code>.eps</code>）</p>
-<p>（如果是直接插入已得到的矢量图，请转至第三步）</p>
-<p><strong>第二步</strong>：使用Adobe
-Illustrator将多个矢量图组合在一起后用快捷键<code>Shift+o</code>裁剪画布，删去边框。将文件保存为<code>.eps</code>或<code>.pdf</code>。如果只是删除<code>.pdf</code>中的白边，使用Adobe
-Acrobat 的编辑功能就能轻松做到。</p>
-<p><strong>第三步</strong>：在LaTex中插入组合好的矢量图。</p>
-<p><strong>提示</strong>：在第一步制作矢量图时，最好调整好字号，图宽以适合出现在论文中或PPT中，并且使用Matlab时一定要保存一份<code>.fig</code>文件，便于以后查找修改。</p>
-<h2 id="office套件中插入矢量图">Office套件中插入矢量图</h2>
-<p>Office办公软件下插入矢量图，使用<code>.emf</code>即可。Office系列间的互通是较为方便的，如Visio、PPT、Word间相互插入文件。</p>
-<p>使用Word和Latex一段时间以后，还是非常推荐大家使用LaTex的（强迫症福音）。毕竟插入的行内、行间公式怎是一个“服服帖帖”就能概括的。更别说切换模板时，只需要改动导言区就ok啦，简直不要太方便。LaTex缺点也有，表格制作很麻烦QAQ…，整体学习成本略高。</p>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li>https://www.zhihu.com/question/378251607/answer/1160351444</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>论文写作</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Levenberg–Marquardt Algorithm</title>
-    <url>/2021/06/24/levenberg%E2%80%93Marquardt_Algorithm/</url>
-    <content><![CDATA[<h2 id="问题背景">问题背景</h2>
-<p>在使用Matlab或Python解决某些实际问题时，我们不免要求解非线性方程组，或解决一些优化问题。这时你就有可能遇到
-<strong>Levenberg–Marquardt 算法</strong>。</p>
-<h2 id="levenbergmarquardt-算法">Levenberg–Marquardt 算法</h2>
-<p>Levenberg–Marquardt
-算法是一种最小二乘（模型拟合）算法。它可以解决以下问题：</p>
-<p><span class="math display">\[
-\min_{x}f(x)= \min_{x} \\| F(x) \\|^2_2 = \min_{x} \sum_i F_i^2(x)
-\]</span></p>
-<p>即求一个 <span class="math inline">\(x\)</span> 使 <span
-class="math inline">\(f(x)\)</span> 最小。</p>
-<p>1944年<a href="https://doi.org/10.1090/qam/10666">Kenneth
-Levenberg</a>首次提出该算法，1963年<a
-href="https://doi.org/10.1137/0111030">Donald
-Marquardt</a>也发现了该算法，后来这种算法被称作Levenberg–Marquardt。</p>
-<p>关于该算法的详细原理和实现可以参考 Flannery 等人的著作 <a
-href="http://www.nrbook.com/a/bookcpdf.php">Numerical recipes in
-C</a>。</p>
-<h2 id="levenbergmarquardt-算法与非线性方程组求根">Levenberg–Marquardt
-算法与非线性方程组求根</h2>
-<p>求解非线性方程组即求解一组 <span
-class="math inline">\(\bar{x}\)</span> 令其满足 <span
-class="math inline">\(\bar{F}(x)=0\)</span>。显然非线性方程组的根可以令上式成立。</p>
-<p>因此，给定初始值，通过Levenberg–Marquardt 算法求得的 <span
-class="math inline">\(\bar{x}\)</span> 就是非线性方程组 <span
-class="math inline">\(\bar{x}\)</span> 的一组近似根（初始值附近）。</p>
-<p>非线性方程组的根显然不止一组，而通过该方法只能得到距离初始值较近的根，要想得到全部的根，需要配合其他算法。</p>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li>Levenberg, K. (1944). A method for the solution of certain
-non-linear problems in least squares. <em>Quarterly of applied
-mathematics</em>, 2(2), 164-168.</li>
-<li>Mardquardt, D. W. (1963). An algorithm for least square estimation
-of parameters. <em>J. Soc. Ind. Appl. Math</em>, 11, 431-441.</li>
-<li>Flannery, B. P., Press, W. H., Teukolsky, S. A., &amp; Vetterling,
-W. (1992). Numerical recipes in C. <em>Press Syndicate of the University
-of Cambridge, New York</em>, 24(78), 36.</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>math</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>论文中的高频英语词汇</title>
     <url>/2021/08/15/%E8%AE%BA%E6%96%87%E4%B8%AD%E7%9A%84%E9%AB%98%E9%A2%91%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%B1%87/</url>
     <content><![CDATA[<h2 id="动词">动词</h2>
@@ -601,243 +479,93 @@ of attention</p>
       </tags>
   </entry>
   <entry>
-    <title>加权残值伽辽金法</title>
-    <url>/2021/08/26/%E5%8A%A0%E6%9D%83%E6%AE%8B%E5%80%BCGalerkin%E6%96%B9%E6%B3%95/</url>
+    <title>FFT和伯德图 (Bode plot) 的区别与联系</title>
+    <url>/2021/08/06/FFT-and-Bode-plot/</url>
     <content><![CDATA[<h2 id="概述">概述</h2>
-<p><strong>加权残值伽辽金法</strong> (Galerkin method of weighted
-residuals) 也被称作加权余量伽辽金法、伽辽金法 (Galerkin
-method)，常被看作是<strong>加权残值（余量）法</strong>的一种。该方法是俄罗斯数学家鲍里斯·格里戈里耶维奇·伽辽金
-(Boris Galerkin)
-发明的一种数值分析方法。应用这种方法可以将求解微分方程问题简化成为线性方程组的求解问题。</p>
-<p><strong>伽辽金法原理概述：</strong>
-采用微分方程对应的<strong>弱形式</strong>，通过选取有限多项试函数（又称基函数或形函数），将它们叠加；再要求结果在求解域内及边界上的加权积分（权函数为试函数本身）满足原方程，便可以将求解微分方程近似解的问题转化为求解一组线性代数方程，且自然边界条件能够自动满足。</p>
-<p>必须强调指出的是，伽辽金法所得到的只是在原求解域内的一个近似解（仅仅是加权平均满足原方程，并非在每个点上都满足）。</p>
-<p>为了阐明伽辽金法的原理及特点，本文先介绍相关概念——微分方程的<strong>等效积分形式</strong>和<strong>弱形式</strong>，再介绍加权残值伽辽金法的基本步骤和特点。</p>
-<h2 id="等效积分弱形式">等效积分弱形式</h2>
-<p>数学中,
-<strong>微分方程的弱解</strong>或广义解是指对该方程中的微分可能不存在,
-但是在某种精确定义的意义下满足该方程的解。 对于不同种类的微分方程,
-弱解的定义性质也可能不同。</p>
-<p>设函数 <span class="math inline">\(\mathbf{u}\)</span> 在域 <span
-class="math inline">\(\Omega\)</span> 中满足如下微分方程组：</p>
-<p><span class="math display">\[
-\mathbf{A}(\mathbf{u}) = 0
+<p><strong>主要区别</strong>： *
+作用对象。FFT作用于<strong>时间序列信号</strong>；Bode图作用于系统<strong>传递函数</strong>
+<span class="math inline">\(H(s)\)</span> *
+目的。FFT的目的是得到一段信号的频谱；Bode图的目的是得到传递函数的幅频特性和相频特性
+*
+原理。FFT基于<strong>傅里叶变换</strong>；Bode图基于<strong>拉普拉斯变换</strong>
+*
+适用性。FFT分析的时间序列可以来自于线性系统或非线性系统；Bode图只能分析<strong>线性非时变系统</strong>的传递函数</p>
+<p><strong>主要联系</strong>： * 两者都得到频域下的结果 *
+在数学形式上，得到传递函数时使用的拉普拉斯变换退化后得到傅里叶变换</p>
+<h2 id="傅里叶变换">傅里叶变换</h2>
+<p><strong>傅里叶变换的目的</strong>：得到被采集信号包含的频率成分和每个频率成分在原信号中的占比，用图形表示则为频谱图。</p>
+<p>傅里叶变换简单通俗理解就是把看似杂乱无章的信号考虑成由一定振幅、相位、频率的基本正弦（余弦）信号组合而成，傅里叶变换的目的就是找出这些基本正弦（余弦）信号中振幅较大（能量较高）信号对应的频率，从而找出杂乱无章的信号中的主要振动频率特点。如减速机故障时，通过傅里叶变换做频谱分析，根据各级齿轮转速、齿数与杂音频谱中振幅大的对比，可以快速判断哪级齿轮损伤。</p>
+<p>傅里叶正变换可以写为： <span class="math display">\[
+X(j\omega) = \int^{+\infty}_ {-\infty} x(t)   e^{ -j \omega t} dt
 \]</span></p>
-<p>域 <span class="math inline">\(\Omega\)</span>
-可能是体积域或面积域。同时未知函数 <span
-class="math inline">\(\mathbf{u}\)</span> 还要在边界 <span
-class="math inline">\(\Gamma\)</span> 满足边界条件：</p>
+<p>但是，我们发现傅里叶变换中的基函数是 <span
+class="math inline">\(e^{j\omega
+t}\)</span>，能用它拟合的函数具有共同特征，那就是，各个频率下的三角函数分量不随时间衰减。这个假设具有明显的局限性，要么是理想没有阻尼的系统，要么是研究有阻尼的系统对特定频率的瞬时响应。</p>
+<p>因此需要对傅里叶变换的基函数进行拓展，由此引出拉普拉斯变换：</p>
 <p><span class="math display">\[
-\mathbf{B}(\mathbf{u}) = 0
+e^{\sigma t}e^{j\omega t}=e^{(\sigma+j\omega) t}=e^{st}
 \]</span></p>
-<p>由于微分方程组在域 <span class="math inline">\(\Omega\)</span>
-中的每一点都必须为0，因此有：</p>
+<p>其中，<span class="math inline">\(s=\sigma+j\omega\)</span>
+为拉普拉斯变换中的变量，表示复实数（<span
+class="math inline">\(j\)</span>为虚数单位）。</p>
+<p>PS：有关傅里叶变换的详细内容可以参照另一篇博客：<a
+href="https://alkaidwood.github.io/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">快速傅里叶变换（FFT）基本原理</a>。</p>
+<h2 id="拉普拉斯变换">拉普拉斯变换</h2>
+<p>拉普拉斯变换可以写为： <span class="math display">\[
+X(\sigma+j\omega)=\int^{+\infty}_ {-\infty} x(t)   e^{(\sigma+j\omega)
+t} dt=\int^{+\infty}_ {-\infty} x(t)   e^{s t} dt=X(s)
+\]</span></p>
 <p><span class="math display">\[
-\int _\Omega \mathbf{v} ^\mathrm{T} \mathbf{A}(\mathbf{u}) \mathrm{d}
-\Omega \equiv \int _\Omega \left( v _1 A _1 (\mathbf{u})+v _2 A _2
-(\mathbf{u})+\cdots \right)\mathrm{d} \Omega \equiv 0
+X(s)=\int^{+\infty}_ {-\infty} x(t)   e^{s t} dt
 \]</span></p>
-<p>上式的数字下标代表对应向量的分量，<span
-class="math inline">\(\mathbf{v}\)</span>
-是一组与微分方程个数相等的任意函数。</p>
-<p>假如边界条件在边界上每一点也同时得到满足，则对任意一组函数 <span
-class="math inline">\(\bar{\mathbf{v}}\)</span>，下式成立：</p>
-<p><span class="math display">\[
-\int _\Gamma \bar{\mathbf{v}} ^\mathrm{T} \mathbf{B}(\mathbf{u})
-\mathrm{d} \Gamma \equiv \int _\Gamma \left( \bar{v} _1 B _1
-(\mathbf{u})+ \bar{v} _2 B _2 (\mathbf{u})+\cdots \right)\mathrm{d}
-\Gamma \equiv 0
-\]</span></p>
-<p>因此有：</p>
-<p><span class="math display">\[
-\int _\Omega \mathbf{v} ^\mathrm{T} \mathbf{A}(\mathbf{u}) \mathrm{d}
-\Omega + \int _\Gamma \bar{\mathbf{v}} ^\mathrm{T}
-\mathbf{B}(\mathbf{u}) \mathrm{d} \Gamma  \equiv 0
-\]</span></p>
-<p>上式是与微分方程组 <span
-class="math inline">\(\mathbf{A}(\mathbf{u})=0\)</span>
-完全等效的<strong>等效积分形式</strong>。</p>
-<p>在很多情况下可以对上式进行分部积分得到另一种形式：</p>
-<p><span class="math display">\[
-\int _\Omega \mathbf{C} ^\mathrm{T} (\mathbf{v}) \mathbf{D}(\mathbf{u})
-\mathrm{d} \Omega + \int _\Gamma \mathbf{E} ^\mathrm{T}
-(\bar{\mathbf{v}}) \mathbf{F}(\mathbf{u}) \mathrm{d} \Gamma  \equiv 0
-\]</span></p>
-<p>其中 <span class="math inline">\(\mathbf{C}, \mathbf{D}, \mathbf{E},
-\mathbf{F}\)</span> 是微分算子，与分部积分之前的 <span
-class="math inline">\(\mathbf{A}\)</span>
-相比，他们所包含的导数的阶数较低，这样对函数 <span
-class="math inline">\(\mathbf{u}\)</span>
-只需求较低阶的连续性就可以了。上式中降低 <span
-class="math inline">\(\mathbf{u}\)</span> 的连续性是以提高 <span
-class="math inline">\(\mathbf{v}\)</span> 及 <span
-class="math inline">\(\mathbf{v^{&#39;}}\)</span>
-的连续性为代价的。然而，适当提高 <span
-class="math inline">\(\mathbf{v}\)</span>
-的连续性并不困难，因为它们是可以选择的已知函数。</p>
-<p>这种通过适当提高对任意函数 <span
-class="math inline">\(\mathbf{v}\)</span> 及 <span
-class="math inline">\(\mathbf{v^{&#39;}}\)</span>
-的连续性要求，以降低对微分方程场函数 <span
-class="math inline">\(\mathbf{u}\)</span>
-的连续性要求所建立的等效积分形式称为微分方程 <span
-class="math inline">\(\mathbf{A}\)</span>
-的<strong>等效积分弱形式</strong>。等效积分弱形式的解称为<strong>微分方程的弱解</strong>。</p>
-<h2 id="加权残值伽辽金法">加权残值伽辽金法</h2>
-<h3 id="概述-1">概述</h3>
-<p>采用使余量的加权积分为零来求得微分方程近似解的方法称为<strong>加权残值法</strong>，也称加权余量法。加权残值法是一种<strong>基于等效积分形式的近似方法</strong>。根据所选取权函数的不同，加权残值法可分为：配点法、子域法、最小二乘法、力矩法和<strong>加权残值伽辽金法</strong>。</p>
-<p>在应用数学中，加权残值法被用来求解微分方程的近似解，<strong>具体步骤</strong>如下：
-1. 假设近似解的形式是有限个<strong>试探函数</strong>（或基函数、形函数）
-<span class="math inline">\(\mathbf{N} _i\)</span>
-的叠加，叠加时的系数为 <span class="math inline">\(\mathbf{a}
-_i\)</span>。 1.
-由于近似解不能精确满足原微分方程和边界条件，近似解带入原微分方程和边界条件后将产生<strong>残差/余量</strong>（等式左端不为零的项）。
-1.
-将得到的关于残差的方程写作<strong>等效积分形式</strong>，并用规定的<strong>权函数</strong>
-<span class="math inline">\(\mathbf{W} _j\)</span> 代替任意函数 <span
-class="math inline">\(\bar{v}\)</span>。 1.
-令得到的由残差和权函数表示的微分方程等于零，可求得待定系数 <span
-class="math inline">\(\mathbf{a}
-_i\)</span>，最终得到了原微分方程的近似解。</p>
-<p><strong>Notation：用近似解的试探函数 <span
-class="math inline">\(\mathbf{N} _j\)</span> 作为权函数 <span
-class="math inline">\(\mathbf{W} _j\)</span> 时 (<span
-class="math inline">\(\mathbf{W} _j = \mathbf{N}
-_j\)</span>)，上述步骤被称为加权残值伽辽金法。</strong></p>
-<h3 id="具体推导">具体推导</h3>
-<p>在求解域 <span class="math inline">\(\Omega\)</span> 中，若场函数
-<span class="math inline">\(\mathbf{u}\)</span> 是精确解，则在域 <span
-class="math inline">\(\Omega\)</span> 中的任何一点都满足微分方程 <span
-class="math inline">\(\mathbf{A}(\mathbf{u})=0\)</span>，同时在边界
-<span class="math inline">\(\Gamma\)</span> 上满足边界条件 <span
-class="math inline">\(\mathbf{B}(\mathbf{u})=0\)</span>，此时等效积分式或其弱形式必然也得到严格满足。但是对于复杂的实际问题，这样的精确解往往很难找到，因此需要设法找到具有一定精度的近似解。</p>
-<p>假设未知场函数 <span class="math inline">\(\mathbf{u}\)</span>
-可以用近似函数表示。近似函数是带有待定参数的已知函数一般形式是：</p>
-<p><span class="math display">\[
-\mathbf{u}  \approx \mathbf{u}^* = \sum ^n _{i=1} \mathbf{N} _i
-\mathbf{a} _i = \mathbf{N} \mathbf{a}
-\]</span></p>
-<p>其中 <span class="math inline">\(\mathbf{a} _i\)</span>
-是待定参数，<span class="math inline">\(\mathbf{N} _i\)</span>
-是被称为试探函数（或基函数、形函数）的已知函数，它取自<strong>完全的函数序列</strong>，是线性独立的。近似解通常选择使之满足强制边界条件和连续性的要求。</p>
+<p>拓展傅里叶变换得到拉普拉斯变换。它是为简化计算而建立的实变量函数和复变量函数间的一种函数变换。对一个实变量函数作拉普拉斯变换，并在复数域中作各种运算，再将运算结果作拉普拉斯反变换来求得实数域中的相应结果，往往比直接在实数域中求出同样的结果在计算上容易得多。拉普拉斯变换的这种运算步骤对于求解线性微分方程尤为有效，它可把微分方程化为容易求解的代数方程来处理，从而使计算简化。在经典控制理论中，对控制系统的分析和综合，都是建立在拉普拉斯变换的基础上的。</p>
+<p><strong>引入拉普拉斯变换的一个主要优点，是可采用传递函数 <span
+class="math inline">\(H(s)\)</span>
+代替微分方程来描述系统的特性</strong>。这就为采用直观和简便的图解方法来确定控制系统的整个特性（见信号流程图、动态结构图）、分析控制系统的运动过程（见奈奎斯特稳定判据、根轨迹法），以及综合控制系统的校正装置（见控制系统校正方法）提供了可能性。</p>
+<h2 id="bode图">Bode图</h2>
+<p>刚才提到，通过拉普拉斯变换可以得到系统的传递函数；而传递函数可以直观的反应线性系统输入与输出之间的关系。当我们对传递函数可视化时往往就会用到<strong>Bode图</strong>。</p>
+<p>伯德图(bode)利用对数表示系统传递函数的幅频、相频特性,它分为两个图，一个是对数幅频图、一个是相频图，横坐标均为
+<span class="math inline">\(\omega\)</span> ，纵坐标一个为<span
+class="math inline">\(L(\omega)=20\lg A(\omega
+)\)</span>表示对数幅值，一个为<span class="math inline">\(\varphi
+(\omega)\)</span> 表示相位角。</p>
 <blockquote>
-<p>完全函数序列：任一函数都可以用此序列表示。</p>
+<p><strong>例</strong>：Bode图 假设系统的传递函数为： <span
+class="math display">\[
+H(s)=\frac{A}{s+a}
+\]</span> <span
+class="math inline">\(s=\sigma+j\omega\)</span>，则传递函数可以写为：
+<span class="math display">\[
+H(\sigma+j\omega)=\frac{A}{(\sigma+j\omega)+a}
+\]</span> 此时传递函数的图像是三维的，有两个自变量<span
+class="math inline">\(\sigma 和
+\omega\)</span>，但是Bode图只关系其中的<span
+class="math inline">\(\omega\)</span>，将另一个变量视为0，<span
+class="math inline">\(\sigma=0\)</span>： <span class="math display">\[
+H(\omega)=\frac{A}{(j\omega)+a}
+\]</span> 上式的对数幅值和相角分别为： <span class="math display">\[
+L(\omega)=20\lg \big\vert H(\omega) \big \vert = 20\lg \bigg(
+\frac{A}{\sqrt{\omega^2+a^2}} \bigg )
+\]</span> <span class="math display">\[
+\varphi (\omega) = - \arctan \frac{\omega}{a}
+\]</span> 利用以上两式即可画出Bode图，横坐标均为<span
+class="math inline">\(\omega\)</span></p>
 </blockquote>
-<p>显然，试探函数为有限项时，近似解是不能精确满足微分方程和边界条件的，它们将产生<strong>残差</strong>
-<span class="math inline">\(\mathbf{R}\)</span> 和 <span
-class="math inline">\(\bar{\mathbf{R}}\)</span>。</p>
-<p><span class="math display">\[
-\mathbf{A}(\mathbf{Na}) = \mathbf{R}
-\]</span></p>
-<p><span class="math display">\[
-\mathbf{B}(\mathbf{Na}) = \bar{\mathbf{R}}
-\]</span></p>
-<p>残差 <span class="math inline">\(\mathbf{R}\)</span> 和 <span
-class="math inline">\(\bar{\mathbf{R}}\)</span>
-也被称为余量。将原方程写作等效积分形式，并用 <span
-class="math inline">\(n\)</span> 个规定的函数代替任意函数 <span
-class="math inline">\(\mathbf{v}\)</span> 和 <span
-class="math inline">\(\bar{\mathbf{v}}\)</span>：</p>
-<p><span class="math display">\[
-\mathbf{v}=\mathbf{W} _j, \quad \bar{\mathbf{v}}=\bar{\mathbf{W}} _j
-\quad (j=1,2,\dots,n)
-\]</span></p>
-<p>则原微分方程的等效形式变为：</p>
-<p><span class="math display">\[
-\int _\Omega \mathbf{W} _j ^\mathrm{T} \mathbf{A}(\mathbf{Na})
-\mathrm{d} \Omega + \int _\Gamma \bar{\mathbf{W}} _j ^\mathrm{T}
-\mathbf{B}(\mathbf{Na}) \mathrm{d} \Gamma  = 0
-\]</span></p>
-<p>亦可写为余量形式：</p>
-<p><span class="math display">\[
-\int _\Omega \mathbf{W} _j ^\mathrm{T} \mathbf{R} \mathrm{d} \Omega +
-\int _\Gamma \bar{\mathbf{W}} _j ^\mathrm{T} \bar{\mathbf{R}} \mathrm{d}
-\Gamma  = 0
-\]</span></p>
-<p>也可写出等效积分弱形式：</p>
-<p><span class="math display">\[
-\int _\Omega \mathbf{C} ^\mathrm{T} (\mathbf{W} _j)
-\mathbf{D}(\mathbf{Na}) \mathrm{d} \Omega + \int _\Gamma \mathbf{E}
-^\mathrm{T} (\bar{\mathbf{W}} _j) \mathbf{F}(\mathbf{Na}) \mathrm{d}
-\Gamma  \equiv 0
-\]</span></p>
-<p>以上三式的意义是：通过选择待定系数 <span
-class="math inline">\(\mathbf{a} _i\)</span>
-，强迫余量在某种平均意义上等于零。<span class="math inline">\(\mathbf{W}
-_j\)</span> 和 <span class="math inline">\(\bar{\mathbf{W}} _j\)</span>
-称为权函数。
-余量的加权积分为零就得到了一组求解方程，用以求解近似解的待定系数 <span
-class="math inline">\(\mathbf{a}\)</span>，从而得到原问题的近似解答。</p>
-<p>近似函数所取的试探函数的项数越多，近似解的精度越高。当项数趋于无穷时，近似解将收敛于精确解。</p>
-<p>取 <span class="math inline">\(\mathbf{W} _j= \mathbf{N}
-_j\)</span>，在边界上 <span class="math inline">\(\bar{\mathbf{W}} _j=
--\mathbf{W} _j = -\mathbf{N}
-_j\)</span>。即简单的利用近似解的试探函数序列作为权函数时，以上步骤称为<strong>加权残值伽辽金法</strong>。此时有：</p>
-<p><span class="math display">\[
-\int _\Omega \mathbf{N} _j ^\mathrm{T} \mathbf{A}\left( \sum ^n
-_{i=1}\mathbf{N} _i \mathbf{a} _i  \right) \mathrm{d} \Omega + \int
-_\Gamma \bar{\mathbf{N}} _j ^\mathrm{T} \mathbf{B}\left( \sum ^n
-_{i=1}\mathbf{N} _i \mathbf{a} _i \right) \mathrm{d} \Gamma  = 0
-\]</span></p>
-<h3 id="加权残值伽辽金法的特点">加权残值伽辽金法的特点</h3>
-<p><strong>特点：如果算子 <span
-class="math inline">\(\mathbf{A}\)</span>
-是线性自伴随的，则采用伽辽金法得到的求解方程的系数矩阵是对称的。</strong>
-在高维问题中，这种对称性会大大减少计算量。因此使用加权残值法建立有限元格式时，几乎毫无例外地采用伽辽金法。现以一维热传导问题为例说明该特点。</p>
-<p>在一维热传导问题中，如果热传导系数取1，则微分方程为：</p>
-<p><span class="math display">\[
-A(\phi) = \frac{\mathrm{d}^2 \phi}{\mathrm{d} x^2}+Q(x) = 0 \quad (0
-\leq x \leq L)
-\]</span></p>
-<p>其中，当 <span class="math inline">\(0\leq x\leq \frac{L}{2}\)</span>
-时 <span class="math inline">\(Q(x)=1\)</span> ；当 <span
-class="math inline">\(\frac{L}{2}\leq x\leq L\)</span> 时 <span
-class="math inline">\(Q(x)=0\)</span>。 边界条件为 <span
-class="math inline">\(x=0\)</span> 和 <span
-class="math inline">\(x=L\)</span> 时，<span class="math inline">\(\phi
-=0\)</span>。</p>
-<p>取傅里叶级数作为近似解：</p>
-<p><span class="math display">\[
-\phi \approx \tilde{\phi} = \sum ^n _{i=1} a _i \sin \frac{i\pi x}{L}
-\]</span></p>
-<p>其中 <span class="math inline">\(a_i\)</span> 为待定参数，试探函数
-<span class="math inline">\(N_i= \sin \frac{i\pi
-x}{L}\)</span>。近似解满足边界条件，因此在边界上不产生余量。将近似解带入原方程的等效积分形式中：</p>
-<p><span class="math display">\[
-\int ^L _0 W _j \left[ \frac{\mathrm{d}^2}{\mathrm{d} x^2} \left( \sum
-^n _{i=1} N _i a _i \right) +Q \right] \mathrm{d} x=0 \quad
-(j=1,2,\dots,n)
-\]</span></p>
-<p>采用伽辽金法时，因为权函数 <span class="math inline">\(W _j = N
-_j\)</span> 是连续的，并且在两端等于 <span class="math inline">\(N _j
-=0\)</span>。对上式分部积分可以得到等效积分形式的弱形式：</p>
-<p><span class="math display">\[
-\int ^L _0 \left[ \frac{\mathrm{d}W _j}{\mathrm{d}x}
-\frac{\mathrm{d}}{\mathrm{d} x} \left( \sum ^n _{i=1} N _i a _i \right)
-+ W _j Q \right] \mathrm{d} x=0 \quad (j=1,2,\dots,n)
-\]</span></p>
-<p>上式可以改写为：</p>
-<p><span class="math display">\[
-\mathbf{Ka-P=0}
-\]</span></p>
-<p>其中，<span class="math inline">\(\mathbf{P}\)</span> 和 <span
-class="math inline">\(\mathbf{a}\)</span> 是 <span
-class="math inline">\(n\)</span> 维向量</p>
-<p><span class="math display">\[
-P _j =\int ^L _0 W _j Q \mathrm{d}x
-\]</span></p>
-<p><span class="math display">\[
-K _{ij} = \frac{\mathrm{d}W _i}{\mathrm{d}x} \frac{\mathrm{d} N
-_j}{\mathrm{d} x}
-\]</span></p>
-<p>可以看到，当 <span class="math inline">\(W _i= N _i\)</span> 时，将有
-<span class="math inline">\(K _{ij} = K
-_{ji}\)</span>，换而言之，采用伽辽金法得到的求解待定参数 <span
-class="math inline">\(a _i\)</span> 的代数方程组的系数矩阵 <span
-class="math inline">\(\mathbf{K}\)</span> 是对称的。</p>
+<hr />
+<p>本文参考了以下博主分享的文章： * <a
+href="https://blog.csdn.net/Davidietop/article/details/105369349">信号处理趣学D8——关于拉氏变换和频谱图的那些事儿</a>
+* <a
+href="https://www.zhihu.com/question/22085329">傅里叶变换、拉普拉斯变换、Z
+变换的联系是什么？为什么要进行这些变换？</a> * <a
+href="https://blog.csdn.net/Davidietop/article/details/102768194">MATLAB频域分析,奈氏图、伯德图、对数幅相图绘制</a>
+* <a href="https://en.wikipedia.org/wiki/Bode_plot">Bode plot -
+Wikipeida</a> * <a
+href="https://zhuanlan.zhihu.com/p/148778408">傅里叶变换和拉普拉斯变换的物理解释及区别</a>
+* <a href="https://zhuanlan.zhihu.com/p/228219488">Bode
+Plots（伯德图）</a></p>
 ]]></content>
       <tags>
-        <tag>有限元</tag>
+        <tag>振动测试</tag>
       </tags>
   </entry>
   <entry>
@@ -1182,6 +910,36 @@ href="https://zhuanlan.zhihu.com/p/26261872">弹性力学变分提法随记 -
       </tags>
   </entry>
   <entry>
+    <title>压电加速度传感器基本原理</title>
+    <url>/2021/06/13/2021-6-13-%E5%8E%8B%E7%94%B5%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<h2 id="压电效应">压电效应</h2>
+<p>某些电介质在沿一定方向上受到外力的作用而变形时，其内部会产生极化现象，同时在它的两个相对表面上出现正负相反的电荷。当外力去掉后，它又会恢复到不带电的状态，这种现象称为正压电效应。当作用力的方向改变时，电荷的极性也随之改变。依据电介质压电效应研制的一类传感器称为压电传感器。</p>
+<h2 id="压电加速度传感器">压电加速度传感器</h2>
+<p>压电式加速度传感器又称压电加速计。
+<strong>工作原理</strong>：在加速度计受振时，质量块加在压电元件上的力也随之变化。当被测振动频率远低于加速度计的固有频率时，则力的变化与被测加速度成正比。压电式加速度传感器利用了某些物质的压电效应，可以将加在自身上的力转化为电荷的变化，即将机械信号转化为电信号，进而通过电信号的转化成功输出或储存被测物体的加速度信号。</p>
+<p>设 <span class="math inline">\(q\)</span> 为释放的电荷，<span
+class="math inline">\(F\)</span> 为作用力，<span
+class="math inline">\(A\)</span> 为电极化面面积，<span
+class="math inline">\(d_x\)</span> 是压电系数，单位为 <span
+class="math inline">\(C/N\)</span>（库伦/牛），则下列关系式成立：</p>
+<p><span class="math display">\[
+\frac{q}{A}=d_x\frac{F}{A}
+\]</span></p>
+<p>理论与试验研究表明，在一般情况下，表示机械量和电量之间关系的压电方程是很复杂的，但是在压电材料弹性变形范围内，电荷与作用力之间的关系可以用线性映射关系表现出来:</p>
+<p><span class="math display">\[
+\bar{q}=\textbf{D}\bar{F}
+\]</span></p>
+<figure>
+<img src="/image/zhendongceshi/yadianxiaoying1.jpg" alt="yadian" />
+<figcaption aria-hidden="true">yadian</figcaption>
+</figure>
+<p>如上所示，压电型加速度传感器，基座受到的加速度最终会以电压形式输出。电荷及电压输出都与加速度成一定比例关系，因此通过测量电荷和电压即可得出加速度。一般电荷输出称为电荷灵敏度，电压输出称为电压灵敏度。</p>
+]]></content>
+      <tags>
+        <tag>振动测试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python基础知识</title>
     <url>/2021/11/09/Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
     <content><![CDATA[<h2 id="数据类型">数据类型</h2>
@@ -1242,258 +1000,6 @@ href="https://zhuanlan.zhihu.com/p/26261872">弹性力学变分提法随记 -
 ]]></content>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FFT和伯德图 (Bode plot) 的区别与联系</title>
-    <url>/2021/08/06/FFT-and-Bode-plot/</url>
-    <content><![CDATA[<h2 id="概述">概述</h2>
-<p><strong>主要区别</strong>： *
-作用对象。FFT作用于<strong>时间序列信号</strong>；Bode图作用于系统<strong>传递函数</strong>
-<span class="math inline">\(H(s)\)</span> *
-目的。FFT的目的是得到一段信号的频谱；Bode图的目的是得到传递函数的幅频特性和相频特性
-*
-原理。FFT基于<strong>傅里叶变换</strong>；Bode图基于<strong>拉普拉斯变换</strong>
-*
-适用性。FFT分析的时间序列可以来自于线性系统或非线性系统；Bode图只能分析<strong>线性非时变系统</strong>的传递函数</p>
-<p><strong>主要联系</strong>： * 两者都得到频域下的结果 *
-在数学形式上，得到传递函数时使用的拉普拉斯变换退化后得到傅里叶变换</p>
-<h2 id="傅里叶变换">傅里叶变换</h2>
-<p><strong>傅里叶变换的目的</strong>：得到被采集信号包含的频率成分和每个频率成分在原信号中的占比，用图形表示则为频谱图。</p>
-<p>傅里叶变换简单通俗理解就是把看似杂乱无章的信号考虑成由一定振幅、相位、频率的基本正弦（余弦）信号组合而成，傅里叶变换的目的就是找出这些基本正弦（余弦）信号中振幅较大（能量较高）信号对应的频率，从而找出杂乱无章的信号中的主要振动频率特点。如减速机故障时，通过傅里叶变换做频谱分析，根据各级齿轮转速、齿数与杂音频谱中振幅大的对比，可以快速判断哪级齿轮损伤。</p>
-<p>傅里叶正变换可以写为： <span class="math display">\[
-X(j\omega) = \int^{+\infty}_ {-\infty} x(t)   e^{ -j \omega t} dt
-\]</span></p>
-<p>但是，我们发现傅里叶变换中的基函数是 <span
-class="math inline">\(e^{j\omega
-t}\)</span>，能用它拟合的函数具有共同特征，那就是，各个频率下的三角函数分量不随时间衰减。这个假设具有明显的局限性，要么是理想没有阻尼的系统，要么是研究有阻尼的系统对特定频率的瞬时响应。</p>
-<p>因此需要对傅里叶变换的基函数进行拓展，由此引出拉普拉斯变换：</p>
-<p><span class="math display">\[
-e^{\sigma t}e^{j\omega t}=e^{(\sigma+j\omega) t}=e^{st}
-\]</span></p>
-<p>其中，<span class="math inline">\(s=\sigma+j\omega\)</span>
-为拉普拉斯变换中的变量，表示复实数（<span
-class="math inline">\(j\)</span>为虚数单位）。</p>
-<p>PS：有关傅里叶变换的详细内容可以参照另一篇博客：<a
-href="https://alkaidwood.github.io/2021/06/15/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%EF%BC%88FFT%EF%BC%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">快速傅里叶变换（FFT）基本原理</a>。</p>
-<h2 id="拉普拉斯变换">拉普拉斯变换</h2>
-<p>拉普拉斯变换可以写为： <span class="math display">\[
-X(\sigma+j\omega)=\int^{+\infty}_ {-\infty} x(t)   e^{(\sigma+j\omega)
-t} dt=\int^{+\infty}_ {-\infty} x(t)   e^{s t} dt=X(s)
-\]</span></p>
-<p><span class="math display">\[
-X(s)=\int^{+\infty}_ {-\infty} x(t)   e^{s t} dt
-\]</span></p>
-<p>拓展傅里叶变换得到拉普拉斯变换。它是为简化计算而建立的实变量函数和复变量函数间的一种函数变换。对一个实变量函数作拉普拉斯变换，并在复数域中作各种运算，再将运算结果作拉普拉斯反变换来求得实数域中的相应结果，往往比直接在实数域中求出同样的结果在计算上容易得多。拉普拉斯变换的这种运算步骤对于求解线性微分方程尤为有效，它可把微分方程化为容易求解的代数方程来处理，从而使计算简化。在经典控制理论中，对控制系统的分析和综合，都是建立在拉普拉斯变换的基础上的。</p>
-<p><strong>引入拉普拉斯变换的一个主要优点，是可采用传递函数 <span
-class="math inline">\(H(s)\)</span>
-代替微分方程来描述系统的特性</strong>。这就为采用直观和简便的图解方法来确定控制系统的整个特性（见信号流程图、动态结构图）、分析控制系统的运动过程（见奈奎斯特稳定判据、根轨迹法），以及综合控制系统的校正装置（见控制系统校正方法）提供了可能性。</p>
-<h2 id="bode图">Bode图</h2>
-<p>刚才提到，通过拉普拉斯变换可以得到系统的传递函数；而传递函数可以直观的反应线性系统输入与输出之间的关系。当我们对传递函数可视化时往往就会用到<strong>Bode图</strong>。</p>
-<p>伯德图(bode)利用对数表示系统传递函数的幅频、相频特性,它分为两个图，一个是对数幅频图、一个是相频图，横坐标均为
-<span class="math inline">\(\omega\)</span> ，纵坐标一个为<span
-class="math inline">\(L(\omega)=20\lg A(\omega
-)\)</span>表示对数幅值，一个为<span class="math inline">\(\varphi
-(\omega)\)</span> 表示相位角。</p>
-<blockquote>
-<p><strong>例</strong>：Bode图 假设系统的传递函数为： <span
-class="math display">\[
-H(s)=\frac{A}{s+a}
-\]</span> <span
-class="math inline">\(s=\sigma+j\omega\)</span>，则传递函数可以写为：
-<span class="math display">\[
-H(\sigma+j\omega)=\frac{A}{(\sigma+j\omega)+a}
-\]</span> 此时传递函数的图像是三维的，有两个自变量<span
-class="math inline">\(\sigma 和
-\omega\)</span>，但是Bode图只关系其中的<span
-class="math inline">\(\omega\)</span>，将另一个变量视为0，<span
-class="math inline">\(\sigma=0\)</span>： <span class="math display">\[
-H(\omega)=\frac{A}{(j\omega)+a}
-\]</span> 上式的对数幅值和相角分别为： <span class="math display">\[
-L(\omega)=20\lg \big\vert H(\omega) \big \vert = 20\lg \bigg(
-\frac{A}{\sqrt{\omega^2+a^2}} \bigg )
-\]</span> <span class="math display">\[
-\varphi (\omega) = - \arctan \frac{\omega}{a}
-\]</span> 利用以上两式即可画出Bode图，横坐标均为<span
-class="math inline">\(\omega\)</span></p>
-</blockquote>
-<hr />
-<p>本文参考了以下博主分享的文章： * <a
-href="https://blog.csdn.net/Davidietop/article/details/105369349">信号处理趣学D8——关于拉氏变换和频谱图的那些事儿</a>
-* <a
-href="https://www.zhihu.com/question/22085329">傅里叶变换、拉普拉斯变换、Z
-变换的联系是什么？为什么要进行这些变换？</a> * <a
-href="https://blog.csdn.net/Davidietop/article/details/102768194">MATLAB频域分析,奈氏图、伯德图、对数幅相图绘制</a>
-* <a href="https://en.wikipedia.org/wiki/Bode_plot">Bode plot -
-Wikipeida</a> * <a
-href="https://zhuanlan.zhihu.com/p/148778408">傅里叶变换和拉普拉斯变换的物理解释及区别</a>
-* <a href="https://zhuanlan.zhihu.com/p/228219488">Bode
-Plots（伯德图）</a></p>
-]]></content>
-      <tags>
-        <tag>振动测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>压电加速度传感器基本原理</title>
-    <url>/2021/06/13/2021-6-13-%E5%8E%8B%E7%94%B5%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<h2 id="压电效应">压电效应</h2>
-<p>某些电介质在沿一定方向上受到外力的作用而变形时，其内部会产生极化现象，同时在它的两个相对表面上出现正负相反的电荷。当外力去掉后，它又会恢复到不带电的状态，这种现象称为正压电效应。当作用力的方向改变时，电荷的极性也随之改变。依据电介质压电效应研制的一类传感器称为压电传感器。</p>
-<h2 id="压电加速度传感器">压电加速度传感器</h2>
-<p>压电式加速度传感器又称压电加速计。
-<strong>工作原理</strong>：在加速度计受振时，质量块加在压电元件上的力也随之变化。当被测振动频率远低于加速度计的固有频率时，则力的变化与被测加速度成正比。压电式加速度传感器利用了某些物质的压电效应，可以将加在自身上的力转化为电荷的变化，即将机械信号转化为电信号，进而通过电信号的转化成功输出或储存被测物体的加速度信号。</p>
-<p>设 <span class="math inline">\(q\)</span> 为释放的电荷，<span
-class="math inline">\(F\)</span> 为作用力，<span
-class="math inline">\(A\)</span> 为电极化面面积，<span
-class="math inline">\(d_x\)</span> 是压电系数，单位为 <span
-class="math inline">\(C/N\)</span>（库伦/牛），则下列关系式成立：</p>
-<p><span class="math display">\[
-\frac{q}{A}=d_x\frac{F}{A}
-\]</span></p>
-<p>理论与试验研究表明，在一般情况下，表示机械量和电量之间关系的压电方程是很复杂的，但是在压电材料弹性变形范围内，电荷与作用力之间的关系可以用线性映射关系表现出来:</p>
-<p><span class="math display">\[
-\bar{q}=\textbf{D}\bar{F}
-\]</span></p>
-<figure>
-<img src="/image/zhendongceshi/yadianxiaoying1.jpg" alt="yadian" />
-<figcaption aria-hidden="true">yadian</figcaption>
-</figure>
-<p>如上所示，压电型加速度传感器，基座受到的加速度最终会以电压形式输出。电荷及电压输出都与加速度成一定比例关系，因此通过测量电荷和电压即可得出加速度。一般电荷输出称为电荷灵敏度，电压输出称为电压灵敏度。</p>
-]]></content>
-      <tags>
-        <tag>振动测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>质心_形心_重心</title>
-    <url>/2022/03/08/%E8%B4%A8%E5%BF%83-%E5%BD%A2%E5%BF%83-%E9%87%8D%E5%BF%83/</url>
-    <content><![CDATA[<h2 id="三者存在的条件">三者存在的条件</h2>
-<ul>
-<li><strong>形心</strong>：目标具有几何外形；</li>
-<li><strong>质心</strong>：目标具有几何外形、具有质量；</li>
-<li><strong>重心</strong>：目标具有几何外形、具有质量、身处重力场。</li>
-</ul>
-<h2 id="质心">质心</h2>
-<p><strong>定义</strong>：质心是多质点系统的质量中心。
-<strong>特点</strong>：若对该点施力，系统会沿着力的方向运动、不会旋转。
-<strong>质心位置</strong>：质点的位置对质量取加权平均值，求得质心位置。</p>
-<p>对于离散系统，三维物体的质心位置由下式求得：</p>
-<p><span class="math display">\[
-\bar{x} = \frac{\sum{x_k m_k}}{\sum{m_k}}, \bar{y} = \frac{\sum{y_k
-m_k}}{\sum{m_k}},  \bar{z} = \frac{\sum{z_k m_k}}{\sum{m_k}}
-\]</span></p>
-<p>对于连续系统，上式推广为： <span class="math display">\[
-\bar{x} = \frac{\int_{\Omega}{x \rho} \rm{d}V}{\int_{\Omega}{ \rho}
-\rm{d}V},  \bar{y} = \frac{\int_{\Omega}{y \rho} \rm{d}V}{\int_{\Omega}{
-\rho} \rm{d}V}, \bar{z} = \frac{\int_{\Omega}{z
-\rho}  \rm{d}V}{\int_{\Omega}{ \rho} \rm{d}V}
-\]</span></p>
-<p>其中，<span class="math inline">\(\rho\)</span> 是物体的密度，为
-<span class="math inline">\(x,y,z\)</span> 的函数。上式为在物体所在空间
-<span class="math inline">\(\Omega\)</span> 进行体积分。</p>
-<h2 id="形心">形心</h2>
-<p><strong>定义</strong>：形心又被称为几何中心。形心是将该物体分成“矩”相等的两部分的所有超平面的交点。
-<strong>形心位置</strong>：等价于取加权平均。</p>
-<p>对于二维图形，形心位置由下式给出： <span class="math display">\[
-\bar{x} = \frac{\int{x f(x)}\rm{d}x}{\int{f(x)}\rm{d}x}, \bar{y} =
-\frac{\int{y f(y)}\rm{d}y}{\int{f(y)}\rm{d}y}
-\]</span></p>
-<p>上式分子部分为 <span class="math inline">\(x\)</span> 和 <span
-class="math inline">\(y\)</span> 的一阶矩。其中，<span
-class="math inline">\(f(x)\)</span> 为几何图形的横坐标位于 <span
-class="math inline">\(x\)</span> 点时在 <span
-class="math inline">\(y\)</span> 方向上的长度；<span
-class="math inline">\(f(y)\)</span> 为几何图形的纵坐标位于 <span
-class="math inline">\(y\)</span> 点时在 <span
-class="math inline">\(x\)</span> 方向上的长度。</p>
-<p>上式的等价形式为： <span class="math display">\[
-\bar{x} = \frac{\int_D{x}\rm{d}S}{\int_D{ }\rm{d}S} =
-\frac{\int_D{x}\rm{d}S}{A}
-\]</span></p>
-<p>上式积分表示在几何图形所在二维空间 <span
-class="math inline">\(D\)</span> 进行面积分；<span
-class="math inline">\(A\)</span> 表示二维几何图形的面积。（<span
-class="math inline">\(y\)</span> 方向写法与之类似）</p>
-<p>将该式推广至三维空间可得： <span class="math display">\[
-\bar{x} = \frac{\int_\Omega{x}\rm{d}V}{\int_\Omega{ }\rm{d}V} =
-\frac{\int_\Omega{x}\rm{d}V}{V}
-\]</span></p>
-<p>对比发现，上式积分中如果加入密度项，则得到的质心的坐标。即，<strong>对于密度均匀的物体，其质心和形心重合</strong>。</p>
-<h2 id="重心">重心</h2>
-<p><strong>定义</strong>：重心是重力作用的平均位置。
-<strong>特点</strong>：各质点相对于重心的位置矢量乘上各质点的重力之和(合力矩)为零。</p>
-<p>在均匀的重力场中，重心等同于质心。在非均匀的重力场中，质心和重心往往不在同一点。</p>
-]]></content>
-      <tags>
-        <tag>mechanics</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Maple常用命令</title>
-    <url>/2022/04/23/maple%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h2 id="基本操作">基本操作</h2>
-<p><strong>赋值</strong>： <code>：=</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a :=b   #表示将 a 的值赋予 b</span><br></pre></td></tr></table></figure></p>
-<p><strong>相等</strong>： <code>=</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a = b           # 创建了一个表达式</span><br><span class="line">equn:= a=b      #将表达式 a=b 赋值给 equn</span><br></pre></td></tr></table></figure></p>
-<p><strong>执行但不输出结果</strong>： <code>:</code></p>
-<p><strong>上标</strong>： <code>^</code></p>
-<p><strong>下标</strong>： <code>__</code> （双下划线）</p>
-<p><strong>乘</strong>： <code></code> （空格）</p>
-<p><strong>构造矩阵</strong>： <code>&lt; &gt;</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;&lt;a, b, c&gt; | &lt;x, y,z&gt;&gt;</span><br></pre></td></tr></table></figure>
-输出结果为： <span class="math display">\[
-\begin{bmatrix} a &amp; x \\\\ b &amp; y \\\\ c &amp; z \end{bmatrix}
-\]</span></p>
-<p><strong>构造函数</strong> <code>F:=x-&gt;2*x</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">F := (x, y) -&gt; 2*x + y</span><br><span class="line">F(2,1)</span><br></pre></td></tr></table></figure>
-输出结果为 <code>4</code></p>
-<h2 id="最常用的数据类型">最常用的数据类型</h2>
-<p><strong>序列</strong>： <code>a := 1, 2, 3</code>
-特点：有顺序、可组合 <code>b:=a,4,5</code> （输出结果为
-<code>1,2,3,4,5</code>），典型应用是函数的输入参数 生成序列的函数
-<code>seq()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">seq(x^i,i=1..11,2)</span><br></pre></td></tr></table></figure> 输出结果为： <span
-class="math inline">\(x,x^3,x^5,x^9,x^{11}\)</span></p>
-<p><strong>列表</strong>： 是用 <code>[  ]</code> 封装的序列
-与序列的不同：列表中嵌入列表展开方式不同
-与集合的不同：列表中元素项顺序是固定的，且会保留重复项 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a:=[1,2,3]:</span><br><span class="line">b:=[a,4,5]</span><br><span class="line">b[1]</span><br><span class="line">b[2]</span><br></pre></td></tr></table></figure>
-输出结果为：<code>b:=[[1,2,3],4,5]</code> 和 <code>[1,2,3]</code> 和
-<code>4</code></p>
-<h2 id="表达式的处理">表达式的处理</h2>
-<p><strong>简化</strong>： <code>simplify()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">equn :=a (a+b+2 a)</span><br><span class="line">simplify(equn)                          #处理单个表达式或矩阵</span><br><span class="line">equns := a (a+b+2 a), x+3x+y, m+n+n+n   #生成表达式序列</span><br><span class="line">simplify(equns)                         #会报错</span><br><span class="line">seq( simplify(equns[i]), i=1..3 )       #正常化简，生成一个化简后的序列</span><br><span class="line">simplify([equns])                       #正常化简，生成一个化简后的列表</span><br></pre></td></tr></table></figure></p>
-<p><strong>展开</strong>： <code>expand()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a:= x ( x+2 + x (x+3) )</span><br><span class="line">expand(a)                               #结果为 x^3 + 4*x^2 + 2*x</span><br><span class="line">b:= x ( x+2 + x (x+3) ), 2 y ( y+21 - 5 y (y+1) )</span><br><span class="line">expand(b)                               #只展开前一项，后一项被当作输入参数</span><br><span class="line">seq(expand(b[i]),i=1..2)                #正常展开，结果为序列 x^3 + 4*x^2 + 2*x, -10*y^3 - 8*y^2 + 42*y</span><br><span class="line">expand([b])                             #正常展开，结果为列表 [x^3 + 4*x^2 + 2*x, -10*y^3 - 8*y^2 + 42*y]</span><br></pre></td></tr></table></figure></p>
-<p><strong>整理</strong>：<code>collect()</code> 和 <code>sort()</code>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">equn := x*y*(x + y*(x + y + y*(x^2 + 1)))</span><br><span class="line">equn := expand(equn)            #先展开 结果为 x^3*y^3 + x^2*y^2 + 2*x*y^3 + x^2*y</span><br><span class="line">collect(equn, y)                #再按照 y 整理各项，结果为 (x^3 + 2*x)*y^3 + x^2*y^2 + x^2*y</span><br><span class="line">sort(equn, y, ascending)        #按 y 降次排列，结果为 x^2*y + x^2*y^2 + x^3*y^3 + 2*x*y^3</span><br></pre></td></tr></table></figure></p>
-<p><strong>变量替换</strong>：<code>subs()</code> 和
-<code>algsubs()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a := x + 3*y</span><br><span class="line">subs(x = z, a)          #用 z 替换表达式 a 中的 x，结果为 z + 3*y</span><br><span class="line">subs(z = x, a)          #因等式中无 z，故结果为 x + 3*y；等式左端为表示中已有变量，右端为替换后的变量</span><br><span class="line">subs（x = 2 z,a）       #结果为 2*z + 3*y</span><br><span class="line">subs（2 y = z,a）       #结果为 x + 3*y；因为subs只用来替换单变量不进行表达式的计算，该情况使用 algsubs()</span><br><span class="line">algsubs(2*y = z, a)     #结果为 x + (3*z)/2</span><br></pre></td></tr></table></figure></p>
-<p><strong>微分</strong>： <code>diff()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一般求导--------------------------------------------------------</span><br><span class="line">equn:=x^3 + 2*x*y^2 + x*y + y^2 + x</span><br><span class="line">diff(equn,x)                    #对 equn 关于 x 求导数，结果为 3*x^2 + 2*y^2 + y + 1</span><br><span class="line"># 对 x(t) 求导----------------------------------------------------</span><br><span class="line">equn2：= x(t) +x(t)^2</span><br><span class="line">diff(equn3, t)                  #可以对 t 直接求导，结果为diff(x(t), t) + 2*x(t)*diff(x(t), t)</span><br><span class="line">diff(equn2,x)                   #结果为0，因为maple不会将 x(t) 认定为 x</span><br><span class="line">diff(equn2, x(t))               #报错，不能对 x(t) 直接求导</span><br><span class="line">equn3 := subs(x(t) = x, equn3)  #先用 x 代换 x(t)，再求导</span><br><span class="line">equn3 := diff(equn3, x)</span><br><span class="line">equn3 := subs(x = x(t), equn3)  #再反代换回去，结果为 2*x(t) + 1</span><br></pre></td></tr></table></figure></p>
-<p><strong>积分</strong>：<code>int()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">integrand:= x+x^2</span><br><span class="line">int(integrand, x = 0 .. 1)      #被积函数是 integrand，积分下限是0，上限是1</span><br></pre></td></tr></table></figure></p>
-<p><strong>选择特定项并移除</strong>： <code>select()</code> 和
-<code>remove()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">integers := [seq(10 .. 20)]     #结果为 [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]</span><br><span class="line">select(isprime, integers)       #选择列表 integers 里的质数，结果为[11, 13, 17, 19]</span><br><span class="line">remove(isprime, integers)       #移除列表 integers 里的质数，结果为[10, 12, 14, 15, 16, 18, 20]</span><br></pre></td></tr></table></figure></p>
-<p><strong>解方程</strong>： <code>solve()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># solve() 的输入参数可以是序列或列表-------------------------------</span><br><span class="line">equns1 := x + y + z = 3:</span><br><span class="line">equns2 := 2*x + 4*y + z = 7:</span><br><span class="line">equns3 := x + y + 3*z = 5:</span><br><span class="line">equns := [equns1, equns2, equns3]:</span><br><span class="line">vars := [x, y, z]:</span><br><span class="line">solve(equns, vars)     #结果为 [[x = 1, y = 1, z = 1]]</span><br></pre></td></tr></table></figure></p>
-<p><strong>转换</strong>： <code>convert()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">integers:=[seq(1..5),1 ]                #此时 integers 为列表，结果为 [1, 2, 3, 4, 5, 1]</span><br><span class="line">integers:=convert(integers,list)        #此时 integers 为集合，结果为 &#123;1, 2, 3, 4, 5&#125; 因为集合无顺序且删去重复的元素</span><br></pre></td></tr></table></figure></p>
-<p><strong>获取等式的左边/右边</strong>：<code>lhs()</code> 和
-<code>rhs()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">equn := x + y = a - b</span><br><span class="line">lhs(equn)                   #获取等式左边，结果为 x + y</span><br><span class="line">rhs(equn)                   #获取等式左边，结果为 a - b</span><br></pre></td></tr></table></figure></p>
-<p><strong>函数映射</strong>： <code>map()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 将某个函数（自定义的或系统自带的）映射到某个对象（例如矩阵）的全部元素中去</span><br><span class="line">test1 := &lt;&lt;1 | 2 | 3&gt;, &lt;4 | 5 | 6&gt;, &lt;7 | 8 | 9&gt;&gt;</span><br><span class="line">f := x -&gt; x^2：</span><br><span class="line">test2:=map(f, test1)</span><br></pre></td></tr></table></figure>
-结果为： <span class="math display">\[
-test1=\begin{bmatrix}1 &amp; 2 &amp; 3 \\\\4 &amp; 5 &amp; 6 \\\\7 &amp;
-8 &amp; 9 \end{bmatrix},test2=\begin{bmatrix}1 &amp; 4 &amp; 9 \\\\16
-&amp; 25 &amp; 36 \\\\49 &amp; 64 &amp; 81 \end{bmatrix}
-\]</span></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">test := &lt;&lt;1 | 2 | 3&gt;, &lt;4 | 5 | 6&gt;, &lt;7 | 8 | 9&gt;&gt;     #创建矩阵</span><br><span class="line">int(test, x = 0 .. 2)                               #报错，不可以直接对矩阵进行积分</span><br><span class="line">map(int, test, x = 0 .. 2)                          #将 int() 映射到矩阵中的每个元素，进行积分</span><br></pre></td></tr></table></figure>
-<p>结果为： <span class="math display">\[
-test=\begin{bmatrix}2 &amp; 4 &amp; 6 \\\\8 &amp; 10 &amp; 12 \\\\14
-&amp; 16 &amp; 18 \end{bmatrix}
-\]</span></p>
-<h2 id="参考书目">参考书目</h2>
-<ul>
-<li><a
-href="https://www.maplesoft.com.cn/support/documentation/PDF/maple2020/Maple2020%E4%B8%AD%E6%96%87%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.pdf">《Maple2020中文用户手册》</a></li>
-<li><a
-href="https://www.maplesoft.com.cn/support/documentation/">Maple文档中心</a></li>
-<li><a
-href="https://pdc.capub.cn/search.html#/detail?id=yrcnjprstu53gy5l2gvknezqtg5lyoocv7kzwrpwvcxul7qhho7q&amp;from=1&amp;type=marc">《Maple理论力学》
-李银山</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Maple</tag>
       </tags>
   </entry>
   <entry>
@@ -1610,6 +1116,434 @@ href="https://www.zhihu.com/question/30416914">微分、差分和变分的概念
       </tags>
   </entry>
   <entry>
+    <title>加权残值伽辽金法</title>
+    <url>/2021/08/26/%E5%8A%A0%E6%9D%83%E6%AE%8B%E5%80%BCGalerkin%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="概述">概述</h2>
+<p><strong>加权残值伽辽金法</strong> (Galerkin method of weighted
+residuals) 也被称作加权余量伽辽金法、伽辽金法 (Galerkin
+method)，常被看作是<strong>加权残值（余量）法</strong>的一种。该方法是俄罗斯数学家鲍里斯·格里戈里耶维奇·伽辽金
+(Boris Galerkin)
+发明的一种数值分析方法。应用这种方法可以将求解微分方程问题简化成为线性方程组的求解问题。</p>
+<p><strong>伽辽金法原理概述：</strong>
+采用微分方程对应的<strong>弱形式</strong>，通过选取有限多项试函数（又称基函数或形函数），将它们叠加；再要求结果在求解域内及边界上的加权积分（权函数为试函数本身）满足原方程，便可以将求解微分方程近似解的问题转化为求解一组线性代数方程，且自然边界条件能够自动满足。</p>
+<p>必须强调指出的是，伽辽金法所得到的只是在原求解域内的一个近似解（仅仅是加权平均满足原方程，并非在每个点上都满足）。</p>
+<p>为了阐明伽辽金法的原理及特点，本文先介绍相关概念——微分方程的<strong>等效积分形式</strong>和<strong>弱形式</strong>，再介绍加权残值伽辽金法的基本步骤和特点。</p>
+<h2 id="等效积分弱形式">等效积分弱形式</h2>
+<p>数学中,
+<strong>微分方程的弱解</strong>或广义解是指对该方程中的微分可能不存在,
+但是在某种精确定义的意义下满足该方程的解。 对于不同种类的微分方程,
+弱解的定义性质也可能不同。</p>
+<p>设函数 <span class="math inline">\(\mathbf{u}\)</span> 在域 <span
+class="math inline">\(\Omega\)</span> 中满足如下微分方程组：</p>
+<p><span class="math display">\[
+\mathbf{A}(\mathbf{u}) = 0
+\]</span></p>
+<p>域 <span class="math inline">\(\Omega\)</span>
+可能是体积域或面积域。同时未知函数 <span
+class="math inline">\(\mathbf{u}\)</span> 还要在边界 <span
+class="math inline">\(\Gamma\)</span> 满足边界条件：</p>
+<p><span class="math display">\[
+\mathbf{B}(\mathbf{u}) = 0
+\]</span></p>
+<p>由于微分方程组在域 <span class="math inline">\(\Omega\)</span>
+中的每一点都必须为0，因此有：</p>
+<p><span class="math display">\[
+\int _\Omega \mathbf{v} ^\mathrm{T} \mathbf{A}(\mathbf{u}) \mathrm{d}
+\Omega \equiv \int _\Omega \left( v _1 A _1 (\mathbf{u})+v _2 A _2
+(\mathbf{u})+\cdots \right)\mathrm{d} \Omega \equiv 0
+\]</span></p>
+<p>上式的数字下标代表对应向量的分量，<span
+class="math inline">\(\mathbf{v}\)</span>
+是一组与微分方程个数相等的任意函数。</p>
+<p>假如边界条件在边界上每一点也同时得到满足，则对任意一组函数 <span
+class="math inline">\(\bar{\mathbf{v}}\)</span>，下式成立：</p>
+<p><span class="math display">\[
+\int _\Gamma \bar{\mathbf{v}} ^\mathrm{T} \mathbf{B}(\mathbf{u})
+\mathrm{d} \Gamma \equiv \int _\Gamma \left( \bar{v} _1 B _1
+(\mathbf{u})+ \bar{v} _2 B _2 (\mathbf{u})+\cdots \right)\mathrm{d}
+\Gamma \equiv 0
+\]</span></p>
+<p>因此有：</p>
+<p><span class="math display">\[
+\int _\Omega \mathbf{v} ^\mathrm{T} \mathbf{A}(\mathbf{u}) \mathrm{d}
+\Omega + \int _\Gamma \bar{\mathbf{v}} ^\mathrm{T}
+\mathbf{B}(\mathbf{u}) \mathrm{d} \Gamma  \equiv 0
+\]</span></p>
+<p>上式是与微分方程组 <span
+class="math inline">\(\mathbf{A}(\mathbf{u})=0\)</span>
+完全等效的<strong>等效积分形式</strong>。</p>
+<p>在很多情况下可以对上式进行分部积分得到另一种形式：</p>
+<p><span class="math display">\[
+\int _\Omega \mathbf{C} ^\mathrm{T} (\mathbf{v}) \mathbf{D}(\mathbf{u})
+\mathrm{d} \Omega + \int _\Gamma \mathbf{E} ^\mathrm{T}
+(\bar{\mathbf{v}}) \mathbf{F}(\mathbf{u}) \mathrm{d} \Gamma  \equiv 0
+\]</span></p>
+<p>其中 <span class="math inline">\(\mathbf{C}, \mathbf{D}, \mathbf{E},
+\mathbf{F}\)</span> 是微分算子，与分部积分之前的 <span
+class="math inline">\(\mathbf{A}\)</span>
+相比，他们所包含的导数的阶数较低，这样对函数 <span
+class="math inline">\(\mathbf{u}\)</span>
+只需求较低阶的连续性就可以了。上式中降低 <span
+class="math inline">\(\mathbf{u}\)</span> 的连续性是以提高 <span
+class="math inline">\(\mathbf{v}\)</span> 及 <span
+class="math inline">\(\mathbf{v^{&#39;}}\)</span>
+的连续性为代价的。然而，适当提高 <span
+class="math inline">\(\mathbf{v}\)</span>
+的连续性并不困难，因为它们是可以选择的已知函数。</p>
+<p>这种通过适当提高对任意函数 <span
+class="math inline">\(\mathbf{v}\)</span> 及 <span
+class="math inline">\(\mathbf{v^{&#39;}}\)</span>
+的连续性要求，以降低对微分方程场函数 <span
+class="math inline">\(\mathbf{u}\)</span>
+的连续性要求所建立的等效积分形式称为微分方程 <span
+class="math inline">\(\mathbf{A}\)</span>
+的<strong>等效积分弱形式</strong>。等效积分弱形式的解称为<strong>微分方程的弱解</strong>。</p>
+<h2 id="加权残值伽辽金法">加权残值伽辽金法</h2>
+<h3 id="概述-1">概述</h3>
+<p>采用使余量的加权积分为零来求得微分方程近似解的方法称为<strong>加权残值法</strong>，也称加权余量法。加权残值法是一种<strong>基于等效积分形式的近似方法</strong>。根据所选取权函数的不同，加权残值法可分为：配点法、子域法、最小二乘法、力矩法和<strong>加权残值伽辽金法</strong>。</p>
+<p>在应用数学中，加权残值法被用来求解微分方程的近似解，<strong>具体步骤</strong>如下：
+1. 假设近似解的形式是有限个<strong>试探函数</strong>（或基函数、形函数）
+<span class="math inline">\(\mathbf{N} _i\)</span>
+的叠加，叠加时的系数为 <span class="math inline">\(\mathbf{a}
+_i\)</span>。 1.
+由于近似解不能精确满足原微分方程和边界条件，近似解带入原微分方程和边界条件后将产生<strong>残差/余量</strong>（等式左端不为零的项）。
+1.
+将得到的关于残差的方程写作<strong>等效积分形式</strong>，并用规定的<strong>权函数</strong>
+<span class="math inline">\(\mathbf{W} _j\)</span> 代替任意函数 <span
+class="math inline">\(\bar{v}\)</span>。 1.
+令得到的由残差和权函数表示的微分方程等于零，可求得待定系数 <span
+class="math inline">\(\mathbf{a}
+_i\)</span>，最终得到了原微分方程的近似解。</p>
+<p><strong>Notation：用近似解的试探函数 <span
+class="math inline">\(\mathbf{N} _j\)</span> 作为权函数 <span
+class="math inline">\(\mathbf{W} _j\)</span> 时 (<span
+class="math inline">\(\mathbf{W} _j = \mathbf{N}
+_j\)</span>)，上述步骤被称为加权残值伽辽金法。</strong></p>
+<h3 id="具体推导">具体推导</h3>
+<p>在求解域 <span class="math inline">\(\Omega\)</span> 中，若场函数
+<span class="math inline">\(\mathbf{u}\)</span> 是精确解，则在域 <span
+class="math inline">\(\Omega\)</span> 中的任何一点都满足微分方程 <span
+class="math inline">\(\mathbf{A}(\mathbf{u})=0\)</span>，同时在边界
+<span class="math inline">\(\Gamma\)</span> 上满足边界条件 <span
+class="math inline">\(\mathbf{B}(\mathbf{u})=0\)</span>，此时等效积分式或其弱形式必然也得到严格满足。但是对于复杂的实际问题，这样的精确解往往很难找到，因此需要设法找到具有一定精度的近似解。</p>
+<p>假设未知场函数 <span class="math inline">\(\mathbf{u}\)</span>
+可以用近似函数表示。近似函数是带有待定参数的已知函数一般形式是：</p>
+<p><span class="math display">\[
+\mathbf{u}  \approx \mathbf{u}^* = \sum ^n _{i=1} \mathbf{N} _i
+\mathbf{a} _i = \mathbf{N} \mathbf{a}
+\]</span></p>
+<p>其中 <span class="math inline">\(\mathbf{a} _i\)</span>
+是待定参数，<span class="math inline">\(\mathbf{N} _i\)</span>
+是被称为试探函数（或基函数、形函数）的已知函数，它取自<strong>完全的函数序列</strong>，是线性独立的。近似解通常选择使之满足强制边界条件和连续性的要求。</p>
+<blockquote>
+<p>完全函数序列：任一函数都可以用此序列表示。</p>
+</blockquote>
+<p>显然，试探函数为有限项时，近似解是不能精确满足微分方程和边界条件的，它们将产生<strong>残差</strong>
+<span class="math inline">\(\mathbf{R}\)</span> 和 <span
+class="math inline">\(\bar{\mathbf{R}}\)</span>。</p>
+<p><span class="math display">\[
+\mathbf{A}(\mathbf{Na}) = \mathbf{R}
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{B}(\mathbf{Na}) = \bar{\mathbf{R}}
+\]</span></p>
+<p>残差 <span class="math inline">\(\mathbf{R}\)</span> 和 <span
+class="math inline">\(\bar{\mathbf{R}}\)</span>
+也被称为余量。将原方程写作等效积分形式，并用 <span
+class="math inline">\(n\)</span> 个规定的函数代替任意函数 <span
+class="math inline">\(\mathbf{v}\)</span> 和 <span
+class="math inline">\(\bar{\mathbf{v}}\)</span>：</p>
+<p><span class="math display">\[
+\mathbf{v}=\mathbf{W} _j, \quad \bar{\mathbf{v}}=\bar{\mathbf{W}} _j
+\quad (j=1,2,\dots,n)
+\]</span></p>
+<p>则原微分方程的等效形式变为：</p>
+<p><span class="math display">\[
+\int _\Omega \mathbf{W} _j ^\mathrm{T} \mathbf{A}(\mathbf{Na})
+\mathrm{d} \Omega + \int _\Gamma \bar{\mathbf{W}} _j ^\mathrm{T}
+\mathbf{B}(\mathbf{Na}) \mathrm{d} \Gamma  = 0
+\]</span></p>
+<p>亦可写为余量形式：</p>
+<p><span class="math display">\[
+\int _\Omega \mathbf{W} _j ^\mathrm{T} \mathbf{R} \mathrm{d} \Omega +
+\int _\Gamma \bar{\mathbf{W}} _j ^\mathrm{T} \bar{\mathbf{R}} \mathrm{d}
+\Gamma  = 0
+\]</span></p>
+<p>也可写出等效积分弱形式：</p>
+<p><span class="math display">\[
+\int _\Omega \mathbf{C} ^\mathrm{T} (\mathbf{W} _j)
+\mathbf{D}(\mathbf{Na}) \mathrm{d} \Omega + \int _\Gamma \mathbf{E}
+^\mathrm{T} (\bar{\mathbf{W}} _j) \mathbf{F}(\mathbf{Na}) \mathrm{d}
+\Gamma  \equiv 0
+\]</span></p>
+<p>以上三式的意义是：通过选择待定系数 <span
+class="math inline">\(\mathbf{a} _i\)</span>
+，强迫余量在某种平均意义上等于零。<span class="math inline">\(\mathbf{W}
+_j\)</span> 和 <span class="math inline">\(\bar{\mathbf{W}} _j\)</span>
+称为权函数。
+余量的加权积分为零就得到了一组求解方程，用以求解近似解的待定系数 <span
+class="math inline">\(\mathbf{a}\)</span>，从而得到原问题的近似解答。</p>
+<p>近似函数所取的试探函数的项数越多，近似解的精度越高。当项数趋于无穷时，近似解将收敛于精确解。</p>
+<p>取 <span class="math inline">\(\mathbf{W} _j= \mathbf{N}
+_j\)</span>，在边界上 <span class="math inline">\(\bar{\mathbf{W}} _j=
+-\mathbf{W} _j = -\mathbf{N}
+_j\)</span>。即简单的利用近似解的试探函数序列作为权函数时，以上步骤称为<strong>加权残值伽辽金法</strong>。此时有：</p>
+<p><span class="math display">\[
+\int _\Omega \mathbf{N} _j ^\mathrm{T} \mathbf{A}\left( \sum ^n
+_{i=1}\mathbf{N} _i \mathbf{a} _i  \right) \mathrm{d} \Omega + \int
+_\Gamma \bar{\mathbf{N}} _j ^\mathrm{T} \mathbf{B}\left( \sum ^n
+_{i=1}\mathbf{N} _i \mathbf{a} _i \right) \mathrm{d} \Gamma  = 0
+\]</span></p>
+<h3 id="加权残值伽辽金法的特点">加权残值伽辽金法的特点</h3>
+<p><strong>特点：如果算子 <span
+class="math inline">\(\mathbf{A}\)</span>
+是线性自伴随的，则采用伽辽金法得到的求解方程的系数矩阵是对称的。</strong>
+在高维问题中，这种对称性会大大减少计算量。因此使用加权残值法建立有限元格式时，几乎毫无例外地采用伽辽金法。现以一维热传导问题为例说明该特点。</p>
+<p>在一维热传导问题中，如果热传导系数取1，则微分方程为：</p>
+<p><span class="math display">\[
+A(\phi) = \frac{\mathrm{d}^2 \phi}{\mathrm{d} x^2}+Q(x) = 0 \quad (0
+\leq x \leq L)
+\]</span></p>
+<p>其中，当 <span class="math inline">\(0\leq x\leq \frac{L}{2}\)</span>
+时 <span class="math inline">\(Q(x)=1\)</span> ；当 <span
+class="math inline">\(\frac{L}{2}\leq x\leq L\)</span> 时 <span
+class="math inline">\(Q(x)=0\)</span>。 边界条件为 <span
+class="math inline">\(x=0\)</span> 和 <span
+class="math inline">\(x=L\)</span> 时，<span class="math inline">\(\phi
+=0\)</span>。</p>
+<p>取傅里叶级数作为近似解：</p>
+<p><span class="math display">\[
+\phi \approx \tilde{\phi} = \sum ^n _{i=1} a _i \sin \frac{i\pi x}{L}
+\]</span></p>
+<p>其中 <span class="math inline">\(a_i\)</span> 为待定参数，试探函数
+<span class="math inline">\(N_i= \sin \frac{i\pi
+x}{L}\)</span>。近似解满足边界条件，因此在边界上不产生余量。将近似解带入原方程的等效积分形式中：</p>
+<p><span class="math display">\[
+\int ^L _0 W _j \left[ \frac{\mathrm{d}^2}{\mathrm{d} x^2} \left( \sum
+^n _{i=1} N _i a _i \right) +Q \right] \mathrm{d} x=0 \quad
+(j=1,2,\dots,n)
+\]</span></p>
+<p>采用伽辽金法时，因为权函数 <span class="math inline">\(W _j = N
+_j\)</span> 是连续的，并且在两端等于 <span class="math inline">\(N _j
+=0\)</span>。对上式分部积分可以得到等效积分形式的弱形式：</p>
+<p><span class="math display">\[
+\int ^L _0 \left[ \frac{\mathrm{d}W _j}{\mathrm{d}x}
+\frac{\mathrm{d}}{\mathrm{d} x} \left( \sum ^n _{i=1} N _i a _i \right)
++ W _j Q \right] \mathrm{d} x=0 \quad (j=1,2,\dots,n)
+\]</span></p>
+<p>上式可以改写为：</p>
+<p><span class="math display">\[
+\mathbf{Ka-P=0}
+\]</span></p>
+<p>其中，<span class="math inline">\(\mathbf{P}\)</span> 和 <span
+class="math inline">\(\mathbf{a}\)</span> 是 <span
+class="math inline">\(n\)</span> 维向量</p>
+<p><span class="math display">\[
+P _j =\int ^L _0 W _j Q \mathrm{d}x
+\]</span></p>
+<p><span class="math display">\[
+K _{ij} = \frac{\mathrm{d}W _i}{\mathrm{d}x} \frac{\mathrm{d} N
+_j}{\mathrm{d} x}
+\]</span></p>
+<p>可以看到，当 <span class="math inline">\(W _i= N _i\)</span> 时，将有
+<span class="math inline">\(K _{ij} = K
+_{ji}\)</span>，换而言之，采用伽辽金法得到的求解待定参数 <span
+class="math inline">\(a _i\)</span> 的代数方程组的系数矩阵 <span
+class="math inline">\(\mathbf{K}\)</span> 是对称的。</p>
+]]></content>
+      <tags>
+        <tag>有限元</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>采样定理</title>
+    <url>/2021/06/13/2021-6-13-%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<h2 id="采样">采样</h2>
+<p>采样就是将连续模拟信号变为离散数字信号的过程。</p>
+<h2 id="什么是采样定理">什么是采样定理</h2>
+<p>离散后的信号能唯一的确定原连续信号，并要求离散信号通过D/A（数/模）转化后能恢复成原连续信号。由于离散信号是从连续信号上取出的一部分值，与连续信号的关系是整体和局部的关系，一般来说是不可能唯一确定连续信号的。只有在满足一定条件下，离散信号才可按照一定方式恢复出原来的连续信号。这个条件就是采样定理。</p>
+<h2 id="如何满足采样定理">如何满足采样定理</h2>
+<p><strong>采样定理</strong>：采样频率必须大于被分析信号成分中最高频率值的两倍以上，否则将产生高、低频<strong>混淆现象</strong>，即高频信号经采样后只出现低频信号，采样信号无法还原为原信号。
+<span class="math display">\[
+f_s=\frac{1}{\Delta t} &gt;2f_m
+\]</span></p>
+<p>其中<span class="math inline">\(f_s\)</span>是采样频率，<span
+class="math inline">\(f_m\)</span>是被分析信号成分中的最高频率值，<span
+class="math inline">\(\Delta t\)</span>是采样时间间隔。</p>
+<h2 id="频率混淆现象">频率混淆现象</h2>
+<p><strong>如果想彻底了解采样定理的内涵，以及为什么不满足采样定理就会出现混淆现象，请接着看下去</strong>
+读者自己推导采样后得到的信号<span
+class="math inline">\(x_s(t)\)</span>的傅里叶变换表达式<span
+class="math inline">\(X_s(j\omega)\)</span>，再根据<span
+class="math inline">\(X_s(j\omega)\)</span>绘制频谱图，最终就会理解采样定理的内涵。</p>
+<p>为了便于推导，现定义： * 原信号：<span
+class="math inline">\(x_m(t)\)</span>，傅里叶变换后为<span
+class="math inline">\(X_m(j\omega)\)</span> * 采样函数：<span
+class="math inline">\(s(t)\)</span>，傅里叶变换后为<span
+class="math inline">\(S(j\omega)\)</span> * 采样后输出信号：<span
+class="math inline">\(x_s(t)\)</span>，傅里叶变换后为<span
+class="math inline">\(X_s(j\omega)\)</span></p>
+<h3 id="采样函数st">采样函数<span
+class="math inline">\(s(t)\)</span></h3>
+<p>当我们把采样的过程看作一个周期为 <span
+class="math inline">\(T\)</span> 、宽度为 <span
+class="math inline">\(\tau\)</span> 的矩形脉冲信号<span
+class="math inline">\(s(t)\)</span>。当<span
+class="math inline">\(\tau\ll  T\)</span> 时，采样脉冲信号<span
+class="math inline">\(s(t)\)</span>具有了狄拉克<span
+class="math inline">\(\delta\)</span>函数的性质：</p>
+<p><span class="math display">\[
+\delta(t)= \begin{cases} \infty &amp; t=0 \\\\ 0 &amp;      t\neq 0
+\end{cases}
+\]</span></p>
+<p><span class="math display">\[
+s(t)= \sum^\infty_{n=-\infty} \delta(t-nT)
+\]</span></p>
+<p>为了便于傅里叶变换，把<span
+class="math inline">\(s(t)\)</span>表示为傅里叶级数的形式：</p>
+<p><span class="math display">\[
+s(t)=\sum^\infty_{k=-\infty} a_k e^{jk\omega_s t} ,\quad
+\omega_s=\frac{2\pi}{T}
+\]</span></p>
+<p>其中：</p>
+<p><span class="math display">\[
+a_k=\frac{1}{T} \int^{T/2}_ {-T/2} \sum\nolimits^\infty_{n=-\infty}
+\delta(t-nT) e^{-j\omega_s t} dt=\frac{1}{T}
+\]</span></p>
+<p>因此，有：</p>
+<p><span class="math display">\[
+s(t)=\frac{1}{T} \sum^\infty_{k=-\infty} e^{jk\omega_s t}
+\]</span></p>
+<p>对<span class="math inline">\(s(t)\)</span>进行傅里叶变换得到<span
+class="math inline">\(S(j\omega)\)</span>：</p>
+<p><span class="math display">\[
+S(j\omega)=F \left[  s(t) \right] =F \left[  \frac{1}{T}
+\sum^\infty_{k=-\infty} e^{jk\omega_s t}  \right]  = \frac{1}{T}
+\sum^\infty_{k=-\infty} F \left[  e^{jk\omega_s t}  \right]
+\]</span></p>
+<p>查常用Fourier变换表可知：</p>
+<p><span class="math display">\[
+F \left[  e^{jk\omega_s t}  \right] =2\pi \delta(\omega -k\omega_s)
+\]</span></p>
+<p>则<span class="math inline">\(S(j\omega)\)</span>为：</p>
+<p><span class="math display">\[
+S(j\omega) = \frac{2\pi}{T} \sum^\infty_{k=-\infty} \delta(\omega
+-k\omega_s)
+\]</span></p>
+<h3 id="采样后输出的信号x_st">采样后输出的信号<span
+class="math inline">\(x_s(t)\)</span></h3>
+<p>采样后输出的信号<span
+class="math inline">\(x_s(t)\)</span>等于原信号<span
+class="math inline">\(x_m(t)\)</span>乘采样函数<span
+class="math inline">\(s(t)\)</span>：</p>
+<p><span class="math display">\[
+x_s(t)=x_m(t)s(t)
+\]</span></p>
+<p>记<span
+class="math inline">\(*\)</span>为卷积，根据频域下的卷积定理</p>
+<p><span class="math display">\[
+f_1(t)f_2(t)=\frac{1}{2\pi}F^{-1}\left[ F_1(j\omega)*
+F_2(j\omega)\right]
+\]</span></p>
+<p>采样后输出的信号<span
+class="math inline">\(X_s(j\omega)\)</span>为：</p>
+<p><span class="math display">\[
+X_s(j\omega)=\frac{1}{2\pi} X_m(j\omega)*S(j\omega)=\frac{1}{2\pi}·
+X_m(j\omega) *\left[ \frac{2\pi}{T} \sum^\infty_{k=-\infty}
+\delta(\omega -k\omega_s) \right]
+\]</span></p>
+<p>根据冲击函数的性质有： <span class="math display">\[
+X_s(j\omega)=\frac{1}{T} \int^\infty _ {-\infty} X_m(j\theta)
+\sum^\infty_{k=-\infty} \delta(\omega -k\omega_s - \theta) d\theta
+\]</span></p>
+<blockquote>
+<p>冲激函数的性质：<span
+class="math inline">\(f(t)*\delta(t-t_0)=f(t-t_0)\)</span></p>
+</blockquote>
+<p>最终，采样后信号的傅里叶变换为：</p>
+<p><span class="math display">\[
+X_s(j\omega)=\frac{1}{T}\sum^\infty_{k=-\infty} X_m(j\omega-jk\omega_s)
+\]</span></p>
+<p>从上式可以看出，原信号的频谱<span
+class="math inline">\(X_m(j\omega)\)</span>在频域内发生了周期延拓。即，原信号在频谱上的宽度是<span
+class="math inline">\(2f_m\)</span>，每隔<span
+class="math inline">\(f_s\)</span>重复一次（相当于信号的平移），发生了周期延拓，从图中直观的看出来，如果<span
+class="math inline">\(f_s&lt;2f_m\)</span>，延拓后的信号会在频域内会发生混淆。</p>
+<p><img src="/image/zhendongceshi/pinlvhunxiao.jpg" width = "60%" height = "60%"  align=center /></p>
+]]></content>
+      <tags>
+        <tag>振动测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Maple常用命令</title>
+    <url>/2022/04/23/maple%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="基本操作">基本操作</h2>
+<p><strong>赋值</strong>： <code>：=</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a :=b   #表示将 a 的值赋予 b</span><br></pre></td></tr></table></figure></p>
+<p><strong>相等</strong>： <code>=</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a = b           # 创建了一个表达式</span><br><span class="line">equn:= a=b      #将表达式 a=b 赋值给 equn</span><br></pre></td></tr></table></figure></p>
+<p><strong>执行但不输出结果</strong>： <code>:</code></p>
+<p><strong>上标</strong>： <code>^</code></p>
+<p><strong>下标</strong>： <code>__</code> （双下划线）</p>
+<p><strong>乘</strong>： <code></code> （空格）</p>
+<p><strong>构造矩阵</strong>： <code>&lt; &gt;</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;&lt;a, b, c&gt; | &lt;x, y,z&gt;&gt;</span><br></pre></td></tr></table></figure>
+输出结果为： <span class="math display">\[
+\begin{bmatrix} a &amp; x \\\\ b &amp; y \\\\ c &amp; z \end{bmatrix}
+\]</span></p>
+<p><strong>构造函数</strong> <code>F:=x-&gt;2*x</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">F := (x, y) -&gt; 2*x + y</span><br><span class="line">F(2,1)</span><br></pre></td></tr></table></figure>
+输出结果为 <code>4</code></p>
+<h2 id="最常用的数据类型">最常用的数据类型</h2>
+<p><strong>序列</strong>： <code>a := 1, 2, 3</code>
+特点：有顺序、可组合 <code>b:=a,4,5</code> （输出结果为
+<code>1,2,3,4,5</code>），典型应用是函数的输入参数 生成序列的函数
+<code>seq()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">seq(x^i,i=1..11,2)</span><br></pre></td></tr></table></figure> 输出结果为： <span
+class="math inline">\(x,x^3,x^5,x^9,x^{11}\)</span></p>
+<p><strong>列表</strong>： 是用 <code>[  ]</code> 封装的序列
+与序列的不同：列表中嵌入列表展开方式不同
+与集合的不同：列表中元素项顺序是固定的，且会保留重复项 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a:=[1,2,3]:</span><br><span class="line">b:=[a,4,5]</span><br><span class="line">b[1]</span><br><span class="line">b[2]</span><br></pre></td></tr></table></figure>
+输出结果为：<code>b:=[[1,2,3],4,5]</code> 和 <code>[1,2,3]</code> 和
+<code>4</code></p>
+<h2 id="表达式的处理">表达式的处理</h2>
+<p><strong>简化</strong>： <code>simplify()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">equn :=a (a+b+2 a)</span><br><span class="line">simplify(equn)                          #处理单个表达式或矩阵</span><br><span class="line">equns := a (a+b+2 a), x+3x+y, m+n+n+n   #生成表达式序列</span><br><span class="line">simplify(equns)                         #会报错</span><br><span class="line">seq( simplify(equns[i]), i=1..3 )       #正常化简，生成一个化简后的序列</span><br><span class="line">simplify([equns])                       #正常化简，生成一个化简后的列表</span><br></pre></td></tr></table></figure></p>
+<p><strong>展开</strong>： <code>expand()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a:= x ( x+2 + x (x+3) )</span><br><span class="line">expand(a)                               #结果为 x^3 + 4*x^2 + 2*x</span><br><span class="line">b:= x ( x+2 + x (x+3) ), 2 y ( y+21 - 5 y (y+1) )</span><br><span class="line">expand(b)                               #只展开前一项，后一项被当作输入参数</span><br><span class="line">seq(expand(b[i]),i=1..2)                #正常展开，结果为序列 x^3 + 4*x^2 + 2*x, -10*y^3 - 8*y^2 + 42*y</span><br><span class="line">expand([b])                             #正常展开，结果为列表 [x^3 + 4*x^2 + 2*x, -10*y^3 - 8*y^2 + 42*y]</span><br></pre></td></tr></table></figure></p>
+<p><strong>整理</strong>：<code>collect()</code> 和 <code>sort()</code>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">equn := x*y*(x + y*(x + y + y*(x^2 + 1)))</span><br><span class="line">equn := expand(equn)            #先展开 结果为 x^3*y^3 + x^2*y^2 + 2*x*y^3 + x^2*y</span><br><span class="line">collect(equn, y)                #再按照 y 整理各项，结果为 (x^3 + 2*x)*y^3 + x^2*y^2 + x^2*y</span><br><span class="line">sort(equn, y, ascending)        #按 y 降次排列，结果为 x^2*y + x^2*y^2 + x^3*y^3 + 2*x*y^3</span><br></pre></td></tr></table></figure></p>
+<p><strong>变量替换</strong>：<code>subs()</code> 和
+<code>algsubs()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a := x + 3*y</span><br><span class="line">subs(x = z, a)          #用 z 替换表达式 a 中的 x，结果为 z + 3*y</span><br><span class="line">subs(z = x, a)          #因等式中无 z，故结果为 x + 3*y；等式左端为表示中已有变量，右端为替换后的变量</span><br><span class="line">subs（x = 2 z,a）       #结果为 2*z + 3*y</span><br><span class="line">subs（2 y = z,a）       #结果为 x + 3*y；因为subs只用来替换单变量不进行表达式的计算，该情况使用 algsubs()</span><br><span class="line">algsubs(2*y = z, a)     #结果为 x + (3*z)/2</span><br></pre></td></tr></table></figure></p>
+<p><strong>微分</strong>： <code>diff()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一般求导--------------------------------------------------------</span><br><span class="line">equn:=x^3 + 2*x*y^2 + x*y + y^2 + x</span><br><span class="line">diff(equn,x)                    #对 equn 关于 x 求导数，结果为 3*x^2 + 2*y^2 + y + 1</span><br><span class="line"># 对 x(t) 求导----------------------------------------------------</span><br><span class="line">equn2：= x(t) +x(t)^2</span><br><span class="line">diff(equn3, t)                  #可以对 t 直接求导，结果为diff(x(t), t) + 2*x(t)*diff(x(t), t)</span><br><span class="line">diff(equn2,x)                   #结果为0，因为maple不会将 x(t) 认定为 x</span><br><span class="line">diff(equn2, x(t))               #报错，不能对 x(t) 直接求导</span><br><span class="line">equn3 := subs(x(t) = x, equn3)  #先用 x 代换 x(t)，再求导</span><br><span class="line">equn3 := diff(equn3, x)</span><br><span class="line">equn3 := subs(x = x(t), equn3)  #再反代换回去，结果为 2*x(t) + 1</span><br></pre></td></tr></table></figure></p>
+<p><strong>积分</strong>：<code>int()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">integrand:= x+x^2</span><br><span class="line">int(integrand, x = 0 .. 1)      #被积函数是 integrand，积分下限是0，上限是1</span><br></pre></td></tr></table></figure></p>
+<p><strong>选择特定项并移除</strong>： <code>select()</code> 和
+<code>remove()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">integers := [seq(10 .. 20)]     #结果为 [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]</span><br><span class="line">select(isprime, integers)       #选择列表 integers 里的质数，结果为[11, 13, 17, 19]</span><br><span class="line">remove(isprime, integers)       #移除列表 integers 里的质数，结果为[10, 12, 14, 15, 16, 18, 20]</span><br></pre></td></tr></table></figure></p>
+<p><strong>解方程</strong>： <code>solve()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># solve() 的输入参数可以是序列或列表-------------------------------</span><br><span class="line">equns1 := x + y + z = 3:</span><br><span class="line">equns2 := 2*x + 4*y + z = 7:</span><br><span class="line">equns3 := x + y + 3*z = 5:</span><br><span class="line">equns := [equns1, equns2, equns3]:</span><br><span class="line">vars := [x, y, z]:</span><br><span class="line">solve(equns, vars)     #结果为 [[x = 1, y = 1, z = 1]]</span><br></pre></td></tr></table></figure></p>
+<p><strong>转换</strong>： <code>convert()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">integers:=[seq(1..5),1 ]                #此时 integers 为列表，结果为 [1, 2, 3, 4, 5, 1]</span><br><span class="line">integers:=convert(integers,list)        #此时 integers 为集合，结果为 &#123;1, 2, 3, 4, 5&#125; 因为集合无顺序且删去重复的元素</span><br></pre></td></tr></table></figure></p>
+<p><strong>获取等式的左边/右边</strong>：<code>lhs()</code> 和
+<code>rhs()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">equn := x + y = a - b</span><br><span class="line">lhs(equn)                   #获取等式左边，结果为 x + y</span><br><span class="line">rhs(equn)                   #获取等式左边，结果为 a - b</span><br></pre></td></tr></table></figure></p>
+<p><strong>函数映射</strong>： <code>map()</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 将某个函数（自定义的或系统自带的）映射到某个对象（例如矩阵）的全部元素中去</span><br><span class="line">test1 := &lt;&lt;1 | 2 | 3&gt;, &lt;4 | 5 | 6&gt;, &lt;7 | 8 | 9&gt;&gt;</span><br><span class="line">f := x -&gt; x^2：</span><br><span class="line">test2:=map(f, test1)</span><br></pre></td></tr></table></figure>
+结果为： <span class="math display">\[
+test1=\begin{bmatrix}1 &amp; 2 &amp; 3 \\\\4 &amp; 5 &amp; 6 \\\\7 &amp;
+8 &amp; 9 \end{bmatrix},test2=\begin{bmatrix}1 &amp; 4 &amp; 9 \\\\16
+&amp; 25 &amp; 36 \\\\49 &amp; 64 &amp; 81 \end{bmatrix}
+\]</span></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">test := &lt;&lt;1 | 2 | 3&gt;, &lt;4 | 5 | 6&gt;, &lt;7 | 8 | 9&gt;&gt;     #创建矩阵</span><br><span class="line">int(test, x = 0 .. 2)                               #报错，不可以直接对矩阵进行积分</span><br><span class="line">map(int, test, x = 0 .. 2)                          #将 int() 映射到矩阵中的每个元素，进行积分</span><br></pre></td></tr></table></figure>
+<p>结果为： <span class="math display">\[
+test=\begin{bmatrix}2 &amp; 4 &amp; 6 \\\\8 &amp; 10 &amp; 12 \\\\14
+&amp; 16 &amp; 18 \end{bmatrix}
+\]</span></p>
+<h2 id="参考书目">参考书目</h2>
+<ul>
+<li><a
+href="https://www.maplesoft.com.cn/support/documentation/PDF/maple2020/Maple2020%E4%B8%AD%E6%96%87%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.pdf">《Maple2020中文用户手册》</a></li>
+<li><a
+href="https://www.maplesoft.com.cn/support/documentation/">Maple文档中心</a></li>
+<li><a
+href="https://pdc.capub.cn/search.html#/detail?id=yrcnjprstu53gy5l2gvknezqtg5lyoocv7kzwrpwvcxul7qhho7q&amp;from=1&amp;type=marc">《Maple理论力学》
+李银山</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Maple</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Timoshenko梁理论与有限元-参考书单及文献</title>
     <url>/2022/04/23/%E6%A2%81%E7%90%86%E8%AE%BA%E4%B8%8E%E6%9C%89%E9%99%90%E5%85%83-%E5%8F%82%E8%80%83%E4%B9%A6%E5%8D%95%E5%8F%8A%E6%96%87%E7%8C%AE/</url>
     <content><![CDATA[<h2 id="参考文献">参考文献</h2>
@@ -1649,60 +1583,6 @@ href="https://pdc.capub.cn/search.html#/detail?id=te3qsklcdh7mpuxtasm3pfdgg5to2g
       <tags>
         <tag>有限元</tag>
         <tag>mechanics</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>矩阵求导</title>
-    <url>/2022/04/23/%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC/</url>
-    <content><![CDATA[<h2 id="公约">公约</h2>
-<p>若<span class="math inline">\(\bar{y}=\Psi(\bar{x})\)</span>，其中
-<span class="math inline">\(\bar{y},\bar{x}\)</span> 分别是 <span
-class="math inline">\(m\times 1,n\times 1\)</span>
-向量，则有Jacobian矩阵： <span class="math display">\[
-\frac{\partial\bar{y}}{\partial\bar{x}} = \begin{bmatrix} \frac{\partial
-y_1}{\partial x_1} &amp; \frac{\partial y_1}{\partial x_2} &amp; \cdots
-&amp; \frac{\partial y_1}{\partial x_n} \\\\ \frac{\partial
-y_2}{\partial x_1} &amp; \frac{\partial y_2}{\partial x_2} &amp; \cdots
-&amp; \frac{\partial y_2}{\partial x_n} \\\\ \vdots &amp; \vdots &amp;
-\ddots &amp; \vdots \\\\ \frac{\partial y_n}{\partial x_1} &amp;
-\frac{\partial y_n}{\partial x_2} &amp; \cdots &amp;\frac{\partial
-y_n}{\partial x_n} \end{bmatrix}
-\]</span></p>
-<p>按照该公约：如果 <span class="math inline">\(x\)</span>
-是标量，则Jacobian矩阵是 <span class="math inline">\(m \times 1\)</span>
-列向量；如果 <span class="math inline">\(y\)</span>
-是标量，则Jacobian矩阵是 $ 1 n$ 行向量。</p>
-<h2 id="定理-1">定理 1</h2>
-<p>若 <span class="math inline">\(\bar{y}=\mathbf{A}
-\bar{x}\)</span>，则: <span class="math display">\[
-\frac{\partial\bar{y}}{\partial\bar{x}}=\mathbf{A}
-\]</span></p>
-<h2 id="定理-2">定理 2</h2>
-<p>若标量 <span class="math inline">\(\alpha\)</span> 满足 <span
-class="math inline">\(\alpha =\bar{y}^T\mathbf{A} \bar{x}\)</span>，则:
-<span class="math display">\[
-\frac{\partial \alpha}{\partial\bar{x}}=\bar{y}^T\mathbf{A},\;
-\frac{\partial \alpha}{\partial\bar{y}}=\bar{x}^T\mathbf{A}^T
-\]</span></p>
-<h2 id="定理-3">定理 3</h2>
-<p>若标量 <span class="math inline">\(\alpha\)</span> 满足 <span
-class="math inline">\(\alpha =\bar{x}^T\mathbf{A} \bar{x}\)</span>，则:
-<span class="math display">\[
-\frac{\partial \alpha}{\partial\bar{x}}=\bar{x}^T \left( \mathbf{A}^T +
-\mathbf{A} \right)
-\]</span></p>
-<hr />
-<ul>
-<li>上式证明过程参考：<a
-href="https://atmos.washington.edu/~dennis/MatrixCalculus.pdf">《Matrix
-Differentiation》 Randal J. Barnes</a></li>
-<li>矩阵相关变换参考：<a
-href="https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf">《Matrix
-Cookbook》 Kaare Brandt Petersen</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>math</tag>
       </tags>
   </entry>
   <entry>
@@ -2107,123 +1987,566 @@ href="https://www.zhihu.com/question/296107343/answer/1625307850">材料力学�
       </tags>
   </entry>
   <entry>
-    <title>采样定理</title>
-    <url>/2021/06/13/2021-6-13-%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86/</url>
-    <content><![CDATA[<h2 id="采样">采样</h2>
-<p>采样就是将连续模拟信号变为离散数字信号的过程。</p>
-<h2 id="什么是采样定理">什么是采样定理</h2>
-<p>离散后的信号能唯一的确定原连续信号，并要求离散信号通过D/A（数/模）转化后能恢复成原连续信号。由于离散信号是从连续信号上取出的一部分值，与连续信号的关系是整体和局部的关系，一般来说是不可能唯一确定连续信号的。只有在满足一定条件下，离散信号才可按照一定方式恢复出原来的连续信号。这个条件就是采样定理。</p>
-<h2 id="如何满足采样定理">如何满足采样定理</h2>
-<p><strong>采样定理</strong>：采样频率必须大于被分析信号成分中最高频率值的两倍以上，否则将产生高、低频<strong>混淆现象</strong>，即高频信号经采样后只出现低频信号，采样信号无法还原为原信号。
-<span class="math display">\[
-f_s=\frac{1}{\Delta t} &gt;2f_m
-\]</span></p>
-<p>其中<span class="math inline">\(f_s\)</span>是采样频率，<span
-class="math inline">\(f_m\)</span>是被分析信号成分中的最高频率值，<span
-class="math inline">\(\Delta t\)</span>是采样时间间隔。</p>
-<h2 id="频率混淆现象">频率混淆现象</h2>
-<p><strong>如果想彻底了解采样定理的内涵，以及为什么不满足采样定理就会出现混淆现象，请接着看下去</strong>
-读者自己推导采样后得到的信号<span
-class="math inline">\(x_s(t)\)</span>的傅里叶变换表达式<span
-class="math inline">\(X_s(j\omega)\)</span>，再根据<span
-class="math inline">\(X_s(j\omega)\)</span>绘制频谱图，最终就会理解采样定理的内涵。</p>
-<p>为了便于推导，现定义： * 原信号：<span
-class="math inline">\(x_m(t)\)</span>，傅里叶变换后为<span
-class="math inline">\(X_m(j\omega)\)</span> * 采样函数：<span
-class="math inline">\(s(t)\)</span>，傅里叶变换后为<span
-class="math inline">\(S(j\omega)\)</span> * 采样后输出信号：<span
-class="math inline">\(x_s(t)\)</span>，傅里叶变换后为<span
-class="math inline">\(X_s(j\omega)\)</span></p>
-<h3 id="采样函数st">采样函数<span
-class="math inline">\(s(t)\)</span></h3>
-<p>当我们把采样的过程看作一个周期为 <span
-class="math inline">\(T\)</span> 、宽度为 <span
-class="math inline">\(\tau\)</span> 的矩形脉冲信号<span
-class="math inline">\(s(t)\)</span>。当<span
-class="math inline">\(\tau\ll  T\)</span> 时，采样脉冲信号<span
-class="math inline">\(s(t)\)</span>具有了狄拉克<span
-class="math inline">\(\delta\)</span>函数的性质：</p>
+    <title>振动传感器主要性能指标</title>
+    <url>/2021/06/14/%E6%8C%AF%E5%8A%A8%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</url>
+    <content><![CDATA[<h2 id="灵敏度">灵敏度</h2>
+<p>灵敏度是指沿传感器的测量方向，对应于每一单位简谐机械量的输入，其开路时电信号的输出，即输出比输入。</p>
+<ul>
+<li>输入的机械量：<span class="math inline">\(x=X\sin(\omega t
++\alpha)\)</span></li>
+<li>输出的电信号：<span class="math inline">\(e=E\sin (\omega t+ \alpha
+- \theta)\)</span>，<span class="math inline">\(\theta\)</span>
+为相移，即输出的电信号<span
+class="math inline">\(e\)</span>对被测机械量<span
+class="math inline">\(x\)</span>的相位滞后</li>
+<li>灵敏度：<span class="math inline">\(s=E/X\)</span> （电信号单位 /
+机械量单位）</li>
+</ul>
+<p>通常，<span class="math inline">\(X\)</span>
+是位移、速度、加速度、力、应变等，<span class="math inline">\(E\)</span>
+是电压、电荷等。</p>
+<h2 id="分辨率">分辨率</h2>
+<p>分辨率是指传感器可感受到的被测量的最小变化的能力。</p>
+<p>也就是说，如果输入量从某一非零值缓慢地变化，但变化值未超过某一数值
+<span class="math inline">\(\Delta X\)</span> 时，传感器的输出变化量
+<span class="math inline">\(\Delta E =0\)</span>
+，即传感器对此输入量的变化是分辨不出来的。只有当输入量的变化超过分辨率时，其输出才会发生变化。</p>
+<p><span class="math inline">\(\Delta X\)</span>
+越小，灵敏度越高，分辨率也越高。灵敏度越高，传感器的信噪比将相应下降，这将降低测量结果的精度，故应综合考虑。</p>
+<h2 id="线性度和线性范围">线性度和线性范围</h2>
+<p>通常情况下，传感器的实际静态特性输出是条曲线而非直线。在实际工作中，为使仪表具有均匀刻度的读数，常用一条拟合直线近似地代表实际的特性曲线。</p>
+<p><strong>线性度</strong>（非线性误差）<span
+class="math inline">\(\gamma\)</span>
+就是这个近似程度的一个性能指标，定义为在全量程范围内实际特性曲线与拟合直线之间的最大偏差值与满量程输出值之比。</p>
 <p><span class="math display">\[
-\delta(t)= \begin{cases} \infty &amp; t=0 \\\\ 0 &amp;      t\neq 0
-\end{cases}
+\gamma=\frac{ \Delta E }{  E_{max} -  E_{min} } \times 100 \\%
 \]</span></p>
+<p><strong>线性范围</strong>是指传感器测量量与实际被测量之间保持近似线性关系的范围。</p>
+<p><img src="/image/zhendongceshi/xianxingdu.png" width = "60%" height = "60%"  align=center /></p>
+<h2 id="频率范围">频率范围</h2>
+<p><strong>频率范围</strong>是指传感器的灵敏度随频率的变化量不超出某一给定的误差限的频率范围（频率上限和下限）。传感器的频率范围取决于：
+1. 机械接收部分的频率特性。 1. 机电变换部分和所用二次仪表的频率特性。 1.
+传感器的安装条件也影响频率上限。</p>
+<p>备注： * 在制定测量方案时，首先要看传感器的频率范围是否满足测量的要求
+* 压电式加速度传感器具有较宽的频率范围，而且频率上限也比较高 *
+电阻式、压阻式和伺服式等三种加速度传感器都具有零频率响应，其中压阻式也具有较高的上限频率</p>
+<h2 id="固有频率与安装谐振频率">固有频率与安装谐振频率</h2>
+<p>对于惯性式接收传感器，其机械接收部分是由质量块、阻尼器、弹簧构成的单自由度振动系统，其质量、阻尼、刚度分别为
+<span class="math inline">\(m, c,
+k\)</span>。该振系统无阻尼自由振动的频率 $ _n = $
+被称为传感器的<strong>固有频率</strong>。</p>
+<p>传感器产生共振时的最低频率称为<strong>安装谐振频率</strong>，若安装刚度是有限的（实际上也很难达到无穷大），则其对传感器的接收特性将有较大影响。</p>
+<h2 id="工作范围">工作范围</h2>
+<p>频率范围和线性范围一起决定了传感器的<strong>工作范围</strong>。工作范围可以从诺谟图（Nomogram）中得到</p>
+<p><img src="/image/zhendongceshi/nuomotu.jpg" width = "50%" height = "50%"  align=center /></p>
+<h2 id="横向灵敏度与方向特性">横向灵敏度与方向特性</h2>
+<p>横向灵敏度主要是由于最大灵敏度轴与传感器的几何轴线不重合而引起的。这是由于传感器加工、安装上的间歇误差等条件造成的。最大灵敏度的轴线与几何轴线间的夹角为
+<span
+class="math inline">\(\theta\)</span>，<strong>最大的横向灵敏度</strong>表示为：</p>
 <p><span class="math display">\[
-s(t)= \sum^\infty_{n=-\infty} \delta(t-nT)
+s_t=\tan \theta
 \]</span></p>
-<p>为了便于傅里叶变换，把<span
-class="math inline">\(s(t)\)</span>表示为傅里叶级数的形式：</p>
+<p>备注： * 加速度传感器的外壳上的红点被用来表示横向灵敏度的方向。 *
+一般令红点和传感器中心的连线，与振幅最大的非被测振动方向垂直，以减少测量误差。</p>
+<h2 id="动态范围">动态范围</h2>
+<p><strong>动态范围</strong>是指某一输入机械量的幅值范围（用分贝表示），该范围内传感器的灵敏度随输入机械量幅值的变化量不超出某一给定的误差限。</p>
 <p><span class="math display">\[
-s(t)=\sum^\infty_{k=-\infty} a_k e^{jk\omega_s t} ,\quad
-\omega_s=\frac{2\pi}{T}
+D=20 \lg \frac{X_{max}}{X_{min}}
 \]</span></p>
-<p>其中：</p>
-<p><span class="math display">\[
-a_k=\frac{1}{T} \int^{T/2}_ {-T/2} \sum\nolimits^\infty_{n=-\infty}
-\delta(t-nT) e^{-j\omega_s t} dt=\frac{1}{T}
-\]</span></p>
-<p>因此，有：</p>
-<p><span class="math display">\[
-s(t)=\frac{1}{T} \sum^\infty_{k=-\infty} e^{jk\omega_s t}
-\]</span></p>
-<p>对<span class="math inline">\(s(t)\)</span>进行傅里叶变换得到<span
-class="math inline">\(S(j\omega)\)</span>：</p>
-<p><span class="math display">\[
-S(j\omega)=F \left[  s(t) \right] =F \left[  \frac{1}{T}
-\sum^\infty_{k=-\infty} e^{jk\omega_s t}  \right]  = \frac{1}{T}
-\sum^\infty_{k=-\infty} F \left[  e^{jk\omega_s t}  \right]
-\]</span></p>
-<p>查常用Fourier变换表可知：</p>
-<p><span class="math display">\[
-F \left[  e^{jk\omega_s t}  \right] =2\pi \delta(\omega -k\omega_s)
-\]</span></p>
-<p>则<span class="math inline">\(S(j\omega)\)</span>为：</p>
-<p><span class="math display">\[
-S(j\omega) = \frac{2\pi}{T} \sum^\infty_{k=-\infty} \delta(\omega
--k\omega_s)
-\]</span></p>
-<h3 id="采样后输出的信号x_st">采样后输出的信号<span
-class="math inline">\(x_s(t)\)</span></h3>
-<p>采样后输出的信号<span
-class="math inline">\(x_s(t)\)</span>等于原信号<span
-class="math inline">\(x_m(t)\)</span>乘采样函数<span
-class="math inline">\(s(t)\)</span>：</p>
-<p><span class="math display">\[
-x_s(t)=x_m(t)s(t)
-\]</span></p>
-<p>记<span
-class="math inline">\(*\)</span>为卷积，根据频域下的卷积定理</p>
-<p><span class="math display">\[
-f_1(t)f_2(t)=\frac{1}{2\pi}F^{-1}\left[ F_1(j\omega)*
-F_2(j\omega)\right]
-\]</span></p>
-<p>采样后输出的信号<span
-class="math inline">\(X_s(j\omega)\)</span>为：</p>
-<p><span class="math display">\[
-X_s(j\omega)=\frac{1}{2\pi} X_m(j\omega)*S(j\omega)=\frac{1}{2\pi}·
-X_m(j\omega) *\left[ \frac{2\pi}{T} \sum^\infty_{k=-\infty}
-\delta(\omega -k\omega_s) \right]
-\]</span></p>
-<p>根据冲击函数的性质有： <span class="math display">\[
-X_s(j\omega)=\frac{1}{T} \int^\infty _ {-\infty} X_m(j\theta)
-\sum^\infty_{k=-\infty} \delta(\omega -k\omega_s - \theta) d\theta
-\]</span></p>
-<blockquote>
-<p>冲激函数的性质：<span
-class="math inline">\(f(t)*\delta(t-t_0)=f(t-t_0)\)</span></p>
-</blockquote>
-<p>最终，采样后信号的傅里叶变换为：</p>
-<p><span class="math display">\[
-X_s(j\omega)=\frac{1}{T}\sum^\infty_{k=-\infty} X_m(j\omega-jk\omega_s)
-\]</span></p>
-<p>从上式可以看出，原信号的频谱<span
-class="math inline">\(X_m(j\omega)\)</span>在频域内发生了周期延拓。即，原信号在频谱上的宽度是<span
-class="math inline">\(2f_m\)</span>，每隔<span
-class="math inline">\(f_s\)</span>重复一次（相当于信号的平移），发生了周期延拓，从图中直观的看出来，如果<span
-class="math inline">\(f_s&lt;2f_m\)</span>，延拓后的信号会在频域内会发生混淆。</p>
-<p><img src="/image/zhendongceshi/pinlvhunxiao.jpg" width = "60%" height = "60%"  align=center /></p>
+<p>动态范围越大，说明传感器对幅值变化的适应能力越强。比如 <span
+class="math inline">\(D=80dB\)</span>，则幅值上限与下限之比达10000倍。传感器的量程即是指其幅值上限与下限值的代数差。</p>
+<h2 id="其他">其他</h2>
+<p>传感器的其它性能参数还包括其质量、重复性、稳定性、输入输出阻抗、阻尼、迟滞、零飘、过载能力、以及它的工作环境条件等。</p>
 ]]></content>
       <tags>
         <tag>振动测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何在论文中完美插入矢量图</title>
+    <url>/2021/06/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%AE%BA%E6%96%87%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E7%9F%A2%E9%87%8F%E5%9B%BE/</url>
+    <content><![CDATA[<h2 id="问题背景">问题背景</h2>
+<p>论文写作时，我们往往需要插入矢量图，以保证图形被阅览时不会因缩放而出现难看的锯齿（失真）。</p>
+<p>需要矢量图的常用场景如下： * 纯矢量图 * 简单的折线、柱形、条形图等 *
+抽象的模型图、概念图、流程图、程序框图等 *
+混合类图形，混合了以上两种图形 * 矢量图与位图的混合 *
+色彩复杂的模型图（位图）旁配上文字、简单的折线图、流程图等 *
+在流程图中嵌入各种结果，如Science、Nature中常见的占用一页的超大混合类图形
+* 其他</p>
+<h2 id="各种类型图片的区别">各种类型图片的区别</h2>
+<h3 id="矢量图">矢量图</h3>
+<p>简单来说矢量图就像用几何图形来描述一幅图，在矢量图放大时，我们所记录的几何图形的各种角度、形状等并没有改变，所以无论是放大还是缩小，都不会影响矢量图的清晰度。</p>
+<p><strong>文件类型：</strong> Adobe
+Illustrator的<code>.AI</code>、<code>.EPS</code>和<code>.SVG</code>、AutoCAD的<code>.dwg</code>和<code>.dxf</code>、Corel
+DRAW的<code>.cdr</code>等。<code>.pdf</code>也常被用来保存矢量图。</p>
+<p><strong>制图：</strong> 使用Adobe
+Illustrator(AI)、CorelDRAW、FlashMX制图</p>
+<h3 id="位图">位图</h3>
+<p>位图又被称作点阵图或栅格图像，它的特点就是，整幅图由许多的‘点’组成，这些‘点’我们称为“像素”。在位图模式下，计算机会将图片的每个像素点进行保存。当位图放大到一定程度时，我们会发现图片是由一个一个的小方块组成，这些小方块就是像素点。</p>
+<p><strong>文件类型：</strong>
+<code>.jpg</code>、<code>.png</code>、<code>.bmp</code>、<code>.pcx</code>、<code>.gif</code>、<code>.tif</code>、<code>.psd</code>等。</p>
+<p><strong>制图：</strong>
+使用Photoshop、Painter和Windows系统自带的画图工具制图。</p>
+<h2 id="如何在论文中使用矢量图">如何在论文中使用矢量图</h2>
+<p><strong>这里主要讨论使用LaTex写作时，如何插入矢量图。</strong></p>
+<p><strong>第一步</strong>：使用任何软件得到矢量图形。如果使用Matlab、Python得到折线、柱形图等，直接输出为<code>.pdf</code>或<code>.eps</code>格式。如果使用Visio、PPT等软件绘制流程图、模型图，导出为<code>.pdf</code>。（貌似微软的办公软件不支持<code>.eps</code>）</p>
+<p>（如果是直接插入已得到的矢量图，请转至第三步）</p>
+<p><strong>第二步</strong>：使用Adobe
+Illustrator将多个矢量图组合在一起后用快捷键<code>Shift+o</code>裁剪画布，删去边框。将文件保存为<code>.eps</code>或<code>.pdf</code>。如果只是删除<code>.pdf</code>中的白边，使用Adobe
+Acrobat 的编辑功能就能轻松做到。</p>
+<p><strong>第三步</strong>：在LaTex中插入组合好的矢量图。</p>
+<p><strong>提示</strong>：在第一步制作矢量图时，最好调整好字号，图宽以适合出现在论文中或PPT中，并且使用Matlab时一定要保存一份<code>.fig</code>文件，便于以后查找修改。</p>
+<h2 id="office套件中插入矢量图">Office套件中插入矢量图</h2>
+<p>Office办公软件下插入矢量图，使用<code>.emf</code>即可。Office系列间的互通是较为方便的，如Visio、PPT、Word间相互插入文件。</p>
+<p>使用Word和Latex一段时间以后，还是非常推荐大家使用LaTex的（强迫症福音）。毕竟插入的行内、行间公式怎是一个“服服帖帖”就能概括的。更别说切换模板时，只需要改动导言区就ok啦，简直不要太方便。LaTex缺点也有，表格制作很麻烦QAQ…，整体学习成本略高。</p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li>https://www.zhihu.com/question/378251607/answer/1160351444</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>论文写作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>非线性方程的延拓法</title>
+    <url>/2022/08/01/%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%9A%84%E5%BB%B6%E6%8B%93%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="概述">概述</h2>
+<ul>
+<li><strong>前置概念</strong>：<a
+href="/2022/07/29/数学概念-同伦/">同伦</a></li>
+<li><strong>作用对象</strong>：非线性方程组</li>
+<li><strong>目的</strong>：扩大非线性方程组的收敛域</li>
+</ul>
+<h2 id="延拓法的基本思想">延拓法的基本思想</h2>
+<ol type="1">
+<li>已知一个待求解的非线性方程组 <span
+class="math inline">\(F(x)=0\)</span></li>
+<li>在方程组中引入一个参数 <span
+class="math inline">\(\lambda\)</span>，构造 <span
+class="math inline">\(F(x)\)</span> 的<strong>同伦映射</strong> <span
+class="math inline">\(H(x,\lambda), \lambda \in [0,1]\)</span>, 使得
+<span class="math inline">\(H(x,0)=0,  H(x,1)=F(x)\)</span><br />
+</li>
+<li>已知 <span class="math inline">\(H(x,0)=0\)</span> 的解是 <span
+class="math inline">\(x=x_0\)</span> (可以是零向量 <span
+class="math inline">\(\bar{0}\)</span> )</li>
+<li>数值迭代，求解满足 <span class="math inline">\(H(x,1)=0\)</span>
+的解 <span class="math inline">\(x^*\)</span>
+<ul>
+<li>构造序列 <span class="math inline">\(\\{ \lambda_i \\} =
+\\{0,...,\lambda_i,...1\\}, i = 0,1,2,...,N\)</span></li>
+<li>以 <span class="math inline">\(x_0\)</span> 为初值，求解 <span
+class="math inline">\(H(x,\lambda_1)=0\)</span>
+（例如，Netwon迭代），解为 <span class="math inline">\(x_1\)</span></li>
+<li>以 <span class="math inline">\(x_1\)</span> 为初值，求解 <span
+class="math inline">\(H(x,\lambda_2)=0\)</span>，解为 <span
+class="math inline">\(x_2\)</span></li>
+<li>以 <span class="math inline">\(x_i\)</span> 为初值，求解 <span
+class="math inline">\(H(x,\lambda_{i+1})=0\)</span>，解为 <span
+class="math inline">\(x_{i+1}\)</span></li>
+<li>最终求得 <span class="math inline">\(H(x,1)=0\)</span> 的解 <span
+class="math inline">\(x_N\)</span>, 即 <span
+class="math inline">\(F(x)=0\)</span>的解 <span
+class="math inline">\(x^*\)</span></li>
+</ul></li>
+<li>该方法的结果相当于扩大了传统非线性方程组迭代求解方法的收敛域</li>
+</ol>
+<p><strong>Mark 1</strong>：
+Newton迭代时，可只迭代一步，因为最终目标是求 <span
+class="math inline">\(\boldsymbol{x}^*\)</span> <strong>Mark
+2</strong>：<span class="math inline">\(N\)</span> 足够大</p>
+<h2 id="延拓法的数学表述">延拓法的数学表述</h2>
+<p>传统的求解非线性方程组求解方法是局部收敛的，只有初值 <span
+class="math inline">\(x_0\)</span>
+足够接近真值，迭代方法收敛。然而，延拓法作为可以扩大收敛域的有效方法，可以从任意的
+<span class="math inline">\(x_0\)</span> 出发，通过延拓求解得到方程的解
+<span class="math inline">\(x^*\)</span>。</p>
+<p>引入参数 <span
+class="math inline">\(\lambda\)</span>，构造一簇同伦映射 <span
+class="math inline">\(\boldsymbol{H}:D\times[0,1] \subset
+\mathbf{R}^{n+1}\rightarrow \mathbf{R}^n\)</span> 代替单映射 <span
+class="math inline">\(\boldsymbol{F}(\boldsymbol{x})\)</span>，令 <span
+class="math inline">\(\boldsymbol{H}\)</span> 满足条件：</p>
+<p><span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x}_0,0)=\boldsymbol{0}
+\]</span></p>
+<p><span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x},1)=\boldsymbol{F}(\boldsymbol{x})
+\]</span></p>
+<p>它表明当 <span class="math inline">\(\lambda=0\)</span> 时，<span
+class="math inline">\(\boldsymbol{H}(\boldsymbol{x},0)=\boldsymbol{0}\)</span>
+的解 <span class="math inline">\(\boldsymbol{x}_0\)</span> 已知；当
+<span class="math inline">\(\lambda=1\)</span> 时，<span
+class="math inline">\(\boldsymbol{H}(\boldsymbol{x},1)=\boldsymbol{F}(\boldsymbol{x})=0\)</span>
+的解 <span class="math inline">\(\boldsymbol{x}^*\)</span>
+为非线性方程组的解。</p>
+<p>现考虑同伦方程：</p>
+<p><span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x},\lambda)=\boldsymbol{0} \\quad
+\lambda \in [0,1],\boldsymbol{x}\in D \subset\mathbf{R}^n
+\]</span></p>
+<p>如果对每个 <span class="math inline">\(\lambda
+\in[0,1]\)</span>，上述方程有解 <span
+class="math inline">\(\boldsymbol{x}=\boldsymbol{x}(\lambda),
+\boldsymbol{x}:[0,1]\rightarrow D\)</span> 且连续，则 <span
+class="math inline">\(\boldsymbol{x}=\boldsymbol{x}(\lambda)\)</span>
+是关于参数 <span class="math inline">\(\lambda\in[0,1]\)</span> 在 <span
+class="math inline">\(\mathbf{R}^{n+1}\)</span>
+中的一条曲线。该曲线的一端为已知点 <span
+class="math inline">\((\boldsymbol{x}_0,0)\)</span>，另一端是点 <span
+class="math inline">\((\boldsymbol{x}^*,1)\)</span>，<span
+class="math inline">\(\boldsymbol{x}^*\)</span>
+即为非线性方程组的解，这就是<strong>延拓法</strong>，也被称作<strong>同伦法</strong>。</p>
+<p>满足条件的同伦可以有各种不同的取法，常用的有两种。</p>
+<p>牛顿同伦： <span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x},\lambda)
+=\boldsymbol{F}(\boldsymbol{x})
++(\lambda-1)\boldsymbol{F}(\boldsymbol{x}_0)
+\]</span></p>
+<p>凸同伦： <span class="math display">\[
+\boldsymbol{H}(\boldsymbol{x},\lambda)
+= t \boldsymbol{F}(\boldsymbol{x})
++(1-\lambda)\boldsymbol{A}(\boldsymbol{x} - \boldsymbol{x}_0)
+\]</span></p>
+<p>其中 <span class="math inline">\(\boldsymbol{A}\in\mathbf{R}^{n\times
+n}\)</span> 是非奇的</p>
+]]></content>
+      <tags>
+        <tag>math</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>质心_形心_重心</title>
+    <url>/2022/03/08/%E8%B4%A8%E5%BF%83-%E5%BD%A2%E5%BF%83-%E9%87%8D%E5%BF%83/</url>
+    <content><![CDATA[<h2 id="三者存在的条件">三者存在的条件</h2>
+<ul>
+<li><strong>形心</strong>：目标具有几何外形；</li>
+<li><strong>质心</strong>：目标具有几何外形、具有质量；</li>
+<li><strong>重心</strong>：目标具有几何外形、具有质量、身处重力场。</li>
+</ul>
+<h2 id="质心">质心</h2>
+<p><strong>定义</strong>：质心是多质点系统的质量中心。
+<strong>特点</strong>：若对该点施力，系统会沿着力的方向运动、不会旋转。
+<strong>质心位置</strong>：质点的位置对质量取加权平均值，求得质心位置。</p>
+<p>对于离散系统，三维物体的质心位置由下式求得：</p>
+<p><span class="math display">\[
+\bar{x} = \frac{\sum{x_k m_k}}{\sum{m_k}}, \bar{y} = \frac{\sum{y_k
+m_k}}{\sum{m_k}},  \bar{z} = \frac{\sum{z_k m_k}}{\sum{m_k}}
+\]</span></p>
+<p>对于连续系统，上式推广为： <span class="math display">\[
+\bar{x} = \frac{\int_{\Omega}{x \rho} \rm{d}V}{\int_{\Omega}{ \rho}
+\rm{d}V},  \bar{y} = \frac{\int_{\Omega}{y \rho} \rm{d}V}{\int_{\Omega}{
+\rho} \rm{d}V}, \bar{z} = \frac{\int_{\Omega}{z
+\rho}  \rm{d}V}{\int_{\Omega}{ \rho} \rm{d}V}
+\]</span></p>
+<p>其中，<span class="math inline">\(\rho\)</span> 是物体的密度，为
+<span class="math inline">\(x,y,z\)</span> 的函数。上式为在物体所在空间
+<span class="math inline">\(\Omega\)</span> 进行体积分。</p>
+<h2 id="形心">形心</h2>
+<p><strong>定义</strong>：形心又被称为几何中心。形心是将该物体分成“矩”相等的两部分的所有超平面的交点。
+<strong>形心位置</strong>：等价于取加权平均。</p>
+<p>对于二维图形，形心位置由下式给出： <span class="math display">\[
+\bar{x} = \frac{\int{x f(x)}\rm{d}x}{\int{f(x)}\rm{d}x}, \bar{y} =
+\frac{\int{y f(y)}\rm{d}y}{\int{f(y)}\rm{d}y}
+\]</span></p>
+<p>上式分子部分为 <span class="math inline">\(x\)</span> 和 <span
+class="math inline">\(y\)</span> 的一阶矩。其中，<span
+class="math inline">\(f(x)\)</span> 为几何图形的横坐标位于 <span
+class="math inline">\(x\)</span> 点时在 <span
+class="math inline">\(y\)</span> 方向上的长度；<span
+class="math inline">\(f(y)\)</span> 为几何图形的纵坐标位于 <span
+class="math inline">\(y\)</span> 点时在 <span
+class="math inline">\(x\)</span> 方向上的长度。</p>
+<p>上式的等价形式为： <span class="math display">\[
+\bar{x} = \frac{\int_D{x}\rm{d}S}{\int_D{ }\rm{d}S} =
+\frac{\int_D{x}\rm{d}S}{A}
+\]</span></p>
+<p>上式积分表示在几何图形所在二维空间 <span
+class="math inline">\(D\)</span> 进行面积分；<span
+class="math inline">\(A\)</span> 表示二维几何图形的面积。（<span
+class="math inline">\(y\)</span> 方向写法与之类似）</p>
+<p>将该式推广至三维空间可得： <span class="math display">\[
+\bar{x} = \frac{\int_\Omega{x}\rm{d}V}{\int_\Omega{ }\rm{d}V} =
+\frac{\int_\Omega{x}\rm{d}V}{V}
+\]</span></p>
+<p>对比发现，上式积分中如果加入密度项，则得到的质心的坐标。即，<strong>对于密度均匀的物体，其质心和形心重合</strong>。</p>
+<h2 id="重心">重心</h2>
+<p><strong>定义</strong>：重心是重力作用的平均位置。
+<strong>特点</strong>：各质点相对于重心的位置矢量乘上各质点的重力之和(合力矩)为零。</p>
+<p>在均匀的重力场中，重心等同于质心。在非均匀的重力场中，质心和重心往往不在同一点。</p>
+]]></content>
+      <tags>
+        <tag>mechanics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>三角函数型与指数型傅里叶变换的联系</title>
+    <url>/2023/07/03/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%9E%8B%E4%B8%8E%E6%8C%87%E6%95%B0%E5%9E%8B%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E8%81%94%E7%B3%BB/</url>
+    <content><![CDATA[<h2 id="三角函数型">三角函数型</h2>
+<p>对于一个周期为 <span class="math inline">\(T\)</span> 的信号 <span
+class="math inline">\(x(t)\)</span>，其基频为 <span
+class="math inline">\(f_1=1/T\)</span>。对 <span
+class="math inline">\(x(t)\)</span> 进行傅里叶展开：</p>
+<p><span class="math display">\[
+x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ a_n \cos\left(2\pi n
+f_1 t \right) + b_n \sin\left(2\pi n f_1 t \right) \right]
+\]</span></p>
+<p>上式中的 <span class="math inline">\(a_n\)</span> 和 <span
+class="math inline">\(b_n\)</span> 是傅里叶系数：</p>
+<p><span class="math display">\[
+a_n = \frac{2}{T} \int^T_ 0 x(t) \cos \left( 2\pi n f_1 t \right) dt
+\]</span></p>
+<p><span class="math display">\[
+b_n = \frac{2}{T} \int^T_ 0 x(t) \sin \left( 2\pi n f_1 t \right) dt
+\]</span></p>
+<p>三角函数型的傅里叶变换也可以写成余弦函数形式（三参数）：</p>
+<p><span class="math display">\[
+x(t) = \frac{c_0}{2} + \sum^{\infty}_ {n=1} \left[ c_n \cos\left(2\pi n
+f_1 t + \varphi_n\right)  \right]
+\]</span></p>
+<p>其中：</p>
+<p><span class="math display">\[
+c_n = \sqrt{a_n^2 + b_n^2}
+\]</span></p>
+<p><span class="math display">\[
+\varphi_n = \mathrm{arctan}(-\frac{b_n}{a_n})
+\]</span></p>
+<h2 id="指数型">指数型</h2>
+<p>欧拉公式建立了三角函数与指数之间的桥梁。</p>
+<p><span class="math display">\[
+\cos \left( 2\pi n f_1 t \right) = \frac{1}{2} \left[ e^{j2\pi n f_1 t}
++  e^{-j2\pi n f_1 t} \right]
+\]</span></p>
+<p><span class="math display">\[
+\sin \left( 2\pi n f_1 t \right) = \frac{1}{2j} \left[ e^{j2\pi n f_1 t}
+-  e^{-j2\pi n f_1 t} \right]
+\]</span></p>
+<p>将欧拉公式带入三角函数型的傅里叶变换后，令：</p>
+<p><span class="math display">\[
+X(2\pi n f_1) = \frac{a_n - j b_n}{2}
+\]</span></p>
+<p>设<span
+class="math inline">\(f_1\)</span>代表傅里叶变换后的基频，<span
+class="math inline">\(j\)</span>表示虚数单位，则傅里叶变换可以写为：
+<span class="math display">\[
+x(t) = \sum^{\infty}_ {n=-\infty}  X(2\pi n f_1)   e^{ j 2\pi n f_1 t
+}   
+\]</span></p>
+<p>式中的 $X(2n f_1) $ 展开后为：</p>
+<p><span class="math display">\[
+\begin{gathered}
+X(2\pi n f_1) =\frac{1}{2} \left[ \frac{2}{T} \int^T_ 0 x(t) \cos \left(
+2\pi n f_1 t \right) dt - \frac{2j}{T} \int^T_ 0 x(t) \sin \left( 2\pi n
+f_1 t \right) dt \right] \\\\
+= \frac{1}{T} \int^T_ 0 x(t) \left[ \cos \left( 2\pi n f_1 t \right) - j
+\sin \left( 2\pi n f_1 t \right) \right] dt
+\end{gathered}
+\]</span></p>
+<p>再利用欧拉公式，可得：</p>
+<p><span class="math display">\[
+X(2\pi n f_1) = \frac{1}{T} \int^T_ 0 x(t)   e^{ -j 2\pi n f_1 t} dt
+\]</span></p>
+<h2 id="两者的联系">两者的联系</h2>
+<p>已知：</p>
+<p><span class="math display">\[
+X(2\pi n f_1) = \frac{a_n - j b_n}{2}
+\]</span></p>
+<p>上式为复数，在复平面内可以被表示为：</p>
+<p><span class="math display">\[
+X(2\pi n f_1) = \frac{1}{2} \sqrt{a_n^2 + b_n^2}
+e^{j\mathrm{arctan}(-\frac{b_n}{a_n})}
+\]</span></p>
+<p>其中<span class="math inline">\(\frac{1}{2} \sqrt{a_n^2 +
+b_n^2}\)</span>为复数的模，<span
+class="math inline">\(\mathrm{arctan}(-\frac{b_n}{a_n})\)</span>为复数的幅角。</p>
+<p>观察此复数的模、幅角与三角函数型傅里叶变化间的异同可知，复数的模等于余弦信号$c_n
+(2n f_1 t + _n) $幅值的一半。</p>
+<p><span class="math display">\[
+|X(2\pi n f_1)| = \frac{1}{2} \sqrt{a_n^2 + b_n^2} = \frac{1}{2} c_n
+\]</span></p>
+<p>复数的幅角等于余弦信号$c_n (2n f_1 t + _n) $初相位。</p>
+<p><span class="math display">\[
+\varphi_n = \mathrm{arctan}(-\frac{b_n}{a_n})
+\]</span></p>
+]]></content>
+      <tags>
+        <tag>振动测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Geometrical Nonlinear and Material Nonlinear</title>
+    <url>/2022/08/02/geometricalNonlinearAndMaterialNonlinear/</url>
+    <content><![CDATA[<h2 id="geometrical-nonlinear">Geometrical Nonlinear</h2>
+<p>In the geometrical nonlinear case, the relationship internal
+force-displacements is nonlinear.</p>
+<h2 id="material-nonlinaer">Material Nonlinaer</h2>
+<p>In the material nonlinear case, the relationship of the stress-strain
+is nonlinear.</p>
+<p>Of course these cases may be independent of each other or
+combined.</p>
+<ul>
+<li><strong>From Czeslaw Kazimierz Szymczak</strong>:
+https://www.researchgate.net/post/What_is_Geomertical_Nonlinearity/2</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>mechanics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unit in Abaqus</title>
+    <url>/2024/09/21/Unit-in-Abaqus/</url>
+    <content><![CDATA[<h2 id="units-in-abaqus">Units in Abaqus</h2>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Quantity</th>
+<th style="text-align: center;">SI (Based on <span
+class="math inline">\(m\)</span>)</th>
+<th style="text-align: center;">SI (Based on <span
+class="math inline">\(mm\)</span>)</th>
+<th style="text-align: center;">Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Length</td>
+<td style="text-align: center;">$ m $</td>
+<td style="text-align: center;">$ mm $</td>
+<td style="text-align: center;"><span
+class="math inline">\(10^3\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Force</td>
+<td style="text-align: center;"><span
+class="math inline">\(N\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(N\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Mass</td>
+<td style="text-align: center;"><span
+class="math inline">\(kg\)</span></td>
+<td style="text-align: center;">tonne (<span class="math inline">\(10^3
+kg\)</span>)</td>
+<td style="text-align: center;"><span
+class="math inline">\(10^-3\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Stress</td>
+<td style="text-align: center;"><span class="math inline">\(Pa
+(N/m^2)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(MPa
+(N/mm^2)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(10^-6\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Energy</td>
+<td style="text-align: center;"><span
+class="math inline">\(J\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(mJ
+(10^{-3}J)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(10^3\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Density</td>
+<td style="text-align: center;"><span
+class="math inline">\(kg/m^3\)</span></td>
+<td style="text-align: center;">tonne <span
+class="math inline">\(/mm^3\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(10^{-12}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Acceleration</td>
+<td style="text-align: center;"><span
+class="math inline">\(m/s^2\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(mm/s^2\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(10^3\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Time</td>
+<td style="text-align: center;"><span
+class="math inline">\(s\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(s\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      <tags>
+        <tag>mechanics</tag>
+        <tag>abaqus</tag>
+        <tag>FEM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>矩阵求导</title>
+    <url>/2022/04/23/%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC/</url>
+    <content><![CDATA[<h2 id="公约">公约</h2>
+<p>若<span class="math inline">\(\bar{y}=\Psi(\bar{x})\)</span>，其中
+<span class="math inline">\(\bar{y},\bar{x}\)</span> 分别是 <span
+class="math inline">\(m\times 1,n\times 1\)</span>
+向量，则有Jacobian矩阵： <span class="math display">\[
+\frac{\partial\bar{y}}{\partial\bar{x}} = \begin{bmatrix} \frac{\partial
+y_1}{\partial x_1} &amp; \frac{\partial y_1}{\partial x_2} &amp; \cdots
+&amp; \frac{\partial y_1}{\partial x_n} \\\\ \frac{\partial
+y_2}{\partial x_1} &amp; \frac{\partial y_2}{\partial x_2} &amp; \cdots
+&amp; \frac{\partial y_2}{\partial x_n} \\\\ \vdots &amp; \vdots &amp;
+\ddots &amp; \vdots \\\\ \frac{\partial y_n}{\partial x_1} &amp;
+\frac{\partial y_n}{\partial x_2} &amp; \cdots &amp;\frac{\partial
+y_n}{\partial x_n} \end{bmatrix}
+\]</span></p>
+<p>按照该公约：如果 <span class="math inline">\(x\)</span>
+是标量，则Jacobian矩阵是 <span class="math inline">\(m \times 1\)</span>
+列向量；如果 <span class="math inline">\(y\)</span>
+是标量，则Jacobian矩阵是 $ 1 n$ 行向量。</p>
+<h2 id="定理-1">定理 1</h2>
+<p>若 <span class="math inline">\(\bar{y}=\mathbf{A}
+\bar{x}\)</span>，则: <span class="math display">\[
+\frac{\partial\bar{y}}{\partial\bar{x}}=\mathbf{A}
+\]</span></p>
+<h2 id="定理-2">定理 2</h2>
+<p>若标量 <span class="math inline">\(\alpha\)</span> 满足 <span
+class="math inline">\(\alpha =\bar{y}^T\mathbf{A} \bar{x}\)</span>，则:
+<span class="math display">\[
+\frac{\partial \alpha}{\partial\bar{x}}=\bar{y}^T\mathbf{A},\;
+\frac{\partial \alpha}{\partial\bar{y}}=\bar{x}^T\mathbf{A}^T
+\]</span></p>
+<h2 id="定理-3">定理 3</h2>
+<p>若标量 <span class="math inline">\(\alpha\)</span> 满足 <span
+class="math inline">\(\alpha =\bar{x}^T\mathbf{A} \bar{x}\)</span>，则:
+<span class="math display">\[
+\frac{\partial \alpha}{\partial\bar{x}}=\bar{x}^T \left( \mathbf{A}^T +
+\mathbf{A} \right)
+\]</span></p>
+<hr />
+<ul>
+<li>上式证明过程参考：<a
+href="https://atmos.washington.edu/~dennis/MatrixCalculus.pdf">《Matrix
+Differentiation》 Randal J. Barnes</a></li>
+<li>矩阵相关变换参考：<a
+href="https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf">《Matrix
+Cookbook》 Kaare Brandt Petersen</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>math</tag>
       </tags>
   </entry>
   <entry>
@@ -2424,208 +2747,6 @@ https://my.mech.utah.edu/~me7960/lectures/Topic2-FundamentalsOfErrors.pdf</li>
       </tags>
   </entry>
   <entry>
-    <title>非线性方程的延拓法</title>
-    <url>/2022/08/01/%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%9A%84%E5%BB%B6%E6%8B%93%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="概述">概述</h2>
-<ul>
-<li><strong>前置概念</strong>：<a
-href="/2022/07/29/数学概念-同伦/">同伦</a></li>
-<li><strong>作用对象</strong>：非线性方程组</li>
-<li><strong>目的</strong>：扩大非线性方程组的收敛域</li>
-</ul>
-<h2 id="延拓法的基本思想">延拓法的基本思想</h2>
-<ol type="1">
-<li>已知一个待求解的非线性方程组 <span
-class="math inline">\(F(x)=0\)</span></li>
-<li>在方程组中引入一个参数 <span
-class="math inline">\(\lambda\)</span>，构造 <span
-class="math inline">\(F(x)\)</span> 的<strong>同伦映射</strong> <span
-class="math inline">\(H(x,\lambda), \lambda \in [0,1]\)</span>, 使得
-<span class="math inline">\(H(x,0)=0,  H(x,1)=F(x)\)</span><br />
-</li>
-<li>已知 <span class="math inline">\(H(x,0)=0\)</span> 的解是 <span
-class="math inline">\(x=x_0\)</span> (可以是零向量 <span
-class="math inline">\(\bar{0}\)</span> )</li>
-<li>数值迭代，求解满足 <span class="math inline">\(H(x,1)=0\)</span>
-的解 <span class="math inline">\(x^*\)</span>
-<ul>
-<li>构造序列 <span class="math inline">\(\\{ \lambda_i \\} =
-\\{0,...,\lambda_i,...1\\}, i = 0,1,2,...,N\)</span></li>
-<li>以 <span class="math inline">\(x_0\)</span> 为初值，求解 <span
-class="math inline">\(H(x,\lambda_1)=0\)</span>
-（例如，Netwon迭代），解为 <span class="math inline">\(x_1\)</span></li>
-<li>以 <span class="math inline">\(x_1\)</span> 为初值，求解 <span
-class="math inline">\(H(x,\lambda_2)=0\)</span>，解为 <span
-class="math inline">\(x_2\)</span></li>
-<li>以 <span class="math inline">\(x_i\)</span> 为初值，求解 <span
-class="math inline">\(H(x,\lambda_{i+1})=0\)</span>，解为 <span
-class="math inline">\(x_{i+1}\)</span></li>
-<li>最终求得 <span class="math inline">\(H(x,1)=0\)</span> 的解 <span
-class="math inline">\(x_N\)</span>, 即 <span
-class="math inline">\(F(x)=0\)</span>的解 <span
-class="math inline">\(x^*\)</span></li>
-</ul></li>
-<li>该方法的结果相当于扩大了传统非线性方程组迭代求解方法的收敛域</li>
-</ol>
-<p><strong>Mark 1</strong>：
-Newton迭代时，可只迭代一步，因为最终目标是求 <span
-class="math inline">\(\boldsymbol{x}^*\)</span> <strong>Mark
-2</strong>：<span class="math inline">\(N\)</span> 足够大</p>
-<h2 id="延拓法的数学表述">延拓法的数学表述</h2>
-<p>传统的求解非线性方程组求解方法是局部收敛的，只有初值 <span
-class="math inline">\(x_0\)</span>
-足够接近真值，迭代方法收敛。然而，延拓法作为可以扩大收敛域的有效方法，可以从任意的
-<span class="math inline">\(x_0\)</span> 出发，通过延拓求解得到方程的解
-<span class="math inline">\(x^*\)</span>。</p>
-<p>引入参数 <span
-class="math inline">\(\lambda\)</span>，构造一簇同伦映射 <span
-class="math inline">\(\boldsymbol{H}:D\times[0,1] \subset
-\mathbf{R}^{n+1}\rightarrow \mathbf{R}^n\)</span> 代替单映射 <span
-class="math inline">\(\boldsymbol{F}(\boldsymbol{x})\)</span>，令 <span
-class="math inline">\(\boldsymbol{H}\)</span> 满足条件：</p>
-<p><span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x}_0,0)=\boldsymbol{0}
-\]</span></p>
-<p><span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x},1)=\boldsymbol{F}(\boldsymbol{x})
-\]</span></p>
-<p>它表明当 <span class="math inline">\(\lambda=0\)</span> 时，<span
-class="math inline">\(\boldsymbol{H}(\boldsymbol{x},0)=\boldsymbol{0}\)</span>
-的解 <span class="math inline">\(\boldsymbol{x}_0\)</span> 已知；当
-<span class="math inline">\(\lambda=1\)</span> 时，<span
-class="math inline">\(\boldsymbol{H}(\boldsymbol{x},1)=\boldsymbol{F}(\boldsymbol{x})=0\)</span>
-的解 <span class="math inline">\(\boldsymbol{x}^*\)</span>
-为非线性方程组的解。</p>
-<p>现考虑同伦方程：</p>
-<p><span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x},\lambda)=\boldsymbol{0} \\quad
-\lambda \in [0,1],\boldsymbol{x}\in D \subset\mathbf{R}^n
-\]</span></p>
-<p>如果对每个 <span class="math inline">\(\lambda
-\in[0,1]\)</span>，上述方程有解 <span
-class="math inline">\(\boldsymbol{x}=\boldsymbol{x}(\lambda),
-\boldsymbol{x}:[0,1]\rightarrow D\)</span> 且连续，则 <span
-class="math inline">\(\boldsymbol{x}=\boldsymbol{x}(\lambda)\)</span>
-是关于参数 <span class="math inline">\(\lambda\in[0,1]\)</span> 在 <span
-class="math inline">\(\mathbf{R}^{n+1}\)</span>
-中的一条曲线。该曲线的一端为已知点 <span
-class="math inline">\((\boldsymbol{x}_0,0)\)</span>，另一端是点 <span
-class="math inline">\((\boldsymbol{x}^*,1)\)</span>，<span
-class="math inline">\(\boldsymbol{x}^*\)</span>
-即为非线性方程组的解，这就是<strong>延拓法</strong>，也被称作<strong>同伦法</strong>。</p>
-<p>满足条件的同伦可以有各种不同的取法，常用的有两种。</p>
-<p>牛顿同伦： <span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x},\lambda)
-=\boldsymbol{F}(\boldsymbol{x})
-+(\lambda-1)\boldsymbol{F}(\boldsymbol{x}_0)
-\]</span></p>
-<p>凸同伦： <span class="math display">\[
-\boldsymbol{H}(\boldsymbol{x},\lambda)
-= t \boldsymbol{F}(\boldsymbol{x})
-+(1-\lambda)\boldsymbol{A}(\boldsymbol{x} - \boldsymbol{x}_0)
-\]</span></p>
-<p>其中 <span class="math inline">\(\boldsymbol{A}\in\mathbf{R}^{n\times
-n}\)</span> 是非奇的</p>
-]]></content>
-      <tags>
-        <tag>math</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>三角函数型与指数型傅里叶变换的联系</title>
-    <url>/2023/07/03/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%9E%8B%E4%B8%8E%E6%8C%87%E6%95%B0%E5%9E%8B%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E8%81%94%E7%B3%BB/</url>
-    <content><![CDATA[<h2 id="三角函数型">三角函数型</h2>
-<p>对于一个周期为 <span class="math inline">\(T\)</span> 的信号 <span
-class="math inline">\(x(t)\)</span>，其基频为 <span
-class="math inline">\(f_1=1/T\)</span>。对 <span
-class="math inline">\(x(t)\)</span> 进行傅里叶展开：</p>
-<p><span class="math display">\[
-x(t) = \frac{a_0}{2} +\sum^{\infty}_ {n=1} \left[ a_n \cos\left(2\pi n
-f_1 t \right) + b_n \sin\left(2\pi n f_1 t \right) \right]
-\]</span></p>
-<p>上式中的 <span class="math inline">\(a_n\)</span> 和 <span
-class="math inline">\(b_n\)</span> 是傅里叶系数：</p>
-<p><span class="math display">\[
-a_n = \frac{2}{T} \int^T_ 0 x(t) \cos \left( 2\pi n f_1 t \right) dt
-\]</span></p>
-<p><span class="math display">\[
-b_n = \frac{2}{T} \int^T_ 0 x(t) \sin \left( 2\pi n f_1 t \right) dt
-\]</span></p>
-<p>三角函数型的傅里叶变换也可以写成余弦函数形式（三参数）：</p>
-<p><span class="math display">\[
-x(t) = \frac{c_0}{2} + \sum^{\infty}_ {n=1} \left[ c_n \cos\left(2\pi n
-f_1 t + \varphi_n\right)  \right]
-\]</span></p>
-<p>其中：</p>
-<p><span class="math display">\[
-c_n = \sqrt{a_n^2 + b_n^2}
-\]</span></p>
-<p><span class="math display">\[
-\varphi_n = \mathrm{arctan}(-\frac{b_n}{a_n})
-\]</span></p>
-<h2 id="指数型">指数型</h2>
-<p>欧拉公式建立了三角函数与指数之间的桥梁。</p>
-<p><span class="math display">\[
-\cos \left( 2\pi n f_1 t \right) = \frac{1}{2} \left[ e^{j2\pi n f_1 t}
-+  e^{-j2\pi n f_1 t} \right]
-\]</span></p>
-<p><span class="math display">\[
-\sin \left( 2\pi n f_1 t \right) = \frac{1}{2j} \left[ e^{j2\pi n f_1 t}
--  e^{-j2\pi n f_1 t} \right]
-\]</span></p>
-<p>将欧拉公式带入三角函数型的傅里叶变换后，令：</p>
-<p><span class="math display">\[
-X(2\pi n f_1) = \frac{a_n - j b_n}{2}
-\]</span></p>
-<p>设<span
-class="math inline">\(f_1\)</span>代表傅里叶变换后的基频，<span
-class="math inline">\(j\)</span>表示虚数单位，则傅里叶变换可以写为：
-<span class="math display">\[
-x(t) = \sum^{\infty}_ {n=-\infty}  X(2\pi n f_1)   e^{ j 2\pi n f_1 t
-}   
-\]</span></p>
-<p>式中的 $X(2n f_1) $ 展开后为：</p>
-<p><span class="math display">\[
-\begin{gathered}
-X(2\pi n f_1) =\frac{1}{2} \left[ \frac{2}{T} \int^T_ 0 x(t) \cos \left(
-2\pi n f_1 t \right) dt - \frac{2j}{T} \int^T_ 0 x(t) \sin \left( 2\pi n
-f_1 t \right) dt \right] \\\\
-= \frac{1}{T} \int^T_ 0 x(t) \left[ \cos \left( 2\pi n f_1 t \right) - j
-\sin \left( 2\pi n f_1 t \right) \right] dt
-\end{gathered}
-\]</span></p>
-<p>再利用欧拉公式，可得：</p>
-<p><span class="math display">\[
-X(2\pi n f_1) = \frac{1}{T} \int^T_ 0 x(t)   e^{ -j 2\pi n f_1 t} dt
-\]</span></p>
-<h2 id="两者的联系">两者的联系</h2>
-<p>已知：</p>
-<p><span class="math display">\[
-X(2\pi n f_1) = \frac{a_n - j b_n}{2}
-\]</span></p>
-<p>上式为复数，在复平面内可以被表示为：</p>
-<p><span class="math display">\[
-X(2\pi n f_1) = \frac{1}{2} \sqrt{a_n^2 + b_n^2}
-e^{j\mathrm{arctan}(-\frac{b_n}{a_n})}
-\]</span></p>
-<p>其中<span class="math inline">\(\frac{1}{2} \sqrt{a_n^2 +
-b_n^2}\)</span>为复数的模，<span
-class="math inline">\(\mathrm{arctan}(-\frac{b_n}{a_n})\)</span>为复数的幅角。</p>
-<p>观察此复数的模、幅角与三角函数型傅里叶变化间的异同可知，复数的模等于余弦信号$c_n
-(2n f_1 t + _n) $幅值的一半。</p>
-<p><span class="math display">\[
-|X(2\pi n f_1)| = \frac{1}{2} \sqrt{a_n^2 + b_n^2} = \frac{1}{2} c_n
-\]</span></p>
-<p>复数的幅角等于余弦信号$c_n (2n f_1 t + _n) $初相位。</p>
-<p><span class="math display">\[
-\varphi_n = \mathrm{arctan}(-\frac{b_n}{a_n})
-\]</span></p>
-]]></content>
-      <tags>
-        <tag>振动测试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown 标记语言常用命令</title>
     <url>/2021/06/12/Markdown%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="markdown基本语法">Markdown基本语法</h1>
@@ -2685,26 +2806,6 @@ resurrection, the scar on his forehead to his burning often endless.</p>
 ]]></content>
       <tags>
         <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Geometrical Nonlinear and Material Nonlinear</title>
-    <url>/2022/08/02/geometricalNonlinearAndMaterialNonlinear/</url>
-    <content><![CDATA[<h2 id="geometrical-nonlinear">Geometrical Nonlinear</h2>
-<p>In the geometrical nonlinear case, the relationship internal
-force-displacements is nonlinear.</p>
-<h2 id="material-nonlinaer">Material Nonlinaer</h2>
-<p>In the material nonlinear case, the relationship of the stress-strain
-is nonlinear.</p>
-<p>Of course these cases may be independent of each other or
-combined.</p>
-<ul>
-<li><strong>From Czeslaw Kazimierz Szymczak</strong>:
-https://www.researchgate.net/post/What_is_Geomertical_Nonlinearity/2</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>mechanics</tag>
       </tags>
   </entry>
 </search>
